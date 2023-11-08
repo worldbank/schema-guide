@@ -12,7 +12,9 @@ The creation of a contemporary data dissemination platform is a collaborative en
 
 ## Features for data users 
 
-In order to cultivate a favorable user experience, online data catalogs must offer an intuitive and efficient interface, allowing users to effortlessly access the most pertinent datasets. To meet user expectations effectively, one should emphasize simplicity, predictability, relevance, speed, and reliability. Integrating these principles into the design of data catalogs can deliver a seamless and user-friendly experience, akin to the convenience and ease provided by well-known internet search engines and e-commerce platforms. This, in turn, streamlines the process of discovering and obtaining the necessary data, making it quick and hassle-free for users.
+In order to cultivate a favorable user experience, online data catalogs must offer an intuitive and efficient interface, allowing users to effortlessly access the most relevant datasets and information. The *relevance* of data pertains to the extent to which the data meet the specific needs of the user. These needs will vary considerably. Some users may be interested in receiving an immediate answer to a simple query (for example, "What is the population of Chad"?). Others may be interested in receiving a list of suggested datasets they may download for conducting advanced statistical analysis.   
+
+To meet user expectations effectively, one should emphasize simplicity, predictability, relevance, speed, and reliability. Integrating these principles into the design of data catalogs can deliver a seamless and user-friendly experience, akin to the convenience and ease provided by well-known internet search engines and e-commerce platforms. This, in turn, streamlines the process of discovering and obtaining the necessary data, making it quick and hassle-free for users.
 
 ### Simple search interface
 
