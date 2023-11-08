@@ -4,7 +4,7 @@ output: html_document
 
 # (PART) RATIONALE AND OBJECTIVES  {-}
 
-# The challenge of finding and assessing, accessing, and using data {#chapter01}
+# The challenge of finding, accessing, and using data {#chapter01}
 
 In the realm of data sharing policies adopted by numerous national and international organizations, a common challenge arises for researchers and other data users: the practicality of finding, accessing, and using data. Navigating through an extensive and continually expanding pool of data sources and types can be a complex, time-consuming, and occasionally frustrating undertaking. It entails identifying relevant sources, acquiring and comprehending pertinent datasets, and effectively analyzing them. This challenge is characterized by issues such as insufficient metadata, limitations of data discovery systems, and the limited visibility of valuable data repositories and cataloging systems. Addressing the technical hurdles to data discoverability, accessibility, and usability is vital to enhance the effectiveness of data sharing policies and maximize the utility of collected data. In the following sections, we will delve into these challenges.
 
