@@ -4,9 +4,7 @@ output: html_document
 
 # The features of a modern data dissemination platform {#chapter02}
 
-In the introductory section of this Guide, we proposed that a data dissemination platform should be modeled after the most successful e-commerce platforms. These platforms are designed to optimally satisfy the requirements and expectations of both buyers (in our context, the data users) and sellers (in our context, the data providers who make their datasets accessible through a data catalog). In this chapter, we outline the crucial features that a modern online data catalog should incorporate to adhere to this model and effectively cater to the diverse needs and expectations of its users.
-
-Our objective is to provide recommendations for developing data catalogs that encompass lexical search and semantic search, filtering, advanced search functionality, interactive user interfaces, and the capability to operate as a data recommender system. To define these features, we approach the topic from three distinct perspectives: the viewpoint of data users, who represent a highly diverse community with varying needs, preferences, expectations, and capabilities; the standpoint of data suppliers, who either publish their data or delegate the task to a data library; and the perspective of catalog administrators, responsible for curating and disseminating data in a responsible, effective, and efficient manner while optimizing both user and supplier satisfaction.
+In the introduction of this Guide, we proposed that a data dissemination platform should be modeled after the most successful e-commerce platforms. These platforms are designed to optimally satisfy the requirements and expectations of both buyers (in our context, the data users) and sellers (in our context, the data providers who make their datasets accessible through a data catalog). To do so, they operate not only as "search and access" systems, but also as recommender systems. Such platforms are optimized with a revenue maximization objective. A data dissemination platform should be optimized, in a similar proactive manner, to maximize data use. In this chapter, we outline some important features that a modern online data catalog should incorporate to adhere to this model and effectively cater to the diverse needs and expectations of its users. To define these features, we approach the topic from three distinct perspectives: the viewpoint of data users, who represent a highly diverse community with varying needs, preferences, expectations, and capabilities; the standpoint of data suppliers, who either publish their data or delegate the task to a data library; and the perspective of catalog administrators, responsible for curating and disseminating data in a responsible, effective, and efficient manner while optimizing both user and supplier satisfaction.
 
 The creation of a contemporary data dissemination platform is a collaborative endeavor, engaging data curators, user experience (UX) experts, designers, search engineers, and subject matter specialists with a profound understanding of both the data and the users' requirements and preferences. Inclusive in this development process should be the active participation of the users themselves, allowing them to provide feedback that directly influences the system's design.
 
@@ -16,9 +14,9 @@ In order to cultivate a favorable user experience, online data catalogs must off
 
 To meet user expectations effectively, one should emphasize simplicity, predictability, relevance, speed, and reliability. Integrating these principles into the design of data catalogs can deliver a seamless and user-friendly experience, akin to the convenience and ease provided by well-known internet search engines and e-commerce platforms. This, in turn, streamlines the process of discovering and obtaining the necessary data, making it quick and hassle-free for users.
 
-### Simple search interface
+### Search interface
 
-All search engines and catalogs will provide a search box as a prominent feature on their user interface. It serves as the primary means for users to interact with the search engine. Most often, the search box is a text input field where users can enter their search queries in the form of keywords or shot sentences. The objective of the search engine is then to "understand" the user's query as accurately as possible, potentially by parsing and enhancing it, and returning the most relevant results ranked in order of importance.
+All search engines and catalogs provide a search box as a prominent feature on their user interface. It serves as the primary means for users to interact with the search engine. Most often, the search box is a text input field where users can enter their search queries in the form of keywords or shot sentences. The objective of the search engine is then to "understand" the user's query as accurately as possible, potentially by parsing and enhancing it, and returning the most relevant results ranked in order of importance.
 
 <br>
 <center>
@@ -26,29 +24,25 @@ All search engines and catalogs will provide a search box as a prominent feature
 </center>
 <br>
 
-Not all users can be expected to provide ideal queries. The search engine must be able to tolerate spelling mistakes to provide a seamless user experience. Auto-completion and spell checkers of queries are independent of the metadata being searched and can be enabled using indexing tools such as Solr or ElasticSearch. 
-A good search box for a search engine should provide a user-friendly and effective search experience. Here are some key features that are important for a search box:
+A good search box for a search engine should provide a user-friendly and effective search experience by implementing the following features in the search box:
+
 - Responsive Design: The search box should be easily accessible and responsive across various devices and screen sizes, including desktop computers, tablets, and mobile devices.
-- Autocomplete or Suggestive Search: Provide autocomplete suggestions or predictive text as the user starts typing in the search query. This helps users find relevant results faster and correct spelling errors.
+- Autocomplete or Suggestive Search: Provide autocomplete suggestions or predictive text as the user starts typing in the search query. This can be implemented using a graph of related words generated by natural language processing (NLP) models. Access to an API is necessary to implement keyword suggestions based on such graphs. The example below shows a related words graph for the terms "climate change" as returned by an NLP model.
+   <br>
+   <center>
+   ![](./images/related_words_graph.JPG){width=100%}
+   </center>
+   <br>
+   A search interface could retrieve such information via API and display it as follows:
+   <br>
+   <center>
+   ![](./images/catalog_search_01.JPG){width=100%}
+   </center>
+   <br>
+
 - Spell Correction: Implement a feature that corrects common spelling errors or provides suggestions for the user's query if they make a typo.
 - Voice Search: If applicable, support voice search to allow users to search using voice commands, especially on mobile devices and smart speakers.
 - Accessibility: Ensure that the search box is accessible to users with disabilities, following accessibility standards and guidelines.
-
-Additionally, after processing a user query, the application can provide suggestions for related keywords. This can be implemented using a graph of related words generated by natural language processing (NLP) models. Access to an API is necessary to implement keyword suggestions based on such graphs. The example below shows a related words graph for the terms "climate change" as returned by an NLP model.
-
-<br>
-<center>
-![](./images/related_words_graph.JPG){width=100%}
-</center>
-<br>
-
-A search interface could retrieve such information via API and display it as follows:
-
-<br>
-<center>
-![](./images/catalog_search_01.JPG){width=100%}
-</center>
-<br>
 
 In modern applications, the search box must not be limited to input in the form of keywords or short sentences. With modern technology, search boxes can accept documents as input, image, voice, or questions formulated in natural language. 
 
