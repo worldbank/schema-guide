@@ -10,34 +10,20 @@ We provide recommendations for developing data catalogs that encompass lexical s
 
 The creation of a data dissemination platform is a collaborative endeavor, engaging data curators, user experience (UX) experts, designers, search engineers, and subject matter specialists with a profound understanding of both the data and the users' requirements and preferences. Inclusive in this development process should be the active participation of the users, allowing them to provide feedback that directly influences the system's design.
 
-The examples we provided in this chapter are taken from our NADA cataloguing application. Other open-source cataloguing applications are available. 
-
 ## Features for data users 
 
-In order to cultivate a favorable user experience, online data catalogs must offer an intuitive and efficient interface, allowing users to effortlessly access the most pertinent datasets. To meet user expectations effectively, one should emphasize simplicity and relevance. Integrating these principles into the design of data catalogs can deliver a seamless and user-friendly experience, akin to the convenience and ease provided by internet search engines and e-commerce platforms. This, in turn, streamlines the process of discovering and obtaining the necessary data, making it quick and hassle-free for users.
+In order to cultivate a favorable user experience, online data catalogs must offer an intuitive and efficient interface, allowing users to effortlessly access the most pertinent datasets. To meet user expectations effectively, one should emphasize **simplicity** and **relevance**. Integrating these principles into the design of data catalogs can deliver a seamless and user-friendly experience, akin to the convenience and ease provided by internet search engines and e-commerce platforms.
 
-### Browser
+Users will **search** the catalog, and **browse** entries (returned by the search, filtered, or all). Also, a catalog may **notify** users of new catalog entries that match criteria they may have provided. **Other features** sought by users include ...
 
-Some users will just want to browse a catalog. This should be made easy. The use of cards is recommended. For images, a mosaic view can be provided. For microdata, a variable view.
+Saving and sharing results: URL / API query ; export list ; social networks, etc.
 
-
-### Collections
-
-Organize entries by collections
-Thematic or other
+In design, comply with Web Content Accessibility Guidelines (WCAG) international standard. WCAG documents explain how to make web content more accessible to people with disabilities.
+ADA provides people with disabilities the same opportunities, free of discrimination.
+WCAG is a compilation of accessibility guidelines for websites, whereas ADA is a civil rights law in the same ambit.
 
 
-Sort by ... ; filter by ... ; collections
-The catalog must provide a list of the most recent additions, and a history of additions and updates. 
-
-For each entry, information must be available on the date the entry was first added to the catalog, and when it was last updated.
-
-<br>
-![image](https://user-images.githubusercontent.com/35276300/231492091-a96d4c5c-c461-4b5f-88c1-f8db26daa98d.png)
-<br>
-
-
-### Search interface
+### Search 
 
 There are two types of search engines: lexical and semantic. The former matches literal terms in the query to the search engine's index, while the latter aims to identify datasets that have semantically similar metadata to the query. While an ideal data catalog would offer both types of search engines, implementing semantic searchability can be complex.
 
@@ -46,7 +32,7 @@ There are two types of search engines: lexical and semantic. The former matches 
 For microdata: embeddings based on thematic variable groupings - an option to implement semantic search and recommendations
 Discovery of microdata poses specific challenges. Typically, a data dictionary will be available, with variables organized by data file. A "virtual" organization of variables by thematic group, with a pre-defined ontology, can significantly improve data discoverability. AI solutions can be used to generate such groupings and map variables to them. The DDI metadata standard provides the metadata elements needed to store information on variable groups.
 
-####Search box
+#### Search box
 
 The default option to search for data in a specialized data catalog must be a single search box. Not all users can be expected to provide ideal queries. The search engine must be able to tolerate spelling mistakes. Auto-completion and spell checkers of queries can be enabled using indexing tools such as Solr or ElasticSearch. The query can be entered using the keyboard or audio.
 
@@ -158,9 +144,13 @@ A search engine not only needs to identify relevant datasets but also must retur
 
 Keyword-based searches can be optimized using tools like Solr or ElasticSearch. Out-of-the-box solutions, such as those provided by SQL databases, rarely deliver satisfactory results. Structured metadata can help optimize search engines and the ranking of results by allowing for the boosting of specific metadata elements. For instance, a query term found in the *title* of a dataset would carry more weight than if it were found in the *notes* element, and the results would be ranked accordingly. Similarly, a country name found in the *nation* or *reference country* metadata elements should be given more weight than if it were found in a variable description. Advanced indexing tools like Solr and ElasticSearch provide boosting functionalities to fine-tune search engines and enhance result relevancy.
 
-### Filtering results
+### Filtering catalog entries
 
-Facets or filters are useful for narrowing down datasets based on specific metadata categories. For instance, in a data catalog with datasets from different countries, a "country" facet can help users find relevant datasets quickly. To be effective, filters should be based on metadata elements that have a limited number of categories and a predictable set of options. Controlled vocabularies can be used to enable such filters. Furthermore, as some metadata elements are specific to particular data types, contextual facets should be integrated into the catalog's user interface to offer relevant filters based on the type of data being searched.
+Some users may just want to browse the content of a data catalog. The catalog's user interface should make it easy to navigate the catalog and to obtain core information on the available entries. To facilitate this "window shopping", the catalog should have the folowing features:  
+
+#### Filtering
+
+Facets or filters are useful for narrowing down datasets based on specific metadata categories. For instance, in a data catalog with datasets from different countries, a "country" facet can help users find relevant datasets quickly. To be effective, filters must be based on metadata elements that have a limited number of categories and a predictable set of options. Controlled vocabularies can be used to enable such filters. Furthermore, as some metadata elements are specific to particular data types, contextual facets should be integrated into the catalog's user interface to offer relevant filters based on the type of data being searched.
 
 <center>
 ![](./images/catalog_facets_01.JPG){width=100%}
@@ -169,53 +159,13 @@ Facets or filters are useful for narrowing down datasets based on specific metad
 
 Tags and tag groups (which are available in all schemas we recommend) provide much flexibility to implement facets, as we showed in section 1.7. 
 
-(use pills / ...)
+The user innterface should make it clear when entries are filtered, possibly by showing pills that can be de-activated.
 
+#### Organizing entries by collections
 
-### Sorting
+Catalogs that contain many entries may organize such entries by *collection*. The collections may be thematic or other (for example, entries may be organized by origin of the data, geographic coverage, or other criteria). Collections are virtual; a same entry may belong to more than one collection. A brief description of each collection, and a "filter by collection", should be provided.
 
-Sorting results
-
-
-
-### Query user interface
-
-For time series only
-
-
-
-
-
-### Customized views 
-
-Build your own dashboards
-- Allow users to set preferences: thematic, data type, geographies, search query
-- Have a page where pre-designed dashboards (country/thematic pages) and custom dashboard are accessible
-- Allow sharing of dashboards
-- Core idea: all data and metadata accessible via API; platform operates as a service to feed dashboards (within the platform or external) 
-
-
-### Data and metadata as a service
-
-- Maintain a data service: let external users build dashboards/poaltorms dynamically connected via API; one organization cannot customize to all communities of users.
-
-
-
-
-
-### Linking results 
-
-Not all data catalog users know exactly what they are looking for and may need to explore the catalog to find relevant resources. E-commerce platforms use recommender systems to suggest products to customers, and data catalogs should have a similar commitment to bringing relevant resources to users' attention. To achieve this, modern data catalogs display relationships between entries, which may involve data of different types, such as microdata files, analytical scripts, and working papers.
-
-These relationships can be documented in the metadata, such as identifying datasets as part of a series or new versions of a previous dataset. When relationships are not known or documented, machine learning tools such as topic models and word embedding models can be used to establish the topical or semantic closeness between resources of different types. This can be used to implement a recommender system in data catalogs, which automatically identifies and displays related documents and data for a given resource. The image below shows how "related documents" and "related data" can be automatically identified and displayed for a resource (in this case a document).
-
-<center>
-![](./images/catalog_related_01.JPG){width=100%}
-</center>
-<br>
-
-
-### Organized results
+#### Organizing entries by data type
 
 When a data catalog contains multiple types of data, it should offer an easy way for users to filter and display query results by data type. For example, when searching for "US population," one user may only be interested in knowing the total population of the USA, while another may need the public use census microdata sample, and a third may be searching for a publication. To cater to such needs, presenting query results in type-specific tabs (with an "All" option) and/or providing a filter (facet) by type will allow users to focus on the types of data relevant to them. This is similar to commercial platforms that offer search results organized by department, allowing users to search for "keyboard" in either the "music" or "electronics" department.
 
@@ -224,16 +174,33 @@ When a data catalog contains multiple types of data, it should offer an easy way
 </center>
 <br>
 
+#### Time series query user interface
 
-### Saving and sharing results
-
-URL / API query ; export list ; social networks, etc.
+For time series only
 
 
-### Personalized results
 
-Option for user to set a profile with preferences that may be used to display results. 
+### Sorting 
 
+The entries displayed in the user interface must be sortable by some key features, including the title of the entry, the year, the date the entry was added or last modified, the geographic area, and possibly others. To make filters operate properly, the use of controlled vocabulary may be required for some metadata fields, such as the geographic coverage of the data. The country names, for example, should be consistent across the catalog (the Democratic Republic of Congo should not be named "Democratic Republic of Congo" in some cases and "Congo, Democratic Republic" in others). 
+
+### Browsing 
+
+#### Providing core information in the entry list page
+
+The list of entries that the users will browse should provide the core information on each entry in a *card*. The user who browses the catalog should not have to open a new page to obtain the most important information such as the title, year, author/producer, and other key information about the entry.
+
+#### Highlights and most popular entries
+
+Some catalog entries may be highlighted in the catalog, and the most popular entries my be listed in the catalog's home page.
+
+#### Recent additions and history
+
+Some users may be interested in finding out what new entries are available in the catalog. The catalog should provide a list of the most recent additions, and a history of additions and updates. The entries in the catalog should be sortable by the date the entry was added or last modified.
+
+<br>
+![image](https://user-images.githubusercontent.com/35276300/231492091-a96d4c5c-c461-4b5f-88c1-f8db26daa98d.png)
+<br>
 
 ### Metadata display and formats
 
@@ -247,8 +214,7 @@ In addition to being displayed in HTML format, metadata should be available as e
 
 <br>
 
-
-### Variable-level comparison
+#### Variable-level comparison
 
 E-commerce platforms commonly allow customers to compare products by displaying their pictures and descriptions (i.e., metadata) side-by-side. Similarly, for data users, the ability to compare datasets can be valuable to evaluate the consistency or comparability of a variable or an indicator over time or across sources and countries. However, to implement this functionality, detailed and structured metadata at the variable level are necessary. These metadata standards, such as DDI and ISO 19110/19139, enable the implementation of this feature. 
 
@@ -273,8 +239,10 @@ After selecting the variables of interest, users should be able to display their
 </center>
 <br>
 
+#### Information on API access
 
-### Transparency in access policies
+
+#### Transparency in access policies
 
 The terms of use (ideally provided in the form of a standard license) and the conditions of access to data should be made transparent and visible in the data catalog. The access policy will preferably be provided using a controlled vocabulary, which can be used to enable a facet (filter) as shown in the screenshot below.
 
@@ -283,28 +251,21 @@ The terms of use (ideally provided in the form of a standard license) and the co
 </center>
 <br>
 
+#### Showing links 
 
-### Data and metadata API
+Not all data catalog users know exactly what they are looking for and may need to explore the catalog to find relevant resources. E-commerce platforms use recommender systems to suggest products to customers, and data catalogs should have a similar commitment to bringing relevant resources to users' attention. To achieve this, modern data catalogs display relationships between entries, which may involve data of different types, such as microdata files, analytical scripts, and working papers.
 
-To keep up with modern data management needs, a comprehensive data catalog must provide users with convenient access to both data and metadata through an application programming interface (API). The structured metadata in a catalog allows users to extract specific components of the metadata they need, such as the identifier and title of all microdata and geographic datasets conducted after a certain year. With an API, users can easily and automatically access datasets or subsets of datasets they require. This enables internal features of the catalog such as dynamic visualizations and data previews, making data management more efficient. It is crucial that detailed documentation and guidelines on the use of the data and metadata API are provided to users to maximize the benefits of this feature.
+These relationships can be documented in the metadata, such as identifying datasets as part of a series or new versions of a previous dataset. When relationships are not known or documented, machine learning tools such as topic models and word embedding models can be used to establish the topical or semantic closeness between resources of different types. This can be used to implement a recommender system in data catalogs, which automatically identifies and displays related documents and data for a given resource. The image below shows how "related documents" and "related data" can be automatically identified and displayed for a resource (in this case a document).
 
-Metadata (and data) should be accessible via API
-The API should be well documented with examples.
-API query builder: UI for building an API query
+<center>
+![](./images/catalog_related_01.JPG){width=100%}
+</center>
+<br>
 
-
-### Online data access forms 
-
-Make the process of registration, requests fully digital, easy, and fully traceable.
-
-
-#### Bulk download option
-
-Even when UI or visualizations etc are shown, many users just want to downlaod the data and metadata.
-(...)
+#### Related entries (recommendations)
 
 
-### Data preview
+#### Data preview
 
 When the data (time series and tabular data, possibly also microdata) are made available via API, the data catalog can also provide a data preview option, and possibly a data extraction option, to the users. Multiple JavaScript tools, some of them open-source, are available to easily embed data grids in catalog pages.
 
@@ -320,7 +281,7 @@ For a document, the "data preview" would consist of a document viewer that would
 </center>
 <br>
 
-### Data visualizations
+#### Visualizations
 
 Embedding visualizations in a data catalog can greatly enhance its usefulness. Different types of data require different types of visualizations. For instance, time series data can be effectively displayed using a line chart, while images with geographic information can be displayed on a map that shows the location of the image capture. For more complex data, other types of charts can be created as well. However, in order to embed dynamic charts in a catalog page, the data needs to be available via API. A good data catalog should offer flexibility in the types of charts and maps that can be embedded in a metadata page. For instance, the NADA catalog provides catalog administrators with the ability to create visualizations using various tools. By including visualizations in a data catalog, users are able to quickly and easily understand the data and gain insights from it.
 
@@ -342,19 +303,58 @@ The NADA catalog allows catalog adinistrators to generate such visualizations us
 <br>
 
 
-### Permanent URLs 
+### Notify
+
+Users may want to be automatically notified (by email) when new entries of interest are added, or when change are made to a specific resource. A system allowing users to set criteria for automatic notification can be developed.
+
+Example of Google SCholar alerts:
+
+<br>
+<center>
+![image](https://user-images.githubusercontent.com/35276300/230730245-ea3702f6-b877-436a-9833-492afafa0270.png)
+</center>
+<br>
+
+### Other features for users
+
+#### Data and metadata as a service
+
+- Maintain a data service: let external users build dashboards/poaltorms dynamically connected via API; one organization cannot customize to all communities of users.
+
+Build your own dashboards
+- Allow users to set preferences: thematic, data type, geographies, search query
+- Have a page where pre-designed dashboards (country/thematic pages) and custom dashboard are accessible
+- Allow sharing of dashboards
+- Core idea: all data and metadata accessible via API; platform operates as a service to feed dashboards (within the platform or external) 
+
+#### Data and metadata API
+
+To keep up with modern data management needs, a comprehensive data catalog must provide users with convenient access to both data and metadata through an application programming interface (API). The structured metadata in a catalog allows users to extract specific components of the metadata they need, such as the identifier and title of all microdata and geographic datasets conducted after a certain year. With an API, users can easily and automatically access datasets or subsets of datasets they require. This enables internal features of the catalog such as dynamic visualizations and data previews, making data management more efficient. It is crucial that detailed documentation and guidelines on the use of the data and metadata API are provided to users to maximize the benefits of this feature.
+
+Metadata (and data) should be accessible via API
+The API should be well documented with examples.
+API query builder: UI for building an API query
+
+#### Online data access forms 
+
+Make the process of registration, requests fully digital, easy, and fully traceable.
+
+#### Bulk download option
+
+Even when UI or visualizations etc are shown, many users just want to downlaod the data and metadata.
+(...)
+
+#### Permanent URLs 
 
 To ensure efficient management and organization of datasets within a data catalog, it is essential to assign a unique identifier to each dataset. This identifier should not only meet technical requirements but also serve other purposes such as facilitating dataset citation. To achieve maximum effectiveness, it is recommended that datasets have a globally unique identifier, which can be accomplished through the assignment of a Digital Object Identifier (DOI). DOIs can be generated in addition to a catalog-specific unique identifier and provide a permanent and persistent identifier for the dataset. For more information about the process of generating DOIs and the reasons to use them, visit the [DataCite website](https://datacite.org/).   
 
 Include a citation requirement in metadata.
 
-
-### Archive / tombstone
+#### Archive / tombstone
 
 When a dataset is removed or replaced, the reproducibility of some analysis may become impossible. This may be a problem for some users. Unless there is a reason for not making them accessible, old versions of datasets should be kept accessible. But they should not be the ones indexed and dislayed in the catalog, to avoid cnfusion or the risk that a user would exploit a version other than the latest. Moving datasts that are replaced to an archive section of the catalog (not indexed) is an option. Note that DOIs require a permanent web page.
 
-
-### Catalog of citations
+#### Catalog of citations
 
 A data catalog should not be limited to data. Ideally, the scripts produced by researchers to analyze the data, and the output of their analysis, should also be available. An ideal data catalog will allow a user to:
 
@@ -370,8 +370,7 @@ Maintain a catalog of citations of datasets.
 </center>
 </br>
 
-
-### Reproducible and replicable scripts
+#### Reproducible and replicable scripts
 
 Document, catalog, and publish reproducible/replicable scripts.
 
@@ -381,43 +380,21 @@ Document, catalog, and publish reproducible/replicable scripts.
 </center>
 </br>
 
-
-### Notifications or alerts
-
-Users may want to be automatically notified (by email) when new entries of interest are added, or when change are made to a specific resource. A system allowing users to set criteria for automatic notification can be developed.
-
-Example of Google SCholar alerts:
-
-<br>
-<center>
-![image](https://user-images.githubusercontent.com/35276300/230730245-ea3702f6-b877-436a-9833-492afafa0270.png)
-</center>
-<br>
-
-### Providing feedback
+#### Users' feedback
 
 Feedback on catalog certainly. In the form of a "Contact" email and possibly a "feedback form". Also, if the platform itself is open source, GitHub for issues and suggestions on the application itself.
 
 BUT: Users forum, "reviews" as in e-commerce platforms, is not always recommended. Not all users are 'constructive" and qualified. Requires moderation, which can be costly and controversial. May create dis-incentives for data producers to publish their data. Could be a good option for data platforms that are internal to an organization (where comments are attributed, and an authentication system controls who can provide feedback), but not for public data platforms.
 
-
-### Getting support
+#### Getting support
 
 Contact, responsive
 FAQs
 
 
-### Web content accessibility
-
-Web Content Accessibility Guidelines (WCAG) international standard. WCAG documents explain how to make web content more accessible to people with disabilities.
-ADA provides people with disabilities the same opportunities, free of discrimination.
-WCAG is a compilation of accessibility guidelines for websites, whereas ADA is a civil rights law in the same ambit.
-
-
 ## Features for data providers 
 
 When the data catalog is not administered by the producer of the data but by an entrusted repository, data providers want:
-
 
 ### Safety
 
@@ -434,15 +411,13 @@ When the data catalog is not administered by the producer of the data but by an 
 </center>
 </br>
 
-### Low burden
+### Efficiency
 
 "do not disturb": low burden of deposit and no burden of serving users (minimum interaction with users; providing detailed metadata helps)
-
 
 ### Real time information on usage
 
 Monitoring of usage (downloads and citations) to assess demand; reports on this (automatically generated)
-
 
 ### Feedback from users
 
@@ -453,7 +428,6 @@ Feedback on quality issues
 
 In addition to meeting the needs of its users, a modern data catalog should also offer features that a catalog administrator can appreciate or expect. The features listed below can serve as checklist for choice of an application or development of features. These features may include:
 
-
 ### Data deposit
 
 User friendly interface for data deposit. Compliant with metadata stadards. With embedded quality gateways and clearance procedures.
@@ -462,31 +436,25 @@ User friendly interface for data deposit. Compliant with metadata stadards. With
 
 Tools for privacy protection control (e.g., tools to identify direct identifiers)
 
-
 ### Free software
 
 Availability of the application as an open-source software, accompanied by detailed technical documentation
-
 
 ### Security
 
 Robust security measures, such as compatibility with advanced authentication systems, flexible role/profile definitions, regular upgrades and security patches, and accreditation by information security experts
 
-
 ### IT affordability
 
 Reasonable IT requirements, such as shared server operability and sufficient memory capacity
-
 
 ### Ease of maintenance
 
 Ease of upgrading to the latest version
 
-
 ###  Interoperability 
 
 Interoperability with other catalogs and applications, as well as compliance with metadata standards. By publishing metadata across multiple catalogs and hubs, data visibility can be increased, and the service provided to users can be maximized. This requires automation to ensure proper synchronization between catalogs (with only one catalog serving as the "owner" of a dataset), which necessitates interoperability between the catalogs, enabled by compliance with common formats and metadata standards and schemas.
-
 
 ### Flexibility on access policies
 
