@@ -4,7 +4,9 @@ output: html_document
 
 # The power of rich, structured metadata {#chapter03}
 
-The previous chapter defined the features of an advanced data discoverability and dissemination solution. What enables such a solution is not only the algorithms and technology, but also the quality of the metadata available to enable them. Metadata is defined as "... structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use or manage that resource" (Data thesaurus, NIH, https://nnlm/gov/data/thesaurus) Metadata must be findable by machines and usable by humans. This chapter describes what metadata are needed, and how they can be organized and improved to fully enable the search and recommender tools. The metadata must be rich and structured. To make them rich, machine learning can be used. To ensure consistent structure, the use of metadata standards and schemas is highly recommended. In this chapter, we build the case for rich, augmented, structured metadata and for the adoption of metadata standard and schemas. The second part of this Guide will provide a detailed description of each recommended standard or schema, for different data types.
+The previous chapter defined the features of an advanced data discoverability and dissemination system. What enables such a system is not only the search algorithms and technology, but also the quality of the metadata available to enable them. Metadata is the "structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use or manage that resource" (Data thesaurus, NIH, https://nnlm/gov/data/thesaurus) 
+
+This chapter describes what metadata are needed, and how they can be organized and improved to enable modern search and recommender solutions. The metadata must be **rich** and **structured**. In this chapter, we build the case for rich, augmented, structured metadata and for the adoption of metadata standard and schemas. 
 
 ## Rich metadata
 
@@ -32,7 +34,7 @@ a Statistical Agency - A Case Study of Statistics Canada"](https://www.ihsn.org/
    ![](./images/compare_variables_IHSN.JPG){width=90%}
    </center>
    
-### Scope of the metadata
+### Defining rich metadata
 
 What makes metadata "rich and comprehensive" is not always easy to define, and is specific to each data type. Microdata and geospatial datasets for example will require much more -- and different-- metadata than a document or an image. Metadata standards and schemas provide data curators with detailed lists of *elements* (or *fields*), specific to each data type, that must or may be provided to document a dataset. The metadata elements included in a standard or schema will typically cover *cataloguing material*, *contextual information*, and *explanatory materials*.
 
@@ -65,7 +67,7 @@ Explanatory materials are the information that should be created and preserved t
    - **Data source**: Details about the source from which the data is derived should be included. For example, when the data source consists of responses to survey questionnaires, each question should be carefully recorded in the documentation. Ideally, the text will include a reference to the generated variable(s). It is also useful to explain the conditions under which a question would be asked, including, if possible, the cases to which it applies and, ideally, a summary of response statistics.
    - **Confidentiality and anonymization**: It is important to determine whether the data contains any confidential information on individuals, households, organizations, or institutions. If so, such information should be recorded together with any agreement on how to use the data, such as with survey respondents. Issues of confidentiality may restrict the analyses to be undertaken or results to be published, particularly if the data is to be made available for secondary use. If the data were anonymized to prevent identification, it is wise to record the anonymization procedure (taking care of not providing information that would enable a reverse-engineering of the procedure) and its impact on the data, as such modification may restrict subsequent analysis.
 
-### Controlled vocabularies
+#### Controlled vocabularies
 
 Metadata standards and schemas provide lists of elements with a description of the expected content to be captured in each element. For some elements, it may be appropriate to restrict the valid content to pre-selected options or "controlled vocabularies". A controlled vocabulary is a pre-defined list of values that can be accepted as valid content for some elements. For example. a metadata element "data type" should not be populated with free text, but should make use of a pre-defined taxonomy of data types. The use of controlled vocabularies (for selected metadata elements) will be particularly useful to implement search and filter features in data catalogs (see section 3.1.1 of this Guide), and to foster inter-operability of data catalogs.
 
@@ -79,7 +81,7 @@ Some recommended controlled vocabularies are included in the description of the 
 
 Ideally, controlled vocabulary will be developed in compliance with the [FAIR principles](https://www.go-fair.org/fair-principles/) for scientific data management and stewardship: **F**indability, **A**ccessibility, **I**nteroperability, and **R**euse.
 
-### Tags 
+#### Tags 
 
 All metadata standards and schemas described in this guide include a `tags` element, even when this element is not part of a standard. This element enables the implementation of filters (facets) in data cataloguing applications, in a flexible manner. The `tags` metadata element is repeatable (meaning that more than one tag can be attached to a dataset) and contains two sub-elements to capture a `tag` (word or phrase), and the `tag_group` (if any) it belongs to.
 
