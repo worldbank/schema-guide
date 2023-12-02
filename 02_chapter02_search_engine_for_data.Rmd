@@ -4,24 +4,17 @@ output: html_document
 
 # The features of a modern data dissemination platform {#chapter02}
 
-In the introductory section of this Guide, we proposed that modern data dissemination platforms should be modeled after the most successful e-commerce platforms. These platforms are optimized to serve both buyers (in our context, the data users) and sellers (in our context, the data providers) in the most efficient manner. In this chapter, we outline features that a modern online data catalog should incorporate to adhere to this model.
+In the introductory section of this Guide, we proposed that modern data dissemination platforms should be modeled after the most successful e-commerce platforms. These platforms are optimized to serve both buyers (in our context, the data users) and sellers (in our context, the data providers) in the most efficient manner. Internet search engines, and in particular the way they exploit the capabilities of generative artificial intelligence, are also a useful source of inspiration for the design of data catalogs. In this chapter, we outline features that a modern online data catalog should incorporate to adhere to these models.
 
-We provide recommendations for developing data catalogs that encompass lexical search and semantic search, filtering, advanced search functionality, interactive user interfaces, and the capability to operate as recommender systems. We approach the topic from three distinct perspectives: the viewpoint of **data users**, who represent a highly diverse community with varying needs, preferences, expectations, and capabilities; the standpoint of **data suppliers**, who either publish their data or delegate the task to a data library; and the perspective of **catalog administrators**, responsible for curating and disseminating data in a responsible, effective, and efficient manner while optimizing both user and supplier satisfaction.
+We provide recommendations for developing data catalogs that encompass lexical search and semantic search, filtering, advanced search functionality, interactive user interfaces, and the capability to operate as useful recommender systems. We approach the topic from three distinct perspectives: the viewpoint of **data users**, who represent a highly diverse community with varying needs, preferences, expectations, and capabilities; the standpoint of **data suppliers**, who either publish their data or delegate the task to a data library; and the perspective of **catalog administrators**, responsible for curating and disseminating data in a responsible, effective, and efficient manner while optimizing both user and supplier satisfaction.
 
-The creation of a data dissemination platform is a collaborative endeavor, engaging data curators, user experience (UX) experts, designers, search engineers, and subject matter specialists with a profound understanding of both the data and the users' requirements and preferences. Inclusive in this development process should be the active participation of the users, allowing them to provide feedback that directly influences the system's design.
+The creation of a data dissemination platform is a collaborative endeavor, engaging data curators, user experience (UX) experts, user interface (UI) designers, search and systems engineers, and subject matter specialists with a profound understanding of both the data and the users' requirements and preferences. Inclusive in this development process should be the active participation of the users, allowing them to provide feedback that directly influences the system's design.
 
 ## Features for data users 
 
-In order to cultivate a favorable user experience, online data catalogs must offer an intuitive and efficient interface, allowing users to effortlessly access the most pertinent datasets. To meet user expectations effectively, one should emphasize **simplicity** and **relevance**. Integrating these principles into the design of data catalogs can deliver a seamless and user-friendly experience, akin to the convenience and ease provided by internet search engines and e-commerce platforms.
+In order to cultivate a favorable user experience, online data catalogs must offer an intuitive and efficient interface, allowing users to effortlessly access the most pertinent datasets. To meet user expectations effectively, one should emphasize **simplicity** and **relevance**. A data dissemination platform should also be made accessible free of discrimination. The Web Content Accessibility Guidelines (WCAG) international standard provides principles and recommendations for accessibility to people with disabilities. Integrating these principles into the design of data catalogs can deliver a seamless and user-friendly experience, akin to the convenience and ease provided by internet search engines and e-commerce platforms. 
 
-Users will **search** the catalog, and **browse** entries (returned by the search, filtered, or all). Also, a catalog may **notify** users of new catalog entries that match criteria they may have provided. **Other features** sought by users include ...
-
-Saving and sharing results: URL / API query ; export list ; social networks, etc.
-
-In design, comply with Web Content Accessibility Guidelines (WCAG) international standard. WCAG documents explain how to make web content more accessible to people with disabilities.
-ADA provides people with disabilities the same opportunities, free of discrimination.
-WCAG is a compilation of accessibility guidelines for websites, whereas ADA is a civil rights law in the same ambit.
-
+Users of a data catalog will typically want to **search** and **filter** the assets available in a catalog. They will also want to **browse** and **sort** the catalog or the entries returned by the activation of a search or filter. We describe below how the search, filtering, sorting, and browsing features may be designed to provide a user-friendly experience. **Other features** of a data catalog that may be useful to users are also proposed.
 
 ### Search 
 
@@ -146,11 +139,14 @@ A search engine not only needs to identify relevant datasets but also must retur
 
 Keyword-based searches can be optimized using tools like Solr or ElasticSearch. Out-of-the-box solutions, such as those provided by SQL databases, rarely deliver satisfactory results. Structured metadata can help optimize search engines and the ranking of results by allowing for the boosting of specific metadata elements. For instance, a query term found in the *title* of a dataset would carry more weight than if it were found in the *notes* element, and the results would be ranked accordingly. Similarly, a country name found in the *nation* or *reference country* metadata elements should be given more weight than if it were found in a variable description. Advanced indexing tools like Solr and ElasticSearch provide boosting functionalities to fine-tune search engines and enhance result relevancy.
 
-### Filtering catalog entries
+#### Saving and sharing results
 
-Some users may just want to browse the content of a data catalog. The catalog's user interface should make it easy to navigate the catalog and to obtain core information on the available entries. To facilitate this "window shopping", the catalog should have the folowing features:  
+URL / API query ; export list ; social networks, etc.
+
 
 #### Filtering
+
+Applies to full catalog (window shopping) or results from a search.
 
 Facets or filters are useful for narrowing down datasets based on specific metadata categories. For instance, in a data catalog with datasets from different countries, a "country" facet can help users find relevant datasets quickly. To be effective, filters must be based on metadata elements that have a limited number of categories and a predictable set of options. Controlled vocabularies can be used to enable such filters. Furthermore, as some metadata elements are specific to particular data types, contextual facets should be integrated into the catalog's user interface to offer relevant filters based on the type of data being searched.
 
@@ -175,10 +171,6 @@ When a data catalog contains multiple types of data, it should offer an easy way
 ![](./images/catalog_tabs_01.JPG){width=100%}
 </center>
 <br>
-
-#### Time series query user interface
-
-For time series only
 
 
 
@@ -318,6 +310,11 @@ Example of Google SCholar alerts:
 <br>
 
 ### Other features for users
+
+#### Time series query user interface
+
+For time series only
+
 
 #### Data and metadata as a service
 
