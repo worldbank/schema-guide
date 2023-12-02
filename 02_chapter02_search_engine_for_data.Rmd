@@ -226,7 +226,7 @@ This streamlined presentation ensures that users can make informed decisions abo
 
 #### Highlights and most popular entries
 
-Some catalog entries may be highlighted in the catalog, and the most popular entries my be listed in the catalog's home page.
+Highlighting popular datasets or those strategically promoted by catalog administrators serves as a valuable guide for users seeking the most relevant and frequently accessed information. This feature streamlines the user experience by directing attention to datasets that have garnered widespread interest or are considered particularly valuable. It not only expedites the search process but also provides users with insights into what datasets are trending or widely utilized by their peers. Additionally, catalog administrators can leverage this feature to promote datasets that align with organizational goals, encouraging users to explore and utilize resources that are strategically significant. 
 
 #### Recent additions and history
 
@@ -301,7 +301,7 @@ For tabular data, such as indicators or microdata, the convenience is further am
 
 In the case of large datasets, a preview feature typically offers a sample of the data rather than the entire dataset. This is practical for several reasons. First, it provides users with a representative subset of the data, offering insights into its characteristics without overwhelming them with excessive information. Second, displaying a sample helps manage resource constraints associated with loading and rendering large datasets, ensuring a smooth and responsive user experience.
 
-The implementation of such a feature requires that the data be available via an API.
+The implementation of such a feature requires that the data be available via API.
 
 <center>
 ![](./images/catalog_data_preview_01.JPG){width=80%}
@@ -319,9 +319,7 @@ For data of type "video", an option to play the video in the catalog itself shou
 
 #### Visualizations
 
-Embedding visualizations in a data catalog can greatly enhance its usefulness. Different types of data require different types of visualizations. For instance, time series data can be effectively displayed using a line chart, while images with geographic information can be displayed on a map that shows the location of the image capture. For more complex data, other types of charts can be created as well. However, in order to embed dynamic charts in a catalog page, the data needs to be available via API. A good data catalog should offer flexibility in the types of charts and maps that can be embedded in a metadata page. For instance, the NADA catalog provides catalog administrators with the ability to create visualizations using various tools. By including visualizations in a data catalog, users are able to quickly and easily understand the data and gain insights from it.
-
-The NADA catalog allows catalog adinistrators to generate such visualizations using different tools of their choice. The example below were generated using the open-source [Apache eCharts](https://echarts.apache.org/en/index.html) library.
+Integrating visualizations into a data catalog significantly enhances its utility by providing users with an immediate, insightful understanding of the data. Visualizations serve as powerful tools for efficient data comprehension and analysis. Tailoring the visualization type to the nature of the data is crucial; for instance, time series data can be effectively communicated through line charts, while geographically tagged images find clarity on a map. For more intricate datasets, diverse chart types can be employed. Embedding dynamic charts into catalog pages requires data accessibility through APIs. An effective data catalog should offer versatility in the types of charts and maps that can be integrated into metadata pages. The system should support the development of widgets using various tools, such as open-source JavaScript libraries. These widgets, combined with API-accessible data, enable the presentation of custom visualizations in a flexible manner. Establishing a repository of visualizations and widgets simplifies their implementation, ensuring users can effortlessly leverage these tools for enhanced data exploration and interpretation.
 
 <br>
 *Example: Line chart for a time series*
@@ -340,51 +338,50 @@ The NADA catalog allows catalog adinistrators to generate such visualizations us
 
 #### Information on API access
 
+Comprehensive documentation of API access within data catalogs is crucial for effective utilization. A standardized and detailed API description serves as a guide, elucidating functionalities, parameters, and responses for users and developers. For each dataset accessible via API, providing illustrative examples of API calls, coupled with a user-friendly API query builder, enhances user understanding and expedites integration. Additionally, clear documentation on pagination mechanisms, the necessity (or lack thereof) for obtaining an API key, and delineation of good and bad practices adds critical context. Highlighting limitations imposed on API usage is equally vital, setting expectations regarding rate limits, data extraction constraints, and any other restrictions. This comprehensive documentation approach ensures transparency, accessibility, and empowers users to navigate the API seamlessly while understanding the nuances of its usage within the data catalog.
 
+#### Showing linked and related resourced 
 
-#### Showing links 
-
-Not all data catalog users know exactly what they are looking for and may need to explore the catalog to find relevant resources. E-commerce platforms use recommender systems to suggest products to customers, and data catalogs should have a similar commitment to bringing relevant resources to users' attention. To achieve this, modern data catalogs display relationships between entries, which may involve data of different types, such as microdata files, analytical scripts, and working papers.
-
-These relationships can be documented in the metadata, such as identifying datasets as part of a series or new versions of a previous dataset. When relationships are not known or documented, machine learning tools such as topic models and word embedding models can be used to establish the topical or semantic closeness between resources of different types. This can be used to implement a recommender system in data catalogs, which automatically identifies and displays related documents and data for a given resource. The image below shows how "related documents" and "related data" can be automatically identified and displayed for a resource (in this case a document).
+The provision of information on links between different entries within a data catalog is useful to users who may not have a precise understanding of what they are seeking and rely on exploration to discover pertinent resources. These relationships can be systematically documented in the metadata. Examples include designating datasets as part of a series or indicating new versions of previous datasets. 
 
 <center>
 ![](./images/catalog_related_01.JPG){width=100%}
 </center>
 <br>
 
-#### Related entries (recommendations)
-
-
+When explicit relationships are not pre-defined, machine learning tools, such as topic models and word embedding models, can dynamically establish the topical or semantic closeness between diverse resources. This lays the foundation for implementing recommender systems within data catalogs, automatically identifying and showcasing related documents and data for a given resource. By leveraging these techniques, users benefit from an intuitive exploration experience, wherein they not only access the desired resource but also discover interconnected datasets and documents that augment their understanding and analysis. 
 
 
 ### Sorting 
 
-The entries displayed in the user interface must be sortable by some key features, including the title of the entry, the year, the date the entry was added or last modified, the geographic area, and possibly others. To make filters operate properly, the use of controlled vocabulary may be required for some metadata fields, such as the geographic coverage of the data. The country names, for example, should be consistent across the catalog (the Democratic Republic of Congo should not be named "Democratic Republic of Congo" in some cases and "Congo, Democratic Republic" in others). 
-
+In a well-structured data catalog, the inclusion of a robust sorting feature is important for user-friendly navigation. Users often need the flexibility to arrange entries based on key features, such as the entry title, year, date of addition or last modification, and geographic area. A sorting mechanism enables users to tailor their exploration based on specific criteria, streamlining the process of finding relevant datasets. To ensure the effectiveness of sorting, employing controlled vocabularies where relevant becomes essential, particularly for metadata fields like geographic coverage. Consistent naming conventions, such as uniform country names throughout the catalog, prevent inconsistencies that might arise from variations in naming conventions. This not only enhances the catalog's overall usability but also ensures that users can confidently and seamlessly leverage the sorting feature to pinpoint the datasets most relevant to their needs. 
 
 ### Other features for users
 
 #### Data and metadata API
 
-To keep up with modern data management needs, a comprehensive data catalog must provide users with convenient access to both data and metadata through an application programming interface (API). The structured metadata in a catalog allows users to extract specific components of the metadata they need, such as the identifier and title of all microdata and geographic datasets conducted after a certain year. With an API, users can easily and automatically access datasets or subsets of datasets they require. This enables internal features of the catalog such as dynamic visualizations and data previews, making data management more efficient. It is crucial that detailed documentation and guidelines on the use of the data and metadata API are provided to users to maximize the benefits of this feature.
+In meeting the demands of contemporary data management, a forward-thinking data catalog must not only house datasets but also provide users with streamlined access to both data and metadata, facilitated through an intuitive application programming interface (API). The structured metadata inherent in a catalog offers users the flexibility to extract specific components tailored to their requirements, such as identifiers and titles of microdata and geographic datasets conducted after a designated year. By integrating an API, users gain the efficiency of automated access to datasets or subsets, fostering a dynamic and agile data exploration experience.
 
-Metadata (and data) should be accessible via API
-If data accesisble via API, make it clear (and filter)
-The API should be well documented with examples.
-API query builder: UI for building an API query
-Limitations as required (API key; permission system; monitoring; security) 
+Ensuring that both data and metadata are accessible through the API is fundamental to maximizing the utility of a modern data catalog. Transparency about the availability of datasets accessible via the API, clearly communicated within the dataset card and accompanied by user-friendly filtering options, enhances the user experience by allowing users to identify and prioritize datasets that align with their preferred access method.
+
+To further enhance user engagement and understanding, comprehensive documentation and guidelines detailing the nuances of using the data and metadata API are indispensable. This includes not only a clear delineation of functionalities but also illustrative examples that empower users to navigate and leverage the API effectively. The incorporation of an API query builder within the user interface adds an extra layer of accessibility, simplifying the process of constructing and executing API queries.
+
+While implementing limitations is a prudent practice, transparency in communicating these constraints is crucial. Whether it involves the need for an API key, permission systems, monitoring protocols, or security measures, users should be informed of these aspects upfront. A well-rounded API, coupled with transparency and user-centric features, becomes a linchpin in modern data catalogs, transforming them from repositories to dynamic and efficient hubs for data exploration and utilization.
 
 #### Bulk download option
 
-Even when UI or visualizations etc are shown, many users just want to downlaod the data and metadata.
-(...)
+A data catalog should provide users with the option for bulk downloading datasets of indicators, even amidst alternative access options such as API access, data visualizations, or query interfaces. This option caters to a diverse user base, acknowledging that some users may prefer a straightforward, one-click method to obtain the complete dataset. Bulk downloading ensures accessibility for individuals who might not possess the technical expertise or inclination to engage with APIs or explore intricate query interfaces. It simplifies the user experience, providing a convenient means to acquire the entire dataset effortlessly.
+
+Furthermore, the provision of datasets in a popular and at least one non-proprietary format ensures broad compatibility and ease of use for a wide range of users. Whether for offline analysis or integration into various tools, offering datasets in standard formats enhances versatility and eliminates potential barriers associated with proprietary formats.
+
+Embedding metadata within the bulk download package is equally crucial, providing users with comprehensive context and documentation about the dataset. This ensures that users, even those opting for bulk downloads, have access to essential information about the dataset's origin, methodology, and relevant details, fostering transparency and informed data utilization. 
 
 #### Alerts (notifications)
 
-Users may want to be automatically notified (by email) when new entries of interest are added, or when change are made to a specific resource. A system allowing users to set criteria for automatic notification can be developed.
+please provide one or a few paragraphs describing the convenience for users of a data catalog of having a feature that alerts them automatically when datasets of relevance to them are added to the catalog. The users must be provided with a user-friendly system to create "queries" that what would describe what makes a dataset relevant to them, applying for example filters on geographic coverage, topics covered, or other. Users would then be notified by email when relevant. An option to cancel the alerts set up by the user must be provided.
 
-Example of Google SCholar alerts:
+
+Example of Google Scholar alerts:
 
 <br>
 <center>
