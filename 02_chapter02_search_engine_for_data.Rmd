@@ -32,6 +32,8 @@ There are two types of search engines: lexical and semantic. The former matches 
 For microdata: embeddings based on thematic variable groupings - an option to implement semantic search and recommendations
 Discovery of microdata poses specific challenges. Typically, a data dictionary will be available, with variables organized by data file. A "virtual" organization of variables by thematic group, with a pre-defined ontology, can significantly improve data discoverability. AI solutions can be used to generate such groupings and map variables to them. The DDI metadata standard provides the metadata elements needed to store information on variable groups.
 
+What search returns: always, a list of results (list of entries) ranked by order of relevance (if none, a message "No entry match your query"). But also in some cases an answer in conversational mode (generative AI) and/or in the form of value/visulization. This will be only when the query justifies it. The system must be able to find out if such an immedate answer is appropriate. 
+
 #### Search box
 
 The default option to search for data in a specialized data catalog must be a single search box. Not all users can be expected to provide ideal queries. The search engine must be able to tolerate spelling mistakes. Auto-completion and spell checkers of queries can be enabled using indexing tools such as Solr or ElasticSearch. The query can be entered using the keyboard or audio.
@@ -159,7 +161,7 @@ Facets or filters are useful for narrowing down datasets based on specific metad
 
 Tags and tag groups (which are available in all schemas we recommend) provide much flexibility to implement facets, as we showed in section 1.7. 
 
-The user innterface should make it clear when entries are filtered, possibly by showing pills that can be de-activated.
+The user interface should make it clear when entries are filtered, possibly by showing pills that can be de-activated.
 
 #### Organizing entries by collections
 
@@ -319,7 +321,7 @@ Example of Google SCholar alerts:
 
 #### Data and metadata as a service
 
-- Maintain a data service: let external users build dashboards/poaltorms dynamically connected via API; one organization cannot customize to all communities of users.
+- Maintain a data service: let external users build dashboards/platorms dynamically connected via API; one organization cannot customize to all communities of users.
 
 Build your own dashboards
 - Allow users to set preferences: thematic, data type, geographies, search query
@@ -332,8 +334,10 @@ Build your own dashboards
 To keep up with modern data management needs, a comprehensive data catalog must provide users with convenient access to both data and metadata through an application programming interface (API). The structured metadata in a catalog allows users to extract specific components of the metadata they need, such as the identifier and title of all microdata and geographic datasets conducted after a certain year. With an API, users can easily and automatically access datasets or subsets of datasets they require. This enables internal features of the catalog such as dynamic visualizations and data previews, making data management more efficient. It is crucial that detailed documentation and guidelines on the use of the data and metadata API are provided to users to maximize the benefits of this feature.
 
 Metadata (and data) should be accessible via API
+If data accesisble via API, make it clear (and filter)
 The API should be well documented with examples.
 API query builder: UI for building an API query
+Limitations as required (API key; permission system; monitoring; security) 
 
 #### Online data access forms 
 
