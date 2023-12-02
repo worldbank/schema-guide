@@ -18,7 +18,7 @@ Users of a data catalog will typically want to **search** and **filter** the ass
 
 ### Search 
 
-Search engines in data catalogs can be *lexical* or *semantic* (or a combination of both). A lexical search (or keyword search, or full-text search) will match literal terms entered in a query to the search engine's index and return datasets whose indexed metadata contain the terms. A semantic search aims to identify datasets that have semantically similar metadata to the query. While an ideal data catalog would offer both types of search engines (ideally combined into a single search tool), implementing semantic searchability can be complex.
+In the realm of data catalogs, search engines can be categorized as either *lexical* or *semantic*, or they may seamlessly integrate elements of both. A lexical search, also referred to as a keyword or full-text search, operates by matching literal terms from a user query to the search engine's index, subsequently returning datasets whose indexed metadata includes the specified terms. On the other hand, a semantic search strives to pinpoint datasets with metadata that bears semantic resemblance to the query. Ideally, a comprehensive data catalog would incorporate both lexical and semantic search engines, seamlessly blended into a unified search tool. However, the integration of semantic search functionality presents a complexity in implementation.
 
 (explain how semantic search works for different data types - with embeddings and vector indexing and cosine similarity - use of API)
 
@@ -29,7 +29,9 @@ What search returns: always, a list of results (list of entries) ranked by order
 
 #### Search box
 
-The default option to search for data in a specialized data catalog must be a single search box. Not all users can be expected to provide ideal queries. The search engine must be able to tolerate spelling mistakes. Auto-completion and spell checkers of queries can be enabled using indexing tools such as Solr or ElasticSearch. The query can be entered using the keyboard or audio.
+In a data catalog, the primary means of searching for data is typically through a single, intuitive search box. Recognizing the diversity in users' search capabilities, the search engine must be designed to accommodate a range of query inputs, acknowledging that not all users will craft perfect queries. 
+
+To enhance user experience and overcome potential spelling errors, the search engine may leverage advanced indexing tools such as Solr or ElasticSearch. Additionally, users should have the flexibility to input queries either through traditional keyboard entry or via audio commands.
 
 <br>
 <center>
@@ -37,19 +39,13 @@ The default option to search for data in a specialized data catalog must be a si
 </center>
 <br>
 
-The search engine must be able to "understand" the user's query and to return the most relevant results ranked in order of importance. This may require an automated process of query parsing and enhancement. AMong other things, the query parsing may derive information on: 
-- the type of data that are of interest
-- whether the query is related to one or a few specific indicators available in the catalog assets
-- whether a geographic location is mentioned
-- whether a time is mentioned
-- whether a keyword search or a semantic search is most appropriate
-- detect the language of the query, and translate if appropriate
+Ensuring a nuanced understanding of user queries, the search engine should employ sophisticated processes, including automated query parsing and enhancement. This parsing mechanism extracts crucial information from the query, discerning factors such as the type of data under consideration, whether the query pertains to specific indicators within the catalog assets, references to geographic locations, time-related elements, and the suitability of a keyword search versus a semantic search. The system also endeavors to detect the language of the query and, if necessary, offers translation services.
 
-Based on this information, the application should be able to determine whether an immediate answer could be provided, and whether the answer should be textual, a data grid, or a visualization.
+A pivotal aspect of the search engine's functionality lies in its ability to decipher the user's intent and return results ranked by relevance. This demands an intricate analysis of the query, potentially leading to immediate answers. Depending on the nature of the query, the application must intelligently determines whether to present results in textual form, organize them in a data grid, or generate visualizations for a more comprehensive understanding. This multifaceted approach ensures that users can interact seamlessly with the data catalog, obtaining the most pertinent information in a manner that aligns with their preferences and requirements.
 
 #### Document as a query
 
-A search engine with semantic search capability should be able to process short or long queries, even accepting a document (a PDF or a TXT file) as a query. The search engine will then first analyze the semantic content of the document, convert it into an embedding vector, and identify the closest resources available in the catalog. 
+A search engine equipped with semantic search capabilities extends its user-friendly functionality by accommodating queries of varying lengths, including the innovative option for users to submit entire documents—whether in PDF or TXT format—as queries. Upon receiving a document query, the search engine initiates a sophisticated process wherein it meticulously analyzes the semantic content within the document. This involves transforming the document into an embedding vector, a compact representation capturing its semantic essence. Subsequently, the search engine adeptly identifies and retrieves the most relevant resources from the catalog, ensuring a nuanced and contextually rich response to the user's document-based query.
 
 <br>
 <center>
@@ -59,10 +55,13 @@ A search engine with semantic search capability should be able to process short 
 
 #### Image as a query
 
+A cutting-edge search engine, empowered with advanced image search capabilities, introduces an innovative dimension to user interaction by enabling the submission of images as queries. Users can seamlessly upload images in various formats, unlocking a novel means of exploration. Upon receiving an image query, the search engine embarks on a sophisticated journey, meticulously analyzing the visual content embedded in the image. Through intricate processes such as feature extraction and image embedding, the search engine translates the visual information into a compact and meaningful representation. Leveraging this representation, the search engine then identifies and retrieves the most pertinent resources from the catalog, delivering a tailored and visually aligned response to the user's image-based query. This transformative capability enhances the search experience, allowing users to explore and discover relevant content through the lens of visual input.
 
 #### Suggested queries
 
-After processing a user query, the application can provide suggestions for related keywords. This can be implemented using a graph of related words generated by natural language processing (NLP) models. Access to an API is necessary to implement keyword suggestions based on such graphs. The example below shows a related words graph for the terms "climate change" as returned by an NLP model.
+Contemporary search engines can further enrich the user experience by the proactive generation of pertinent and refined query suggestions. Beyond merely processing user queries, these advanced search engines leverage sophisticated techniques to automatically propose alternative queries that are more useful and relevant. This intelligent feature is often implemented through the utilization of expansive graphs of related words, crafted by state-of-the-art Natural Language Processing (NLP) models. By tapping into the inherent semantic relationships between words, these graphs offer a comprehensive understanding of language nuances.
+
+To implement such dynamic query suggestions, seamless integration with an API becomes imperative. This API facilitates the retrieval of insightful keyword recommendations grounded in the intricate web of semantic connections identified by NLP models. Users benefit from a fluid and intuitive search experience as the search engine anticipates their needs and refines their queries in real-time. This proactive query suggestion mechanism stands as a testament to the evolving landscape of search technology, where the fusion of NLP and intelligent algorithms empowers users with not only accurate search results but also a collaborative and responsive search process.
 
 <br>
 <center>
@@ -80,7 +79,9 @@ A search interface could retrieve such information via API and display it as fol
 
 #### Advanced search 
 
-It is useful also to provide users with an option to build a more advanced search, targetted to specific metadata elements and with boolean operators. Advanced search are enabled by structured metadata, i.e., by the use of metadata standards and schemas. The advanced search should be available as a user interface and using a syntax option. The interface could be as follows:
+Advanced search are enabled by structured metadata, i.e., by the use of metadata standards and schemas. Accessible through an intuitive user interface, an *advanced search* option provides users with a dynamic and interactive platform to specify their search criteria. Users can pinpoint their focus to distinct metadata fields, enabling a fine-grained exploration of datasets within the catalog. Furthermore, to cater to users familiar with syntax-based queries, the Advanced Search offers a syntax option, granting more adept users the flexibility to craft complex search queries using boolean operators.
+
+Whether through the user-friendly interface or the syntax option, the Advanced Search capability provides a comprehensive and tailored search experience. This feature not only acknowledges the diverse needs of users but also reflects the catalog's ability to facilitating efficient and precise data discovery through the judicious use of structured metadata.
 
 <br>
 <center>
@@ -97,22 +98,16 @@ This would correspond to the following syntax that the user could enter directly
 
 #### Geographic search
 
-Data catalogs receive numerous queries that are related to a particular geography. Analysis of millions of queries from the World Bank (WB) and International Monetary Fund (IMF) data catalogs revealed that a significant percentage of queries consist of a single country name. For data catalogs that cover multiple countries, creating a "Country page" can provide a quick overview of the most recent and popular datasets of different types, which many users may find helpful.
+Geographic discoverability and searchability within data catalogs are critical components that cater to the diverse needs of users seeking information pertaining to specific geographic areas. Data catalogs routinely receive a substantial volume of queries centered around particular regions, whether at the country level, sub-national entities, or non-administrative geographic features like watersheds and oceans. In the context of data catalogs housing geographic datasets, it becomes imperative to offer specialized search tools that enhance the precision and relevance of spatial data discovery.
 
-However, geography is not limited to countries alone. Many users may be interested in sub-national data or geographic areas that do not correspond to administrative areas, such as a watershed or an ocean. Especially when a data catalog contains geographic datasets, it is recommended to provide specialized search tools. Most metadata standards allow the use of bounding boxes to specify geographic coverage, which could be used to develop a "search" tool that enables a user to draw a box on a map. But this option is very imperfect (explain why).
+While metadata standards often allow the utilization of bounding boxes to specify geographic coverage, this method has inherent limitations that make it imperfect. Drawing a box on a map to define an area oversimplifies the complexity of geographical features, particularly when users are interested in irregular or non-standard shapes. To address this limitation, it is recommended to incorporate advanced geographic search tools that provide users with more nuanced ways to explore datasets based on their spatial characteristics.
 
-Example from data.gov (https://catalog.data.gov/dataset/?metadata_type=geospatial)
-<br>
-<center>
-![image](https://user-images.githubusercontent.com/35276300/230094206-ff3bca7b-58ee-4061-ab0c-7777d9286813.png)
-</center>
-<br>
+Geographic indexing emerges as a powerful solution for datasets with explicit geographic content. The H3 index, known for its hierarchical hexagonal structure, proves to be a robust option. The hierarchical nature of the H3 index facilitates efficient aggregation and retrieval of data at various levels of granularity, offering an effective means to enhance the geographic discoverability of datasets within a catalog. By adopting geographic indexing, the catalog ensures that users can precisely identify and access datasets relevant to their spatial requirements.
 
-For geographic datasets, geographic indexing is recommended. The H3 index is a powerful option. (describe)
+Recognizing that many users rely on keyword searches to discover data, it is also essential to address the challenges associated with incomplete metadata coverage. For instance, a raster image of the Philippines obtained from satellite imagery may contain the country name in its metadata. Still, specific sub-national areas like "Iloilo" may not be explicitly mentioned. To overcome this limitation, a sophisticated search engine should implement intelligent query parsing. This involves detecting if a user query contains the name of a geographic area, automatically identifying the corresponding polygon of geographic coordinates. This process can be facilitated by leveraging APIs such as Nominatim. Subsequently, the search engine retrieves relevant resources in the catalog that cover the specified geographic area, underscoring the importance of geographically indexing datasets to enable accurate and comprehensive results.
 
-Also, one must take into account that many users will rely on a keywords search to identify data. For example, a raster image of the Philippines (e.g., dataset from a satellite imagery) will contain the country name in the metadata, but the metadata cannot contain the name of all geographic areas coveregd by the data. A user looking for "Iloilo" for example would not find this relevant dataset based on a simple keyword search. The solution would be for the search engine to parse the query, detect if it contains the name of a geographic area, automatically identify the area (polygon of geographic coordinates) that corresponds to it (possibly using an API built around Nominatim), and retrieve resources in the catalog that cover the area (which requires that the datasets in the catalog be indexed geographically).  
+This integrated approach ensures that users can seamlessly navigate and explore geographic datasets within the catalog, whether through advanced search tools, geographic indexing, or intelligent keyword parsing, thereby fostering a robust and user-centric data discovery experience.
 
-(describe how this works - illustrate from our KCP project "Indexing the world").   
 
 <br>
 <center>
@@ -138,19 +133,25 @@ The search API endpoint of Nominatim returns this JSON data which can be process
 
 #### Ranking results 
 
-A search engine not only needs to identify relevant datasets but also must return the results in a proper order of relevance, with the most relevant results at the top of the list. If users fail to find a relevant response among the top results, they may choose to search for data elsewhere. The ability of a search engine to return relevant results in the optimal rank depends on the metadata's content and structure. To optimize the ranking of results, a lot of relevance engineering is required, including tuning advanced search tools like Solr or ElasticSearch. 
+A search engine must not only identify relevant datasets but also present them in an ordered list based on their level of relevance. The ranking of results directly influences users' ability to quickly find pertinent information, with the most relevant outcomes prominently positioned at the top. If users do not encounter relevance in the initial results, there's a risk of them seeking data from alternative sources, emphasizing the critical role of effective result ranking in user satisfaction and retention.
 
-Large data catalogs managed by well-resourced agencies can leverage data scientists to explore the possibility of using machine learning solutions such as "learn-to-rank" to improve result ranking. See section "Improving results ranking" below. For more detailed information, see D. Turnbull and J. Berryman's (2016) in-depth description of tools and methods.
+Achieving optimal result ranking hinges on the careful consideration of both the content and structure of metadata. Relevance engineering plays a pivotal role in this process, requiring fine-tuning of advanced search tools such as Solr or ElasticSearch. This is a crucial step in ensuring that the search engine not only identifies relevant datasets but also presents them in a manner that aligns with users' expectations.
 
-Keyword-based searches can be optimized using tools like Solr or ElasticSearch. Out-of-the-box solutions, such as those provided by SQL databases, rarely deliver satisfactory results. Structured metadata can help optimize search engines and the ranking of results by allowing for the boosting of specific metadata elements. For instance, a query term found in the *title* of a dataset would carry more weight than if it were found in the *notes* element, and the results would be ranked accordingly. Similarly, a country name found in the *nation* or *reference country* metadata elements should be given more weight than if it were found in a variable description. 
-Also, some or all keywords; grouped/sequence/proximity; etc.
+Optimizing keyword-based searches is integral to effective result ranking. While out-of-the-box solutions like those provided by SQL databases may fall short, advanced indexing tools such as Solr and ElasticSearch offer robust mechanisms for enhancement. Structured metadata proves to be a key ally in this optimization effort, enabling the boosting of specific metadata elements. For instance, a query term found in the title holds greater weight than if found in notes, and results are ranked accordingly. Similarly, attributing more weight to a country name found in designated metadata elements like nation or reference country ensures that results align with the contextual relevance of the query.
 
-Advanced indexing tools like Solr and ElasticSearch provide boosting functionalities to fine-tune search engines and enhance result relevancy.
+Furthermore, advanced indexing tools provide additional functionalities, including grouping, sequencing, and proximity-based considerations, further refining the result ranking process. The boosting capabilities offered by tools like Solr and ElasticSearch empower search engines to adapt and align with the nuanced preferences of users, ultimately contributing to an enhanced and efficient data discovery experience.
+
+For large data catalogs managed by well-resourced agencies, the exploration of machine learning solutions, particularly "learn-to-rank" techniques, offers an avenue for result ranking enhancement. This involves leveraging the expertise of data scientists to develop models that can intelligently weigh and prioritize results based on relevance, contributing to an improved and personalized user experience. 
 
 #### Saving and sharing results
 
-URL / API query ; export list ; social networks, etc.
+Empowering users with the ability to save, export, and share their search queries within a data catalog search engine enhances the overall utility and collaborative potential of the platform. The option to save a search query for future re-use provides users with a convenient way to revisit and refine their information retrieval strategies. This is particularly beneficial for users engaging in recurrent or complex data exploration, allowing them to streamline their workflow and save time.
 
+The capability to export search results is equally crucial, offering users the flexibility to analyze and manipulate the obtained data outside the confines of the search engine. Exported results, whether in the form of downloadable files or accessible URLs, enable seamless integration with external tools and applications for further analysis or visualization.
+
+Sharing functionalities contribute to the collaborative aspect of data exploration. Enabling users to share both their saved queries and the results with others fosters knowledge exchange and collaboration within the user community. The option to share via social media platforms adds an additional layer of accessibility, allowing users to disseminate valuable insights to a broader audience and potentially connect with others who share similar interests or objectives.
+
+In essence, the ability to save, export, and share search queries and results not only enhances the individual user experience by facilitating efficient workflow management but also promotes collaboration, knowledge-sharing, and community engagement within the data catalog ecosystem. This collaborative dimension contributes to the creation of a more dynamic and interactive user community, fostering a culture of shared insights and collective learning.
 
 ### Filtering
 
