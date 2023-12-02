@@ -14,7 +14,9 @@ The creation of a data dissemination platform is a collaborative endeavor, engag
 
 In order to cultivate a favorable user experience, online data catalogs must offer an intuitive and efficient interface, allowing users to effortlessly access the most pertinent datasets. To meet user expectations effectively, one should emphasize **simplicity** and **relevance**. A data dissemination platform should also be made accessible free of discrimination. The Web Content Accessibility Guidelines (WCAG) international standard provides principles and recommendations for accessibility to people with disabilities. Integrating these principles into the design of data catalogs can deliver a seamless and user-friendly experience, akin to the convenience and ease provided by internet search engines and e-commerce platforms. 
 
-Users of a data catalog will typically want to **search** and **filter** the assets available in a catalog. They will also wantto **browse** and possibly **sort** the catalog entries or the entries returned by running a search or by activating a filter. We describe below how the search, filtering, browsing, and sorting features may be designed to provide a user-friendly experience. **Other features** of a data catalog that may be useful to users are also proposed.
+Users of a data catalog will typically want to **search** and **filter** the assets available in a catalog. They will also wantto **browse** and possibly **sort** the catalog entries or the entries returned by running a search or by activating a filter. We describe below how the search, filtering, browsing, and sorting features may be designed to provide a user-friendly experience. **Other features** of a data catalog that may be useful to users are also proposed, including features enabled by artificial intelligence, which are to a large extent in exploratory stage.
+
+As artificial intelligence (AI) and machine learning (ML) solutions continue to advance, there emerges a capacity for these search engines to go beyond merely delivering a ranked list of results. In certain scenarios, particularly when the nature and content of a user's query permit, the search algorithm can generate a more direct and informative response. This could take the form of a conversational reply, synthesized through generative AI, or the presentation of structured data grids and visualizations that directly address the query. For such capabilities to be effectively implemented, the system must exhibit a level of intelligence that allows it to discern the appropriate response strategy. This involves parsing the intricacies of the query, recognizing patterns, and making informed decisions on whether to provide a direct answer or adhere to the conventional approach of returning a ranked list of resources. The fusion of advanced AI and ML technologies with search engines in data catalogs marks a significant evolution, empowering users with more nuanced and contextually relevant information retrieval experiences.
 
 ### Search 
 
@@ -22,7 +24,7 @@ Search engines implemented in data catalogs can be categorized as either *lexica
 
 Semantic search leverages advanced techniques like embeddings, vector indexing, and similarity measures to enhance the precision and relevance of search results by capturing the semantic meaning of user queries and dataset content. The process typically involves converting words or phrases into high-dimensional vectors using embeddings. Embeddings are representations of words or phrases in a continuous vector space, where semantically similar terms are positioned closer to each other.
 
-Vector indexing in specialized vector databases is a key aspect of semantic search. These databases, such as Milvus or Qadrant, are optimized for storing and querying high-dimensional vectors efficiently. They enable the indexing of embeddings associated with both user queries and catalog resources, allowing for fast and accurate similarity searches.
+Vector indexing in specialized *vector databases* is a key aspect of semantic search. These databases, such as Milvus or Qadrant, are optimized for storing and querying high-dimensional vectors efficiently. They enable the indexing of embeddings associated with both user queries and catalog resources, allowing for fast and accurate similarity searches.
 
 Cosine similarity is a common measure used in semantic search to quantify the similarity between vectors. In a vector space, the cosine of the angle between two vectors is calculated, with a higher cosine indicating greater similarity. This measure is instrumental in ranking and retrieving datasets based on their semantic relevance to a user's query.
 
@@ -31,12 +33,6 @@ To facilitate the implementation of semantic search, APIs play a crucial role. A
 In a search engine, semantic search is often combined with lexical search to offer a comprehensive and effective discovery system. Lexical search involves matching literal terms in a user query to the search engine's index, while semantic search focuses on identifying datasets with semantically similar metadata. Combining these approaches ensures a balanced and robust search system, catering to a wide range of user preferences and query styles.
 
 In summary, semantic search is a powerful approach that involves embeddings, vector indexing, and similarity measures to provide users with more contextually relevant results. Specialized vector databases, APIs for embeddings, and a combination with lexical search contribute to the seamless implementation of semantic search in data catalog search engines, enhancing the overall user experience and discovery capabilities.
-
-
-For microdata: embeddings based on thematic variable groupings - an option to implement semantic search and recommendations
-Discovery of microdata poses specific challenges. Typically, a data dictionary will be available, with variables organized by data file. A "virtual" organization of variables by thematic group, with a pre-defined ontology, can significantly improve data discoverability. AI solutions can be used to generate such groupings and map variables to them. The DDI metadata standard provides the metadata elements needed to store information on variable groups.
-
-What search returns: always, a list of results (list of entries) ranked by order of relevance (if none, a message "No entry match your query"). But also in some cases an answer in conversational mode (generative AI) and/or in the form of value/visualization. This will be only when the query justifies it. The system must be able to find out if such an immedate answer is appropriate. 
 
 #### Search box
 
@@ -119,7 +115,6 @@ Recognizing that many users rely on keyword searches to discover data, it is als
 
 This integrated approach ensures that users can seamlessly navigate and explore geographic datasets within the catalog, whether through advanced search tools, geographic indexing, or intelligent keyword parsing, thereby fostering a robust and user-centric data discovery experience.
 
-
 <br>
 <center>
 ![image](https://user-images.githubusercontent.com/35276300/230091095-d63c8b8f-7684-41db-b347-d75ded1dc95a.png)
@@ -166,9 +161,13 @@ In essence, the ability to save, export, and share search queries and results no
 
 ### Filtering
 
-Applies to full catalog (window shopping) or results from a search.
+The incorporation of filtering options, such as facets or other navigational tools, alongside a search engine within a data catalog is of paramount importance. While search engines excel at pinpointing specific items based on user queries, filtering options complement this functionality by enabling users to refine and explore the catalog comprehensively. These filters empower users to navigate through extensive datasets with precision, allowing them to narrow down results based on criteria such as data type, date range, or specific attributes. This not only streamlines the browsing experience for users seeking specific subsets of information but also facilitates a more nuanced exploration of the entire catalog. By offering both a powerful search engine and versatile filtering mechanisms, a data catalog ensures that users can efficiently uncover relevant data through tailored search queries or by dynamically refining their exploration of the complete catalog or search results.
 
-Facets or filters are useful for narrowing down datasets based on specific metadata categories. For instance, in a data catalog with datasets from different countries, a "country" facet can help users find relevant datasets quickly. To be effective, filters must be based on metadata elements that have a limited number of categories and a predictable set of options. Controlled vocabularies can be used to enable such filters. Furthermore, as some metadata elements are specific to particular data types, contextual facets should be integrated into the catalog's user interface to offer relevant filters based on the type of data being searched.
+#### Facets 
+
+Facets, also referred to as *filters*, play a crucial role in enhancing the usability of a data catalog by allowing users to refine their searches and navigate through datasets with precision. Structured metadata and controlled vocabularies form the backbone of these facets, providing a systematic framework for categorizing and organizing information. For example, in a data catalog featuring datasets from various countries, a "country" facet can serve as a powerful filter, enabling users to swiftly locate relevant datasets associated with specific geographic regions. The effectiveness of these filters hinges on metadata elements characterized by a limited number of categories and a predictable set of options, which is facilitated through the use of controlled vocabularies.
+
+In the user interface (UI) of a data catalog, the visibility and accessibility of activated filters are paramount. UI design should prioritize making activated filters easily noticeable and providing a straightforward mechanism for deactivation, such as the use of filter "pills" that can be conveniently toggled on and off. This ensures that users have a transparent and intuitive means of managing their refined search criteria. Additionally, recognizing that certain metadata elements are inherently tied to specific data types, the integration of contextual facets within the catalog's UI becomes essential. These contextual facets dynamically offer relevant filters based on the type of data being searched, further optimizing the user experience and facilitating efficient exploration of the catalog's diverse datasets.
 
 <center>
 ![](./images/catalog_facets_01.JPG){width=100%}
@@ -177,35 +176,35 @@ Facets or filters are useful for narrowing down datasets based on specific metad
 
 Tags and tag groups (which are available in all schemas we recommend) provide much flexibility to implement facets, as we showed in section 1.7. 
 
-The user interface should make it clear when entries are filtered, possibly by showing pills that can be de-activated.
-
 #### Organizing entries by collections
 
-Catalogs that contain many entries may organize such entries by *collection*. The collections may be thematic or other (for example, entries may be organized by origin of the data, geographic coverage, or other criteria). Collections are virtual; a same entry may belong to more than one collection. A brief description of each collection, and a "filter by collection", should be provided.
+Organizing data assets into virtual collections within catalogs significantly enhances users' ability to navigate and discover relevant information efficiently. These collections, which can be structured thematically, geographically, by sponsor, producer, or any other relevant criteria, serve as intuitive groupings (and filters) that streamline the search process. For instance, datasets may be grouped by the origin of the data, geographic coverage, or thematic focus. The virtual nature of collections allows a single data asset to belong to multiple collections simultaneously, recognizing the multidimensional nature of datasets. Each collection must come with a brief descriptive overview, providing users with valuable context about the content it encompasses. 
 
 #### Organizing entries by data type
 
-When a data catalog contains multiple types of data, it should offer an easy way for users to filter and display query results by data type. For example, when searching for "US population," one user may only be interested in knowing the total population of the USA, while another may need the public use census microdata sample, and a third may be searching for a publication. To cater to such needs, presenting query results in type-specific tabs (with an "All" option) and/or providing a filter (facet) by type will allow users to focus on the types of data relevant to them. This is similar to commercial platforms that offer search results organized by department, allowing users to search for "keyboard" in either the "music" or "electronics" department.
+Organizing data assets within a data catalog by main data type facilitates user navigation and ensures that individuals can easily locate the specific information they seek. In a catalog encompassing diverse data types such as microdata, indicators, geographic datasets, documents, and more, offering a streamlined mechanism for users to filter and display query results by data type is paramount. This functionality accommodates the varied needs of users conducting searches with distinct objectives.
+
+Consider a scenario where users are searching for "US population." One user may be interested solely in obtaining the total population of the USA, while another might specifically seek the public use census microdata sample, and a third may be looking for a relevant publication. To cater to these diverse needs, presenting query results in type-specific tabs (with an "All" option) or providing a filter (facet) by type becomes instrumental. This approach empowers users to focus on the particular data types that align with their requirements, streamlining the information retrieval process.
+
+By implementing such features, data catalogs not only enhance user experience but also cater to the varying capacities and expertise of users. For example, users without statistical analysis expertise may prefer to filter out microdata, focusing only on data types that align with their capabilities. This organization and filtering by data type contribute to a more personalized and user-centric service, ensuring that individuals can efficiently access and utilize the data most relevant to their specific needs and competencies.
 
 <center>
 ![](./images/catalog_tabs_01.JPG){width=100%}
 </center>
 <br>
 
-#### Transparency in access policies
+#### Filtering by access type 
 
-The terms of use (ideally provided in the form of a standard license) and the conditions of access to data should be made transparent and visible in the data catalog. The access policy will preferably be provided using a controlled vocabulary, which can be used to enable a facet (filter) as shown in the screenshot below.
+Organizing data assets within a data catalog by mode of access and access policy also contributes to ensuring that users can easily identify and access datasets aligned with their specific needs, preferences, and compliance requirements. The mode of access, whether through bulk download, API, or other means, serves as a critical factor for users who may have distinct preferences or technical capabilities. For instance, some users might prefer bulk download options for offline analysis, while others may seek real-time access through APIs.
+
+Equally important is the categorization of datasets based on access policies. Clear and transparent access policies, preferably articulated through a standard license and utilizing a controlled vocabulary, provide users with essential information regarding the type of access granted. This could include distinctions between open access, public use files, licensed access, or access within a secure data enclave. The use of controlled vocabulary enables the creation of a facet (filter) that allows users to refine their search based on specific access conditions.
+
+Making access policies prominently visible in the data catalog is essential for user understanding and compliance. A standardized presentation, potentially through a facet, allows users to quickly filter datasets based on their preferred level of access and usage rights. Additionally, any specific access conditions, restrictions, or requirements should be clearly communicated to users to ensure transparency and adherence to relevant legal and ethical considerations. In this way, organizing data assets by mode of access and access policy not only simplifies the user's navigation of the catalog but also contributes to a more informed and responsible use of the available datasets.
 
 <center>
 ![](./images/catalog_access_policy_01.JPG){width=100%}
 </center>
 <br>
-
-#### Other facets
-
-Structured metadata enables it
-Tags and tag groups
-
 
 ### Browsing
 
