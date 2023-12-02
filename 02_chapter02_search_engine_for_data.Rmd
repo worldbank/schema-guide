@@ -18,14 +18,25 @@ Users of a data catalog will typically want to **search** and **filter** the ass
 
 ### Search 
 
-In the realm of data catalogs, search engines can be categorized as either *lexical* or *semantic*, or they may seamlessly integrate elements of both. A lexical search, also referred to as a keyword or full-text search, operates by matching literal terms from a user query to the search engine's index, subsequently returning datasets whose indexed metadata includes the specified terms. On the other hand, a semantic search strives to pinpoint datasets with metadata that bears semantic resemblance to the query. Ideally, a comprehensive data catalog would incorporate both lexical and semantic search engines, seamlessly blended into a unified search tool. However, the integration of semantic search functionality presents a complexity in implementation.
+Search engines implemented in data catalogs can be categorized as either *lexical* or *semantic*, or they may seamlessly integrate elements of both. A lexical search, also referred to as a keyword or full-text search, operates by matching literal terms from a user query to the search engine's index, subsequently returning datasets whose indexed metadata includes the specified terms. On the other hand, a semantic search strives to pinpoint datasets with metadata that bears semantic resemblance to the query. Ideally, a comprehensive data catalog would incorporate both lexical and semantic search engines, seamlessly blended into a unified search tool. However, the integration of semantic search functionality presents a complexity in implementation.
 
-(explain how semantic search works for different data types - with embeddings and vector indexing and cosine similarity - use of API)
+Semantic search leverages advanced techniques like embeddings, vector indexing, and similarity measures to enhance the precision and relevance of search results by capturing the semantic meaning of user queries and dataset content. The process typically involves converting words or phrases into high-dimensional vectors using embeddings. Embeddings are representations of words or phrases in a continuous vector space, where semantically similar terms are positioned closer to each other.
+
+Vector indexing in specialized vector databases is a key aspect of semantic search. These databases, such as Milvus or Qadrant, are optimized for storing and querying high-dimensional vectors efficiently. They enable the indexing of embeddings associated with both user queries and catalog resources, allowing for fast and accurate similarity searches.
+
+Cosine similarity is a common measure used in semantic search to quantify the similarity between vectors. In a vector space, the cosine of the angle between two vectors is calculated, with a higher cosine indicating greater similarity. This measure is instrumental in ranking and retrieving datasets based on their semantic relevance to a user's query.
+
+To facilitate the implementation of semantic search, APIs play a crucial role. APIs for generating embeddings streamline the process by providing access to pre-trained models or embedding services. These APIs take care of the complex task of converting textual data into meaningful embeddings, saving time and resources for developers. Additionally, APIs for search engines allow the integration of semantic search capabilities seamlessly, enabling the retrieval of relevant results based on semantic similarity.
+
+In a search engine, semantic search is often combined with lexical search to offer a comprehensive and effective discovery system. Lexical search involves matching literal terms in a user query to the search engine's index, while semantic search focuses on identifying datasets with semantically similar metadata. Combining these approaches ensures a balanced and robust search system, catering to a wide range of user preferences and query styles.
+
+In summary, semantic search is a powerful approach that involves embeddings, vector indexing, and similarity measures to provide users with more contextually relevant results. Specialized vector databases, APIs for embeddings, and a combination with lexical search contribute to the seamless implementation of semantic search in data catalog search engines, enhancing the overall user experience and discovery capabilities.
+
 
 For microdata: embeddings based on thematic variable groupings - an option to implement semantic search and recommendations
 Discovery of microdata poses specific challenges. Typically, a data dictionary will be available, with variables organized by data file. A "virtual" organization of variables by thematic group, with a pre-defined ontology, can significantly improve data discoverability. AI solutions can be used to generate such groupings and map variables to them. The DDI metadata standard provides the metadata elements needed to store information on variable groups.
 
-What search returns: always, a list of results (list of entries) ranked by order of relevance (if none, a message "No entry match your query"). But also in some cases an answer in conversational mode (generative AI) and/or in the form of value/visulization. This will be only when the query justifies it. The system must be able to find out if such an immedate answer is appropriate. 
+What search returns: always, a list of results (list of entries) ranked by order of relevance (if none, a message "No entry match your query"). But also in some cases an answer in conversational mode (generative AI) and/or in the form of value/visualization. This will be only when the query justifies it. The system must be able to find out if such an immedate answer is appropriate. 
 
 #### Search box
 
