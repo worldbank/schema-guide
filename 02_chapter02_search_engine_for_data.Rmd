@@ -10,6 +10,8 @@ We provide recommendations for developing data catalogs that encompass lexical s
 
 The creation of a data dissemination platform is a collaborative endeavor, engaging data curators, user experience (UX) experts, user interface (UI) designers, search and systems engineers, and subject matter specialists with a profound understanding of both the data and the users' requirements and preferences. Inclusive in this development process should be the active participation of the users, allowing them to provide feedback that directly influences the system's design.
 
+The set of features we describe below are proposed for a large data catalog, developed and mantained by a well-resourced organization. Not all features would be appropriate for a small catalog or for a catalog maintained by an organization facing technical and other constraints. In such situations, semantic search capability and the implementation of features that require the implementation of machine learning of generative artificial intelligence may not be recommended.
+
 ## Features for data users 
 
 In order to cultivate a favorable user experience, online data catalogs must offer an intuitive and efficient interface, allowing users to effortlessly access the most pertinent datasets. To meet user expectations effectively, one should emphasize **simplicity** and **relevance**. A data dissemination platform should also be made accessible free of discrimination. The Web Content Accessibility Guidelines (WCAG) international standard provides principles and recommendations for accessibility to people with disabilities. Integrating these principles into the design of data catalogs can deliver a seamless and user-friendly experience, akin to the convenience and ease provided by internet search engines and e-commerce platforms. 
@@ -208,9 +210,19 @@ Making access policies prominently visible in the data catalog is essential for 
 
 ### Browsing
 
-#### Providing core information in the entry list page
+Browsing a data catalog refers to the process of exploring and navigating through the catalog's contents to discover relevant datasets or information. Unlike targeted searches that involve specific queries, browsing involves a more exploratory approach, allowing users to casually peruse the catalog's offerings. It is akin to strolling through the aisles of a library or scanning the shelves of a bookstore to see what catches your interest.
 
-The list of entries that the users will browse should provide the core information on each entry in a *card*. The user who browses the catalog should not have to open a new page to obtain the most important information such as the title, year, author/producer, and other key information about the entry.
+In the context of a data catalog, browsing typically involves navigating through categories, collections, or filters that organize datasets based on thematic, geographic, or other criteria. Users might scroll through a list of datasets, explore collections related to specific topics, or filter results based on certain attributes. The goal is to serendipitously come across valuable data assets, discover new insights, or identify datasets that align with the user's interests or project requirements.
+
+Effective browsing in a data catalog often relies on well-organized metadata, clear categorization, and intuitive user interfaces. Browsing functionality can encompass various features such as filters, facets, and sorting options, enabling users to refine their exploration and focus on datasets that match their criteria. Ultimately, the browsing experience in a data catalog is designed to be user-friendly, encouraging users to efficiently explore and discover the wealth of information available within the catalog's repository.
+
+#### Providing core information in the listing page
+
+Designing a data catalog with a concise and informative listing page, presented in the form of a card, is crucial for optimizing user experience and aiding efficient decision-making. This card format should encapsulate key details such as entry title, period, geographic coverage, producer, API availability, a brief description, and potentially a logo. By encapsulating these essential elements in a compact display, users can swiftly evaluate the relevance of a dataset without the need to navigate to a separate page.
+
+The entry title serves as a focal point, providing a quick overview of the dataset's main subject. Period and geographic coverage offer immediate insights into the temporal and spatial dimensions of the data. Knowing the producer lends credibility and context to the dataset, while information on API availability indicates the level of accessibility and functionality for technically inclined users. A concise description complements these details, offering a snapshot of the dataset's purpose and content. Including a logo enhances visual recognition, especially for datasets associated with specific organizations or brands.
+
+This streamlined presentation ensures that users can make informed decisions about exploring further details without the need to open multiple pages. The goal is to empower users with enough information upfront, streamlining their browsing experience and enabling efficient decision-making regarding the datasets most relevant to their needs. Ultimately, the catalog card functions as a powerful tool to engage users, providing a snapshot of critical information and enticing them to delve deeper into datasets that align with their specific interests and requirements.
 
 #### Highlights and most popular entries
 
@@ -218,7 +230,15 @@ Some catalog entries may be highlighted in the catalog, and the most popular ent
 
 #### Recent additions and history
 
-Some users may be interested in finding out what new entries are available in the catalog. The catalog should provide a list of the most recent additions, and a history of additions and updates. The entries in the catalog should be sortable by the date the entry was added or last modified.
+Providing users with a list of the "latest additions" and maintaining a history of additions and modifications in a data catalog is highly useful for several reasons.
+
+- Stay Updated: The "latest additions" feature allows users to quickly identify and access the most recently added datasets. This is particularly valuable for users who want to stay up-to-date with the latest information or who are interested in newly available datasets that might be relevant to their work or research.
+
+- Track Changes: A history of additions and modifications provides transparency and accountability. Users can track changes made to datasets over time, including updates, revisions, or corrections. This history is crucial for maintaining data integrity and ensuring users are aware of any changes that may impact their use of the data.
+
+- Version Control: For datasets that undergo multiple versions or updates, a history log helps users understand the evolution of the data. This version control is essential for researchers, analysts, or anyone relying on specific versions of datasets for consistency and reproducibility in their work.
+
+- Enhance Trust: Transparency in the catalog's modification history builds trust among users. Knowing when and how datasets have been added or modified contributes to the credibility of the catalog and the reliability of the data it contains.
 
 <br>
 ![image](https://user-images.githubusercontent.com/35276300/231492091-a96d4c5c-c461-4b5f-88c1-f8db26daa98d.png)
@@ -226,9 +246,9 @@ Some users may be interested in finding out what new entries are available in th
 
 #### Metadata display and formats
 
-To make metadata easily accessible to users, it's important to display it in a convenient way. The display of metadata will vary depending on the data type being used, as each type uses a specific metadata schema. For online catalogs, style sheets can be utilized to control the appearance of the HTML pages.
+To make metadata easily accessible to users, it is important to display it in a convenient way. The display of metadata will vary depending on the data type being used, as each type uses a specific metadata schema. For online catalogs, style sheets can be utilized to control the appearance of the HTML pages.
 
-In addition to being displayed in HTML format, metadata should be available as electronic files in JSON, XML, and potentially PDF format. Structured metadata provides greater control and flexibility to automatically generate JSON and XML files, as well as format and create PDF outputs. It's important that the JSON and XML files generated by the data catalog comply with the underlying metadata schema and are properly validated. This ensures that the metadata files can be easily and reliably reused and repurposed.
+In addition to being displayed in HTML format, metadata should be available as electronic files in JSON, XML, and potentially PDF format. Structured metadata provides greater control and flexibility to automatically generate JSON and XML files, as well as format and create PDF outputs. It is important that the JSON and XML files generated by the data catalog comply with the underlying metadata schema and are properly validated. This ensures that the metadata files can be easily and reliably reused and repurposed.
 
 <center>
 ![](./images/catalog_display_01.JPG){width=100%}
@@ -238,9 +258,7 @@ In addition to being displayed in HTML format, metadata should be available as e
 
 #### Variable-level comparison
 
-E-commerce platforms commonly allow customers to compare products by displaying their pictures and descriptions (i.e., metadata) side-by-side. Similarly, for data users, the ability to compare datasets can be valuable to evaluate the consistency or comparability of a variable or an indicator over time or across sources and countries. However, to implement this functionality, detailed and structured metadata at the variable level are necessary. These metadata standards, such as DDI and ISO 19110/19139, enable the implementation of this feature. 
-
-In the example below, we show how a query for *water* returns not only a list of seven datasets, but also a list of variables in each dataset that match the query.
+This features is specific to microdata. E-commerce platforms commonly allow customers to compare products by displaying their pictures and descriptions side-by-side. Similarly, for data users, the ability to compare datasets can be valuable to evaluate the consistency or comparability of a variable or an indicator over time or across sources and countries. However, to implement this functionality, detailed and structured metadata at the variable level are necessary. These metadata standards, such as DDI and ISO 19110/19139, enable the implementation of this feature. In the example below, we show how a query for *water* returns not only a list of seven datasets, but also a list of variables in each dataset that match the query.
 
 <center>
 ![](./images/catalog_variable_view_01.JPG){width=100%}
@@ -263,22 +281,41 @@ After selecting the variables of interest, users should be able to display their
 
 #### Image mosaic view
 
+If the catalog contains entries of type "image", a mosaic view should be provided in addition to the listing view. The availability of a mosaic view in an image catalog offers users a highly convenient and visually intuitive way to explore and navigate through a large collection of images. A mosaic view typically presents a grid or tiled layout of images, allowing users to see multiple thumbnails simultaneously on a single screen.
+
+Here are several conveniences for users provided by a mosaic view in an image catalog:
+
+   - Efficient visual scanning: A mosaic view enables users to efficiently scan and preview a large number of images at once. This is particularly valuable when users are seeking specific images or trying to get a quick overview of the content available in the catalog.
+   - Rapid identification: Users can quickly identify images of interest based on their visual content without the need to open individual files. The mosaic layout provides a holistic view, aiding in the rapid identification of relevant images.
+   - Contextual understanding: Seeing images side by side in a mosaic view allows users to grasp contextual relationships and patterns that may not be apparent when viewing images individually. This is particularly beneficial when exploring thematic or chronological relationships among images.
+   - Streamlined selection Process: Users can efficiently select multiple images for further actions, such as downloading, sharing, or organizing. This streamlines the selection process, enhancing user productivity and reducing the time required to interact with the catalog.
+   - Enhanced user experience: The visual appeal of a mosaic view enhances the overall user experience. It provides an engaging and interactive way for users to interact with the image catalog, making the exploration of images more enjoyable and user-friendly.
+
+The images should be organized into albums.
 
 #### Data preview
 
-When the data (time series and tabular data, possibly also microdata) are made available via API, the data catalog can also provide a data preview option, and possibly a data extraction option, to the users. Multiple JavaScript tools, some of them open-source, are available to easily embed data grids in catalog pages.
+The inclusion of a data preview feature in a data catalog is convenient for users as it allows them to get a quick glimpse of the dataset's content without having to download or open the entire file. This feature is particularly beneficial for assessing data relevance, structure, and quality before committing to a full download or exploration.
+
+For tabular data, such as indicators or microdata, the convenience is further amplified by various options to display the data in user-friendly data grids. These grids present the tabular data in a structured and readable format, making it easy for users to interpret and analyze the information. Additionally, the preview feature often accommodates customization options, allowing users to choose specific columns or rows for display, focusing on the most relevant aspects of the data.
+
+In the case of large datasets, a preview feature typically offers a sample of the data rather than the entire dataset. This is practical for several reasons. First, it provides users with a representative subset of the data, offering insights into its characteristics without overwhelming them with excessive information. Second, displaying a sample helps manage resource constraints associated with loading and rendering large datasets, ensuring a smooth and responsive user experience.
+
+The implementation of such a feature requires that the data be available via an API.
 
 <center>
 ![](./images/catalog_data_preview_01.JPG){width=80%}
 </center>
 
-For a document, the "data preview" would consist of a document viewer that would allow the user to view the document within the application (even when the document is not stored in the catalog itself but in an external website). When implementing such a feature, check that the terms of use of the origination source allows that.
+For data of type "document", the "data preview" would consist of a document viewer that would allow the user to view the document within the application (even when the document is not stored in the catalog itself but in an external website). When implementing such a feature, check that the terms of use of the origination source allows that.
 
 <br>
 <center>
 ![image](https://user-images.githubusercontent.com/35276300/230733447-55c75dbb-5e5c-4788-9e58-ae4fca646a85.png)
 </center>
 <br>
+
+For data of type "video", an option to play the video in the catalog itself should be provided. Typically, this will require publishing the video in an on-line service like Youtube, and embedding it into the catalog page.
 
 #### Visualizations
 
@@ -301,9 +338,9 @@ The NADA catalog allows catalog adinistrators to generate such visualizations us
 </center>
 <br>
 
-#### Embedded videos
-
 #### Information on API access
+
+
 
 #### Showing links 
 
