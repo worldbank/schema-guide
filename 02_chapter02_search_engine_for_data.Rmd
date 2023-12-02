@@ -14,13 +14,13 @@ The creation of a data dissemination platform is a collaborative endeavor, engag
 
 In order to cultivate a favorable user experience, online data catalogs must offer an intuitive and efficient interface, allowing users to effortlessly access the most pertinent datasets. To meet user expectations effectively, one should emphasize **simplicity** and **relevance**. A data dissemination platform should also be made accessible free of discrimination. The Web Content Accessibility Guidelines (WCAG) international standard provides principles and recommendations for accessibility to people with disabilities. Integrating these principles into the design of data catalogs can deliver a seamless and user-friendly experience, akin to the convenience and ease provided by internet search engines and e-commerce platforms. 
 
-Users of a data catalog will typically want to **search** and **filter** the assets available in a catalog. They will also want to **browse** and **sort** the catalog or the entries returned by the activation of a search or filter. We describe below how the search, filtering, sorting, and browsing features may be designed to provide a user-friendly experience. **Other features** of a data catalog that may be useful to users are also proposed.
+Users of a data catalog will typically want to **search** and **filter** the assets available in a catalog. They will also wantto **browse** and possibly **sort** the catalog entries or the entries returned by running a search or by activating a filter. We describe below how the search, filtering, browsing, and sorting features may be designed to provide a user-friendly experience. **Other features** of a data catalog that may be useful to users are also proposed.
 
 ### Search 
 
-There are two types of search engines: lexical and semantic. The former matches literal terms in the query to the search engine's index, while the latter aims to identify datasets that have semantically similar metadata to the query. While an ideal data catalog would offer both types of search engines, implementing semantic searchability can be complex.
+Search engines in data catalogs can be *lexical* or *semantic* (or a combination of both). A lexical search (or keyword search, or full-text search) will match literal terms entered in a query to the search engine's index and return datasets whose indexed metadata contain the terms. A semantic search aims to identify datasets that have semantically similar metadata to the query. While an ideal data catalog would offer both types of search engines (ideally combined into a single search tool), implementing semantic searchability can be complex.
 
-(explain how semantic search workd for different data types - with embeddings and vector indexing and cosine similarity - use of API)
+(explain how semantic search works for different data types - with embeddings and vector indexing and cosine similarity - use of API)
 
 For microdata: embeddings based on thematic variable groupings - an option to implement semantic search and recommendations
 Discovery of microdata poses specific challenges. Typically, a data dictionary will be available, with variables organized by data file. A "virtual" organization of variables by thematic group, with a pre-defined ontology, can significantly improve data discoverability. AI solutions can be used to generate such groupings and map variables to them. The DDI metadata standard provides the metadata elements needed to store information on variable groups.
@@ -56,6 +56,9 @@ A search engine with semantic search capability should be able to process short 
 ![image](https://user-images.githubusercontent.com/35276300/229806674-941ac085-6f6f-45e8-bfa4-d0834cf73587.png)
 </center>
 <br>
+
+#### Image as a query
+
 
 #### Suggested queries
 
@@ -135,16 +138,21 @@ The search API endpoint of Nominatim returns this JSON data which can be process
 
 #### Ranking results 
 
-A search engine not only needs to identify relevant datasets but also must return the results in a proper order of relevance, with the most relevant results at the top of the list. If users fail to find a relevant response among the top results, they may choose to search for data elsewhere. The ability of a search engine to return relevant results in the optimal rank depends on the metadata's content and structure. To optimize the ranking of results, a lot of relevance engineering is required, including tuning advanced search tools like Solr or ElasticSearch. Large data catalogs managed by well-resourced agencies can leverage data scientists to explore the possibility of using machine learning solutions such as "learn-to-rank" to improve result ranking. See section "Improving results ranking" below. For more detailed information, see D. Turnbull and J. Berryman's (2016) in-depth description of tools and methods.
+A search engine not only needs to identify relevant datasets but also must return the results in a proper order of relevance, with the most relevant results at the top of the list. If users fail to find a relevant response among the top results, they may choose to search for data elsewhere. The ability of a search engine to return relevant results in the optimal rank depends on the metadata's content and structure. To optimize the ranking of results, a lot of relevance engineering is required, including tuning advanced search tools like Solr or ElasticSearch. 
 
-Keyword-based searches can be optimized using tools like Solr or ElasticSearch. Out-of-the-box solutions, such as those provided by SQL databases, rarely deliver satisfactory results. Structured metadata can help optimize search engines and the ranking of results by allowing for the boosting of specific metadata elements. For instance, a query term found in the *title* of a dataset would carry more weight than if it were found in the *notes* element, and the results would be ranked accordingly. Similarly, a country name found in the *nation* or *reference country* metadata elements should be given more weight than if it were found in a variable description. Advanced indexing tools like Solr and ElasticSearch provide boosting functionalities to fine-tune search engines and enhance result relevancy.
+Large data catalogs managed by well-resourced agencies can leverage data scientists to explore the possibility of using machine learning solutions such as "learn-to-rank" to improve result ranking. See section "Improving results ranking" below. For more detailed information, see D. Turnbull and J. Berryman's (2016) in-depth description of tools and methods.
+
+Keyword-based searches can be optimized using tools like Solr or ElasticSearch. Out-of-the-box solutions, such as those provided by SQL databases, rarely deliver satisfactory results. Structured metadata can help optimize search engines and the ranking of results by allowing for the boosting of specific metadata elements. For instance, a query term found in the *title* of a dataset would carry more weight than if it were found in the *notes* element, and the results would be ranked accordingly. Similarly, a country name found in the *nation* or *reference country* metadata elements should be given more weight than if it were found in a variable description. 
+Also, some or all keywords; grouped/sequence/proximity; etc.
+
+Advanced indexing tools like Solr and ElasticSearch provide boosting functionalities to fine-tune search engines and enhance result relevancy.
 
 #### Saving and sharing results
 
 URL / API query ; export list ; social networks, etc.
 
 
-#### Filtering
+### Filtering
 
 Applies to full catalog (window shopping) or results from a search.
 
@@ -172,13 +180,22 @@ When a data catalog contains multiple types of data, it should offer an easy way
 </center>
 <br>
 
+#### Transparency in access policies
+
+The terms of use (ideally provided in the form of a standard license) and the conditions of access to data should be made transparent and visible in the data catalog. The access policy will preferably be provided using a controlled vocabulary, which can be used to enable a facet (filter) as shown in the screenshot below.
+
+<center>
+![](./images/catalog_access_policy_01.JPG){width=100%}
+</center>
+<br>
+
+#### Other facets
+
+Structured metadata enables it
+Tags and tag groups
 
 
-### Sorting 
-
-The entries displayed in the user interface must be sortable by some key features, including the title of the entry, the year, the date the entry was added or last modified, the geographic area, and possibly others. To make filters operate properly, the use of controlled vocabulary may be required for some metadata fields, such as the geographic coverage of the data. The country names, for example, should be consistent across the catalog (the Democratic Republic of Congo should not be named "Democratic Republic of Congo" in some cases and "Congo, Democratic Republic" in others). 
-
-### Browsing 
+### Browsing
 
 #### Providing core information in the entry list page
 
@@ -196,7 +213,7 @@ Some users may be interested in finding out what new entries are available in th
 ![image](https://user-images.githubusercontent.com/35276300/231492091-a96d4c5c-c461-4b5f-88c1-f8db26daa98d.png)
 <br>
 
-### Metadata display and formats
+#### Metadata display and formats
 
 To make metadata easily accessible to users, it's important to display it in a convenient way. The display of metadata will vary depending on the data type being used, as each type uses a specific metadata schema. For online catalogs, style sheets can be utilized to control the appearance of the HTML pages.
 
@@ -233,30 +250,7 @@ After selecting the variables of interest, users should be able to display their
 </center>
 <br>
 
-#### Information on API access
-
-
-#### Transparency in access policies
-
-The terms of use (ideally provided in the form of a standard license) and the conditions of access to data should be made transparent and visible in the data catalog. The access policy will preferably be provided using a controlled vocabulary, which can be used to enable a facet (filter) as shown in the screenshot below.
-
-<center>
-![](./images/catalog_access_policy_01.JPG){width=100%}
-</center>
-<br>
-
-#### Showing links 
-
-Not all data catalog users know exactly what they are looking for and may need to explore the catalog to find relevant resources. E-commerce platforms use recommender systems to suggest products to customers, and data catalogs should have a similar commitment to bringing relevant resources to users' attention. To achieve this, modern data catalogs display relationships between entries, which may involve data of different types, such as microdata files, analytical scripts, and working papers.
-
-These relationships can be documented in the metadata, such as identifying datasets as part of a series or new versions of a previous dataset. When relationships are not known or documented, machine learning tools such as topic models and word embedding models can be used to establish the topical or semantic closeness between resources of different types. This can be used to implement a recommender system in data catalogs, which automatically identifies and displays related documents and data for a given resource. The image below shows how "related documents" and "related data" can be automatically identified and displayed for a resource (in this case a document).
-
-<center>
-![](./images/catalog_related_01.JPG){width=100%}
-</center>
-<br>
-
-#### Related entries (recommendations)
+#### Image mosaic view
 
 
 #### Data preview
@@ -296,35 +290,32 @@ The NADA catalog allows catalog adinistrators to generate such visualizations us
 </center>
 <br>
 
+#### Embedded videos
 
-### Notify
+#### Information on API access
 
-Users may want to be automatically notified (by email) when new entries of interest are added, or when change are made to a specific resource. A system allowing users to set criteria for automatic notification can be developed.
+#### Showing links 
 
-Example of Google SCholar alerts:
+Not all data catalog users know exactly what they are looking for and may need to explore the catalog to find relevant resources. E-commerce platforms use recommender systems to suggest products to customers, and data catalogs should have a similar commitment to bringing relevant resources to users' attention. To achieve this, modern data catalogs display relationships between entries, which may involve data of different types, such as microdata files, analytical scripts, and working papers.
 
-<br>
+These relationships can be documented in the metadata, such as identifying datasets as part of a series or new versions of a previous dataset. When relationships are not known or documented, machine learning tools such as topic models and word embedding models can be used to establish the topical or semantic closeness between resources of different types. This can be used to implement a recommender system in data catalogs, which automatically identifies and displays related documents and data for a given resource. The image below shows how "related documents" and "related data" can be automatically identified and displayed for a resource (in this case a document).
+
 <center>
-![image](https://user-images.githubusercontent.com/35276300/230730245-ea3702f6-b877-436a-9833-492afafa0270.png)
+![](./images/catalog_related_01.JPG){width=100%}
 </center>
 <br>
 
+#### Related entries (recommendations)
+
+
+
+
+### Sorting 
+
+The entries displayed in the user interface must be sortable by some key features, including the title of the entry, the year, the date the entry was added or last modified, the geographic area, and possibly others. To make filters operate properly, the use of controlled vocabulary may be required for some metadata fields, such as the geographic coverage of the data. The country names, for example, should be consistent across the catalog (the Democratic Republic of Congo should not be named "Democratic Republic of Congo" in some cases and "Congo, Democratic Republic" in others). 
+
+
 ### Other features for users
-
-#### Time series query user interface
-
-For time series only
-
-
-#### Data and metadata as a service
-
-- Maintain a data service: let external users build dashboards/platorms dynamically connected via API; one organization cannot customize to all communities of users.
-
-Build your own dashboards
-- Allow users to set preferences: thematic, data type, geographies, search query
-- Have a page where pre-designed dashboards (country/thematic pages) and custom dashboard are accessible
-- Allow sharing of dashboards
-- Core idea: all data and metadata accessible via API; platform operates as a service to feed dashboards (within the platform or external) 
 
 #### Data and metadata API
 
@@ -336,14 +327,40 @@ The API should be well documented with examples.
 API query builder: UI for building an API query
 Limitations as required (API key; permission system; monitoring; security) 
 
-#### Online data access forms 
-
-Make the process of registration, requests fully digital, easy, and fully traceable.
-
 #### Bulk download option
 
 Even when UI or visualizations etc are shown, many users just want to downlaod the data and metadata.
 (...)
+
+#### Alerts (notifications)
+
+Users may want to be automatically notified (by email) when new entries of interest are added, or when change are made to a specific resource. A system allowing users to set criteria for automatic notification can be developed.
+
+Example of Google SCholar alerts:
+
+<br>
+<center>
+![image](https://user-images.githubusercontent.com/35276300/230730245-ea3702f6-b877-436a-9833-492afafa0270.png)
+</center>
+<br>
+
+#### Time series query user interface
+
+For time series only
+
+#### Data and metadata as a service
+
+- Maintain a data service: let external users build dashboards/platorms dynamically connected via API; one organization cannot customize to all communities of users.
+
+Build your own dashboards
+- Allow users to set preferences: thematic, data type, geographies, search query
+- Have a page where pre-designed dashboards (country/thematic pages) and custom dashboard are accessible
+- Allow sharing of dashboards
+- Core idea: all data and metadata accessible via API; platform operates as a service to feed dashboards (within the platform or external) 
+
+#### Online data access forms 
+
+Make the process of registration, requests fully digital, easy, and fully traceable.
 
 #### Permanent URLs 
 
@@ -387,10 +404,19 @@ Feedback on catalog certainly. In the form of a "Contact" email and possibly a "
 
 BUT: Users forum, "reviews" as in e-commerce platforms, is not always recommended. Not all users are 'constructive" and qualified. Requires moderation, which can be costly and controversial. May create dis-incentives for data producers to publish their data. Could be a good option for data platforms that are internal to an organization (where comments are attributed, and an authentication system controls who can provide feedback), but not for public data platforms.
 
-#### Getting support
+#### Support
 
 Contact, responsive
 FAQs
+
+#### Interaction with resource
+
+Generative AI
+
+#### AI-activated assistance to data analysis 
+
+Writing scripts; copilot
+
 
 
 ## Features for data providers 
@@ -416,13 +442,15 @@ When the data catalog is not administered by the producer of the data but by an 
 
 "do not disturb": low burden of deposit and no burden of serving users (minimum interaction with users; providing detailed metadata helps)
 
-### Real time information on usage
+### Information on usage
 
 Monitoring of usage (downloads and citations) to assess demand; reports on this (automatically generated)
+API and downloads etc
 
 ### Feedback from users
 
 Feedback on quality issues
+
 
 
 ## Features for catalog administrators
@@ -459,14 +487,13 @@ Interoperability with other catalogs and applications, as well as compliance wit
 
 ### Flexibility on access policies
 
-Flexibility in implementing data access policies that conform to the specific procedures and protocols of the organization managing the catalog
-
+Flexibility in implementing data access policies that conform to the specific procedures and protocols of the organization managing the catalog.
+Both for downloads, browsing (data preview), and API access 
 
 ### API based system for automation and efficiency
 
 Availability of APIs for catalog administration
 Easy automation of procedures (harvesting, migration of formats, editing, etc.) This means API-based system.
-
 
 ### Featuring tools
 
