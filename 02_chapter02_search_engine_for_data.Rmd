@@ -364,6 +364,8 @@ In meeting the demands of contemporary data management, a forward-thinking data 
 
 Ensuring that both data and metadata are accessible through the API is fundamental to maximizing the utility of a modern data catalog. Transparency about the availability of datasets accessible via the API, clearly communicated within the dataset card and accompanied by user-friendly filtering options, enhances the user experience by allowing users to identify and prioritize datasets that align with their preferred access method.
 
+By providing access to the full data and metadata via API, the data catalog provides "data as a service" which allows users to build their own applications, such as specialized dashboards. Such a system is particularly efficient and cost-effective, as it allows multiple front-end applications to be served by a common back-end data system, thereby avoiding the need for duplication of data curation and storage. 
+
 To further enhance user engagement and understanding, comprehensive documentation and guidelines detailing the nuances of using the data and metadata API are indispensable. This includes not only a clear delineation of functionalities but also illustrative examples that empower users to navigate and leverage the API effectively. The incorporation of an API query builder within the user interface adds an extra layer of accessibility, simplifying the process of constructing and executing API queries.
 
 While implementing limitations is a prudent practice, transparency in communicating these constraints is crucial. Whether it involves the need for an API key, permission systems, monitoring protocols, or security measures, users should be informed of these aspects upfront. A well-rounded API, coupled with transparency and user-centric features, becomes a linchpin in modern data catalogs, transforming them from repositories to dynamic and efficient hubs for data exploration and utilization.
@@ -378,8 +380,13 @@ Embedding metadata within the bulk download package is equally crucial, providin
 
 #### Alerts (notifications)
 
-please provide one or a few paragraphs describing the convenience for users of a data catalog of having a feature that alerts them automatically when datasets of relevance to them are added to the catalog. The users must be provided with a user-friendly system to create "queries" that what would describe what makes a dataset relevant to them, applying for example filters on geographic coverage, topics covered, or other. Users would then be notified by email when relevant. An option to cancel the alerts set up by the user must be provided.
+The inclusion of an automated alert feature represents a significant convenience for users, streamlining the process of staying informed about newly added (or updated) datasets that align with their specific interests and criteria. This feature transforms the data catalog into a proactive tool, ensuring that users are promptly notified whenever datasets of relevance are introduced. This proactive approach enhances user efficiency by eliminating the need for constant manual monitoring and search efforts.
 
+To empower users in defining their criteria for relevance, the system must offer a user-friendly interface for creating customized queries and setting them as alerts. Users can set up filters based on various parameters such as geographic coverage, specific topics, or other relevant attributes. This intuitive query creation process enables users to precisely articulate their preferences, ensuring that the alerts are tailored to their unique requirements.
+
+The alert notifications are delivered via email to provide a timely and accessible update. 
+
+Recognizing the dynamic nature of user preferences, the system includes an option for users to easily cancel or modify their alert settings at any time, offering flexibility and control over the information they receive.
 
 Example of Google Scholar alerts:
 
@@ -391,31 +398,41 @@ Example of Google Scholar alerts:
 
 #### Time series query user interface
 
-For time series only
+For catalogs that contain time series data, developing a user interface that simplifies the extraction and dissemination of indicators provides an additional convenient mode of access to users. A well-designed interface should empower users to effortlessly select one or multiple indicators, choose specific geographic areas, and define desired time periods. This user-friendly approach enhances the efficiency of data retrieval, catering to diverse user needs and research requirements.
 
-#### Data and metadata as a service
+The interface should seamlessly translate these user selections into a query, providing a clear representation of the chosen parameters. Additionally, to enhance versatility, the system should offer options to download the queried data in various formats, such as CSV or other commonly used file types. This facilitates easy integration of the obtained data into different analytical tools and platforms.
 
-- Maintain a data service: let external users build dashboards/platorms dynamically connected via API; one organization cannot customize to all communities of users.
-
-Build your own dashboards
-- Allow users to set preferences: thematic, data type, geographies, search query
-- Have a page where pre-designed dashboards (country/thematic pages) and custom dashboard are accessible
-- Allow sharing of dashboards
-- Core idea: all data and metadata accessible via API; platform operates as a service to feed dashboards (within the platform or external) 
+To further optimize the user experience and facilitate collaboration, the system should automatically convert the user-generated query into an API query. This functionality not only streamlines the process for users but also allows them to save and share their queries effortlessly. The ability to save and share API queries enhances collaboration, enabling users to exchange valuable insights and streamline data-driven decision-making processes. 
 
 #### Online data access forms 
 
-Make the process of registration, requests fully digital, easy, and fully traceable.
+Facilitating access to non-public datasets through a streamlined and secure process is paramount for the success of an online data catalog. Providing users with a convenient means to request access to restricted datasets not only ensures compliance with privacy and security measures but also encourages a collaborative and transparent data-sharing environment. The inclusion of a registration mechanism within the catalog enables users to create accounts, establishing a secure and authenticated identity.
+
+To request access, users can utilize an online form integrated into the catalog, simplifying the submission process. This form allows requesters to articulate their need for specific datasets and provide relevant context for their usage. The entire access request workflow, from submission to approval, is managed within the dissemination platform. This centralized control ensures a consistent and efficient process.
+
+Communication between the requester and the approver is a crucial aspect of this access management system. The platform should offer dedicated channels for dialogue, notifications, and status updates to keep all stakeholders informed throughout the request and approval stages. Additionally, a comprehensive logging system records all actions taken during the access request process. This traceability and auditability feature not only enhances accountability but also facilitates compliance with regulatory requirements and internal data governance policies.
+
+By integrating these functionalities, an online data catalog not only safeguards the confidentiality of non-public datasets but also fosters a transparent and accountable data-sharing ecosystem. Users benefit from a straightforward process, while administrators gain the tools needed to effectively manage and monitor access requests, ultimately promoting responsible and secure data dissemination.
 
 #### Permanent URLs 
 
-To ensure efficient management and organization of datasets within a data catalog, it is essential to assign a unique identifier to each dataset. This identifier should not only meet technical requirements but also serve other purposes such as facilitating dataset citation. To achieve maximum effectiveness, it is recommended that datasets have a globally unique identifier, which can be accomplished through the assignment of a Digital Object Identifier (DOI). DOIs can be generated in addition to a catalog-specific unique identifier and provide a permanent and persistent identifier for the dataset. For more information about the process of generating DOIs and the reasons to use them, visit the [DataCite website](https://datacite.org/).   
+Establishing a globally unique and permanent identifier for each dataset within a data catalog is pivotal for efficient data management and organization. This unique identifier not only serves technical purposes but also plays a crucial role in various aspects, including facilitating dataset citation, tracking data usage, and ensuring long-term accessibility.
 
-Include a citation requirement in metadata.
+A globally unique identifier is essential to distinguish datasets unambiguously, preventing potential confusion or mismanagement, especially in large and diverse data catalogs. Beyond technical requirements, these identifiers serve as a cornerstone for systematic data citation, a practice increasingly recognized as vital for acknowledging data contributors and enhancing reproducibility in research.
+
+To achieve the highest level of effectiveness, it is recommended to assign a Digital Object Identifier (DOI) as a globally unique identifier for datasets. DOIs provide a permanent and persistent link to the dataset, even if the dataset undergoes changes or is relocated. Generating DOIs can be achieved through registration with a DOI registration agency, ensuring a standardized and widely accepted method for unique identification.
+
+In addition to a catalog-specific identifier, the DOI enhances the discoverability and accessibility of datasets, making them citable entities in scholarly publications. Researchers and data users can easily reference the dataset in their work by including the DOI in citations. This practice not only gives proper credit to data contributors but also contributes to the traceability of data usage in research publications.
+
+To reinforce the importance of proper dataset citation and to streamline tracking, it is advisable to include a citation requirement as part of the conditions imposed on users accessing the data. By mandating the inclusion of the DOI or other unique identifier in publications, data providers ensure a transparent and accountable system for tracking the use of datasets over time. This holistic approach to dataset identification and citation not only supports efficient data management but also aligns with best practices in scholarly research and data stewardship.
 
 #### Archive / tombstone
 
-When a dataset is removed or replaced, the reproducibility of some analysis may become impossible. This may be a problem for some users. Unless there is a reason for not making them accessible, old versions of datasets should be kept accessible. But they should not be the ones indexed and dislayed in the catalog, to avoid cnfusion or the risk that a user would exploit a version other than the latest. Moving datasts that are replaced to an archive section of the catalog (not indexed) is an option. Note that DOIs require a permanent web page.
+Preserving old versions of datasets within a data repository and catalog is indispensable for ensuring the reproducibility of analyses and supporting the diverse needs of users. When datasets are removed or replaced without retaining previous versions, the ability to replicate analyses and validate results may be compromised, posing a challenge for researchers and analysts who rely on historical data configurations.
+
+Maintaining accessibility to old versions is crucial unless there are specific reasons for restricting access. These older iterations provide valuable insights into the evolution of datasets over time and are essential for those users whose analyses depend on specific historical data points. However, to mitigate confusion and guide users towards the most current information, it is advisable not to index and prominently display old versions in the main catalog.
+
+A pragmatic approach involves relocating replaced datasets to an archive section within the catalog, making them accessible but not prominently featured or indexed. This ensures that users seeking the latest information encounter the most recent dataset versions by default, minimizing the risk of unintentional use of outdated data. It is worth noting that while Digital Object Identifiers (DOIs) necessitate a permanent web page, maintaining an archive section within the catalog allows for the preservation of historical dataset versions while adhering to best practices in data management and version control. This approach not only safeguards the reproducibility of analyses but also accommodates the diverse needs of users engaged in longitudinal studies or analyses reliant on specific historical data snapshots.
 
 #### Catalog of citations
 
