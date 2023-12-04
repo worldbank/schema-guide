@@ -223,7 +223,7 @@ Designing a data catalog with a concise and informative listing page, presented 
 The entry title serves as a focal point, providing a quick overview of the dataset's main subject. Period and geographic coverage offer immediate insights into the temporal and spatial dimensions of the data. Knowing the producer lends credibility and context to the dataset, while information on API availability indicates the level of accessibility and functionality for technically inclined users. A concise description complements these details, offering a snapshot of the dataset's purpose and content. Including a logo enhances visual recognition, especially for datasets associated with specific organizations or brands.
 
 <center>
-![](./images/listing_card.JPG){width=80%}
+![](./images/listing_cards.png){width=80%}
 </center>
 
 This streamlined presentation ensures that users can make informed decisions about exploring further details without the need to open multiple pages. The goal is to empower users with enough information upfront, streamlining their browsing experience and enabling efficient decision-making regarding the datasets most relevant to their needs. Ultimately, the catalog card functions as a powerful tool to engage users, providing a snapshot of critical information and enticing them to delve deeper into datasets that align with their specific interests and requirements.
