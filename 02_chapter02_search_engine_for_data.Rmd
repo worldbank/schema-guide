@@ -685,6 +685,6 @@ For instance, the incorporation of plugins and widgets enables the seamless inte
 
 The advantages of a modular and extensible system extend beyond visualization tools, providing the framework to incorporate various functionalities and features tailored to specific use cases. This flexibility ensures that the online data dissemination system remains dynamic and responsive to the evolving demands of data administrators and end-users alike. 
 
-### Feedback to developers
+### Interaction with developers
 
 For administrators of an online data catalog, establishing a collaborative relationship with the designers and developers of the cataloging system is highly beneficial. This collaboration allows administrators to actively participate in the evolution and enhancement of the cataloging system, ensuring it remains responsive to evolving user needs and industry best practices. Regular communication between administrators and the design and development teams enables the implementation of user feedback, addressing usability issues, and introducing new features or optimizations. This iterative process ensures that the data catalog remains a dynamic and efficient tool, fostering a more seamless experience for both data contributors and users. The synergy between administrators and the technical teams contributes to the ongoing success of the catalog, making it a continuously evolving and adaptive resource within the organization.  
