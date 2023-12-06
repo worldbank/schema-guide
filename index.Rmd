@@ -22,27 +22,25 @@ graphics: yes
 ```{asis, echo=identical(knitr:::pandoc_to(), 'html')}
 <p style="text-align: center;"><img src="images/cover2.JPG"/></p>
 ```
-Numerous organizations --government agencies, international organizations, the private sector, the academia, and others-- invest in data collection and creation. Their datasets often possess intrinsic value not only for their creators but also for a broader community of secondary users and researchers. By repurposing and reusing data, this community adds value to the data. However, many valuable datasets remain difficult to find, access, and use, and are therefore underexploited. A dedicated and concerted effort to improve the discoverability, accessibility, and usability of data is needed. Such effort would largely hinge on the quality of the **metadata** associated with the data. This Guide aims to promote and facilitate the production and use of rich and structured metadata, ultimately promoting the responsible use and repurposing of data.
+Many organizations --government agencies, international organizations, the private sector, the academia, and others-- collect, process and anlayze data. Their datasets often possess intrinsic value not only for their creators but also for a broader community of secondary users and researchers. By repurposing and reusing these data, this community can add much value to existing data. However, many valuable datasets remain difficult to find, access, and use, and are therefore underexploited. A dedicated and concerted effort to improve the discoverability, accessibility, and usability of data is needed. Such effort would largely hinge on the quality of the **metadata** associated with the data. This Guide aims to promote and facilitate the production and use of rich and structured metadata, ultimately promoting the responsible use and repurposing of data. The primary audience for the Guide are data producers and curators, data librarians and catalogs administrators, and the developers of data management and dissemination platforms, who seek to maximize the value of existing data in a responsible and technically proficient manner. The Guide applies mainly to socio-economic data of different types (indicators, microdata, geographic datasets, publications, and others).
 
-The primary audience for the Guide are data producers and curators, data librarians and catalogs administrators, and the developers of data management and dissemination platforms, who seek to maximize the value of existing data in a responsible and technically proficient manner. The Guide applies mainly to socio-economic data of different types (indicators, microdata, geographic datasets, publications, and others).
-
-The Guide is part of a broader toolset that also includes specialized software applications -- a specialized metadata editor and a cataloging tool. This toolset covers the *technical* aspects of data documentation and dissemination. *Legal* and *ethical* considerations are equally important, but are adressed in other guidelines and are supported by different tools. 
+The Guide is part of a broader toolset that also includes specialized software applications -- a specialized Metadata Editor, a data cataloging application, and other data management and curation tools. This toolset focuses on the technical aspects of data documentation and dissemination. Legal and ethical considerations are equally important, but are adressed in other guidelines and are supported by different tools. 
 
 ## Acknowledgments {-}
 
-The Guide was written by Olivier Dupriez (Deputy Chief Statistician, World Bank) and Mehmood Asghar (Senior Data Engineer, World Bank). Kamwoo Lee (Data Scientist, World Bank) produced some of the examples of the use of metadata schemas included in the Guide and contributed to the testing of the schemas. Emmanuel Blondel (consultant) contributed much of chapter 6. Geoffrey Greenwell (consultant) provided input to chapter 9. Tefera Bekele Degefu and Cathrine Machingauta (Data Scientists, World Bank) participated in the testing of the metadata schemas. 
+The Guide was written by Olivier Dupriez (Deputy Chief Statistician, World Bank) and Mehmood Asghar (Senior Data Engineer, World Bank). Kamwoo Lee (Data Scientist, World Bank) produced some of the examples of the use of metadata schemas included in the Guide and contributed to the testing of the schemas. Emmanuel Blondel (consultant) contributed much of chapter 6. Geoffrey Greenwell (consultant) provided input to chapter 9. Bo Andree, Tefera Bekele Degefu, Cathrine Machingauta, and Aivin Solatorio (Data Scientists, World Bank) participated in the testing and improvement of the metadata schemas. David L. Newhouse (Senior Economist, World Bank) provided input to chapter 12. 
 
-The production of the Guide and related tools has been made possible by financial contributions from:
+The production of the Guide and related tools benefited from financial contributions from:
 
    - The World Bank-UNHCR Joint Data Center Microdata Library project P174080, Grant No TF0B4772, administered by the World Bank Development Data Group.
    - The UK Aid-UNHCR-World Bank research program Building the Evidence on Protracted Forced Displacement, funded by the UK government (FCV Data Platform component, project P174529, Grant No TF0B4149). This project supported the development of a data platform which led to the improvement and testing of some of the metadata schemas described in the Guide.
    - The World Bank administrative budget.
 
-The Guide was created using [R Bookdown](https://bookdown.org/) and is licensed under a [Creative Commons Attribution- NonCommercial- NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
-
 chatGPT was used as a copy editor, but not for substantive content suggestion or creation.  
 
-Feedback and suggestions on the Guide are welcome. They can be sent to [...] or submitted on GitHub where the Guide's source code is stored (https://github.com/mah0001/schema-guide). 
+The Guide was created using [R Bookdown](https://bookdown.org/) and is licensed under a [Creative Commons Attribution- NonCommercial- NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
+
+Feedback and suggestions on the Guide can be sent to [...*email*...] or submitted on GitHub where the Guide's source code is stored (https://github.com/worldbank/schema-guide). 
 
 ![](./images/index_ccby_logo.png){width=20%}
 </center>
