@@ -10,31 +10,27 @@ We provide recommendations for developing data catalogs that encompass lexical s
 
 The creation of a data dissemination platform is a collaborative endeavor, engaging data curators, user experience (UX) experts, user interface (UI) designers, search and systems engineers, and subject matter specialists with a profound understanding of both the data and the users' requirements and preferences. Inclusive in this development process should be the active participation of the users, allowing them to provide feedback that directly influences the system's design.
 
-The set of features we describe below are proposed for a large data catalog, developed and mantained by a well-resourced organization. Not all features would be appropriate for a small catalog or for a catalog maintained by an organization facing technical and other constraints. In such situations, semantic search capability and the implementation of features that require the implementation of machine learning of generative artificial intelligence may not be recommended.
+The set of features we describe below are proposed for a large data catalog, developed and maintained by a well-resourced organization. Not all features would be appropriate for a small catalog or for a catalog maintained by an organization facing technical and other constraints. In such situations, semantic search capability and the implementation of features that require the implementation of machine learning of generative artificial intelligence may not be recommended.
 
 ## Features for data users 
 
-In order to cultivate a favorable user experience, online data catalogs must offer an intuitive and efficient interface, allowing users to effortlessly access the most pertinent datasets. To meet user expectations effectively, one should emphasize **simplicity** and **relevance**. A data dissemination platform should also be made accessible free of discrimination. The Web Content Accessibility Guidelines (WCAG) international standard provides principles and recommendations for accessibility to people with disabilities. Integrating these principles into the design of data catalogs can deliver a seamless and user-friendly experience, akin to the convenience and ease provided by internet search engines and e-commerce platforms. 
+To foster a positive user experience, online data catalogs must feature an intuitive and efficient interface, enabling users to effortlessly access the most relevant datasets. Emphasizing **simplicity** and **relevance** is crucial to meet user expectations effectively. Additionally, a data dissemination platform should be made accessible without discrimination. Aligning with the Web Content Accessibility Guidelines (WCAG) international standard, which provides principles and recommendations for accessibility to people with disabilities, can enhance the design of data catalogs, delivering a seamless and user-friendly experience akin to popular internet search engines and e-commerce platforms.
 
-Users of a data catalog will typically want to **search** and **filter** the assets available in a catalog. They will also wantto **browse** and possibly **sort** the catalog entries or the entries returned by running a search or by activating a filter. We describe below how the search, filtering, browsing, and sorting features may be designed to provide a user-friendly experience. **Other features** of a data catalog that may be useful to users are also proposed, including features enabled by artificial intelligence, which are to a large extent in exploratory stage.
+Users of a data catalog typically desire to **search**, **filter**, **browse**, and possibly **sort** the available assets. Below, we outline how these features can be designed to provide a user-friendly experience. Additionally, we propose other useful features enabled by artificial intelligence (AI).
 
-As artificial intelligence (AI) and machine learning (ML) solutions continue to advance, there emerges a capacity for these search engines to go beyond merely delivering a ranked list of results. In certain scenarios, particularly when the nature and content of a user's query permit, the search algorithm can generate a more direct and informative response. This could take the form of a conversational reply, synthesized through generative AI, or the presentation of structured data grids and visualizations that directly address the query. For such capabilities to be effectively implemented, the system must exhibit a level of intelligence that allows it to discern the appropriate response strategy. This involves parsing the intricacies of the query, recognizing patterns, and making informed decisions on whether to provide a direct answer or adhere to the conventional approach of returning a ranked list of resources. The fusion of advanced AI and ML technologies with search engines in data catalogs marks a significant evolution, empowering users with more nuanced and contextually relevant information retrieval experiences.
+As AI and machine learning solutions progress, these search engines can go beyond delivering a ranked list of results. In certain scenarios, particularly when a user's query allows, the search algorithm can generate a more direct and informative response. This might take the form of a conversational answer synthesized through generative AI or the presentation of structured data grids and visualizations that directly address the query. Implementing such capabilities effectively requires a system with a level of intelligence to discern the appropriate response strategy. This involves parsing the intricacies of the query, recognizing patterns, and making informed decisions on whether to provide a direct answer or return a ranked list of resources conventionally. The integration of advanced AI and ML technologies with search engines in data catalogs marks a significant evolution, empowering users with more nuanced and contextually relevant information retrieval experiences.
 
 ### Search 
 
-Search engines implemented in data catalogs can be categorized as either *lexical* or *semantic*, or they may seamlessly integrate elements of both. A lexical search, also referred to as a keyword or full-text search, operates by matching literal terms from a user query to the search engine's index, subsequently returning datasets whose indexed metadata includes the specified terms. On the other hand, a semantic search strives to pinpoint datasets with metadata that bears semantic resemblance to the query. Ideally, a comprehensive data catalog would incorporate both lexical and semantic search engines, seamlessly blended into a unified search tool. However, the integration of semantic search functionality presents a complexity in implementation.
+Search engines implemented in data catalogs can be categorized as either **lexical** or **semantic**, or they may seamlessly integrate elements of both. A lexical search, also referred to as a "keyword search" or "full-text search", operates by matching literal terms from a user query to the search engine's index, subsequently returning datasets whose indexed metadata includes the specified terms. On the other hand, a semantic search strives to pinpoint datasets with metadata that bears semantic resemblance to the query. Ideally, a comprehensive data catalog would incorporate both lexical and semantic search engines, seamlessly blended into a unified search tool. However, the integration of semantic search functionality presents a complexity in implementation.
 
-Semantic search leverages advanced techniques like embeddings, vector indexing, and similarity measures to enhance the precision and relevance of search results by capturing the semantic meaning of user queries and dataset content. The process typically involves converting words or phrases into high-dimensional vectors using embeddings. Embeddings are representations of words or phrases in a continuous vector space, where semantically similar terms are positioned closer to each other.
+Semantic search leverages advanced techniques like embeddings, vector indexing, and similarity measures to enhance the precision and relevance of search results by capturing the semantic meaning of user queries and dataset content. The process typically involves converting words or phrases into high-dimensional vectors using embedding models. Embeddings are representations of words or phrases in a continuous vector space, where semantically similar terms are positioned closer to each other.
 
-Vector indexing in specialized *vector databases* is a key aspect of semantic search. These databases, such as Milvus or Qadrant, are optimized for storing and querying high-dimensional vectors efficiently. They enable the indexing of embeddings associated with both user queries and catalog resources, allowing for fast and accurate similarity searches.
-
-Cosine similarity is a common measure used in semantic search to quantify the similarity between vectors. In a vector space, the cosine of the angle between two vectors is calculated, with a higher cosine indicating greater similarity. This measure is instrumental in ranking and retrieving datasets based on their semantic relevance to a user's query.
+Vector indexing in specialized *vector databases* is a key aspect of semantic search. Vector databases are optimized for storing and querying high-dimensional vectors efficiently. They enable the indexing of embeddings associated with both user queries and catalog resources, allowing for fast and accurate similarity searches. Cosine similarity is a common measure used in semantic search to quantify the similarity between vectors. In a vector space, the cosine of the angle between two vectors is calculated, with a higher cosine indicating greater similarity. This measure is instrumental in ranking and retrieving datasets based on their semantic relevance to a user's query.
 
 To facilitate the implementation of semantic search, APIs play a crucial role. APIs for generating embeddings streamline the process by providing access to pre-trained models or embedding services. These APIs take care of the complex task of converting textual data into meaningful embeddings, saving time and resources for developers. Additionally, APIs for search engines allow the integration of semantic search capabilities seamlessly, enabling the retrieval of relevant results based on semantic similarity.
 
 In a search engine, semantic search is often combined with lexical search to offer a comprehensive and effective discovery system. Lexical search involves matching literal terms in a user query to the search engine's index, while semantic search focuses on identifying datasets with semantically similar metadata. Combining these approaches ensures a balanced and robust search system, catering to a wide range of user preferences and query styles.
-
-In summary, semantic search is a powerful approach that involves embeddings, vector indexing, and similarity measures to provide users with more contextually relevant results. Specialized vector databases, APIs for embeddings, and a combination with lexical search contribute to the seamless implementation of semantic search in data catalog search engines, enhancing the overall user experience and discovery capabilities.
 
 #### Search box
 
@@ -44,7 +40,7 @@ To enhance user experience and overcome potential spelling errors, the search en
 
 <br>
 <center>
-![image](https://user-images.githubusercontent.com/35276300/229823626-311376be-f75f-4e0b-9e6b-767fa307246b.png)
+![](https://user-images.githubusercontent.com/35276300/229823626-311376be-f75f-4e0b-9e6b-767fa307246b.png)
 </center>
 <br>
 
@@ -58,7 +54,7 @@ A search engine equipped with semantic search capabilities extends its user-frie
 
 <br>
 <center>
-![image](https://user-images.githubusercontent.com/35276300/229806674-941ac085-6f6f-45e8-bfa4-d0834cf73587.png)
+![](https://user-images.githubusercontent.com/35276300/229806674-941ac085-6f6f-45e8-bfa4-d0834cf73587.png)
 </center>
 <br>
 
@@ -94,7 +90,7 @@ Whether through the user-friendly interface or the syntax option, the Advanced S
 
 <br>
 <center>
-![image](https://user-images.githubusercontent.com/35276300/229806372-8c33d0ca-5d3e-48b1-af4f-5a0405c30c22.png){width=85%}
+![](https://user-images.githubusercontent.com/35276300/229806372-8c33d0ca-5d3e-48b1-af4f-5a0405c30c22.png){width=85%}
 </center>
 <br>
 
@@ -119,7 +115,7 @@ This integrated approach ensures that users can seamlessly navigate and explore 
 
 <br>
 <center>
-![image](https://user-images.githubusercontent.com/35276300/230091095-d63c8b8f-7684-41db-b347-d75ded1dc95a.png)
+![](https://user-images.githubusercontent.com/35276300/230091095-d63c8b8f-7684-41db-b347-d75ded1dc95a.png)
 </center>
 <br>
 
@@ -127,7 +123,7 @@ Example of use of Nominatim: The Nominatim application shows the polygon boundar
 
 <br>
 <center>
-![image](https://user-images.githubusercontent.com/35276300/230091354-b44c38fa-f628-4693-97bb-f49fb4f23b3e.png)
+![](https://user-images.githubusercontent.com/35276300/230091354-b44c38fa-f628-4693-97bb-f49fb4f23b3e.png)
 </center>
 <br>
 
@@ -135,7 +131,7 @@ The search API endpoint of Nominatim returns this JSON data which can be process
 
 <br>
 <center>
-![image](https://user-images.githubusercontent.com/35276300/230091598-fee71949-29d2-4bac-b60f-dd8efb49278f.png)
+![](https://user-images.githubusercontent.com/35276300/230091598-fee71949-29d2-4bac-b60f-dd8efb49278f.png)
 </center>
 <br>
 
