@@ -64,9 +64,9 @@ A cutting-edge search engine, empowered with advanced image search capabilities,
 
 #### Suggested queries
 
-Contemporary search engines can further enrich the user experience by the proactive generation of pertinent and refined query suggestions. Beyond merely processing user queries, these advanced search engines leverage sophisticated techniques to automatically propose alternative queries that are more useful and relevant. This intelligent feature is often implemented through the utilization of expansive graphs of related words, crafted by state-of-the-art Natural Language Processing (NLP) models. By tapping into the inherent semantic relationships between words, these graphs offer a comprehensive understanding of language nuances.
+Modern search engines can enhance the user experience through the proactive generation of relevant and refined query suggestions. Going beyond mere processing of user queries, these advanced search engines employ sophisticated techniques to automatically propose alternative queries that are more useful and pertinent. This intelligent feature is often implemented by leveraging expansive graphs of related words, crafted by state-of-the-art Natural Language Processing (NLP) models. These graphs tap into the inherent semantic relationships between words, offering a comprehensive understanding of language nuances.
 
-To implement such dynamic query suggestions, seamless integration with an API becomes imperative. This API facilitates the retrieval of insightful keyword recommendations grounded in the intricate web of semantic connections identified by NLP models. Users benefit from a fluid and intuitive search experience as the search engine anticipates their needs and refines their queries in real-time. This proactive query suggestion mechanism stands as a testament to the evolving landscape of search technology, where the fusion of NLP and intelligent algorithms empowers users with not only accurate search results but also a collaborative and responsive search process.
+To implement dynamic query suggestions seamlessly, integration with an API becomes imperative. By dynamically linking a data catalog's user interface with a machine learning model, such an API facilitates the retrieval of insightful keyword recommendations grounded in the intricate web of semantic connections identified by NLP models. Users benefit from a fluid and intuitive search experience as the search engine anticipates their needs and refines their queries in real-time. This proactive query suggestion mechanism reflects the evolving landscape of search technology, where the fusion of NLP and intelligent algorithms empowers users with not only accurate search results but also a collaborative and responsive search process.
 
 <br>
 <center>
@@ -84,9 +84,7 @@ A search interface could retrieve such information via API and display it as fol
 
 #### Advanced search 
 
-Advanced search are enabled by structured metadata, i.e., by the use of metadata standards and schemas. Accessible through an intuitive user interface, an *advanced search* option provides users with a dynamic and interactive platform to specify their search criteria. Users can pinpoint their focus to distinct metadata fields, enabling a fine-grained exploration of datasets within the catalog. Furthermore, to cater to users familiar with syntax-based queries, the Advanced Search offers a syntax option, granting more adept users the flexibility to craft complex search queries using boolean operators.
-
-Whether through the user-friendly interface or the syntax option, the Advanced Search capability provides a comprehensive and tailored search experience. This feature not only acknowledges the diverse needs of users but also reflects the catalog's ability to facilitating efficient and precise data discovery through the judicious use of structured metadata.
+Advanced search are enabled by **structured metadata**, i.e., by the use of metadata standards. Accessible through an intuitive user interface, an "advanced search" option provides users with a dynamic and interactive platform to specify their search criteria. Users can pinpoint their focus to distinct metadata fields, enabling a fine-grained exploration of datasets within the catalog. Furthermore, to cater to users familiar with syntax-based queries, the advanced search offers a syntax option, granting more adept users the flexibility to craft complex search queries using boolean operators. Whether through the user-friendly interface or the syntax option, the advanced search capability provides a comprehensive and tailored search experience. This feature not only acknowledges the diverse needs of users but also reflects the catalog's ability to facilitating efficient and precise data discovery through the judicious use of structured metadata.
 
 <br>
 <center>
@@ -96,8 +94,9 @@ Whether through the user-friendly interface or the syntax option, the Advanced S
 
 This would correspond to the following syntax that the user could enter directly in the search box (and save and/or share with others):
 <br>
+<br>
 <center>
-**title:"demographic transition" AND country:(*Kenya*) AND body:(poverty)**
+title:"demographic transition" AND country:(*Kenya*) AND body:(poverty)
 </center>
 <br>
 
@@ -174,7 +173,7 @@ In the user interface (UI) of a data catalog, the visibility and accessibility o
 
 Tags and tag groups (which are available in all schemas we recommend) provide much flexibility to implement facets, as we showed in section 1.7. 
 
-#### Organizing entries by collections
+#### Organizing entries by collection
 
 Organizing data assets into virtual collections within catalogs significantly enhances users' ability to navigate and discover relevant information efficiently. These collections, which can be structured thematically, geographically, by sponsor, producer, or any other relevant criteria, serve as intuitive groupings (and filters) that streamline the search process. For instance, datasets may be grouped by the origin of the data, geographic coverage, or thematic focus. The virtual nature of collections allows a single data asset to belong to multiple collections simultaneously, recognizing the multidimensional nature of datasets. Each collection must come with a brief descriptive overview, providing users with valuable context about the content it encompasses. 
 
@@ -218,9 +217,11 @@ Designing a data catalog with a concise and informative listing page, presented 
 
 The entry title serves as a focal point, providing a quick overview of the dataset's main subject. Period and geographic coverage offer immediate insights into the temporal and spatial dimensions of the data. Knowing the producer lends credibility and context to the dataset, while information on API availability indicates the level of accessibility and functionality for technically inclined users. A concise description complements these details, offering a snapshot of the dataset's purpose and content. Including a logo enhances visual recognition, especially for datasets associated with specific organizations or brands.
 
+<br>
 <center>
 ![](./images/listing_cards.png){width=80%}
 </center>
+<br>
 
 This streamlined presentation ensures that users can make informed decisions about exploring further details without the need to open multiple pages. The goal is to empower users with enough information upfront, streamlining their browsing experience and enabling efficient decision-making regarding the datasets most relevant to their needs. Ultimately, the catalog card functions as a powerful tool to engage users, providing a snapshot of critical information and enticing them to delve deeper into datasets that align with their specific interests and requirements.
 
@@ -250,7 +251,6 @@ In addition to being displayed in HTML format, metadata should be available as e
 <center>
 ![](./images/catalog_display_01.JPG){width=100%}
 </center>
-
 <br>
 
 #### Variable-level comparison
@@ -274,7 +274,7 @@ After selecting the variables of interest, users should be able to display their
 <center>
 ![](./images/catalog_variable_view_03.JPG){width=100%}
 </center>
-<br>
+</br>
 
 #### Mosaic view for images
 
@@ -300,9 +300,11 @@ In the case of large datasets, a preview feature typically offers a sample of th
 
 The implementation of such a feature requires that the data be available via API.
 
+<br>
 <center>
 ![](./images/catalog_data_preview_01.JPG){width=80%}
 </center>
+</br>
 
 For data of type "document", the "data preview" would consist of a document viewer that would allow the user to view the document within the application (even when the document is not stored in the catalog itself but in an external website). When implementing such a feature, check that the terms of use of the origination source allows that.
 
@@ -310,7 +312,7 @@ For data of type "document", the "data preview" would consist of a document view
 <center>
 ![image](https://user-images.githubusercontent.com/35276300/230733447-55c75dbb-5e5c-4788-9e58-ae4fca646a85.png)
 </center>
-<br>
+</br>
 
 For data of type "video", an option to play the video in the catalog itself should be provided. Typically, this will require publishing the video in an on-line service like Youtube, and embedding it into the catalog page.
 
@@ -321,26 +323,27 @@ Integrating visualizations into a data catalog significantly enhances its utilit
 <br>
 *Example: Line chart for a time series*
 
+<br>
 <center>
 ![](./images/catalog_visualization_03.JPG){width=100%}
 </center>
+</br>
 
-<br>
 *Example: Geo-location of an image*
-
+<br>
 <center>
 ![](./images/catalog_visualization_05.JPG){width=100%}
 </center>
-<br>
+</br>
 
 #### Links and related resources 
 
 The provision of information on links between different entries within a data catalog is useful to users who may not have a precise understanding of what they are seeking and rely on exploration to discover pertinent resources. These relationships can be systematically documented in the metadata. Examples include designating datasets as part of a series or indicating new versions of previous datasets. 
-
+<br>
 <center>
 ![](./images/catalog_related_01.JPG){width=100%}
 </center>
-<br>
+</br>
 
 When explicit relationships are not pre-defined, machine learning tools, such as topic models and word embedding models, can dynamically establish the topical or semantic closeness between diverse resources. This lays the foundation for implementing recommender systems within data catalogs, automatically identifying and showcasing related documents and data for a given resource. By leveraging these techniques, users benefit from an intuitive exploration experience, wherein they not only access the desired resource but also discover interconnected datasets and documents that augment their understanding and analysis. 
 
