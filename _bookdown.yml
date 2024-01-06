@@ -5,6 +5,7 @@ rmd_files:
 - 01_chapter01_challenge_finding_using_data.Rmd
 - 02_chapter02_search_engine_for_data.Rmd
 - 03_chapter03_rich_structured_metadata.Rmd
+- 04_chapter04_practical_implementation.Rmd
 - 04_chapter04_document.Rmd
 - 05_chapter05_microdata.Rmd
 - 06_chapter06_geospatial.Rmd
