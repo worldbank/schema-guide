@@ -29,7 +29,7 @@ This guide is designed to promote and facilitate the creation and utilization of
 
 As part of a broader toolset, this guide complements specialized software applications such as a dedicated Metadata Editor, a data cataloging application, and other tools for data management and curation. While the focus of this toolset is on the technical aspects of data documentation and dissemination, it is essential to acknowledge that legal and ethical considerations are equally important. These aspects are addressed in separate guidelines and supported by distinct tools.
 
-Feedback and suggestions on the Guide can be sent to [...*email*...] or submitted on the Guide's [GitHub repository](https://github.com/worldbank/schema-guide). 
+Feedback and suggestions on the Guide can be sent to [...*email*...] or submitted in the Guide's [GitHub repository](https://github.com/worldbank/schema-guide). 
 
 **Acknowledgments**
 
