@@ -25,7 +25,21 @@ The most recent documentation of all schemas described in the Guide is available
 </center>
 <br>
 
-The documentation of each standard starts with four common elements that are not actually part of the standard or schema, but that contain information that will be used when the metadata are published programatically in a NADA data catalog. If NADA is not used, these elements can be ignored.
+The left navigation bar lists the metadata standards for each data type: documents, microdata (labeled "surveys"), geospatial, database, indicators (labeled "timeseries"), tables, images, videos, research projects and reproducible scripts (labeled "scripts), and related resources (labeled "external resources"). The list also includes the following components: 
+
+- API keys
+- Collections
+- Datasets
+- Visualizations
+- Citations
+- Filestore
+- Reports
+- Widgets
+[to be described or removed]
+
+The righthandside frame lists all elements in a succint presentation. The middle frame provides a description of the metadata elements. 
+
+The list of elements for each standard starts with four common elements that are not actually part of the standard itself, but that are used to store information that will be used when the metadata are published in a NADA data catalog. If NADA is not used, these elements can be ignored. These elements will not be included when the metadata are exported to JSON or XML format.
 
 <center>
 ![](./images/reDoc_0.JPG){width=100%}
@@ -50,30 +64,31 @@ This set of administrative elements is followed by one or multiple sections that
    - **`file description`**: a list and description of data files associated to the study.
    - **`variable description`**: the data dictionary (description of variables).
 
-The schema-specific sections are followed by a few other metadata elements common to most schemas. These elements are used to provide additional information useful for cataloguing and discoverability purposes. They include **tags** (which allow catalog administrators to attach tags to datasets independently of their type, which can be used as filters in the catalog), and **external resources**. 
+The standard-specific sections are followed by a few other metadata elements common to most schemas. These elements are used to provide additional information useful for cataloguing and discoverability purposes. They include **tags** (which allow catalog administrators to attach tags to datasets independently of their type, which can be used as filters in the catalog), and **external resources**. 
 
-Some standards provide the possibility for data curators to add their own metadata elements in an **additional** section. The use of additional elements should be the exception, as metadata standards and schemas are designed to provide all elements needed to fully document a data resource. 
+Some standards provide the possibility for data curators to add their own metadata elements in an **additional** section. The use of additional elements should be the exception, as metadata standards are designed to provide all elements needed to fully document a data resource. 
 
 ## Core properties and features of metadata elements
 
-In each standard, metadata elements can have the following properties:
+The metadata elements listed in a standard can have the following properties:
 
-   - **Optional** or **required**. When an element is declared as *required* (or *mandatory*), the metadata will be considered invalid if it contains no information in that element. To keep the schemas flexible, very few elements are set as required. Note that it is possible for a metadata element to be `required` but have all its components (for elements that have sub-elements) declared as optional. This will be the case when at least one (but any) of the sub-element must contain information. It is also possible for an element to be declared *optional* but have one or more of its sub-elements declared `mandatory` (this means that the field is optional, but if it is used, some of its features MUST be provided.) 
+   - **Optional** or **required**. When an element is **required**, the metadata will be considered invalid if they contain no information for that element. To keep the schemas flexible, very few elements are set as required. Note that it is possible for a metadata element to be `required` but have all its components (for elements that have sub-elements) declared as optional. This will be the case when at least one (but any) of the sub-element must contain information. It is also possible for an element to be declared *optional* but have one or more of its sub-elements declared `mandatory` (this means that the field is optional, but if it is used, some of its features MUST be provided.) 
+   - **Simple** or **structured**. Simple elements consist of a single entry; for example, the element `title` in the standard used to document microdata is a simple element which accepts only one value. Structured elements contain sub-elements. For example, the element `producers` in the same standard contains the sub-elements `name`, `abbr`, `affiliation`, and `role`. 
    - **Repeatable** or **Not repeatable**. For example, the element `nation` in the DDI standard is *Repeatable* because a dataset can cover more than one country, while the element `title` is *Not repeatable* because a study should be identified by a unique title. 
    - **Type**. This indicates the format of the information contained in an element. It can be a *string* (text), a *numeric* value, a *boolean* variable (TRUE/FALSE), or an *array*.
 
 Some schemas may recommend controlled vocabularies for some elements. For example, the ISO 19139 used to document geographic datasets recommends ...
 
-In most cases however, controlled vocabularies are not part of the metadata standard or schema. They will be selected and activated in templates and applications.
+In most cases however, controlled vocabularies are not part of the metadata standard itself as they may be specific to an organization. They may be provided and activated in templates in the Metadata Editor.
 ...example...
                                                
 ## Generating and publishing structured metadata 
 
 ### Using the Metadata Editor
 
-The easiest way to generate metadata compliant with the standards and schemas we describe in this Guide is to use a specialized Metadata Editor. A Metadata Editor provides a user-friendly and flexible interface to document data. Most metadata editors are specific to a certain standard. The World Bank developed an open source multi-standard Metadata Editor. 
+The easiest way to generate metadata compliant with the standards we describe in this Guide is to use a specialized Metadata Editor. A Metadata Editor provides a user-friendly and flexible interface to document data. Most metadata editors are specific to a certain standard. The World Bank developed an open source multi-standard Metadata Editor. We provide here a brief introduction to the Metadata Editor and to its use. For more detailed information, see the Metadata Editor User Guide.
 
-This Metadata Editor contains all suggested standards. The full version of each standard is embedded in the application. But few users will ever make use of all elements contained in the standard. And some will want to customize the instructions, labels of the metadata elements, controlled vocabularies, and instructions to curators who will enter the metadata. 
+The full version of each standard is embedded in the application. But few users will ever make use of all elements contained in a standard. And some will want to customize the instructions, labels of the metadata elements, controlled vocabularies, and instructions to curators who will enter the metadata. 
 
 The Metadata Editor allows users to develop their own templates based on the full version of the standards. A template is a subset of the elements available in the standard/schema, where the elements can be renamed and other customization can be made (within limits, as the metadata generated must remain compliant with the standard independently of the template).  
 
@@ -85,7 +100,8 @@ Template manager:
 </center>
 <br>
 
-Then UI with (for some types) import of data and automated generation of some metadata.
+Then UI with (for some types) import of data and automated generation of some metadata. This provides a convenient option especially for microdata. The system will import all available metadata from common data formats like Stata or SPSS (variable and value labels), and generate summary statistics for each variable which will be part of the metadata (such as the number of valid values for the variable, and frequencies for categorical variables). This makes the Metadata Editor an effective tool for documenting microdata, as doing the same programatically may be tedious.
+
 <br>
 <center>
 ![image](https://user-images.githubusercontent.com/35276300/230179493-6e945fed-3bcf-4ab6-9545-8a7e982d5c46.png)
@@ -93,6 +109,8 @@ Then UI with (for some types) import of data and automated generation of some me
 <br>
 
 (describe / provide a better example)
+
+Once complete, the metadata can be published in a NADA catalog. [provide screenshots]
 
 ### Using R
 
