@@ -15,7 +15,7 @@ rmd_files:
 - 10_chapter10_image.Rmd
 - 11_chapter11_video.Rmd
 - 12_chapter12_reproducible_scripts.Rmd
-- 13_chapter13_related_resources.Rmd
+- 14_chapter14_external_resources.Rmd
 - 90_annexes.Rmd
 new_session: yes
 delete_merged_file: true
