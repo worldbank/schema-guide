@@ -26,11 +26,8 @@ The metadata elements listed in a standard have the following properties:
    - **Repeatable** or **Not repeatable**. For example, the element `nation` in the DDI standard is *Repeatable* because a dataset can cover more than one country, while the element `title` is *Not repeatable* because a study should be identified by a unique title. 
    - **Type**. This indicates the format of the information contained in an element. It can be a *string* (text), a *numeric* value, a *boolean* variable (TRUE/FALSE), or an *array*.
 
-Some schemas may recommend controlled vocabularies for some elements. For example, the ISO 19139 used to document geographic datasets recommends ...
-
-In most cases however, controlled vocabularies are not part of the metadata standard itself as they may be specific to an organization. They may be provided and activated in templates in the Metadata Editor.
+Some schemas may recommend controlled vocabularies for some elements. But in most cases, controlled vocabularies are not part of the metadata standard itself as they may be specific to an organization. They may be provided and activated in templates in the Metadata Editor.
 ...example...
-
 
 ## Documentation of the standards' API
 
@@ -51,6 +48,7 @@ The left navigation bar lists the metadata standards for each data type: documen
 - Filestore
 - Reports
 - Widgets
+
 [to be described or removed]
 
 The righthandside frame lists all elements in a succint presentation of all elements in the standard. Curly brackets are used to group elements. In this list, we can identify the type of element and distinguish repeatable and non-repeatable elements. Repeatable elements are included into square brackets. For example, the DDI metadata standard used to document microdata contains a group of elements labeled `study_desc`, which contains a group labeled `title_statement`, in which we find (among others) a non-repeatable element `idno` (of type *string*) and a repeatable group of elements labeled `identifiers` which contains two sub-elements (`type` and `identifier`), both of them of type *string*. The grouping of elements, and the distinction between repeatable and non-repeatable elements of groups of elements, is essential when using R or Python for generating metadata.
