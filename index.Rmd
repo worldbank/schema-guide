@@ -1,5 +1,5 @@
 --- 
-title: "[DRAFT - WORK IN PROGRESS] Metadata Standards and Schemas for Improved Data Discoverability and Usability"
+title: "[DRAFT - WORK IN PROGRESS] Metadata Standards for Improved Data Discoverability and Usability"
 author: "Olivier Dupriez and Mehmood Asghar"
 date: "`r Sys.Date()`"
 knit: bookdown::render_book
