@@ -308,7 +308,7 @@ Guidelines for implementing SEO are provided by Google Search, Google Dataset Se
 
 An important element of SEO is the provision of structured metadata that can be exploited directly by the crawlers and indexers of search engines. This is the purpose of a set of schemas known as [**schema.org**](https://schema.org/). In 2011 Google, Microsoft, Yandex, and Yahoo! created a common set of schemas for structured data markup on web pages with the aim of helping search engines to better understand websites. An alternative to schema.org is the [DCAT (Data Catalog Vocabulary)](https://www.w3.org/TR/vocab-dcat-2/) metadata schema recommended by the W3C, also recognized by Google. "DCAT is a vocabulary for publishing data catalogs on the Web, which was originally developed in the context of government data catalogs such as data.gov and data.gov.uk (...)" (https://www.w3.org/TR/vocab-dcat-2/) Mapping augmented and structured metadata to the schema.org and/or DCAT standard is a critical element of such optimization. It will contribute significantly to the visibility of on-line data and metadata. Implementing such structured data markup in digital repositories is the responsibility of data librarians and of developers of data cataloguing applications. 
 
-## Augmenting metadata
+## Augmented metadata
 
 Detailed and complete metadata foster usability and discoverability of data. Augmentation of "enrichment" or "enhancement" of the metadata will therefore be beneficial. There are multiple ways metadata can be made richer, or *augmented*, programmatically and in a largely automated manner. Metadata can be extracted from external sources or from the data themselves. 
 
