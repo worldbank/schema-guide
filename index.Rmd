@@ -25,11 +25,13 @@ graphics: yes
 
 Government agencies, international organizations, the private sector, academia, and other entities engage in the collection, processing, and analysis of data. While these datasets inherently hold value for their creators, they also harbor potential benefits for a wider community of secondary users. By repurposing or reusing these data, this community can significantly enhance the value of existing datasets. Unfortunately, many datasets remain challenging to locate, access, and utilize, resulting in underexploitation. Addressing this issue requires a dedicated and collaborative effort to enhance the discoverability, accessibility, and usability of data. The key to this improvement lies in the quality of the metadata associated with the data.
 
-This guide is designed to promote and facilitate the creation and utilization of comprehensive and structured metadata, thereby encouraging the responsible use and repurposing of data. The primary audience for this guide includes data producers and curators, data librarians, catalog administrators, and developers of data management and dissemination platforms. These stakeholders aim to maximize the value of existing data in a responsible and technically proficient manner by adopting metadata standards and implementing best practices for data documentation and cataloging. The guide is particularly applicable to various types of socio-economic data, including indicators, microdata, geographic datasets, publications, and more.
+This guide is designed to promote and facilitate the creation and utilization of comprehensive and structured metadata. The primary audience for this guide are data producers and curators, data librarians, catalog administrators, and developers of data management and dissemination platforms. The guide is particularly applicable to various types of socio-economic data, including indicators, microdata, geographic datasets, publications, and more.
 
 As part of a broader toolset, this guide complements specialized software applications such as a dedicated Metadata Editor, a data cataloging application, and other tools for data management and curation. While the focus of this toolset is on the technical aspects of data documentation and dissemination, it is essential to acknowledge that legal and ethical considerations are equally important. These aspects are addressed in separate guidelines and supported by distinct tools.
 
-## Acknowledgments {-}
+Feedback and suggestions on the Guide can be sent to [...*email*...] or submitted on the Guide's [GitHub repository] (https://github.com/worldbank/schema-guide). 
+
+**Acknowledgments**
 
 The Guide was written by Olivier Dupriez (Deputy Chief Statistician, World Bank) and Mehmood Asghar (Senior Data Engineer, World Bank). Kamwoo Lee (Data Scientist, World Bank) produced some of the examples of the use of metadata schemas included in the Guide and contributed to the testing of the schemas. Emmanuel Blondel (consultant) contributed much of chapter 6. Geoffrey Greenwell (consultant) provided input to chapter 9. Bo Andree, Tefera Bekele Degefu, Cathrine Machingauta, and Aivin Solatorio (Data Scientists, World Bank) participated in the testing and improvement of the metadata schemas. David L. Newhouse (Senior Economist, World Bank) provided input to chapter 12. 
 
@@ -43,7 +45,5 @@ chatGPT was used as a copy editor, but not for substantive content suggestion or
 
 The Guide was created using [R Bookdown](https://bookdown.org/) and is licensed under a [Creative Commons Attribution- NonCommercial- NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
 
-Feedback and suggestions on the Guide can be sent to [...*email*...] or submitted on GitHub where the Guide's source code is stored (https://github.com/worldbank/schema-guide). 
-
+<br>
 ![](./images/index_ccby_logo.png){width=20%}
-</center>
