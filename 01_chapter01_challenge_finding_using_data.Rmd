@@ -28,17 +28,11 @@ Metadata are not only needed to enable the data discovery systems. They are also
 
 Gaining access to data presents a multifaceted challenge that encompasses legal, ethical, and practical considerations. To ensure that data access is not only lawful and ethical but also efficient, both data providers and users must adhere to specific principles and practices:
 
-- **Legal and ethical framework**
-  - Data providers must affirm their legal rights to share the data and articulate clear usage rights for data users.
-  - Data users must comprehend how they can employ the data, whether for research, commercial purposes, or other applications, strictly adhering to the specified terms of use.
-- **Privacy and ethical standards**
-  - Data access must align with data privacy laws and ethical standards, especially concerning sensitive or personally identifiable information. Handling such data requires utmost care to safeguard individuals' privacy.
-- **Comprehensive metadata**
-  - Data providers play a crucial role in furnishing comprehensive metadata that offers context and a thorough understanding of the data. This metadata should encompass details about the data's provenance, including its history, transformations, and processing steps. This understanding is indispensable for accurate and responsible analysis.
-- **User-friendly formats**
-  - Data should be made available in user-friendly formats, including non-proprietary formats, compatible with common data analysis tools.
-- **Diverse accessibility**
-  - The modes of access should cater to various user preferences and capacities. This may involve offering downloadable data files, providing access through web-based tools, and supporting data streaming. Access to data via API (Application Programming Interface) empowers users to retrieve and manipulate data programmatically, seamlessly integrating them into their research workflows and applications.
+- **Legal framework**: Data providers must affirm their legal rights to share the data and articulate clear usage rights for data users. Data users must comprehend how they can employ the data, whether for research, commercial purposes, or other applications, strictly adhering to the specified terms of use.
+- **Privacy and ethical standards**: Data access must align with data privacy laws and ethical standards, especially concerning sensitive or personally identifiable information. Handling such data requires utmost care to safeguard individuals' privacy.
+- **Comprehensive metadata**: Data providers play a crucial role in furnishing comprehensive metadata that offers context and a thorough understanding of the data. This metadata should encompass details about the data's provenance, including its history, transformations, and processing steps. This understanding is indispensable for accurate and responsible analysis.
+- **User-friendly formats**: Data should be made available in user-friendly formats, including non-proprietary formats, compatible with common data analysis tools.
+- **Convenient accessibility**: The modes of access should cater to various user preferences and capacities. This may involve offering downloadable data files, providing access through web-based tools, and supporting data streaming. Access to data via API (Application Programming Interface) empowers users to retrieve and manipulate data programmatically, seamlessly integrating them into their research workflows and applications.
 
 By embracing these principles, the data community can navigate the challenges of accessing data, fostering a framework that ensures legality, ethics, efficiency, convenience, and relevance in data usage.
 
