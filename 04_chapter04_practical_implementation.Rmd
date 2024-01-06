@@ -16,6 +16,22 @@ In this section, we provide a concise overview of how structured metadata can be
 
 This section refers to two distinct applications: the World Bank's Metadata Editor and the NADA cataloging application. Both applications are accessible freely and openly. While other metadata editors and online cataloging tools are available, none encompass all the standards outlined in the Guide. The World Bank's Metadata Editor produces metadata in open formats, such as XML and JSON, making it compatible with cataloging tools beyond NADA—such as CKAN, which can ingest the generated metadata through the application's API, for instance.
 
+
+## Core properties and features of metadata elements
+
+The metadata elements listed in a standard have the following properties:
+
+   - **Optional** or **required**. When an element is **required**, the metadata will be considered invalid if they contain no information for that element. To keep the schemas flexible, very few elements are set as required. Note that it is possible for a metadata element to be `required` but have all its components (for elements that have sub-elements) declared as optional. This will be the case when at least one (but any) of the sub-element must contain information. It is also possible for an element to be declared *optional* but have one or more of its sub-elements declared `mandatory` (this means that the field is optional, but if it is used, some of its features MUST be provided.) 
+   - **Simple** or **structured**. Simple elements consist of a single entry; for example, the element `title` in the standard used to document microdata is a simple element which accepts only one value. Structured elements contain sub-elements. For example, the element `producers` in the same standard contains the sub-elements `name`, `abbr`, `affiliation`, and `role`. 
+   - **Repeatable** or **Not repeatable**. For example, the element `nation` in the DDI standard is *Repeatable* because a dataset can cover more than one country, while the element `title` is *Not repeatable* because a study should be identified by a unique title. 
+   - **Type**. This indicates the format of the information contained in an element. It can be a *string* (text), a *numeric* value, a *boolean* variable (TRUE/FALSE), or an *array*.
+
+Some schemas may recommend controlled vocabularies for some elements. For example, the ISO 19139 used to document geographic datasets recommends ...
+
+In most cases however, controlled vocabularies are not part of the metadata standard itself as they may be specific to an organization. They may be provided and activated in templates in the Metadata Editor.
+...example...
+
+
 ## Documentation of the standards' API
 
 The most recent documentation of all schemas described in the Guide is available on-line at https://ihsn.github.io/nada-api-redoc/catalog-admin/#. 
@@ -37,7 +53,19 @@ The left navigation bar lists the metadata standards for each data type: documen
 - Widgets
 [to be described or removed]
 
-The righthandside frame lists all elements in a succint presentation. The middle frame provides a description of the metadata elements. 
+The righthandside frame lists all elements in a succint presentation of all elements in the standard. Curly brackets are used to group elements. In this list, we can identify the type of element and distinguish repeatable and non-repeatable elements. Repeatable elements are included into square brackets. For example, the DDI metadata standard used to document microdata contains a group of elements labeled `study_desc`, which contains a group labeled `title_statement`, in which we find (among others) a non-repeatable element `idno` (of type *string*) and a repeatable group of elements labeled `identifiers` which contains two sub-elements (`type` and `identifier`), both of them of type *string*. The grouping of elements, and the distinction between repeatable and non-repeatable elements of groups of elements, is essential when using R or Python for generating metadata.
+
+<center>
+![](./images/groups_repeatable.JPG){width=60%}
+</center>
+<br>
+
+The middle frame provides a description of the metadata elements, and will indicate elements that are required. 
+
+<center>
+![](./images/required_elements.JPG){width=60%}
+</center>
+<br>
 
 The list of elements for each standard starts with four common elements that are not actually part of the standard itself, but that are used to store information that will be used when the metadata are published in a NADA data catalog. If NADA is not used, these elements can be ignored. These elements will not be included when the metadata are exported to JSON or XML format.
 
@@ -68,20 +96,7 @@ The standard-specific sections are followed by a few other metadata elements com
 
 Some standards provide the possibility for data curators to add their own metadata elements in an **additional** section. The use of additional elements should be the exception, as metadata standards are designed to provide all elements needed to fully document a data resource. 
 
-## Core properties and features of metadata elements
 
-The metadata elements listed in a standard can have the following properties:
-
-   - **Optional** or **required**. When an element is **required**, the metadata will be considered invalid if they contain no information for that element. To keep the schemas flexible, very few elements are set as required. Note that it is possible for a metadata element to be `required` but have all its components (for elements that have sub-elements) declared as optional. This will be the case when at least one (but any) of the sub-element must contain information. It is also possible for an element to be declared *optional* but have one or more of its sub-elements declared `mandatory` (this means that the field is optional, but if it is used, some of its features MUST be provided.) 
-   - **Simple** or **structured**. Simple elements consist of a single entry; for example, the element `title` in the standard used to document microdata is a simple element which accepts only one value. Structured elements contain sub-elements. For example, the element `producers` in the same standard contains the sub-elements `name`, `abbr`, `affiliation`, and `role`. 
-   - **Repeatable** or **Not repeatable**. For example, the element `nation` in the DDI standard is *Repeatable* because a dataset can cover more than one country, while the element `title` is *Not repeatable* because a study should be identified by a unique title. 
-   - **Type**. This indicates the format of the information contained in an element. It can be a *string* (text), a *numeric* value, a *boolean* variable (TRUE/FALSE), or an *array*.
-
-Some schemas may recommend controlled vocabularies for some elements. For example, the ISO 19139 used to document geographic datasets recommends ...
-
-In most cases however, controlled vocabularies are not part of the metadata standard itself as they may be specific to an organization. They may be provided and activated in templates in the Metadata Editor.
-...example...
-                                               
 ## Generating and publishing structured metadata 
 
 ### Using the Metadata Editor
