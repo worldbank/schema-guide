@@ -10,7 +10,6 @@ Many organizations share data online, making numerous and diverse datasets acces
 
 ## Finding data
 
-
 Researchers and data users employ a variety of strategies to pinpoint and procure existing datasets. While some leverage personal networks or academic publications to identify datasets of interest, this approach may result in the utilization of readily available yet suboptimal information. Conversely, many data users resort to utilizing general search engines or specialized data catalogs in their pursuit of pertinent and high-quality data resources.
 
 Prominent internet search engines showcase significant capabilities in locating and ranking pertinent online resources. The algorithms behind these search engines integrate both lexical and semantic functionalities. Straightforward data queries, such as searching for *population of India 2023*, yield instant answers (though not always from the most authoritative source). Less specific queries, like searching for *malnutrition in Yemen*, may not provide a direct answer but offer sufficient information and links to useful resources. Generative artificial intelligence is enhancing these search engines' ability to engage with users using natural language, suitable for addressing simple queries, albeit with the potential for errors and inaccuracies. However, internet search engines are not optimized to identify the most relevant data when user requirements cannot be expressed as a straightforward query.
@@ -27,22 +26,21 @@ Metadata are not only needed to enable the data discovery systems. They are also
 
 ## Accessing data
 
-Gaining access to data presents a multifaceted challenge that encompasses legal, ethical, and practical considerations. To ensure that data access is not only lawful and ethical but also efficient, fostering relevant and responsible use, both data providers and users must adhere to specific principles and practices:
+Gaining access to data presents a multifaceted challenge that encompasses legal, ethical, and practical considerations. To ensure that data access is not only lawful and ethical but also efficient, both data providers and users must adhere to specific principles and practices:
 
-- **Legal and ethical framework**:
+- **Legal and ethical framework**
   - Data providers must affirm their legal rights to share the data and articulate clear usage rights for data users.
   - Data users must comprehend how they can employ the data, whether for research, commercial purposes, or other applications, strictly adhering to the specified terms of use.
-- **Privacy and ethical standards**:
+- **Privacy and ethical standards**
   - Data access must align with data privacy laws and ethical standards, especially concerning sensitive or personally identifiable information. Handling such data requires utmost care to safeguard individuals' privacy.
-- **Comprehensive metadata**:
+- **Comprehensive metadata**
   - Data providers play a crucial role in furnishing comprehensive metadata that offers context and a thorough understanding of the data. This metadata should encompass details about the data's provenance, including its history, transformations, and processing steps. This understanding is indispensable for accurate and responsible analysis.
-- **User-friendly formats**:
-  - Data should be made available in user-friendly formats compatible with common data analysis tools, such as CSV, JSON, or Excel.
-- **Diverse accessibility**:
-  - Data accessibility should cater to various user preferences and capacities. This may involve offering downloadable files, providing access through web-based tools, and supporting data streaming.
-  - APIs (Application Programming Interfaces) are crucial for enabling programmable data access. They empower researchers to retrieve and manipulate data programmatically, seamlessly integrating it into their research workflows and applications.
+- **User-friendly formats**
+  - Data should be made available in user-friendly formats, including non-proprietary formats, compatible with common data analysis tools.
+- **Diverse accessibility**
+  - The modes of access should cater to various user preferences and capacities. This may involve offering downloadable data files, providing access through web-based tools, and supporting data streaming. Access to data via API (Application Programming Interface) empowers users to retrieve and manipulate data programmatically, seamlessly integrating them into their research workflows and applications.
 
-By embracing these principles, the data community can navigate the challenges of accessing data, fostering a framework that ensures legality, ethics, efficiency, and relevance in data usage.
+By embracing these principles, the data community can navigate the challenges of accessing data, fostering a framework that ensures legality, ethics, efficiency, convenience, and relevance in data usage.
 
 ## Using data
 
