@@ -11,7 +11,7 @@ biblio-style: apalike
 link-citations: yes
 description: ""
 github-repo: ""
-cover-image: "./images/cover2.jpg"
+cover-image: "./images/guide_cover.png"
 url: ''
 colorlinks: yes
 graphics: yes
