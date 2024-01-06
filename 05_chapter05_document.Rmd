@@ -347,11 +347,11 @@ If the source is a text within an edited volume, it should be listed under the n
 ```
 <br>
   - **`first_name`** *[Optional ; Not repeatable ; String]* <br>
-  The first name of the editor.
+  The first name of the editor.<br>
   - **`initial`** *[Optional ; Not repeatable ; String]* <br>
-  The initials of the editor.
+  The initials of the editor.<br>
   - **`last_name`** *[Optional ; Not repeatable ; String]* <br>
-  The last name of the editor.
+  The last name of the editor.<br>
   - **`affiliation`** *[Optional ; Not repeatable ; String]* <br>
   The affiliation of the editor.<br><br>
 
@@ -569,8 +569,8 @@ notes": [
 ```
 <br>
 
-  This field can be used to provide information on the document that does not belong to the other, more specific metadata elements provided in the schema. 
-  - **`note`**  <br>
+  This field can be used to provide information on the document that does not belong to the other, more specific metadata elements provided in the schema.<br> 
+  - **`note`** <br>
   A note, entered as free text.
 
 <br>
@@ -1157,7 +1157,7 @@ my_doc <- list(
   # ... 
 )  
 ```   
-
+<br>
 
 - **`security_classification`** *[Optional ; Not repeatable ; String]* <br>
 
@@ -1186,11 +1186,11 @@ my_doc <- list(
 ```
 <br>
 
-  This element is used to describe the sources of different types (except data sources, which must be listed in the next element `data_source`) that were used in the production of the document. 
+  This element is used to describe the sources of different types (except data sources, which must be listed in the next element `data_source`) that were used in the production of the document. <br>
   - **`source_origin`** *[Optional ; Not repeatable ; String]* <br>
-  For historical materials, information about the origin(s) of the sources and the rules followed in establishing the sources should be specified.
+  For historical materials, information about the origin(s) of the sources and the rules followed in establishing the sources should be specified.<br>
   - **`source_char`** *[Optional ; Not repeatable ; String]* <br>
-  Characteristics of the source. Assessment of characteristics and quality of source material.
+  Characteristics of the source. Assessment of characteristics and quality of source material.<br>
   - **`source_doc`** *[Optional ; Not repeatable ; String]* <br>
   Documentation and access to the source. <br><br>
 
@@ -1212,7 +1212,7 @@ my_doc <- list(
 
   Used to list the machine-readable data file(s) -if any- that served as the source(s) of the data collection. 
   - **`name`** *[Required ; Not repeatable ; String]* <br>
-  Name (title) of the dataset used as source. 
+  Name (title) of the dataset used as source. <br>
   - **`uri`** *[Optional ; Not repeatable ; String]* <br>
   Link (URL) to the dataset or to a web page describing the dataset. <br>
   - **`note`** *[Optional ; Not repeatable ; String]* <br>
