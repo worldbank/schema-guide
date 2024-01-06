@@ -6,7 +6,7 @@ output: html_document
 
 # Generating and publishing structured metadata {#chapter04}
                                    
-## Standards API documentation
+## Documentation of standards API
 
 The most recent documentation of the schemas described in the Guide is available on-line at https://ihsn.github.io/nada-api-redoc/catalog-admin/#. 
 
