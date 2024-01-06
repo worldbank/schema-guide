@@ -2,7 +2,7 @@
 output: html_document
 ---
 
-# The features of a modern data dissemination platform {#chapter02}
+# Features of a modern data dissemination platform {#chapter02}
 
 In the introductory section of this Guide, we proposed that modern data dissemination platforms should be modeled after the most successful e-commerce platforms. These platforms are optimized to serve both buyers (in our context, the data users) and sellers (in our context, the data providers) in the most efficient manner. Internet search engines, and in particular the way they exploit the capabilities of generative artificial intelligence, are also a useful source of inspiration for the design of data catalogs. In this chapter, we outline features that a modern online data catalog should incorporate to adhere to these models.
 
