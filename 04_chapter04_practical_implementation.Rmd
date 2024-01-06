@@ -2,9 +2,9 @@
 output: html_document
 ---
 
-# (PART) IMPLEMENTATION OF STANDARDS  {-}
+# (PART) PRACTICAL IMPLEMENTATION {-}
 
-# Practical implementation {#chapter04}
+# Generating and publishing structured metadata {#chapter04}
                                    
 ## Where to find the schemas' documentation
 
