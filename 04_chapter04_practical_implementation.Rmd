@@ -56,12 +56,12 @@ In most cases however, controlled vocabularies are not part of the metadata stan
 ...example...
 
                                                
-## Generating structured metadata 
+## Generating and publishing structured metadata 
 
 Metadata compliant with the standards and schemas described in this Guide can be generated in two different ways: **programmatically** using a programming language like R or Python, or by **using a specialized metadata editor** application. The first option provides a high degree of flexibility and efficiency. It offers multiple opportunities to automate part of the metadata generation process, and to exploit advanced machine learning solutions to enhance metadata. Also, metadata generated using R or Python can also be published in a NADA catalog using the NADA API and the R package NADAR or the Python library PyNADA. The programmatic option may thus be the preferred option for organizations that have strong expertise in R or Python. For other organizations, and for some types of data, the use of a specialized metadata editor may be a better option. Metadata editors are specialized software applications designed to offer a user-friendly alternative to the programmatic generation of metadata. We provide in this section a brief description of how structured metadata can be generated and published using respectively R, Python, and a metadata editor application. 
 
 
-### Generating compliant metadata using a metadata editor
+### Using a metadata editor
 
 The easiest way to generate metadata compliant with the standards and schemas we describe in this Guide is to use a specialized Metadata Editor. A Metadata Editor provides a user-friendly and flexible interface to document data. Most metadata editors are specific to a certain standard. The IHSN / World Bank developed an open source multi-standard Metadata Editor. 
 
@@ -86,7 +86,7 @@ Then UI with (for some types) import of data and automated generation of some me
 
 (describe / provide a better example)
 
-### Generating compliant metadata using R
+### Using R
 
 All schemas described in the [on-line documentation](https://ihsn.github.io/nada-api-redoc/catalog-admin/#) can be used to generate compliant metadata using R scripts. Generating metadata using R will consist of producing a *list* object (itself containing lists). In the documentation of the standards and schemas, curly brackets indicate to R users that a *list* must be created to store the metadata elements. Square brackets indicate that a block of elements is repeatable, which corresponds in R to a *list of lists*. For example (using the [DOCUMENT]((https://ihsn.github.io/nada-api-redoc/catalog-admin/#operation/createDocument)) metadata schema): 
 
@@ -177,7 +177,7 @@ The document is now available in the NADA catalog.
 </center>
 
 
-### Generating compliant metadata using Python
+### Using Python
 
 Generating metadata using Python will consist of producing a *dictionary* object, which will itself contain lists and dictionaries. Non-repeatable metadata elements will be stored as dictionaries, and repeatable elements as lists of dictionaries. In the [metadata documentation](https://ihsn.github.io/nada-api-redoc/catalog-admin/#), curly brackets indicate that a *dictionary* must be created to store the metadata elements. Square brackets indicate that a dictionary containing dictionaries must be created. 
 
