@@ -2,7 +2,7 @@
 output: html_document
 ---
 
-#	Geographic data and services {#chapter06}
+#	Geographic data and services {#chapter07}
 
 <br>
 <center>
