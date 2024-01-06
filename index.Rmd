@@ -31,6 +31,13 @@ As part of a broader toolset, this guide complements specialized software applic
 
 Feedback and suggestions on the Guide can be sent to [...*email*...] or submitted in the Guide's [GitHub repository](https://github.com/worldbank/schema-guide). 
 
+The Guide was created using [R Bookdown](https://bookdown.org/) and is licensed under a [Creative Commons Attribution- NonCommercial- NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
+
+<br>
+![](./images/index_ccby_logo.png){width=20%}
+<br>
+<br>
+
 **Acknowledgments**
 
 The Guide was written by Olivier Dupriez (Deputy Chief Statistician, World Bank) and Mehmood Asghar (Senior Data Engineer, World Bank). Kamwoo Lee (Data Scientist, World Bank) produced some of the examples of the use of metadata schemas included in the Guide and contributed to the testing of the schemas. Emmanuel Blondel (consultant) contributed much of chapter 7. Geoffrey Greenwell (consultant) provided input to chapter 10. Bo Andree, Tefera Bekele Degefu, Cathrine Machingauta, and Aivin Solatorio (Data Scientists, World Bank) participated in the testing and improvement of the metadata schemas. David L. Newhouse (Senior Economist, World Bank) provided input to chapter 13. 
@@ -43,7 +50,3 @@ The production of the Guide and related tools benefited from financial contribut
 
 chatGPT was used as a copy editor, but not for substantive content suggestion or creation.  
 
-The Guide was created using [R Bookdown](https://bookdown.org/) and is licensed under a [Creative Commons Attribution- NonCommercial- NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
-
-<br>
-![](./images/index_ccby_logo.png){width=20%}
