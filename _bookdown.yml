@@ -12,7 +12,7 @@ rmd_files:
 - 08_chapter08_database.Rmd
 - 09_chapter09_indicator.Rmd
 - 10_chapter10_table.Rmd
-- 11_chapter11_image.Rmd
+- 11_chapter11_images.Rmd
 - 12_chapter12_video.Rmd
 - 13_chapter13_reproducible_scripts.Rmd
 - 14_chapter14_external_resources.Rmd
