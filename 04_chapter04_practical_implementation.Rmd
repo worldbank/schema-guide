@@ -5,17 +5,27 @@ output: html_document
 # (PART) PRACTICAL IMPLEMENTATION {-}
 
 # Generating and publishing structured metadata {#chapter04}
-                                   
-## Documentation of standards API
 
-The most recent documentation of the schemas described in the Guide is available on-line at https://ihsn.github.io/nada-api-redoc/catalog-admin/#. 
+Metadata conforming to the standards outlined in this Guide can be produced through two distinct methods: **utilizing a specialized metadata editor application** or **programatically** using programming languages such as R or Python.
+
+A metadata editor serves as dedicated software crafted to provide a user-friendly means of generating structured metadata. This option is particularly advantageous for users unfamiliar with programming languages and for certain data types, such as microdata.
+
+On the other hand, the programmatic approach offers heightened flexibility and efficiency but necessitates a proficient understanding of R or Python. It presents numerous opportunities to automate segments of the metadata generation process and leverage advanced machine learning solutions for automatic metadata enhancement. Consequently, the programmatic alternative may be preferable for organizations equipped with expertise in R or Python. 
+
+In this section, we provide a concise overview of how structured metadata can be generated and published using a metadata editor application, and using R or Python, respectively. Users opting for the programmatic route should have access to the comprehensive documentation of the standards' API.
+
+This section refers to two distinct applications: the World Bank's Metadata Editor and the NADA cataloging application. Both applications are accessible freely and openly. While other metadata editors and online cataloging tools are available, none encompass all the standards outlined in the Guide. The World Bank's Metadata Editor produces metadata in open formats, such as XML and JSON, making it compatible with cataloging tools beyond NADA—such as CKAN, which can ingest the generated metadata through the application's API, for instance.
+
+## Documentation of the standards' API
+
+The most recent documentation of all schemas described in the Guide is available on-line at https://ihsn.github.io/nada-api-redoc/catalog-admin/#. 
 
 <center>
 ![](./images/reDoc.JPG){width=100%}
 </center>
 <br>
 
-The documentation of each standard or schema starts with four common elements that are not actually part of the standard or schema, but that contain information that will be used when the metadata are published in a data catalog that uses the NADA application. If NADA is not used, these "administrative elements" can be ignored.
+The documentation of each standard starts with four common elements that are not actually part of the standard or schema, but that contain information that will be used when the metadata are published programatically in a NADA data catalog. If NADA is not used, these elements can be ignored.
 
 <center>
 ![](./images/reDoc_0.JPG){width=100%}
@@ -33,7 +43,7 @@ The documentation of each standard or schema starts with four common elements th
    - **`published`** determines the status of the metadata in the on-line catalog (with options 0 = draft and 1 = published). Published entries are visible to all visitors of the on-line catalog; unpublished (draft) entries will only be visible by the catalog administrators and reviewers. 
    - **`overwrite`** determines whether the metadata already in the catalog for this entry can be overwritten (iwith options yes or no, 'no' being the default).  
 
-This set of administrative elements is followed by one or multiple sections that contain the elements specific to each standard/schema. For example, the DDI Codebook metadata standard, used to document microdata, contains the following main sections:
+This set of administrative elements is followed by one or multiple sections that contain the elements specific to each standard. For example, the DDI Codebook metadata standard, used to document microdata, contains the following main sections:
    
    - **`document description`**: a description of the metadata (who documented the dataset, when, etc.) Most schemas will contain such a section describing the metadata, useful mainly to data curators and catalog administrators. In other schemas, this section may be named `metadata_description`. 
    - **`study description`**: the description of the survey/census/study, not including the data files and data dictionary.
@@ -42,9 +52,11 @@ This set of administrative elements is followed by one or multiple sections that
 
 The schema-specific sections are followed by a few other metadata elements common to most schemas. These elements are used to provide additional information useful for cataloguing and discoverability purposes. They include **tags** (which allow catalog administrators to attach tags to datasets independently of their type, which can be used as filters in the catalog), and **external resources**. 
 
-Some schemas provide the possibility for data curators to add their own metadata elements in an **additional** section. The use of additional elements should be the exception, as metadata standards and schemas are designed to provide all elements needed to fully document a data resource. 
+Some standards provide the possibility for data curators to add their own metadata elements in an **additional** section. The use of additional elements should be the exception, as metadata standards and schemas are designed to provide all elements needed to fully document a data resource. 
 
-In each standard and schema, metadata elements can have the following properties:
+## Core properties and features of metadata elements
+
+In each standard, metadata elements can have the following properties:
 
    - **Optional** or **required**. When an element is declared as *required* (or *mandatory*), the metadata will be considered invalid if it contains no information in that element. To keep the schemas flexible, very few elements are set as required. Note that it is possible for a metadata element to be `required` but have all its components (for elements that have sub-elements) declared as optional. This will be the case when at least one (but any) of the sub-element must contain information. It is also possible for an element to be declared *optional* but have one or more of its sub-elements declared `mandatory` (this means that the field is optional, but if it is used, some of its features MUST be provided.) 
    - **Repeatable** or **Not repeatable**. For example, the element `nation` in the DDI standard is *Repeatable* because a dataset can cover more than one country, while the element `title` is *Not repeatable* because a study should be identified by a unique title. 
@@ -54,16 +66,12 @@ Some schemas may recommend controlled vocabularies for some elements. For exampl
 
 In most cases however, controlled vocabularies are not part of the metadata standard or schema. They will be selected and activated in templates and applications.
 ...example...
-
                                                
 ## Generating and publishing structured metadata 
 
-Metadata compliant with the standards and schemas described in this Guide can be generated in two different ways: **programmatically** using a programming language like R or Python, or by **using a specialized metadata editor** application. The first option provides a high degree of flexibility and efficiency. It offers multiple opportunities to automate part of the metadata generation process, and to exploit advanced machine learning solutions to enhance metadata. Also, metadata generated using R or Python can also be published in a NADA catalog using the NADA API and the R package NADAR or the Python library PyNADA. The programmatic option may thus be the preferred option for organizations that have strong expertise in R or Python. For other organizations, and for some types of data, the use of a specialized metadata editor may be a better option. Metadata editors are specialized software applications designed to offer a user-friendly alternative to the programmatic generation of metadata. We provide in this section a brief description of how structured metadata can be generated and published using respectively R, Python, and a metadata editor application. 
+### Using the Metadata Editor
 
-
-### Using a metadata editor
-
-The easiest way to generate metadata compliant with the standards and schemas we describe in this Guide is to use a specialized Metadata Editor. A Metadata Editor provides a user-friendly and flexible interface to document data. Most metadata editors are specific to a certain standard. The IHSN / World Bank developed an open source multi-standard Metadata Editor. 
+The easiest way to generate metadata compliant with the standards and schemas we describe in this Guide is to use a specialized Metadata Editor. A Metadata Editor provides a user-friendly and flexible interface to document data. Most metadata editors are specific to a certain standard. The World Bank developed an open source multi-standard Metadata Editor. 
 
 This Metadata Editor contains all suggested standards. The full version of each standard is embedded in the application. But few users will ever make use of all elements contained in the standard. And some will want to customize the instructions, labels of the metadata elements, controlled vocabularies, and instructions to curators who will enter the metadata. 
 
