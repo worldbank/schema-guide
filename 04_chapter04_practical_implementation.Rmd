@@ -6,32 +6,35 @@ output: html_document
 
 # Generating and publishing structured metadata {#chapter04}
 
-Metadata conforming to the standards outlined in this Guide can be produced through two distinct methods: **utilizing a specialized metadata editor application** or **programatically** using programming languages such as R or Python.
+Metadata conforming to the standards outlined in this Guide can be produced through two distinct methods: **utilizing a specialized metadata editor** application or **programmatically** using programming languages such as R or Python.
 
-A metadata editor serves as dedicated software crafted to provide a user-friendly means of generating structured metadata. This option is particularly advantageous for users unfamiliar with programming languages and for certain data types, such as microdata.
+A **metadata editor** serves as dedicated software crafted to provide a user-friendly means of generating structured metadata. This option is particularly advantageous for users unfamiliar with programming languages and for certain data types, such as microdata.
 
-On the other hand, the programmatic approach offers heightened flexibility and efficiency but necessitates a proficient understanding of R or Python. It presents numerous opportunities to automate segments of the metadata generation process and leverage advanced machine learning solutions for automatic metadata enhancement. Consequently, the programmatic alternative may be preferable for organizations equipped with expertise in R or Python. 
+On the other hand, the **programmatic approach** offers heightened flexibility and efficiency but necessitates a proficient understanding of R or Python. It presents opportunities to automate segments of the metadata generation process and to leverage advanced machine learning solutions for automatic metadata enhancement. Consequently, the programmatic alternative may be preferable for organizations equipped with expertise in R or Python. 
 
-In this section, we provide a concise overview of how structured metadata can be generated and published using a metadata editor application, and using R or Python, respectively. Users opting for the programmatic route should have access to the comprehensive documentation of the standards' API.
+In this section, we provide a concise overview of how structured metadata can be generated and published using a metadata editor application, and using R or Python, respectively. Examples of the use of the programmatic option are also provided in chapters 5 to 13. 
 
 This section refers to two distinct applications: the World Bank's Metadata Editor and the NADA cataloging application. Both applications are accessible freely and openly. While other metadata editors and online cataloging tools are available, none encompass all the standards outlined in the Guide. The World Bank's Metadata Editor produces metadata in open formats, such as XML and JSON, making it compatible with cataloging tools beyond NADA—such as CKAN, which can ingest the generated metadata through the application's API, for instance.
 
-
 ## Core properties and features of metadata elements
 
-The metadata elements listed in a standard have the following properties:
+A metadata standard constitutes a systematic arrangement of elements crafted for documenting a dataset, complete with rules and instructions to ensure consistent and uniform implementation. These elements possess specific attributes such as name, type, description, and other predefined features, aiming to store all metadata related to a digital resource in a standardized and structured manner. The metadata standards are defined as JSON or XML schemas, rendering them machine-readable and conveniently exploitable by software applications.
 
-   - **Optional** or **required**. When an element is **required**, the metadata will be considered invalid if they contain no information for that element. To keep the schemas flexible, very few elements are set as required. Note that it is possible for a metadata element to be `required` but have all its components (for elements that have sub-elements) declared as optional. This will be the case when at least one (but any) of the sub-element must contain information. It is also possible for an element to be declared *optional* but have one or more of its sub-elements declared `mandatory` (this means that the field is optional, but if it is used, some of its features MUST be provided.) 
-   - **Simple** or **structured**. Simple elements consist of a single entry; for example, the element `title` in the standard used to document microdata is a simple element which accepts only one value. Structured elements contain sub-elements. For example, the element `producers` in the same standard contains the sub-elements `name`, `abbr`, `affiliation`, and `role`. 
-   - **Repeatable** or **Not repeatable**. For example, the element `nation` in the DDI standard is *Repeatable* because a dataset can cover more than one country, while the element `title` is *Not repeatable* because a study should be identified by a unique title. 
-   - **Type**. This indicates the format of the information contained in an element. It can be a *string* (text), a *numeric* value, a *boolean* variable (TRUE/FALSE), or an *array*.
+The elements outlined in a metadata standard exhibit the following characteristics:
 
-Some schemas may recommend controlled vocabularies for some elements. But in most cases, controlled vocabularies are not part of the metadata standard itself as they may be specific to an organization. They may be provided and activated in templates in the Metadata Editor.
-...example...
+- **Simple or composite**: Simple elements consist of a single field, exemplified by the `title` element in the metadata standard used for documenting microdata. In contrast, composite elements encompass sub-elements. For instance, the `producers` element in the same standard contains sub-elements like `name`, `abbr`, `affiliation`, and `role` to capture diverse pieces of information related to the producer.
+
+- **Optional or required**: When an element is marked as required, the metadata is considered invalid if it lacks information for that specific element. To maintain flexibility in schemas, only a few elements are set as required. Notably, a composite metadata element can be marked as required while only having optional sub-elements. Alternatively, an element may be declared optional but have one or more of its sub-elements declared as required, signifying that if the element is utilized, specific sub-elements must be provided.
+
+- **Repeatable or Not repeatable**: For instance, the `producers` element in the microdata documentation standard is Repeatable because a dataset may be produced by multiple entities, while the `title` element is Not repeatable as a dataset should be identified by a unique official title.
+
+- **Type**: The type denotes the format of the information contained in an element (or sub-element) and can be a string (text), a numeric value, a boolean variable (TRUE/FALSE), or an array (for composite elements).
+
+Certain standards may suggest controlled vocabularies for specific elements, representing pre-defined sets of valid entries. However, in most cases, controlled vocabularies are not intrinsic to the metadata standard itself, as they may be organization-specific. These vocabularies can be provided and activated in the Metadata Editor using custom templates (refer to section 4.3.1).
 
 ## Documentation of the standards' API
 
-The most recent documentation of all schemas described in the Guide is available on-line at https://ihsn.github.io/nada-api-redoc/catalog-admin/#. 
+Users opting for the programmatic route should have access to the comprehensive documentation of the standards' API. The most recent documentation of all schemas described in the Guide is available on-line at https://ihsn.github.io/nada-api-redoc/catalog-admin/#. 
 
 <center>
 ![](./images/reDoc.JPG){width=100%}
@@ -99,7 +102,7 @@ Some standards provide the possibility for data curators to add their own metada
 
 ### Using the Metadata Editor
 
-The easiest way to generate metadata compliant with the standards we describe in this Guide is to use a specialized Metadata Editor. A Metadata Editor provides a user-friendly and flexible interface to document data. Most metadata editors are specific to a certain standard. The World Bank developed an open source multi-standard Metadata Editor. We provide here a brief introduction to the Metadata Editor and to its use. For more detailed information, see the Metadata Editor User Guide.
+The easiest way to generate metadata compliant with the standards we describe in this Guide is to use a specialized Metadata Editor. A Metadata Editor provides a user-friendly and flexible interface to document data. Most metadata editors are specific to a certain standard. The World Bank developed an open source multi-standard Metadata Editor. We provide here a brief introduction to the World Bank Metadata Editor and to its use. For more detailed information, see the Metadata Editor User Guide.
 
 The full version of each standard is embedded in the application. But few users will ever make use of all elements contained in a standard. And some will want to customize the instructions, labels of the metadata elements, controlled vocabularies, and instructions to curators who will enter the metadata. 
 
