@@ -17,11 +17,11 @@ colorlinks: yes
 graphics: yes
 ---
 
-# Preface {-}
-
 ```{asis, echo=identical(knitr:::pandoc_to(), 'html')}
 <p style="text-align: center;"><img src="images/guide_cover.jpg"/></p>
 ```
+
+# Preface {-}
 
 Government agencies, international organizations, the private sector, academia, and other entities engage in the collection, processing, and analysis of data. While these datasets inherently hold value for their creators, they also harbor potential benefits for a wider community of secondary users. By repurposing or reusing these data, this community can significantly enhance the value of existing datasets. Unfortunately, many datasets remain challenging to locate, access, and utilize, resulting in underexploitation. Addressing this issue requires a dedicated and collaborative effort to enhance the discoverability, accessibility, and usability of data. The key to this improvement lies in the quality of the metadata associated with the data.
 
