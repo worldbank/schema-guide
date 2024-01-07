@@ -104,29 +104,86 @@ Some standards provide the possibility for data curators to add their own metada
 
 The easiest way to generate metadata compliant with the standards we describe in this Guide is to use a specialized Metadata Editor. A Metadata Editor provides a user-friendly and flexible interface to document data. Most metadata editors are specific to a certain standard. The World Bank developed an open source multi-standard Metadata Editor. We provide here a brief introduction to the World Bank Metadata Editor and to its use. For more detailed information, see the Metadata Editor User Guide.
 
-The full version of each standard is embedded in the application. But few users will ever make use of all elements contained in a standard. And some will want to customize the instructions, labels of the metadata elements, controlled vocabularies, and instructions to curators who will enter the metadata. 
+#### Custom templates
 
-The Metadata Editor allows users to develop their own templates based on the full version of the standards. A template is a subset of the elements available in the standard/schema, where the elements can be renamed and other customization can be made (within limits, as the metadata generated must remain compliant with the standard independently of the template).  
+All standards described in this Guide are available in the Metadata Editor. But few users will ever make use of all elements contained in any of these standard; instead, they will select a subset of the elements they consider relevant for their use. Also, users may want to customize the labels (not the names, which cannot be changed) of the metadata elements, add controlled vocabularies, and customize the instructions associated with the elements. To do so, they will develop their own **templates**. Templates determine how the metadata entry forms will be displayed and what they will contain. 
 
-Template manager:
+Typically, an organization will define a template for each relevant standard, then make it the "default template" in the Metadata Editor. Creating its own templates provides an organization with several benefits, such as:
+
+- Selecting relevant metadata elements from the large number available in a standard or schema, resulting in lighter metadata entry forms.
+- Declaring some elements as "required" or "recommended" (beyond what the standard itself declares as required).
+- Controlling the order of appearance of elements in metadata entry forms and organizing them into customized groups.
+- Customizing labels and instructions associated with each metadata element to match the jargon used by the organization's team of data curators.
+- Setting controlled vocabularies and default values specific to the organization, where appropriate.
+- Setting its own validation rules for metadata element content.
 
 <br>
 <center>
-![image](https://user-images.githubusercontent.com/35276300/230179149-87eb17ca-2a60-4ae6-a993-423a51880da8.png)
+![Metadata Editor, Template Manager]()
 </center>
 <br>
 
-Then UI with (for some types) import of data and automated generation of some metadata. This provides a convenient option especially for microdata. The system will import all available metadata from common data formats like Stata or SPSS (variable and value labels), and generate summary statistics for each variable which will be part of the metadata (such as the number of valid values for the variable, and frequencies for categorical variables). This makes the Metadata Editor an effective tool for documenting microdata, as doing the same programatically may be tedious.
+#### Producing the metadata
 
-<br>
-<center>
-![image](https://user-images.githubusercontent.com/35276300/230179493-6e945fed-3bcf-4ab6-9545-8a7e982d5c46.png)
-</center>
-<br>
+We show here how to use the Metadata Editor to document a survey dataset (microdata), using the Data Documentation Intitiative (DDI) Codebook 2.5 standard. We use a synthetic micro-dataset consisting of two data files provided in Stata 15 format. Only some core features of the Metadata Editor are shown. See the application's User Guide for more detailed information. 
 
-(describe / provide a better example)
+To document a dataset, click "Create new project" and select "Microdata". A new project homepage will open, and the navigation bar shown on the left will reflect the content of the default metadata template for "Microdata". "Switch template" if you want to use another template.
+
+![image](https://github.com/ihsn/editor/assets/35276300/c9beb3aa-fad8-4228-aa2e-d43fd74e316b)
+
+Select an image to be used as thumbnail in the catalog in which the metadata will be published.
+
+![image](https://github.com/ihsn/editor/assets/35276300/4d2fe874-c569-4515-a36a-44bdd23efc5a)
+
+In the section "Study description", enter the relevant information on the survey. 
+
+![image](https://user-images.githubusercontent.com/35276300/233703241-b06145e0-e4e3-4486-93ca-37296a0e04c6.png)
+
+When all available "Study information" is entered, click on "Data files" in the navigation bar, then click "Import data" and select the two Stata data files to be imported. The import will extract all available metadata (variable list, names, variable labels, value labels), and also generate summary statistics.
+
+![image](https://user-images.githubusercontent.com/35276300/231763763-c4d8a6d3-789b-4cb6-94f3-77680f15cfbf.png)
+
+![image](https://user-images.githubusercontent.com/35276300/231763936-aac0aea2-eb90-4969-bd37-06a313418816.png)
+
+You can now document the data files and the variables they contain. 
+
+Add a brief description of each data file, then add or edit the information available for each variable. 
+
+![image](https://user-images.githubusercontent.com/35276300/233704533-62d1362a-cfe3-46eb-a77f-cb4a1a69bf8e.png)
+
+The page will display a list of variables for the selected file, along with multiple options to edit and complete the metadata related to the variables. On this page, you can:
+
+- Edit the variables labels.
+- Edit the value labels (for discrete/categorical variables only).
+- If necessary, delete variables.
+- Identify a variable as being a sample weight.
+- Add metadata related to the variable (literal question, interviewer instructions, derivation and imputation, and more) in the "DOCUMENTATION" tab.
+- Identify values to be considered as "missing." The system missing values in Stata or SPSS will be automatically identified as "missing." However, in some cases, one (or multiple) values may be used to represent missing values (e.g., "99" representing missing or unknown for a variable such as age).
+- Set the weighting coefficient (if relevant) to be applied to generate summary statistics.
+- Select the summary statistics to be included in the metadata (in tab "STATISTICS").
+
+Now, add metadata specific to each variable. Most of the metadata at the variable level that were not extracted from the imported data files will typically be found in the survey questionnaire and the interviewer manual. The "DOCUMENTATION" tab displays the metadata for the variable(s) selected in the list of variables. Add the following information:
+
+- Universe of the variable
+- Pre-question, literal question, and post-question (for collected variables, not for derived variables)
+- Derivation or imputation methods (for derived variables)
+
+![image](https://user-images.githubusercontent.com/35276300/233705597-9b6a4e8b-c65b-4f65-8994-1d029cc60900.png)
+
+Once you have entered the variable-level metadata for both files, you can finalize the documentation of the dataset by documenting and attaching external resources to the survey metadata. External resources include all materials you want to make accessible to users when you publish the dataset in a catalog. This includes the microdata files, if you want to disseminate them openly or under restrictions. For our survey metadata, we will add two external resources: the Excel file that contains the questionnaire and the dataset (the two Stata files compressed as one zip file). Note that you could provide the data in more than one format, for example, you could also share a version of the files in CSV and SPSS formats for user convenience.
+
+To create external resources, click on "External resources" in the navigation tree and then click on "Create resource". Select the file type ("questionnaire" and "microdata" for our two external resources) and give each a short title.
+
+Provide a link to the resource or select the file you want to upload in your online catalog, then click "SAVE."
+
+![image](https://user-images.githubusercontent.com/35276300/233708637-2432c485-6ac4-472f-a2f4-2e5f010ef195.png)
+
+Your dataset documentation is now complete. You can export the DDI and the RDF metadata and save the full package as a project zip file. If you have a NADA catalog and the credentials, you can also publish your data and metadata in the catalog.
+
+#### Publishing the metadata in a catalog
 
 Once complete, the metadata can be published in a NADA catalog. [provide screenshots]
+
 
 ### Using R
 
