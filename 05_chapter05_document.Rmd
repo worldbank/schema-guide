@@ -2,7 +2,7 @@
 output: html_document
 ---
 
-# (PART) DESCRIPTION OF STANDARDS {-}
+# (PART) METADATA STANDARDS {-}
 
 # Documents {#chapter05}
 
