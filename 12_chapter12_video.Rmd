@@ -137,9 +137,9 @@ The `video_description` section contains all elements that will be used to descr
 ```
 <br>
 
-  This element is used to enter video identifiers other than the `idno` element described above). It can for example be a Digital Object Identifier (DOI). Note that the identifier entered in `idno` can be repeated here, allowing to attach a "type" attribute to it.
+  This element is used to enter video identifiers other than the `idno` element described above). It can for example be a Digital Object Identifier (DOI). Note that the identifier entered in `idno` can be repeated here, allowing to attach a "type" attribute to it.<br>
   - **`type`** *[Optional ; Not repeatable ; String]* <br>
-  The type of unique identifier, e.g., "DOI".
+  The type of unique identifier, e.g., "DOI".<br>
   - **`value`** *[Required ; Not repeatable ; String]* <br>
   The identifier. <br><br>
 
@@ -179,7 +179,7 @@ The `video_description` section contains all elements that will be used to descr
 
   A list of keywords that provide information on the core content of the video. Keywords provide a convenient solution to improve the discoverability of the video, as it allows terms and phrases not found elsewhere in the video metadata to be indexed and to make the video discoverable by text-based search engines. A controlled vocabulary will preferably be used (although not required), such as the [UNESCO Thesaurus](http://vocabularies.unesco.org/browser/thesaurus/en/). The list can combine keywords from multiple controlled vocabularies, and user-defined keywords.  
   - **`name`** *[Required ; Not repeatable ; String]* <br>
-  The keyword itself.
+  The keyword itself.<br>
   - **`vocabulary`** *[Optional ; Not repeatable ; String]* <br>
   The controlled vocabulary (including version number or date) from which the keyword is extracted, if any.
   - **`uri`** *[Optional ; Not repeatable ; String]* <br>
@@ -374,9 +374,9 @@ video_description = list(
 ```
 <br>
 
-  The list of countries (or regions) covered by the video, if applicable. This refers to the <u>content</u> of the video, not to the country where the video was released. This is a repeatable block of two elements:
+  The list of countries (or regions) covered by the video, if applicable. This refers to the <u>content</u> of the video, not to the country where the video was released. This is a repeatable block of two elements:<br>
   - **`name`** *[Required ; Not repeatable ; String]* <br>
-  The country/region name. Note that many organizations have their own policies on the naming of countries/regions/economies/territories, which data curators will have to comply with.
+  The country/region name. Note that many organizations have their own policies on the naming of countries/regions/economies/territories, which data curators will have to comply with.<br>
   - **`code`** *[Optional ; Not repeatable ; String]* <br>
   The country/region code (entered as a string, even for numeric codes). It is recommended to use a standard list of countries and regions, such as the ISO country list ([ISO 3166](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes)).
 <br>
@@ -422,13 +422,13 @@ A brief description of the intended audience of the video, i.e. the group for wh
 
   This element is used to define one or multiple bounding box(es), which are the (rectangular) fundamental geometric description of the geographic coverage of the video. A bounding box is defined by west and east longitudes and north and south latitudes, and includes the largest geographic extent of the video's geographic coverage. The bounding box provides the geographic coordinates of the top left (north/west) and bottom-right (south/east) corners of a rectangular area. This element can be used in catalogs as the first pass of a coordinate-based search. 
   - **`west`** *[Required ; Not repeatable ; String]* <br>
-  West longitude of the box
+  West longitude of the box<br>
   - **`east`** *[Required ; Not repeatable ; String]* <br>
-  East longitude of the box
+  East longitude of the box<br>
   - **`south`** *[Required ; Not repeatable ; String]* <br>
-  South latitude of the box
+  South latitude of the box<br>
   - **`north`** *[Required ; Not repeatable ; String]* <br>
-  North latitude of the box
+  North latitude of the box<br>
   <br>
  
 - **`language`** *[Optional, Repeatable]* <br>   
@@ -443,9 +443,9 @@ A brief description of the intended audience of the video, i.e. the group for wh
 ```
 <br>
 
-  Most videos will only be provided in one language. This is however a repeatable field, to allow for more than one language to be listed. For the language code, ISO codes will preferably be used. The language refers to the language in which the video is published. This is a block of two elements (at least one must be provided for each language):
+  Most videos will only be provided in one language. This is however a repeatable field, to allow for more than one language to be listed. For the language code, ISO codes will preferably be used. The language refers to the language in which the video is published. This is a block of two elements (at least one must be provided for each language):<br>
   - **`name`** *[Optional ; Not repeatable ; String]* <br>
-  The name of the language.
+  The name of the language.<br>
   - **`code`** *[Optional ; Not repeatable ; String]* <br>
   The code of the language. The use of [ISO 639-2](https://www.loc.gov/standards/iso639-2/php/code_list.php) (the alpha-3 code in Codes for the representation of names of languages) is recommended. Numeric codes must be entered as strings. <br><br>
 
@@ -528,13 +528,13 @@ Users of the video may need further clarification and information. This section 
 
   Identifies the person(s) and/or organization(s) who contributed to the production of the video. The `role` attribute allows defining what the specific contribution of the identified person or organization was. <br>
   - **`name`** *[Optional, Not Repeatable ; String]* <br>
-  The name of the contributor (person or organization). 
+  The name of the contributor (person or organization). <br>
   - **`affiliation`** *[Optional, Not Repeatable ; String]* <br>
-  The affiliation of the contributor. 
+  The affiliation of the contributor. <br>
   - **`abbr`** *[Optional, Not Repeatable ; String]* <br>
-  The abbreviation for the institution which has been listed as the affiliation of the contributor.         
+  The abbreviation for the institution which has been listed as the affiliation of the contributor. <br>      
   - **`role`** *[Optional, Not Repeatable ; String]* <br>
-  The specific role of the contributor. This could for example be "Cameraman", "Sound engineer", etc.
+  The specific role of the contributor. This could for example be "Cameraman", "Sound engineer", etc.<br>
   - **`uri`** *[Optional, Not Repeatable ; String]* <br>
   A URI (link to a website, or email address) for the contributor. <br><br>
 
@@ -571,13 +571,13 @@ my_video = list(
 ```
 <br>
 
-  This element is used to list the funders/sponsors of the video. If different funding agencies financed different stages of the production process, use the "role" attribute to distinguish them.
+  This element is used to list the funders/sponsors of the video. If different funding agencies financed different stages of the production process, use the "role" attribute to distinguish them.<br>
   - **`name`** *[Required ; Not repeatable ; String]* <br>
-  The name of the sponsor (person or organization)
+  The name of the sponsor (person or organization)<br>
   - **`abbr`** *[Optional ; Not repeatable ; String]* <br>
-  The abbreviation (acronym) of the sponsor.
+  The abbreviation (acronym) of the sponsor.<br>
   - **`grant`** *[Optional ; Not repeatable ; String]* <br>
-  The grant (or contract) number.
+  The grant (or contract) number.<br>
   - **`role`** *[Optional ; Not repeatable ; String]* <br>
   The specific role of the sponsor. <br><br>
   
@@ -596,13 +596,13 @@ my_video = list(
 ```
 <br>
 
-  Organization or person who adapted the video to different languages. This element maps to the element *translator* in VideoObject.
+  Organization or person who adapted the video to different languages. This element maps to the element *translator* in VideoObject.<br>
   - **`first_name`** *[Optional ; Not repeatable ; String]* <br>
-  The first name of the translator.
+  The first name of the translator.<br>
   - **`initial`** *[Optional ; Not repeatable ; String]* <br>
-  The initials of the translator.
+  The initials of the translator.<br>
   - **`last_name`** *[Optional ; Not repeatable ; String]* <br>
-  The last name of the translator.
+  The last name of the translator.<br>
   - **`affiliation`** *[Optional ; Not repeatable ; String]* <br>
   The affiliation of the translator. <br><br>
 
@@ -732,11 +732,11 @@ my_video = list(
 ```
 <br>
 
-  The transcript of the video content, provided as a text. Note that if the text is very long, an alternative is to save it in a separate text file and to make it available in a data catalog as an external resource.
+  The transcript of the video content, provided as a text. Note that if the text is very long, an alternative is to save it in a separate text file and to make it available in a data catalog as an external resource.<br>
   - **`language_name`** *[Optional ; Not repeatable ; String]* <br>   
-  The name of the language of the transcript.
+  The name of the language of the transcript.<br>
   - **`language_code`** *[Optional ; Not repeatable ; String]* <br>   
-  The code of the language of the transcript, preferably the ISO code.
+  The code of the language of the transcript, preferably the ISO code.<br>
   - **`text`** *[Optional ; Not repeatable ; String]* <br>   
   
   The transcript itself. Adding the transcript in the metadata will make the video much more discoverable, as the content of the transcription can be indexed in catalogs.
@@ -768,15 +768,15 @@ my_video = list(
 ```
 <br>
 
-  When a video is published in a catalog containing many other videos, it may be desirable to organize them by album. Albums are collections of videos organized by theme, period, location, or other criteria. One video can belong to more than one album. Albums are "virtual collections". 
+  When a video is published in a catalog containing many other videos, it may be desirable to organize them by album. Albums are collections of videos organized by theme, period, location, or other criteria. One video can belong to more than one album. Albums are "virtual collections". <br>
   - **`name`** *[Optional ; Not Repeatable ; String]* <br>
-  The name (label) of the album. 
+  The name (label) of the album. <br>
   - **`description`** *[Optional ; Not Repeatable ; String]* <br>
-  A brief description of the album.
+  A brief description of the album.<br>
   - **`owner`** *[Optional ; Not Repeatable ; String]* <br>
-  The owner of the album.
+  The owner of the album.<br>
   - **`uri`** *[Optional ; Not Repeatable ; String]* <br>
-  A link (URL) to the album.
+  A link (URL) to the album.<br>
 
 
 - **`provenance`** *[Optional ; Repeatable]* <br>  
