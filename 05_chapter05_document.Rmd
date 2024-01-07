@@ -2,7 +2,7 @@
 output: html_document
 ---
 
-# (PART) STANDARDS AND SCHEMAS {-}
+# (PART) DESCRIPTION OF STANDARDS {-}
 
 # Documents {#chapter05}
 
