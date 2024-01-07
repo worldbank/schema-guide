@@ -308,41 +308,12 @@ Guidelines for implementing SEO are provided by Google Search, Google Dataset Se
 
 An important element of SEO is the provision of structured metadata that can be exploited directly by the crawlers and indexers of search engines. This is the purpose of a set of schemas known as [**schema.org**](https://schema.org/). In 2011 Google, Microsoft, Yandex, and Yahoo! created a common set of schemas for structured data markup on web pages with the aim of helping search engines to better understand websites. An alternative to schema.org is the [DCAT (Data Catalog Vocabulary)](https://www.w3.org/TR/vocab-dcat-2/) metadata schema recommended by the W3C, also recognized by Google. "DCAT is a vocabulary for publishing data catalogs on the Web, which was originally developed in the context of government data catalogs such as data.gov and data.gov.uk (...)" (https://www.w3.org/TR/vocab-dcat-2/) Mapping augmented and structured metadata to the schema.org and/or DCAT standard is a critical element of such optimization. It will contribute significantly to the visibility of on-line data and metadata. Implementing such structured data markup in digital repositories is the responsibility of data librarians and of developers of data cataloguing applications. 
 
-## Augmented metadata
 
-Detailed and complete metadata foster usability and discoverability of data. Augmentation of "enrichment" or "enhancement" of the metadata will therefore be beneficial. There are multiple ways metadata can be made richer, or *augmented*, programmatically and in a largely automated manner. Metadata can be extracted from external sources or from the data themselves. 
+## Recommended standards
 
-**Extraction from external sources**
+The standards we recommend and describe in this guide are the following: 
 
-Metadata can be augmented by tapping into external sources related to the data being documented. For example, in a catalog of documents published in peer-reviewed journals, the [Scimago Journal Rank (SJR)](https://www.scimagojr.com/) indicator could be extracted and added as an additional metadata element for each document. This information can then be used by the catalog's search engine to rank query results, by "boosting" the rank of documents published in prestigious journals.
-
-**Extraction from the data** 
-
-Metadata can be extracted from the data themselves. What metadata can be extracted will be specific to each data type. Examples of metadata augmentation will be provided in the subsequent chapters. We mention a few below.
-
-   - For microdata: variable-level statistics (range of values, number of valid/missing cases, frequencies for categorical variables, summary statistics like means or standard deviations for continuous variables) can be extracted and stored as metadata. The DDI Codebook metadata standard provides elements for that purpose.  
-   - For documents: information such as the country counts (how many times each country is mentioned) can be extracted automatically to fill out the metadata element related to geographic coverage. Natural language processing (NLP) models can be applied to automatically extract keywords or topics (e.g., using a Latent Dirichlet Allocation - LDA - topic model). Classification models can be applied to categorize documents by type. 
-   
-**Embeddings and semantic discovery**
-
-Previous sections of the chapter showed the value of rich and structured metadata to improve data usability and discoverability. Comprehensive and structured metadata are required to build and develop advanced and optimized <u>lexical</u> search engines (i.e. search engines that return results based on a matching of terms found in a query and in an inverted index). The richness of the metadata guarantees that the search engine will have all necessary "raw material" to identify datasets of interest. The metadata structure allows catalog administrators to tune their search engine (provided they use advanced solutions like Solr or ElasticSearch) to return and rank results in the most relevant manner. But this leaves one issue unsolved: the dependency on keyword matching. A user interested in datasets related to *malnutrition* for example will not find the indicators on *Prevalence of stunting* and *Prevalence of wasting* that the catalog may contain, unless the keyword "malnutrition" was included in these indicators' metadata. Smarter search engines will be able to "understand" users intent, and identify relevant data based not only on a keyword matching process, but also on the **semantic closeness** between a query submitted by thea user and the metadata available in the database. The combination of rich metadata and natural language processing (NLP) models can solve this issue, by enabling semantic searchability in data catalogs.
-
-To enable a semantic search engine (or a recommender system), we need a way to "quantify" the semantic content of a query submitted by the user and the semantic content the metadata associated with a dataset, and to measure the closeness between them. This "quantitative" representation of semantic content can be generated in the form of numeric vectors called **embeddings**. "Word embedding is a term used for the representation of words for text analysis, typically in the form of a real-valued vector that encodes the meaning of the word such that the words that are closer in the vector space are expected to be similar in meaning." (Jurafsky, Daniel; H. James, Martin (2000)). These vectors will typically have a large dimension, with a length of 100 or more. They can be generated for a word, a phrase, or a longer text such as a paragraph or a full document. They are calculated using models like word2vec (Mikolov et al., 2013) or other. Training such models require a large corpus of hundreds of thousands or millions of documents. Pre-trained models and APIs are available that allow data catalog curators to generate embeddings for their metadata and, in real time, for queries submitted by users.
-
-Practically, embeddings are used as follows: metadata (or part of the metadata) associated with a dataset are converted into a numeric vector using a pre-trained embedding model. These embeddings are stored in a database. When a user submits a search query (which can be a term, a phrase, or even a document), the query is analyzed and enhanced (stop words are removed, spelling errors may be fixed, language detection and automatic translation may be applied, and more), then transformed into a vector using the same pre-trained model that was used to generate the metadata vectors. The metadata vectors that have the shortest distance (typically the cosine distance) with the query vector will be identified. The search engine will then return a sorted list of datasets having the highest semantic similarity with the query, or the distance between vectors will be used in combination with other criteria to rank and return results to the user. The fast identification of the closest vectors requires a specialized and optimized tool like the open source [Milvus](https://milvus.io/) application.
-   
-   - For geospatial data: bounding boxes (i.e. the *extent* of the data) can be derived from the data files. 
-   - For photos taken by digital cameras: metadata such as the date and time the photo was taken and possibly the geographic location can be extracted from the EXIF metadata generated by digital cameras and stored in the image file. Also, machine learning models allow image labeling, face detection, text detection and recognition to be applied at low cost (using commercial solutions like [Google Vision](https://cloud.google.com/vision) or [Amazon Rekognition](https://aws.amazon.com/rekognition/) among others). 
-   - For videos and audio files, machine learning models of speech-to-text API solutions can be used to automatically generate transcripts (see for example [Amazon Transcribe](https://aws.amazon.com/transcribe/), [Google Cloud Speech-to-Text](https://cloud.google.com/speech-to-text), [Microsoft Azure Speech to Text](https://azure.microsoft.com/en-us/services/cognitive-services/speech-to-text/), or [rev.ai](https://www.rev.ai/)). The content of the transcripts can then be indexed in search engines, making the content of video and audio files more discoverable. 
-   - For programs and scripts: a parsing of the commands used in the script may be used to derive information on the methods applied.
-   - For all types: user-defined tags can be added, possibly generated by machine learning classification algorithms.
-
-
-## Recommended standards and schemas
-
-The standards and schemas we recommend and describe in this guide are the following: 
-
-| Data type                  | Standard or schema                              | 
+| Data type                  | Standard                                        | 
 | -------------------------- | ----------------------------------------------- | 
 | Documents                  | Dublin Core Metadata Initiative (DCMI), MARC    | 
 | Microdata                  | Data Documentation Initiative 2.5 (Codebook)    | 
@@ -493,5 +464,39 @@ The screenshots below show an example of an HTML page for a dataset published in
 </center>
 <br>
 
+
+## Augmented metadata
+
+Detailed and complete metadata foster usability and discoverability of data. Augmentation of "enrichment" or "enhancement" of the metadata --which can apply to any metadata standard-- will therefore be beneficial. There are multiple ways metadata can be programmatically **enhanced** or **augmented**, in a largely automated manner. Metadata can be extracted from external sources or from the data themselves. 
+
+**Extraction from external sources**
+
+Metadata can be augmented by tapping into external sources related to the data being documented. For example, in a catalog of documents published in peer-reviewed journals, the [Scimago Journal Rank (SJR)](https://www.scimagojr.com/) indicator could be extracted and added as an additional metadata element for each document. This information can then be used by the catalog's search engine to rank query results, by "boosting" the rank of documents published in prestigious journals.
+
+**Extraction from the data** 
+
+Metadata can be extracted from the data themselves. What metadata can be extracted will be specific to each data type. Examples of metadata augmentation will be provided in the subsequent chapters. We mention a few below.
+
+   - For microdata: variable-level statistics (range of values, number of valid/missing cases, frequencies for categorical variables, summary statistics like means or standard deviations for continuous variables) can be extracted and stored as metadata. Topics and variable groups can be extracted from the data dictionary using AI-based tools.
+
+   - For documents: information such as the country counts (how many times each country is mentioned) can be extracted automatically to fill out the metadata element related to geographic coverage. Natural language processing (NLP) models can be applied to automatically extract keywords or topics (e.g., using a Latent Dirichlet Allocation - LDA - topic model). Classification models can be applied to categorize documents by type. 
+   
+**Embeddings and semantic discovery**
+
+Previous sections of the chapter showed the value of rich and structured metadata to improve data usability and discoverability. Comprehensive and structured metadata are required to build and develop advanced and optimized <u>lexical</u> search engines (i.e. search engines that return results based on a matching of terms found in a query and in an inverted index). The richness of the metadata guarantees that the search engine will have all necessary "raw material" to identify datasets of interest. The metadata structure allows catalog administrators to tune their search engine (provided they use advanced solutions like Solr or ElasticSearch) to return and rank results in the most relevant manner. But this leaves one issue unsolved: the dependency on keyword matching. A user interested in datasets related to *malnutrition* for example will not find the indicators on *Prevalence of stunting* and *Prevalence of wasting* that the catalog may contain, unless the keyword "malnutrition" was included in these indicators' metadata. Smarter search engines will be able to "understand" users intent, and identify relevant data based not only on a keyword matching process, but also on the **semantic closeness** between a query submitted by thea user and the metadata available in the database. The combination of rich metadata and natural language processing (NLP) models can solve this issue, by enabling semantic searchability in data catalogs.
+
+To enable a semantic search engine (or a recommender system), we need a way to "quantify" the semantic content of a query submitted by the user and the semantic content the metadata associated with a dataset, and to measure the closeness between them. This "quantitative" representation of semantic content can be generated in the form of numeric vectors called **embeddings**. "Word embedding is a term used for the representation of words for text analysis, typically in the form of a real-valued vector that encodes the meaning of the word such that the words that are closer in the vector space are expected to be similar in meaning." (Jurafsky, Daniel; H. James, Martin (2000)). These vectors will typically have a large dimension, with a length of 100 or more. They can be generated for a word, a phrase, or a longer text such as a paragraph or a full document. They are calculated using models like word2vec (Mikolov et al., 2013) or other. Training such models require a large corpus of hundreds of thousands or millions of documents. Pre-trained models and APIs are available that allow data catalog curators to generate embeddings for their metadata and, in real time, for queries submitted by users.
+
+Practically, embeddings are used as follows: metadata (or part of the metadata) associated with a dataset are converted into a numeric vector using a pre-trained embedding model. These embeddings are stored in a database. When a user submits a search query (which can be a term, a phrase, or even a document), the query is analyzed and enhanced (stop words are removed, spelling errors may be fixed, language detection and automatic translation may be applied, and more), then transformed into a vector using the same pre-trained model that was used to generate the metadata vectors. The metadata vectors that have the shortest distance (typically the cosine distance) with the query vector will be identified. The search engine will then return a sorted list of datasets having the highest semantic similarity with the query, or the distance between vectors will be used in combination with other criteria to rank and return results to the user. The fast identification of the closest vectors requires a specialized and optimized tool like the open source [Milvus](https://milvus.io/) application.
+   
+   - For geospatial data: bounding boxes (i.e. the *extent* of the data) can be derived from the data files. 
+   
+   - For photos taken by digital cameras: metadata such as the date and time the photo was taken and possibly the geographic location can be extracted from the EXIF metadata generated by digital cameras and stored in the image file. Also, machine learning models allow image labeling, face detection, text detection and recognition to be applied at low cost (using commercial solutions like [Google Vision](https://cloud.google.com/vision) or [Amazon Rekognition](https://aws.amazon.com/rekognition/) among others). 
+   
+   - For videos and audio files, machine learning models of speech-to-text API solutions can be used to automatically generate transcripts (see for example [Amazon Transcribe](https://aws.amazon.com/transcribe/), [Google Cloud Speech-to-Text](https://cloud.google.com/speech-to-text), [Microsoft Azure Speech to Text](https://azure.microsoft.com/en-us/services/cognitive-services/speech-to-text/), or [rev.ai](https://www.rev.ai/)). The content of the transcripts can then be indexed in search engines, making the content of video and audio files more discoverable. 
+   
+   - For programs and scripts: a parsing of the commands used in the script may be used to derive information on the methods applied.
+   
+   - For all types: user-defined tags can be added, possibly generated by machine learning classification algorithms.
 
 [^1] See Omar Benjelloun, Shiyu Chen, Natasha Noy, 2020, *Google Dataset Search by the Numbers*, https://doi.org/10.48550/arXiv.2006.06894
