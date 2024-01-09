@@ -129,7 +129,7 @@ Templates play a pivotal role in determining the display and content of metadata
 ![Metadata Editor, Template Manager](./images/ME_template_manager.jpg){width=100%}
 <br>
 
-#### Producing the metadata
+#### Producing and publishing the metadata
 
 Illustrated below is a brief tutorial on employing the Metadata Editor to document a survey dataset (microdata) using the Data Documentation Initiative (DDI) Codebook 2.5 metadata standard. For this demonstration, we utilize a synthetic micro-dataset comprising two data files in Stata 15 format. The tutorial focuses on essential features of the Metadata Editor; for a more comprehensive understanding, consult the application's User Guide.
 
