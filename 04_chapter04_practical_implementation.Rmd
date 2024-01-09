@@ -16,6 +16,7 @@ In this section, we provide a concise overview of how structured metadata can be
 
 This section refers to two distinct applications: the World Bank's Metadata Editor and the NADA cataloging application. Both applications are accessible freely and openly. While other metadata editors and online cataloging tools are available, none encompass all the standards outlined in the Guide. The World Bank's Metadata Editor produces metadata in open formats, such as XML and JSON, making it compatible with cataloging tools beyond NADA—such as CKAN, which can ingest the generated metadata through the application's API, for instance.
 
+
 ## Core properties and features of metadata elements
 
 A metadata standard constitutes a systematic arrangement of elements crafted for documenting a dataset, complete with rules and instructions to ensure consistent and uniform implementation. These elements possess specific attributes such as name, type, description, and other predefined features, aiming to store all metadata related to a digital resource in a standardized and structured manner. The metadata standards are defined as JSON or XML schemas, rendering them machine-readable and conveniently exploitable by software applications.
@@ -32,6 +33,7 @@ The elements outlined in a metadata standard exhibit the following characteristi
 
 Certain standards may suggest controlled vocabularies for specific elements, representing pre-defined sets of valid entries. However, in most cases, controlled vocabularies are not intrinsic to the metadata standard itself, as they may be organization-specific. These vocabularies can be provided and activated in the Metadata Editor using custom templates (refer to section 4.3.1).
 
+
 ## Documentation of the standards' API
 
 Users opting for the programmatic route should have access to the comprehensive documentation of the standards' API. The most recent documentation of all schemas described in the Guide is available on-line at https://ihsn.github.io/nada-api-redoc/catalog-admin/#. 
@@ -41,7 +43,7 @@ Users opting for the programmatic route should have access to the comprehensive 
 </center>
 <br>
 
-The left navigation bar lists the metadata standards for each data type: documents, microdata (labeled "surveys"), geospatial, database, indicators (labeled "timeseries"), tables, images, videos, research projects and reproducible scripts (labeled "scripts), and related resources (labeled "external resources"). The list also includes the following components: 
+The navigation bar on the left of the page provides a comprehensive overview of metadata standards tailored to various data types. These include documents, microdata (labeled as "surveys"), geospatial data, databases, indicators (labeled as "timeseries"), tables, images, videos, research projects, and reproducible scripts (labeled as "scripts"). Additionally, you'll find a section dedicated to related resources (labeled as "external resources)." The list encompasses the following components: 
 
 - API keys
 - Collections
@@ -54,135 +56,125 @@ The left navigation bar lists the metadata standards for each data type: documen
 
 [to be described or removed]
 
-The righthandside frame lists all elements in a succint presentation of all elements in the standard. Curly brackets are used to group elements. In this list, we can identify the type of element and distinguish repeatable and non-repeatable elements. Repeatable elements are included into square brackets. For example, the DDI metadata standard used to document microdata contains a group of elements labeled `study_desc`, which contains a group labeled `title_statement`, in which we find (among others) a non-repeatable element `idno` (of type *string*) and a repeatable group of elements labeled `identifiers` which contains two sub-elements (`type` and `identifier`), both of them of type *string*. The grouping of elements, and the distinction between repeatable and non-repeatable elements of groups of elements, is essential when using R or Python for generating metadata.
+The right-hand frame presents a concise overview of all elements within the standard, employing curly brackets to logically group them. This list provides clarity on the type of each element, distinguishing between repeatable and non-repeatable ones. Repeatable elements are enclosed in square brackets. For instance, in the DDI metadata standard used for documenting microdata, there exists a group labeled `study_desc`, containing another group labeled `title_statement`. Within this structure, we encounter, among others, a non-repeatable element `idno` (of type *string*), and a repeatable group of elements labeled `identifiers`, housing two sub-elements (`type` and `identifier`), both identified as string types. Understanding the grouping and differentiation between repeatable and non-repeatable elements within these groups is pivotal, especially when utilizing R or Python for metadata generation.
 
 <center>
 ![](./images/groups_repeatable.JPG){width=60%}
 </center>
 <br>
 
-The middle frame provides a description of the metadata elements, and will indicate elements that are required. 
+The central frame furnishes a detailed account of the metadata elements, highlighting those deemed **required**. 
 
 <center>
 ![](./images/required_elements.JPG){width=60%}
 </center>
 <br>
 
-The list of elements for each standard starts with four common elements that are not actually part of the standard itself, but that are used to store information that will be used when the metadata are published in a NADA data catalog. If NADA is not used, these elements can be ignored. These elements will not be included when the metadata are exported to JSON or XML format.
+The enumeration of elements for each standard initiates with four common elements. These four elements are used to store information for eventual publication in a NADA data catalog, but are not inherent to the standard. If NADA is not employed, these elements are not used. Importantly, when the metadata undergo exportation to JSON or XML format, these particular elements are omitted from the output.
 
 <center>
 ![](./images/reDoc_0.JPG){width=100%}
 </center>
 <br>
 
-   - **`repositoryid`** identifies the collection in which the metadata will be published. 
-   - **`access_policy`** determines if and how the <u>data files</u> will be accessible from the catalog in which the metadata are published. This element only applies to the microdata and geographic metadata standards. It makes use of a controlled vocabulary with the following access policy options: 
-      - **`direct`**: data can be downloaded without requiring them to be registered; 
-      - **`open`**: same as "direct", with an open data license attached to the dataset; 
-      - **`public`**: public use files, which only require users to be registered in the catalog;
-      - **`licensed`**: access to data is restricted to registered users who receive authorization to use the data, after submitting a request;
-      - **`remote`**: data are made available by an external data repository;
-      - **`data_na`**: data are not accessible to the public (only metadata are published). 
-   - **`published`** determines the status of the metadata in the on-line catalog (with options 0 = draft and 1 = published). Published entries are visible to all visitors of the on-line catalog; unpublished (draft) entries will only be visible by the catalog administrators and reviewers. 
-   - **`overwrite`** determines whether the metadata already in the catalog for this entry can be overwritten (iwith options yes or no, 'no' being the default).  
+These elements serve distinct functions within the system:
 
-This set of administrative elements is followed by one or multiple sections that contain the elements specific to each standard. For example, the DDI Codebook metadata standard, used to document microdata, contains the following main sections:
+   - **`repositoryid`** functions to identify the collection in which the metadata will be published.
+
+   - **`access_policy`** determines the accessibility of <u>data files</u> from the catalog in which the metadata is published. This element is applicable solely to the microdata and geographic metadata standards. It utilizes a controlled vocabulary with specific access policy options:
+      - **`direct`**: Allows data to be downloaded without requiring registration.
+      - **`open`**: Similar to "direct," with an open data license attached to the dataset.
+      - **`public`**: Pertains to public-use files, necessitating user registration in the catalog.
+      - **`licensed`**: Restricts data access to registered users who receive authorization after submitting a request.
+      - **`remote`**: Makes data available through an external data repository.
+      - **`data_na`**: Indicates that data are not accessible to the public, with only metadata being published.
    
+   - **`published`** determines the status of metadata in the online catalog, with options 0 (draft) and 1 (published). Published entries are visible to all catalog visitors, while unpublished (draft) entries are visible solely to catalog administrators and reviewers.
+   
+   - **`overwrite`** dictates whether existing metadata in the catalog for a particular entry can be overwritten. It offers options of 'yes' or 'no,' with 'no' being the default.
+
+Following this set of administrative elements, one or more sections follow, each containing elements specific to the respective standard. For instance, the DDI Codebook metadata standard, used for documenting microdata, encompasses the following primary sections:
+  
    - **`document description`**: a description of the metadata (who documented the dataset, when, etc.) Most schemas will contain such a section describing the metadata, useful mainly to data curators and catalog administrators. In other schemas, this section may be named `metadata_description`. 
+   
    - **`study description`**: the description of the survey/census/study, not including the data files and data dictionary.
+   
    - **`file description`**: a list and description of data files associated to the study.
+   
    - **`variable description`**: the data dictionary (description of variables).
 
-The standard-specific sections are followed by a few other metadata elements common to most schemas. These elements are used to provide additional information useful for cataloguing and discoverability purposes. They include **tags** (which allow catalog administrators to attach tags to datasets independently of their type, which can be used as filters in the catalog), and **external resources**. 
-
-Some standards provide the possibility for data curators to add their own metadata elements in an **additional** section. The use of additional elements should be the exception, as metadata standards are designed to provide all elements needed to fully document a data resource. 
+Following the sections specific to each standard, there are additional metadata elements shared across most schemas. These elements play a crucial role in enhancing cataloging and discoverability. Notable among them are **tags**, empowering catalog administrators to affix tags to datasets, irrespective of their type. These tags serve as effective filters within the catalog. Another significant element is **external resources`. The standards also offer data curators the flexibility to introduce their own metadata elements within an **additional** section. The use of additional elements should be the exception rather than the rule. The design of metadata standards is intended to encompass all necessary elements for a comprehensive documentation of a data resource.
 
 
 ## Generating and publishing structured metadata 
 
 ### Using the Metadata Editor
 
-The easiest way to generate metadata compliant with the standards we describe in this Guide is to use a specialized Metadata Editor. A Metadata Editor provides a user-friendly and flexible interface to document data. Most metadata editors are specific to a certain standard. The World Bank developed an open source multi-standard Metadata Editor. We provide here a brief introduction to the World Bank Metadata Editor and to its use. For more detailed information, see the Metadata Editor User Guide.
+To easily generate metadata aligned with the standards outlined in this guide, utilizing a dedicated Metadata Editor is highly recommended. Such tools offer a user-friendly and adaptable interface for documenting data, often tailored to specific standards. Notably, the World Bank has introduced an open-source, multi-standard Metadata Editor. Here, we present a concise introduction to the World Bank Metadata Editor and its application. For comprehensive details and instructions, please refer to the Metadata Editor User Guide.
 
 #### Custom templates
 
-All standards described in this Guide are available in the Metadata Editor. But few users will ever make use of all elements contained in any of these standard; instead, they will select a subset of the elements they consider relevant for their use. Also, users may want to customize the labels (not the names, which cannot be changed) of the metadata elements, add controlled vocabularies, and customize the instructions associated with the elements. To do so, they will develop their own **templates**. Templates determine how the metadata entry forms will be displayed and what they will contain. 
+Every standard outlined in this guide is incorporated in its entirety into the Metadata Editor. However, it is unlikely that users will utilize all elements within any given standard. Instead, they are encouraged to select a subset of elements deemed relevant for their specific purposes. Users may also wish to tailor the labels (note that the names are immutable) of metadata elements, incorporate controlled vocabularies, and customize associated instructions. This is achieved through the creation of **templates**.
 
-Typically, an organization will define a template for each relevant standard, then make it the "default template" in the Metadata Editor. Creating its own templates provides an organization with several benefits, such as:
+Templates play a pivotal role in determining the display and content of metadata entry forms. Typically, an organization will craft a template for each pertinent standard, designating it as the "default template" in the Metadata Editor. This approach offers several advantages, including:
 
-- Selecting relevant metadata elements from the large number available in a standard or schema, resulting in lighter metadata entry forms.
-- Declaring some elements as "required" or "recommended" (beyond what the standard itself declares as required).
-- Controlling the order of appearance of elements in metadata entry forms and organizing them into customized groups.
-- Customizing labels and instructions associated with each metadata element to match the jargon used by the organization's team of data curators.
-- Setting controlled vocabularies and default values specific to the organization, where appropriate.
-- Setting its own validation rules for metadata element content.
+   - Streamlining metadata entry forms by selecting only the pertinent elements from the extensive array available in a standard or schema.
+   - Designating certain elements as "required" or "recommended," surpassing the standard's own specifications.
+   - Exerting control over the sequence of element appearance in metadata entry forms and grouping them according to custom criteria.
+   - Tailoring labels and instructions for each metadata element to align with the terminology used by the organization's team of data curators.
+   - Establishing controlled vocabularies and organization-specific default values where applicable.
+   - Defining custom validation rules for the content of metadata elements in accordance with the organization's requirements.
 
 <br>
-<center>
-![Metadata Editor, Template Manager]()
-</center>
+![Metadata Editor, Template Manager](./images/ME_template_manager.jpg){width=100%}
 <br>
 
 #### Producing the metadata
 
-We show here how to use the Metadata Editor to document a survey dataset (microdata), using the Data Documentation Intitiative (DDI) Codebook 2.5 standard. We use a synthetic micro-dataset consisting of two data files provided in Stata 15 format. Only some core features of the Metadata Editor are shown. See the application's User Guide for more detailed information. 
+Illustrated below is a brief tutorial on employing the Metadata Editor to document a survey dataset (microdata) using the Data Documentation Initiative (DDI) Codebook 2.5 metadata standard. For this demonstration, we utilize a synthetic micro-dataset comprising two data files in Stata 15 format. The tutorial focuses on essential features of the Metadata Editor; for a more comprehensive understanding, consult the application's User Guide.
 
-To document a dataset, click "Create new project" and select "Microdata". A new project homepage will open, and the navigation bar shown on the left will reflect the content of the default metadata template for "Microdata". "Switch template" if you want to use another template.
+To document the dataset, the user will initiate the process by "Creating a new project" and opting for the "Microdata" option when prompted This action will open a new project homepage, in which the left-side navigation bar aligns with the default metadata template for "Microdata." A different template can be selected by using the "Switch template" option. The user also has the opportunity to select an image to serve as a thumbnail in the catalog where the metadata will be published. 
 
-![image](https://github.com/ihsn/editor/assets/35276300/c9beb3aa-fad8-4228-aa2e-d43fd74e316b)
+<br>
+![Metadata Editor, Template Manager](./images/ME_project_home.jpg){width=100%}
+<br>
 
-Select an image to be used as thumbnail in the catalog in which the metadata will be published.
+The sections within the "Study Description" navigation bar offer access to metadata entry screens where comprehensive information about the survey can be documented.
 
-![image](https://github.com/ihsn/editor/assets/35276300/4d2fe874-c569-4515-a36a-44bdd23efc5a)
+<br>
+![Metadata Editor, Study Description](./images/ME_study_description.jpg){width=100%}
+<br>
 
-In the section "Study description", enter the relevant information on the survey. 
+Upon completing the entry of all pertinent "Study information," the user will proceed by selecting "Data files" from the navigation bar and "Importing data", designating the two Stata data files for importation. This process will extract a comprehensive set of metadata, including variable lists, file and variable names, variable labels, and value labels. Additionally, it will generate summary statistics. Following the import, the user can enrich the metadata associated with the data files and the variables they encompass.
 
-![image](https://user-images.githubusercontent.com/35276300/233703241-b06145e0-e4e3-4486-93ca-37296a0e04c6.png)
+<br>
+![Metadata Editor, Variable Description](./images/ME_variable_description.jpg){width=100%}
+<br>
 
-When all available "Study information" is entered, click on "Data files" in the navigation bar, then click "Import data" and select the two Stata data files to be imported. The import will extract all available metadata (variable list, names, variable labels, value labels), and also generate summary statistics.
+On this page, the user can:
 
-![image](https://user-images.githubusercontent.com/35276300/231763763-c4d8a6d3-789b-4cb6-94f3-77680f15cfbf.png)
+   - Modify variable labels.
+   - Adjust value labels (specific to discrete/categorical variables).
+   - Delete variables, if needed.
+   - Designate a variable as a sample weight.
+   - Enhance metadata for the variable (universe, literal question, interviewer instructions, derivation and imputation, etc.).
+   - Specify values to be treated as "missing." 
+   - Set the weighting coefficient (if applicable) for generating summary statistics.
+   - Choose the summary statistics to be incorporated in the metadata under the "STATISTICS" tab.
 
-![image](https://user-images.githubusercontent.com/35276300/231763936-aac0aea2-eb90-4969-bd37-06a313418816.png)
+<br>
+![Metadata Editor, Summary Statistics](./images/ME_summary_statistics.jpg){width=100%}
+<br>
 
-You can now document the data files and the variables they contain. 
+After inputting variable-level metadata for both files, the user will conclude the dataset documentation by annotating and associating external resources with the survey metadata. External resources encompass all materials intended for user access when the dataset is published in a catalog. This encompasses microdata files, whether for open dissemination or under specific restrictions. In our survey metadata instance, we will append two external resources: the Excel file housing the questionnaire and the dataset (both Stata files compressed into a zip file). To create external resources, the user can navigate to "External Resources" in the navigation tree, "Create a Resource", specify its type ("questionnaire" and "microdata" for our resources), assign a concise title to each, and provide a link to the resource or choose the file for upload in the online catalog.
 
-Add a brief description of each data file, then add or edit the information available for each variable. 
+![Metadata Editor, External Resources]()(./images/ME_external_resources.jpg){width=100%}
 
-![image](https://user-images.githubusercontent.com/35276300/233704533-62d1362a-cfe3-46eb-a77f-cb4a1a69bf8e.png)
+The dataset documentation is now complete. The metadata can be exported to JSON or XML, or published directly in a NADA catalog. 
 
-The page will display a list of variables for the selected file, along with multiple options to edit and complete the metadata related to the variables. On this page, you can:
+![Metadata Editor, Publish in NADA Catalog]()(./images/ME_publish_to_NADA.jpg){width=100%}
 
-- Edit the variables labels.
-- Edit the value labels (for discrete/categorical variables only).
-- If necessary, delete variables.
-- Identify a variable as being a sample weight.
-- Add metadata related to the variable (literal question, interviewer instructions, derivation and imputation, and more) in the "DOCUMENTATION" tab.
-- Identify values to be considered as "missing." The system missing values in Stata or SPSS will be automatically identified as "missing." However, in some cases, one (or multiple) values may be used to represent missing values (e.g., "99" representing missing or unknown for a variable such as age).
-- Set the weighting coefficient (if relevant) to be applied to generate summary statistics.
-- Select the summary statistics to be included in the metadata (in tab "STATISTICS").
-
-Now, add metadata specific to each variable. Most of the metadata at the variable level that were not extracted from the imported data files will typically be found in the survey questionnaire and the interviewer manual. The "DOCUMENTATION" tab displays the metadata for the variable(s) selected in the list of variables. Add the following information:
-
-- Universe of the variable
-- Pre-question, literal question, and post-question (for collected variables, not for derived variables)
-- Derivation or imputation methods (for derived variables)
-
-![image](https://user-images.githubusercontent.com/35276300/233705597-9b6a4e8b-c65b-4f65-8994-1d029cc60900.png)
-
-Once you have entered the variable-level metadata for both files, you can finalize the documentation of the dataset by documenting and attaching external resources to the survey metadata. External resources include all materials you want to make accessible to users when you publish the dataset in a catalog. This includes the microdata files, if you want to disseminate them openly or under restrictions. For our survey metadata, we will add two external resources: the Excel file that contains the questionnaire and the dataset (the two Stata files compressed as one zip file). Note that you could provide the data in more than one format, for example, you could also share a version of the files in CSV and SPSS formats for user convenience.
-
-To create external resources, click on "External resources" in the navigation tree and then click on "Create resource". Select the file type ("questionnaire" and "microdata" for our two external resources) and give each a short title.
-
-Provide a link to the resource or select the file you want to upload in your online catalog, then click "SAVE."
-
-![image](https://user-images.githubusercontent.com/35276300/233708637-2432c485-6ac4-472f-a2f4-2e5f010ef195.png)
-
-Your dataset documentation is now complete. You can export the DDI and the RDF metadata and save the full package as a project zip file. If you have a NADA catalog and the credentials, you can also publish your data and metadata in the catalog.
-
-#### Publishing the metadata in a catalog
-
-Once complete, the metadata can be published in a NADA catalog. [provide screenshots]
+![Metadata Editor, Survey in NADA]()(./images/ME_survey_in_NADA.jpg){width=100%}
 
 
 ### Using R
