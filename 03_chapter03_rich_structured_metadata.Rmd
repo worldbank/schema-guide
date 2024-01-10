@@ -355,6 +355,7 @@ We are interested in documenting and disseminating **data processing and analysi
 
 **External resources** are files and links that we may want to attach to a dataset's published metadata in a data catalog. When we publish metadata in a catalog, what is published is only the textual documentation contained in the JSO or XML metadata file. Other resources attached to a dataset (such as the questionnaire for a survey, technical or training manuals, tabulations, reports, possibly micro-data files, etc.) are not included in these metadata, but also constitute important materials for data users. All these resources are what we consider as *external resources* ("external" to the schema-compliant metadata), which need to be catalogued and (for most of them) published with the metadata. A simple metadata schema, based on the Dublin Core, is used to provide some essential information on these resources.     
 
+
 ## A note on other standards
 
 ### SDMX
