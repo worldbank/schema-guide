@@ -64,6 +64,10 @@ Explanatory materials are the information that should be created and preserved t
 
 Ensure transparency, auditability, and credibility of the data and of the derived products.
 
+#### Quality assurance
+
+[to do]
+
 #### Visibility
 
 Increase the online visibility of the data, and thus the demand for, and use of the data.
@@ -107,10 +111,6 @@ Support the preservation of **institutional memory**.
 #### Harmonization of data collection
 
 Provide the meta-database needed to harmonize data collection methods and instruments. A compelling case for such use of metadata can be found in ["The Struggle for Integration and Harmonization of Social Statistics in a Statistical Agency - A Case Study of Statistics Canada"](https://www.ihsn.org/sites/default/files/resources/IHSN-WP004.pdf) by Gordon Priest (2010).<br>
-
-#### Quality assurance
-
-[to do]
 
 
 ## Structured metadata
