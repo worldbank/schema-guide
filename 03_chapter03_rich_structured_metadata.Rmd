@@ -68,6 +68,10 @@ Ensure transparency, auditability, and credibility of the data and of the derive
 
 [to do]
 
+#### Harmonization of data collection
+
+Provide the meta-database needed to harmonize data collection methods and instruments. A compelling case for such use of metadata can be found in ["The Struggle for Integration and Harmonization of Social Statistics in a Statistical Agency - A Case Study of Statistics Canada"](https://www.ihsn.org/sites/default/files/resources/IHSN-WP004.pdf) by Gordon Priest (2010).<br>
+
 #### Visibility
 
 Increase the online visibility of the data, and thus the demand for, and use of the data.
@@ -107,11 +111,6 @@ Reduce the cost of operating a data dissemination service by lowering the burden
 #### Preservation of institutional memory
 
 Support the preservation of **institutional memory**.
-
-#### Harmonization of data collection
-
-Provide the meta-database needed to harmonize data collection methods and instruments. A compelling case for such use of metadata can be found in ["The Struggle for Integration and Harmonization of Social Statistics in a Statistical Agency - A Case Study of Statistics Canada"](https://www.ihsn.org/sites/default/files/resources/IHSN-WP004.pdf) by Gordon Priest (2010).<br>
-
 
 ## Structured metadata
 
