@@ -45,11 +45,17 @@ Explanatory materials are the information that should be created and preserved t
 
 ### Benefits for data users
 
-Rich metadata helps data users:
+#### Finding data
 
-   - **Find** data of interest. The metadata provide much of the content that the search engine will be able to index and discover. The richer the metadata, the better the search engine will be able to help users identify relevant data. 
-   - **Understand** what the data are measuring and how they have been created. Without a proper description of the data, the risk is high that a user will misunderstand and possibly misuse them, or simply decide not to make use of them.
-   - **Assess** the quality of the data, including their reliability, fitness for purpose, and consistency with other datasets when the purpose requires integration of multiple datasets. 
+**Find** data of interest. The metadata provide much of the content that the search engine will be able to index and discover. The richer the metadata, the better the search engine will be able to help users identify relevant data. 
+
+#### Understanding and using data
+
+**Understand** what the data are measuring and how they have been created. Without a proper description of the data, the risk is high that a user will misunderstand and possibly misuse them, or simply decide not to make use of them.
+
+#### Assessing data
+
+**Assess** the quality of the data, including their reliability, fitness for purpose, and consistency with other datasets when the purpose requires integration of multiple datasets. 
 
 
 ### Benefits for data producers 
@@ -58,41 +64,11 @@ Rich metadata helps data users:
 
 Ensure transparency, auditability, and credibility of the data and of the derived products.
 
-#### Cost-effectiveness of data dissemination
+#### Visibility
 
-Reduce the cost of operating a data dissemination service by lowering the burden of responding to users' requests for information.
+Increase the online visibility of the data, and thus the demand for, and use of the data.
 
-#### Preservation of institutional memory
-
-Support the preservation of **institutional memory**.
-
-#### Harmonization of data collection
-
-Provide the meta-database needed to harmonize data collection methods and instruments. A compelling case for such use of metadata can be found in ["The Struggle for Integration and Harmonization of Social Statistics in a Statistical Agency - A Case Study of Statistics Canada"](https://www.ihsn.org/sites/default/files/resources/IHSN-WP004.pdf) by Gordon Priest (2010).<br>
-
-#### Quality assurance
-
-[to do]
-
-#### Visibility of the data
-
-Increase the visibility of the data, and thus the demand for, and use of the data.
-
-Data cataloguing applications provide search and filtering tools to help users of the catalog identify data of interest. But not all users will start their search for data directly in specialized data catalogs; many will start their search in Google, Google Dataset Search, Bing, Yahoo! or another search engine.  
-
-Some search engines may provide users with a direct answer to their query, without transiting via the source catalog. This will be the case when the query can be associated with a specific indicator, time and location for which data are openly available or accessible via a public API. For example, a search for "population india 2020" on Google, will provide an *answer* first, followed by links to the underlying sources.
-<br>
-   <center>
-   ![](./images/Google_Population_India_2020.JPG){width=90%}
-   </center>
-<br>
-
-In other cases, the search engine will provide users with a link to a specific catalog page, not to the catalog's home page. In such cases, the user will not be directly connected to the catalog's own search engine. For example, a search for "Albania LSMS 2012" (a Living Standard Measurement Study, i.e. household survey) in Google will send the user directly to the survey page of the catalog, not to the home or search page of the catalog.
-<br>
-   <center>
-   ![](./images/Google_LSMS_Albania_2012.JPG){width=90%}
-   </center>
-<br>
+Data cataloguing applications provide search and filtering tools to help users of the catalog identify data of interest. But not all users will start their search for data directly in specialized data catalogs; many will start their search in Google, Google Dataset Search, Bing, Yahoo! or another search engine. 
 
 In some cases, the user may not be brought to the data catalog at all, if the catalog ranked low in the relevance order of the Google query results. [User behavior data (2020)](https://www.smartinsights.com/search-engine-marketing/search-engine-statistics/) showed that "only 9% of Google searchers make it to the bottom of the first page of the search results", and that "only .44% of searchers go to the second page of Google’s search results". It is thus critical to optimize the visibility of the content of specialized data catalogs in the lead search engines, Google in particular. This optimization process is referred to as **search engine optimization** or SEO. [Wikipedia](https://en.wikipedia.org/wiki/Search_engine_optimization) describes SEO as “the process of improving the quality and quantity of website traffic to a website or a web page from search engines. SEO targets unpaid traffic (known as "natural" or "organic" results) rather than direct traffic or paid traffic. (…) As an Internet marketing strategy, SEO considers how search engines work, the computer-programmed algorithms that dictate search engine behavior, what people search for, the actual search terms or keywords typed into search engines, and which search engines are preferred by their targeted audience. SEO is performed because a website will receive more visitors from a search engine when websites rank higher on the search engine results page.” 
 
@@ -119,6 +95,22 @@ Improving the ranking of catalog pages is a shared responsibility of data curato
 Last, Google will "reward" popular websites, i.e. websites that are frequently visited and to which many other influent and popular websites provide links. Google's recommendation is thus to "tell people about your site. Be active in communities where you can tell like-minded people about your services and products that you mention on your site."
 
 A helpful and detailed [self-assessment list](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) of items that data curators, catalog developers, and catalog administrators should pay attention to is provided by Google. Various tools are also available to catalog developers and administrators to assess the technical performance of their websites.
+
+#### Cost-effectiveness of data dissemination
+
+Reduce the cost of operating a data dissemination service by lowering the burden of responding to users' requests for information.
+
+#### Preservation of institutional memory
+
+Support the preservation of **institutional memory**.
+
+#### Harmonization of data collection
+
+Provide the meta-database needed to harmonize data collection methods and instruments. A compelling case for such use of metadata can be found in ["The Struggle for Integration and Harmonization of Social Statistics in a Statistical Agency - A Case Study of Statistics Canada"](https://www.ihsn.org/sites/default/files/resources/IHSN-WP004.pdf) by Gordon Priest (2010).<br>
+
+#### Quality assurance
+
+[to do]
 
 
 ## Structured metadata
