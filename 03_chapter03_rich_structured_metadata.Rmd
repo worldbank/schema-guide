@@ -119,6 +119,7 @@ Metadata compliant with standards will typically be stored as JSON or XML files 
 **Structured, machine-readable (JSON) version**:
 
 ```{json}
+{
   "title"           : "Child Mortality Survey 2010-2011",
   "alternate_title" : "CMS 2010-2011", 
   "authoring_entity": "National Statistics Office (NSO)", 
@@ -128,7 +129,7 @@ Metadata compliant with standards will typically be stored as JSON or XML files 
 }  
 ```
 
-In XML format: 
+In XML format (with DDI tag names): 
 ```{xml}
 <titl>Child Mortality Survey 2010-2011</titl>
 <altTitl>CMS 2010-2011</altTitl>
