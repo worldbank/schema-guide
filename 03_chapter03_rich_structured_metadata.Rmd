@@ -363,13 +363,13 @@ We are interested in documenting and disseminating **data processing and analysi
 
 **External resources** are files and links that we may want to attach to a dataset's published metadata in a data catalog. When we publish metadata in a catalog, what is published is only the textual documentation contained in the JSO or XML metadata file. Other resources attached to a dataset (such as the questionnaire for a survey, technical or training manuals, tabulations, reports, possibly micro-data files, etc.) are not included in these metadata, but also constitute important materials for data users. All these resources are what we consider as *external resources* ("external" to the schema-compliant metadata), which need to be catalogued and (for most of them) published with the metadata. A simple metadata schema, based on the Dublin Core, is used to provide some essential information on these resources.     
 
-### A note on other standards
+## A note on other standards
 
-#### SDMX
+### SDMX
 
 The metadata standards and schemas described in the Guide do not include the [Statistical Data and Metadata eXchange (SDMX)](https://sdmx.org/?sdmx_news=launching-the-new-sdmx-3-0-standard) standard sponsored by a group of international organisations. Although SDMX includes a metadata component, it is intended to support machine-to-machine data exchange, not data documentation and discoverability. SDMX and the metadata standards and schemas we describe in the Guide can --and should-- be made inter-operable. 
 
-##### schema.org and DCAT
+#### schema.org and DCAT
 
 *Structured data* is information that is embedded in HTML pages that helps Google classify, understand, and display the content of the page when the page is related to a specific type of content. The information stored in the structured data does not impact how the page itself is displayed in a web browser; it only impacts the display of information on the page when returned by Google search results. The types of content to which structured metadata applies is diverse and includes items like job positings, cooking receipes, books, events, movies, math solvers, and others (see the list provided in [Google's Search Gallery](https://developers.google.com/search/docs/appearance/structured-data/search-gallery)). It also applies to resources of type *dataset* and *image*. In this context, a *dataset* can be any type of structured dataset including microdata, indicators, tables, and geographic datasets.
 
@@ -421,6 +421,45 @@ The embedding of structured metadata (schema.org or DCAT) into HTML pages must b
 </center>
 <br>
 
+
+## Use of controlled vocabularies
+
+Metadata standards and schemas provide lists of elements with a description of the expected content to be captured in each element. For some elements, it may be appropriate to restrict the valid content to pre-selected options or "controlled vocabularies". A controlled vocabulary is a pre-defined list of values that can be accepted as valid content for some elements. For example. a metadata element "data type" should not be populated with free text, but should make use of a pre-defined taxonomy of data types. The use of controlled vocabularies (for selected metadata elements) will be particularly useful to implement search and filter features in data catalogs (see section 3.1.1 of this Guide), and to foster inter-operability of data catalogs.
+
+:::quote
+In library and information science, controlled vocabulary is a carefully selected list of words and phrases, which are used to tag units of information (document or work) so that they may be more easily retrieved by a search.[Wikipedia](https://en.wikipedia.org/wiki/Controlled_vocabulary)
+:::
+
+Controlled vocabularies can be specific to an agency, or be developed by a community of practice. For example, the list of countries and codes provided by the [ISO 3166](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes) can be used as a controlled vocabulary for a metadata element `country` or `nation`; the [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) list of languages can be used as a controlled vocabulary for a metadata element `language`. Or the [CESSDA topics classification](https://vocabularies.cessda.eu/vocabulary/TopicClassification) can be used as a controlled vocabulary for the element `topics` found in most metadata schemas. When a controlled vocabulary is used in a metadata standard or schema, it is good practice to include an identification of its origin and version.  
+
+Some recommended controlled vocabularies are included in the description of the ISO 19139 standard for geographic data and services (see chapter 6). Most standards and schemas we recommend also include a `topics` element. Annex 1 provides a description of the CESSDA topics classification. 
+
+Ideally, controlled vocabulary will be developed in compliance with the [FAIR principles](https://www.go-fair.org/fair-principles/) for scientific data management and stewardship: **F**indability, **A**ccessibility, **I**nteroperability, and **R**euse.
+
+
+### Use of tags 
+
+All metadata standards and schemas described in this guide include a `tags` element, even when this element is not part of a standard. This element enables the implementation of filters (facets) in data cataloguing applications, in a flexible manner. The `tags` metadata element is repeatable (meaning that more than one tag can be attached to a dataset) and contains two sub-elements to capture a `tag` (word or phrase), and the `tag_group` (if any) it belongs to.
+
+<center>
+![](./images/reDoc_tags.JPG){width=100%}
+</center>
+
+To illustrate the use of tags, let's assume that a catalog contains datasets that are available freely, and others that are available for a fee. The catalog administrator may want to provide a filter (facet) in the user interface that would allow users to filter datasets based on their free or not free status. None of the metadata schemas we describe in the Guide contains an element specifically designed to indicate the "free" or "for a fee" nature of the data. But this information can be captured in a tag "*Free*" or "*For a fee*" that would be added to each dataset in the catalog, with a tag group that could be named "free_or_fee". In R, this would be done as follows (for a "Free" dataset):
+
+```{r, eval=F, echo=T}
+# ... ,
+tags = list(
+  list(tag = "Free", tag_group = "free_or_fee")
+)
+# ... 
+```
+    
+In the NADA catalog, a facet titled "Free or for a fee" can then be created based on the information found in the `tags` element where `tag_group` = "free_or_fee".
+
+<center>
+![](./images/reDoc_tags_2.JPG){width=100%}
+</center>
 
 
 ## Metadata augmentation
