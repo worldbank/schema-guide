@@ -10,30 +10,9 @@ This chapter describes what metadata is needed, and how it can be organized and 
 
 ## Rich metadata
 
-*Rich* metadata means metadata that is **detailed** and **comprehensive**. Rich metadata benefits both the users and the producers (or curators) of data.
-
-### Benefits for data users
-
-Rich metadata helps data users:
-
-   - **Find** data of interest. The metadata provide much of the content that the search engine will be able to index and discover. The richer the metadata, the better the search engine will be able to help users identify relevant data. 
-   - **Understand** what the data are measuring and how they have been created. Without a proper description of the data, the risk is high that a user will misunderstand and possibly misuse them, or simply decide not to make use of them.
-   - **Assess** the quality of the data, including their reliability, fitness for purpose, and consistency with other datasets when the purpose requires integration of multiple datasets. 
-
-### Benefits for data producers 
-
-For the data producers (and curators), rich metadata will contribute to:
-
-   - Ensure **transparency**, **auditability, and **credibility** of the data and of the derived products.
-   - Increase the **visibility** of the data, and thus the demand for, and use of the data.
-   - **Reduce the cost** of operating a data dissemination service by lowering the burden of responding to users' requests for information.
-   - Support the preservation of **institutional memory**.
-   - Provide the meta-database needed to **harmonize data collection** methods and instruments. A compelling case for such use of metadata can be found in ["The Struggle for Integration and Harmonization of Social Statistics in
-a Statistical Agency - A Case Study of Statistics Canada"](https://www.ihsn.org/sites/default/files/resources/IHSN-WP004.pdf) by Gordon Priest (2010).<br>
-   
 ### Defining rich metadata
 
-What makes metadata "rich and comprehensive" is not always easy to define, and is specific to each data type. Microdata and geospatial datasets for example will require much more -- and different-- metadata than a document or an image. Metadata standards and schemas provide data curators with detailed lists of *elements* (or *fields*), specific to each data type, that must or may be provided to document a dataset. The metadata elements included in a standard or schema will typically cover *cataloguing material*, *contextual information*, and *explanatory materials*.
+*Rich* metadata means metadata that is **detailed** and **comprehensive**. What makes metadata "detailed and comprehensive" is not always easy to define, and is specific to each data type. Microdata and geospatial datasets for example will require much more -- and different-- metadata than a document or an image. Metadata standards and schemas provide data curators with detailed lists of *elements* (or *fields*), specific to each data type, that must or may be provided to document a dataset. The metadata elements included in a standard or schema will typically cover *cataloguing material*, *contextual information*, and *explanatory materials*.
 
 #### Cataloguing material
 
@@ -64,47 +43,87 @@ Explanatory materials are the information that should be created and preserved t
    - Information on **data sources**: Details about the source from which the data is derived should be included. For example, when the data source consists of responses to survey questionnaires, each question should be carefully recorded in the documentation. Ideally, the text will include a reference to the generated variable(s). It is also useful to explain the conditions under which a question would be asked, including, if possible, the cases to which it applies and, ideally, a summary of response statistics.
    - Information on **confidentiality and anonymization**: It is important to determine whether the data contains any confidential information on individuals, households, organizations, or institutions. If so, such information should be recorded together with any agreement on how to use the data, such as with survey respondents. Issues of confidentiality may restrict the analyses to be undertaken or results to be published, particularly if the data is to be made available for secondary use. If the data were anonymized to prevent identification, it is wise to record the anonymization procedure (taking care of not providing information that would enable a reverse-engineering of the procedure) and its impact on the data, as such modification may restrict subsequent analysis.
 
-### Controlled vocabularies
+### Benefits for data users
 
-Metadata standards and schemas provide lists of elements with a description of the expected content to be captured in each element. For some elements, it may be appropriate to restrict the valid content to pre-selected options or "controlled vocabularies". A controlled vocabulary is a pre-defined list of values that can be accepted as valid content for some elements. For example. a metadata element "data type" should not be populated with free text, but should make use of a pre-defined taxonomy of data types. The use of controlled vocabularies (for selected metadata elements) will be particularly useful to implement search and filter features in data catalogs (see section 3.1.1 of this Guide), and to foster inter-operability of data catalogs.
+Rich metadata helps data users:
+
+   - **Find** data of interest. The metadata provide much of the content that the search engine will be able to index and discover. The richer the metadata, the better the search engine will be able to help users identify relevant data. 
+   - **Understand** what the data are measuring and how they have been created. Without a proper description of the data, the risk is high that a user will misunderstand and possibly misuse them, or simply decide not to make use of them.
+   - **Assess** the quality of the data, including their reliability, fitness for purpose, and consistency with other datasets when the purpose requires integration of multiple datasets. 
+
+
+### Benefits for data producers 
+
+#### Transparency and credibility
+
+Ensure transparency, auditability, and credibility of the data and of the derived products.
+
+#### Cost-effectiveness of data dissemination
+
+Reduce the cost of operating a data dissemination service by lowering the burden of responding to users' requests for information.
+
+#### Preservation of institutional memory
+
+Support the preservation of **institutional memory**.
+
+#### Harmonization of data collection
+
+Provide the meta-database needed to harmonize data collection methods and instruments. A compelling case for such use of metadata can be found in ["The Struggle for Integration and Harmonization of Social Statistics in a Statistical Agency - A Case Study of Statistics Canada"](https://www.ihsn.org/sites/default/files/resources/IHSN-WP004.pdf) by Gordon Priest (2010).<br>
+
+#### Quality assurance
+
+[to do]
+
+#### Visibility of the data
+
+Increase the visibility of the data, and thus the demand for, and use of the data.
+
+Data cataloguing applications provide search and filtering tools to help users of the catalog identify data of interest. But not all users will start their search for data directly in specialized data catalogs; many will start their search in Google, Google Dataset Search, Bing, Yahoo! or another search engine.  
+
+Some search engines may provide users with a direct answer to their query, without transiting via the source catalog. This will be the case when the query can be associated with a specific indicator, time and location for which data are openly available or accessible via a public API. For example, a search for "population india 2020" on Google, will provide an *answer* first, followed by links to the underlying sources.
+<br>
+   <center>
+   ![](./images/Google_Population_India_2020.JPG){width=90%}
+   </center>
+<br>
+
+In other cases, the search engine will provide users with a link to a specific catalog page, not to the catalog's home page. In such cases, the user will not be directly connected to the catalog's own search engine. For example, a search for "Albania LSMS 2012" (a Living Standard Measurement Study, i.e. household survey) in Google will send the user directly to the survey page of the catalog, not to the home or search page of the catalog.
+<br>
+   <center>
+   ![](./images/Google_LSMS_Albania_2012.JPG){width=90%}
+   </center>
+<br>
+
+In some cases, the user may not be brought to the data catalog at all, if the catalog ranked low in the relevance order of the Google query results. [User behavior data (2020)](https://www.smartinsights.com/search-engine-marketing/search-engine-statistics/) showed that "only 9% of Google searchers make it to the bottom of the first page of the search results", and that "only .44% of searchers go to the second page of Google’s search results". It is thus critical to optimize the visibility of the content of specialized data catalogs in the lead search engines, Google in particular. This optimization process is referred to as **search engine optimization** or SEO. [Wikipedia](https://en.wikipedia.org/wiki/Search_engine_optimization) describes SEO as “the process of improving the quality and quantity of website traffic to a website or a web page from search engines. SEO targets unpaid traffic (known as "natural" or "organic" results) rather than direct traffic or paid traffic. (…) As an Internet marketing strategy, SEO considers how search engines work, the computer-programmed algorithms that dictate search engine behavior, what people search for, the actual search terms or keywords typed into search engines, and which search engines are preferred by their targeted audience. SEO is performed because a website will receive more visitors from a search engine when websites rank higher on the search engine results page.” 
 
 :::quote
-In library and information science, controlled vocabulary is a carefully selected list of words and phrases, which are used to tag units of information (document or work) so that they may be more easily retrieved by a search.[Wikipedia](https://en.wikipedia.org/wiki/Controlled_vocabulary)
+Because search engines crawl the web pages that are generated from databases (rather than crawling the databases themselves), your carefully applied metadata inside the database will not even be seen by search engines unless you write scripts to display the metadata tags and their values in HTML meta tags. It is crucial to understand that any metadata offered to search engines must be recognizable as part of a schema and must be machine-readable, which is to say that the search engine must be able to parse the metadata accurately. (For example, if you enter a bibliographic citation into a single metadata field, the search engine probably won’t know how to distinguish the article title from the journal title, or the volume from the issue number. In order for the search engine to read those citations effectively each part of the citation must have its own field. (...) Making sure metadata is machine-readable requires patterns and consistency, which will also prepare it for transformation to other schema. (This is far more important than picking any single metadata schema. (...) *From the blog post "Metadata, Schema.org, and Getting Your Digital Collection Noticed" by Patrick Hogan (https://www.ala.org/tools/article/ala-techsource/metadata-schemaorg-and-getting-your-digital-collection-noticed-3)*
 :::
 
-Controlled vocabularies can be specific to an agency, or be developed by a community of practice. For example, the list of countries and codes provided by the [ISO 3166](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes) can be used as a controlled vocabulary for a metadata element `country` or `nation`; the [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) list of languages can be used as a controlled vocabulary for a metadata element `language`. Or the [CESSDA topics classification](https://vocabularies.cessda.eu/vocabulary/TopicClassification) can be used as a controlled vocabulary for the element `topics` found in most metadata schemas. When a controlled vocabulary is used in a metadata standard or schema, it is good practice to include an identification of its origin and version.  
+The ranking of web pages by Google and other lead search engines is determined by complex, proprietary, and non-disclosed algorithms. The only option for a web developer to ensure that a web page appears on top of the Google list of results is to pay for it, publishing it as a "sponsored" link. Otherwise, the ranking of a web page will be determined by a combination of known and unknown criteria. "Google's automated ranking systems are designed to present helpful, reliable information that's primarily created to benefit people, not to gain search engine rankings, in the top Search results." ([Google Search Central](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)) But Google, Bing and other search engines provide web developers with some guidance and recommendations on search engine optimization (SEO). See for example the [Google Search Central](https://developers.google.com/search) website where Google publish "Specific things you can do to improve the SEO of your website". 
 
-Some recommended controlled vocabularies are included in the description of the ISO 19139 standard for geographic data and services (see chapter 6). Most standards and schemas we recommend also include a `topics` element. Annex 1 provides a description of the CESSDA topics classification. 
+   - [Google Search Engine Optimization Starter Guide](https://developers.google.com/search/docs/beginner/seo-starter-guide)
+   - [Google Dataset Search, Advanced SEO](https://developers.google.com/search/docs/data-types/dataset)
+   - [Bing webmaster Tools](https://www.bing.com/webmasters/about)
 
-Ideally, controlled vocabulary will be developed in compliance with the [FAIR principles](https://www.go-fair.org/fair-principles/) for scientific data management and stewardship: **F**indability, **A**ccessibility, **I**nteroperability, and **R**euse.
+Improving the ranking of catalog pages is a shared responsibility of data curators and catalog developers and administrators. **Data curators** must pay particular attention to providing rich, useful content in the catalog web pages (the HTML pages that describe each catalog entry). To identify relevant results, search engines index the content of web pages. Datasets that are well documented, i.e. those published with rich and structured metadata, will thus have a better chance to be discovered. Much attention should be paid to some core elements including the dataset title, producer, description (abstract), keywords, topics, access license, and geographic coverage. In Google Search Central's terms, curators must "create helpful, reliable, people-first content" (not search engine-first content) and "use words that people would use to look for your content, and place those words in prominent locations on the page, such as the title and main heading of a page, and other descriptive locations such as alt text and link text.* 
 
-### Tags 
+**Developers and administrators of cataloguing applications** must pay attention to other aspects of a catalog that will make it rank higher in Google and other search engine results: 
 
-All metadata standards and schemas described in this guide include a `tags` element, even when this element is not part of a standard. This element enables the implementation of filters (facets) in data cataloguing applications, in a flexible manner. The `tags` metadata element is repeatable (meaning that more than one tag can be attached to a dataset) and contains two sub-elements to capture a `tag` (word or phrase), and the `tag_group` (if any) it belongs to.
+- Ensuring that a data catalog delivers a good experience to users (see [Understanding page experience in Google Search results](https://developers.google.com/search/docs/appearance/page-experience)), which among other things involves:
+   - Catalog pages that load fast
+   - Catalog pages that are mobile-friendly. A data catalog should thus be built with a responsive design.
+   - Provide secure connection by serving the catalog over HTTPS (see more information, see for example https://web.dev/enable-https/)
+- Embedding *structured data* in the catalog's HTML pages. The HTML pages in a data catalog are mostly the pages that will make the metadata specific to an entry visible to the user. These pages are automatically generated by the cataloguing application, by extracting and formatting the metadata stored in the catalog's database. Structured data is information that will be included in these HTML pages (but not shown to the user) to help Google understand the content of the page. The use of *structured data* only applies to certain types of content, including datasets. The use of structured data influences not only the ranking of a page, but also the way information on the page will be displayed by Google. The next section is dedicated to this.
 
-<center>
-![](./images/reDoc_tags.JPG){width=100%}
-</center>
+Last, Google will "reward" popular websites, i.e. websites that are frequently visited and to which many other influent and popular websites provide links. Google's recommendation is thus to "tell people about your site. Be active in communities where you can tell like-minded people about your services and products that you mention on your site."
 
-To illustrate the use of tags, let's assume that a catalog contains datasets that are available freely, and others that are available for a fee. The catalog administrator may want to provide a filter (facet) in the user interface that would allow users to filter datasets based on their free or not free status. None of the metadata schemas we describe in the Guide contains an element specifically designed to indicate the "free" or "for a fee" nature of the data. But this information can be captured in a tag "*Free*" or "*For a fee*" that would be added to each dataset in the catalog, with a tag group that could be named "free_or_fee". In R, this would be done as follows (for a "Free" dataset):
+A helpful and detailed [self-assessment list](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) of items that data curators, catalog developers, and catalog administrators should pay attention to is provided by Google. Various tools are also available to catalog developers and administrators to assess the technical performance of their websites.
 
-```{r, eval=F, echo=T}
-# ... ,
-tags = list(
-  list(tag = "Free", tag_group = "free_or_fee")
-)
-# ... 
-```
-    
-In the NADA catalog, a facet titled "Free or for a fee" can then be created based on the information found in the `tags` element where `tag_group` = "free_or_fee".
 
-<center>
-![](./images/reDoc_tags_2.JPG){width=100%}
-</center>
-                                                      
 ## Structured metadata
 
-### Structuring metadata
+### Defining structured metadata
 
 Metadata should not only be comprehensive and detailed, they should also be organized in a **structured** manner, preferably using a standardized structure. **Structured metadata** means that the metadata are stored in specific *fields* (or *elements*) organized in a <u>metadata schema</u>. **Standardized** means that the list and description of elements are commonly agreed by a community of practice, in which case the metadata schema is referred to as a metadata standard. Some metadata schemas may be standard within an organization, others may be adopted by a larger community of practice, in some cases internationally. International metadata standards have particular value as they facilitate the sharing of international good practice and support cost-effective and efficient data and metadata exchange. 
 
@@ -274,50 +293,6 @@ Data catalogs that adopt common metadata standards and schemas can exchange info
 Interoperability between data catalogs can be further improved by the adoption of common controlled vocabularies. For example, the adoption of the ISO country codes in country lists will guarantee that all catalogs will be able to filter dataset by country in a consistent manner. This will solve the issue of possible differences in the spelling of country names (e.g., one catalog referring to the *Democratic Republic of Congo* as *Congo, DR*, and another one as *Congo, Dem. Rep.*). It also solves issues of changing country names, e.g. *Swaziland* renamed as *Eswatini* in 2018). Controlled vocabularies are often used for "categorical" metadata elements like topics, keywords, data type, etc. Some metadata standards like the ISO 19139 for geospatial data include their own recommended controlled vocabularies. Ideally, controlled vocabularies are developed in accordance with [FAIR principles](https://www.go-fair.org/fair-principles/) (Findability, Accessibility, Interoperability, and Reuse of digital assets). "The principles emphasise machine-actionability (i.e., the capacity of computational systems to find, access, interoperate, and reuse data with none or minimal human intervention) because humans increasingly rely on computational support to deal with data as a result of the increase in volume, complexity, and creation speed of data." (https://www.go-fair.org/fair-principles/) 
 
 The adoption of standards and schemas by software developers also contributes to the easy transfer of metadata across applications. For example, data capture tools like [Survey Solutions](https://mysurvey.solutions/en/) by the World Bank and [CsPro](https://www.census.gov/data/software/cspro.html) by the US Census Bureau offer options to export metadata compliant with the DDI Codebook standard; ESRI's ArcGIS software export geospatial metadata in the ISO 19139 standard. 
-
-#### Visibility
-
-Data cataloguing applications provide search and filtering tools to help users of the catalog identify data of interest. But not all users will start their search for data directly in specialized data catalogs; many will start their search in Google, Google Dataset Search, Bing, Yahoo! or another search engine.  
-
-Some search engines may provide users with a direct answer to their query, without transiting via the source catalog. This will be the case when the query can be associated with a specific indicator, time and location for which data are openly available or accessible via a public API. For example, a search for "population india 2020" on Google, will provide an *answer* first, followed by links to the underlying sources.
-<br>
-   <center>
-   ![](./images/Google_Population_India_2020.JPG){width=90%}
-   </center>
-<br>
-
-In other cases, the search engine will provide users with a link to a specific catalog page, not to the catalog's home page. In such cases, the user will not be directly connected to the catalog's own search engine. For example, a search for "Albania LSMS 2012" (a Living Standard Measurement Study, i.e. household survey) in Google will send the user directly to the survey page of the catalog, not to the home or search page of the catalog.
-<br>
-   <center>
-   ![](./images/Google_LSMS_Albania_2012.JPG){width=90%}
-   </center>
-<br>
-
-In some cases, the user may not be brought to the data catalog at all, if the catalog ranked low in the relevance order of the Google query results. [User behavior data (2020)](https://www.smartinsights.com/search-engine-marketing/search-engine-statistics/) showed that "only 9% of Google searchers make it to the bottom of the first page of the search results", and that "only .44% of searchers go to the second page of Google’s search results". It is thus critical to optimize the visibility of the content of specialized data catalogs in the lead search engines, Google in particular. This optimization process is referred to as **search engine optimization** or SEO. [Wikipedia](https://en.wikipedia.org/wiki/Search_engine_optimization) describes SEO as “the process of improving the quality and quantity of website traffic to a website or a web page from search engines. SEO targets unpaid traffic (known as "natural" or "organic" results) rather than direct traffic or paid traffic. (…) As an Internet marketing strategy, SEO considers how search engines work, the computer-programmed algorithms that dictate search engine behavior, what people search for, the actual search terms or keywords typed into search engines, and which search engines are preferred by their targeted audience. SEO is performed because a website will receive more visitors from a search engine when websites rank higher on the search engine results page.” 
-
-:::quote
-Because search engines crawl the web pages that are generated from databases (rather than crawling the databases themselves), your carefully applied metadata inside the database will not even be seen by search engines unless you write scripts to display the metadata tags and their values in HTML meta tags. It is crucial to understand that any metadata offered to search engines must be recognizable as part of a schema and must be machine-readable, which is to say that the search engine must be able to parse the metadata accurately. (For example, if you enter a bibliographic citation into a single metadata field, the search engine probably won’t know how to distinguish the article title from the journal title, or the volume from the issue number. In order for the search engine to read those citations effectively each part of the citation must have its own field. (...) Making sure metadata is machine-readable requires patterns and consistency, which will also prepare it for transformation to other schema. (This is far more important than picking any single metadata schema. (...) *From the blog post "Metadata, Schema.org, and Getting Your Digital Collection Noticed" by Patrick Hogan (https://www.ala.org/tools/article/ala-techsource/metadata-schemaorg-and-getting-your-digital-collection-noticed-3)*
-:::
-
-The ranking of web pages by Google and other lead search engines is determined by complex, proprietary, and non-disclosed algorithms. The only option for a web developer to ensure that a web page appears on top of the Google list of results is to pay for it, publishing it as a "sponsored" link. Otherwise, the ranking of a web page will be determined by a combination of known and unknown criteria. "Google's automated ranking systems are designed to present helpful, reliable information that's primarily created to benefit people, not to gain search engine rankings, in the top Search results." ([Google Search Central](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)) But Google, Bing and other search engines provide web developers with some guidance and recommendations on search engine optimization (SEO). See for example the [Google Search Central](https://developers.google.com/search) website where Google publish "Specific things you can do to improve the SEO of your website". 
-
-   - [Google Search Engine Optimization Starter Guide](https://developers.google.com/search/docs/beginner/seo-starter-guide)
-   - [Google Dataset Search, Advanced SEO](https://developers.google.com/search/docs/data-types/dataset)
-   - [Bing webmaster Tools](https://www.bing.com/webmasters/about)
-
-Improving the ranking of catalog pages is a shared responsibility of data curators and catalog developers and administrators. **Data curators** must pay particular attention to providing rich, useful content in the catalog web pages (the HTML pages that describe each catalog entry). To identify relevant results, search engines index the content of web pages. Datasets that are well documented, i.e. those published with rich and structured metadata, will thus have a better chance to be discovered. Much attention should be paid to some core elements including the dataset title, producer, description (abstract), keywords, topics, access license, and geographic coverage. In Google Search Central's terms, curators must "create helpful, reliable, people-first content" (not search engine-first content) and "use words that people would use to look for your content, and place those words in prominent locations on the page, such as the title and main heading of a page, and other descriptive locations such as alt text and link text.* 
-
-**Developers and administrators of cataloguing applications** must pay attention to other aspects of a catalog that will make it rank higher in Google and other search engine results: 
-
-- Ensuring that a data catalog delivers a good experience to users (see [Understanding page experience in Google Search results](https://developers.google.com/search/docs/appearance/page-experience)), which among other things involves:
-   - Catalog pages that load fast
-   - Catalog pages that are mobile-friendly. A data catalog should thus be built with a responsive design.
-   - Provide secure connection by serving the catalog over HTTPS (see more information, see for example https://web.dev/enable-https/)
-- Embedding *structured data* in the catalog's HTML pages. The HTML pages in a data catalog are mostly the pages that will make the metadata specific to an entry visible to the user. These pages are automatically generated by the cataloguing application, by extracting and formatting the metadata stored in the catalog's database. Structured data is information that will be included in these HTML pages (but not shown to the user) to help Google understand the content of the page. The use of *structured data* only applies to certain types of content, including datasets. The use of structured data influences not only the ranking of a page, but also the way information on the page will be displayed by Google. The next section is dedicated to this.
-
-Last, Google will "reward" popular websites, i.e. websites that are frequently visited and to which many other influent and popular websites provide links. Google's recommendation is thus to "tell people about your site. Be active in communities where you can tell like-minded people about your services and products that you mention on your site."
-
-A helpful and detailed [self-assessment list](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) of items that data curators, catalog developers, and catalog administrators should pay attention to is provided by Google. Various tools are also available to catalog developers and administrators to assess the technical performance of their websites.
 
 
 ## Recommended standards
