@@ -369,7 +369,7 @@ We are interested in documenting and disseminating **data processing and analysi
 
 The metadata standards and schemas described in the Guide do not include the [Statistical Data and Metadata eXchange (SDMX)](https://sdmx.org/?sdmx_news=launching-the-new-sdmx-3-0-standard) standard sponsored by a group of international organisations. Although SDMX includes a metadata component, it is intended to support machine-to-machine data exchange, not data documentation and discoverability. SDMX and the metadata standards and schemas we describe in the Guide can --and should-- be made inter-operable. 
 
-#### schema.org and DCAT
+### schema.org and DCAT
 
 *Structured data* is information that is embedded in HTML pages that helps Google classify, understand, and display the content of the page when the page is related to a specific type of content. The information stored in the structured data does not impact how the page itself is displayed in a web browser; it only impacts the display of information on the page when returned by Google search results. The types of content to which structured metadata applies is diverse and includes items like job positings, cooking receipes, books, events, movies, math solvers, and others (see the list provided in [Google's Search Gallery](https://developers.google.com/search/docs/appearance/structured-data/search-gallery)). It also applies to resources of type *dataset* and *image*. In this context, a *dataset* can be any type of structured dataset including microdata, indicators, tables, and geographic datasets.
 
