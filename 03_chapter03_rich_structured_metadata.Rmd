@@ -286,28 +286,89 @@ Some search engines may provide users with a direct answer to their query, witho
    </center>
 <br>
 
-In other cases, the search engine will provide users with a link to a specific catalog page, not to the catalog's home page. In such cases, the user will not be directly connected to the catalog's own search engine. For example, a search for "albania lsms 2012" (a Living Standard Measurement Study, i.e. household survey) in Google will send the user directly to the survey page of the catalog, not to the home or search page of the catalog.
+In other cases, the search engine will provide users with a link to a specific catalog page, not to the catalog's home page. In such cases, the user will not be directly connected to the catalog's own search engine. For example, a search for "Albania LSMS 2012" (a Living Standard Measurement Study, i.e. household survey) in Google will send the user directly to the survey page of the catalog, not to the home or search page of the catalog.
 <br>
    <center>
    ![](./images/Google_LSMS_Albania_2012.JPG){width=90%}
    </center>
 <br>
 
-In some cases, the user may not be brought to the data catalog at all, if the catalog ranked low in the relevance order of the Google query results. User behavior data (2020) showed that "only 9% of Google searchers make it to the bottom of the first page of the search results", and that "only .44% of searchers go to the second page of Google’s search results". (source: https://www.smartinsights.com/search-engine-marketing/search-engine-statistics/)
- 
-It is thus critical to optimize the visibility of the content of specialized data catalogs in the lead search engines, Google in particular. This optimization process is referred to as **search engine optimization** or SEO. [Wikipedia](https://en.wikipedia.org/wiki/Search_engine_optimization) describes SEO as “the process of improving the quality and quantity of website traffic to a website or a web page from search engines. SEO targets unpaid traffic (known as "natural" or "organic" results) rather than direct traffic or paid traffic. (…) As an Internet marketing strategy, SEO considers how search engines work, the computer-programmed algorithms that dictate search engine behavior, what people search for, the actual search terms or keywords typed into search engines, and which search engines are preferred by their targeted audience. SEO is performed because a website will receive more visitors from a search engine when websites rank higher on the search engine results page.” 
+In some cases, the user may not be brought to the data catalog at all, if the catalog ranked low in the relevance order of the Google query results. [User behavior data (2020)](https://www.smartinsights.com/search-engine-marketing/search-engine-statistics/) showed that "only 9% of Google searchers make it to the bottom of the first page of the search results", and that "only .44% of searchers go to the second page of Google’s search results". It is thus critical to optimize the visibility of the content of specialized data catalogs in the lead search engines, Google in particular. This optimization process is referred to as **search engine optimization** or SEO. [Wikipedia](https://en.wikipedia.org/wiki/Search_engine_optimization) describes SEO as “the process of improving the quality and quantity of website traffic to a website or a web page from search engines. SEO targets unpaid traffic (known as "natural" or "organic" results) rather than direct traffic or paid traffic. (…) As an Internet marketing strategy, SEO considers how search engines work, the computer-programmed algorithms that dictate search engine behavior, what people search for, the actual search terms or keywords typed into search engines, and which search engines are preferred by their targeted audience. SEO is performed because a website will receive more visitors from a search engine when websites rank higher on the search engine results page.” 
 
 :::quote
 Because search engines crawl the web pages that are generated from databases (rather than crawling the databases themselves), your carefully applied metadata inside the database will not even be seen by search engines unless you write scripts to display the metadata tags and their values in HTML meta tags. It is crucial to understand that any metadata offered to search engines must be recognizable as part of a schema and must be machine-readable, which is to say that the search engine must be able to parse the metadata accurately. (For example, if you enter a bibliographic citation into a single metadata field, the search engine probably won’t know how to distinguish the article title from the journal title, or the volume from the issue number. In order for the search engine to read those citations effectively each part of the citation must have its own field. (...) Making sure metadata is machine-readable requires patterns and consistency, which will also prepare it for transformation to other schema. (This is far more important than picking any single metadata schema. (...) *From the blog post "Metadata, Schema.org, and Getting Your Digital Collection Noticed" by Patrick Hogan (https://www.ala.org/tools/article/ala-techsource/metadata-schemaorg-and-getting-your-digital-collection-noticed-3)*
 :::
 
-Guidelines for implementing SEO are provided by Google Search, Google Dataset Search, and other lead search engines. These guidelines are to be implemented not only by webmasters, but also by the developers of data cataloguing tools who should embed SEO into their software applications. 
+The ranking of web pages by Google and other lead search engines is determined by complex, proprietary, and non-disclosed algorithms. The only option for a web developer to ensure that a web page appears on top of the Google list of results is to pay for it, publishing it as a "sponsored" link. Otherwise, the ranking of a web page will be determined by a combination of known and unknown criteria. "Google's automated ranking systems are designed to present helpful, reliable information that's primarily created to benefit people, not to gain search engine rankings, in the top Search results." ([Google Search Central](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)) But Google, Bing and other search engines provide web developers with some guidance and recommendations on search engine optimization (SEO). See for example the [Google Search Central](https://developers.google.com/search) website where Google publish "Specific things you can do to improve the SEO of your website". 
 
    - [Google Search Engine Optimization Starter Guide](https://developers.google.com/search/docs/beginner/seo-starter-guide)
    - [Google Dataset Search, Advanced SEO](https://developers.google.com/search/docs/data-types/dataset)
    - [Bing webmaster Tools](https://www.bing.com/webmasters/about)
 
-An important element of SEO is the provision of structured metadata that can be exploited directly by the crawlers and indexers of search engines. This is the purpose of a set of schemas known as [**schema.org**](https://schema.org/). In 2011 Google, Microsoft, Yandex, and Yahoo! created a common set of schemas for structured data markup on web pages with the aim of helping search engines to better understand websites. An alternative to schema.org is the [DCAT (Data Catalog Vocabulary)](https://www.w3.org/TR/vocab-dcat-2/) metadata schema recommended by the W3C, also recognized by Google. "DCAT is a vocabulary for publishing data catalogs on the Web, which was originally developed in the context of government data catalogs such as data.gov and data.gov.uk (...)" (https://www.w3.org/TR/vocab-dcat-2/) Mapping augmented and structured metadata to the schema.org and/or DCAT standard is a critical element of such optimization. It will contribute significantly to the visibility of on-line data and metadata. Implementing such structured data markup in digital repositories is the responsibility of data librarians and of developers of data cataloguing applications. 
+Improving the ranking of catalog pages is a shared responsibility of data curators and catalog developers and administrators. **Data curators** must pay particular attention to providing rich, useful content in the catalog web pages (the HTML pages that describe each catalog entry). To identify relevant results, search engines index the content of web pages. Datasets that are well documented, i.e. those published with rich and structured metadata, will thus have a better chance to be discovered. Much attention should be paid to some core elements including the dataset title, producer, description (abstract), keywords, topics, access license, and geographic coverage. In Google Search Central's terms, curators must "create helpful, reliable, people-first content" (not search engine-first content) and "use words that people would use to look for your content, and place those words in prominent locations on the page, such as the title and main heading of a page, and other descriptive locations such as alt text and link text.* 
+
+**Developers and administrators of cataloguing applications** must pay attention to other aspects of a catalog that will make it rank higher in Google and other search engine results: 
+
+- Ensuring that a data catalog delivers a good experience to users (see [Understanding page experience in Google Search results](https://developers.google.com/search/docs/appearance/page-experience)), which among other things involves:
+   - Catalog pages that load fast
+   - Catalog pages that are mobile-friendly. A data catalog should thus be built with a responsive design.
+   - Provide secure connection by serving the catalog over HTTPS (see more information, see for example https://web.dev/enable-https/)
+- Embedding *structured data* in the catalog's HTML pages. The HTML pages in a data catalog are mostly the pages that will make the metadata specific to an entry visible to the user. These pages are automatically generated by the cataloguing application, by extracting and formatting the metadata stored in the catalog's database. Structured data is information that will be included in these HTML pages (but not shown to the user) to help Google understand the content of the page. The use of *structured data* only applies to certain types of content, including datasets. The use of structured data influences not only the ranking of a page, but also the way information on the page will be displayed by Google. The next section is dedicated to this.
+
+Last, Google will "reward" popular websites, i.e. websites that are frequently visited and to which many other influent and popular websites provide links. Google's recommendation is thus to "tell people about your site. Be active in communities where you can tell like-minded people about your services and products that you mention on your site."
+
+A helpful and detailed [self-assessment list](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) of items that data curators, catalog developers, and catalog administrators should pay attention to is provided by Google. Various tools are also available to catalog developers and administrators to assess the technical performance of their websites.
+
+##### Structured data for rich results in Google
+
+*Structured data* is information that is embedded in HTML pages that helps Google classify, understand, and display the content of the page when the page is related to a specific type of content. The information stored in the structured data does not impact how the page itself is displayed in a web browser; it only impacts the display of information on the page when returned by Google search results. The types of content to which structured metadata applies is diverse and includes items like job positings, cooking receipes, books, events, movies, math solvers, and others (see the list provided in [Google's Search Gallery](https://developers.google.com/search/docs/appearance/structured-data/search-gallery)). It also applies to resources of type *dataset* and *image*. In this context, a *dataset* can be any type of structured dataset including microdata, indicators, tables, and geographic datasets.
+
+The *structured data* to be embedded in an HTML page consists of a set of metadata elements compliant with either the [*dataset* schema from schema.org](https://schema.org/Dataset) or W3C's Data Catalog Vocabulary ([DCAT](https://www.w3.org/TR/vocab-dcat/#dcat-scope)) for datasets, and with the *image* schema from schema.org for images. For datasets, the schema.org schema is the most frequently used option.[^1] 
+
+   - **schema.org**: [schema.org](www.schema.org) is a collection of schemas designed to document many types of resources. The most generic type is a "thing" which can be a person, an organization, an event, a creative work, etc. A *creative work* can be a book, a movie, a photograph, a data catalog, a dataset, etc. Among the many types of *creative work* for which schemas are available, we are particularly interested in the ones that correspond to the types of data and resources we recommend in this guide. This includes:
+      - [**DataCatalog**](https://schema.org/DataCatalog): A data catalog is a collection of datasets.  
+      - [**Dataset**](https://schema.org/Dataset): A body of structured information describing some topic(s) of interest.  
+      - [**MediaObject**](https://schema.org/MediaObject): A media object, such as an image, video, or audio object embedded in a web page or a downloadable dataset. This includes:
+         - [**ImageObject**](https://schema.org/ImageObject): An image file.   
+         - [**AudioObject**](https://schema.org/AudioObject): An audio file.   
+         - [**VideoObject**](https://schema.org/VideoObject): A video file.   
+      - [**Book**](https://schema.org/Book): A book.  
+      - [**DigitalDocument**](https://schema.org/DigitalDocument): An electronic file or document.  
+   The schemas proposed by schema.org have been developed primarily "to improve the web by creating a structured data markup schema supported by major search engines. On-page markup helps search engines understand the information on web pages and provide richer search results." (from [schema.org, Q&A](https://schema.org/docs/faq.html#0)) These schemas have not been developed by specialized communities of practice (statisticians, survey specialists, data librarians) to document datasets for preservation of institutional memory, to increase transparency in the data production process, or to provide data users with the "cook book" they may need to safely and responsibly use data. These schemas are not the ones that statistical organizations need to comply with international recommendations like the Generic Standard Business Process Model (GSBPM). But they play a critical role in improving data discoverability, as they provide webmasters and search engines with a means to better capture and index the content of web-based data platforms. Schemas from schema.org should thus be embedded in data catalogs. Data cataloguing applications should automatically map (some of) the elements of the specialized metadata standards and schemas they use to the appropriate fields of schema.org. Recommended mapping between the specialized standards and schemas and schema.org are not yet available. The production of such mappings, and the development of utilities to facilitate the production of content compliant with schema.org, would contribute to the objective of visibility and discoverability of data.  
+
+   - **DCAT**: [DCAT](https://www.w3.org/TR/vocab-dcat-2/) describes datasets and data services using a standard model and vocabulary. It is organized in 13 "classes" (Catalog, Cataloged Resource, Catalog Record, Dataset, Distribution, Data Service, Concept Scheme, Concept, Organization/Person, Relationship, Role, Period of Time, and Location). Within classes, *properties* are used as metadata elements. For example, the class *Cataloged Resource* includes properties like *title*, *description*, *resource creator*; the class *Dataset* includes properties like *spatial resolution*, *temporal coverage*; many of these properties can easily be mapped to equivalent elements of the specialized metadata schemas we recommend in this Guide.
+
+The embedding of structured metadata (schema.org or DCAT) into HTML pages must be automated in a data cataloguing tool. Data catalogs applications dynamically generate the HTML pages that display the description of each catalog entry. They do so by extracting the necessary metadata from the catalog database, and applying "transformations and styles" to this content to produce a user-friendly output that catalog visitors will view in their web browser. To embed structured data in these pages, the catalog application will (i) extract the relevant subset of metadata elements from the original metadata (e.g., from the DDI-compliant metadata for a micro-dataset), (ii) map these extracted elements to the schema.org or DCAT schema, and (iii) save it in the HTML page as a JSON-LD "hidden" component. Mapping the core elements of specialized metadata standards to the schema.org schema is thus essential to enable this feature. The screenshots below show an example of an HTML page for a dataset published in a NADA catalog, with the underlying code. The structured metadata is used by Google to display this information as a formatted, "rich result" in Google Dataset Search.
+
+<br>
+**The HTML page as viewed by the catalog user** - The web browser will ignore the embedded structured metadata when the HTML page is displayed. What users will see is entirely controlled by the catalog application. 
+<br>
+
+<br>
+<center>
+![](./images/reDoc_html_view.JPG){width=80%}
+</center>
+<br>
+
+<br>
+**The HTML page code (abstract)** - The automatically-generated structured data can be seen in the HTML page code (or *page source*). This information is visible and processed by Google, Bing, and other search engine's web crawlers. Note that the structured data, although not "visible" to users, can be made accessible to them via API. Other data cataloguing applications may be able to ingest this information; the CKAN cataloguing tool for example makes use of metadata compliant with DCAT or schema.org. Making the structured data accessible is one way to improve the inter-operability of data catalogs.
+<br>
+
+<br>
+<center>
+![](./images/reDoc_html_code.JPG){width=80%}
+</center>
+<br>
+
+<br>
+**The result - Higher visibility/ranking in Google Dataset Search** - The websites catalog.ihsn.org and microdata.worldbank.org are NADA catalogs, which embed schema.org metadata. 
+<br>
+
+<br>
+<center>
+![](./images/reDoc_html_rank.JPG){width=80%}
+</center>
+<br>
 
 
 ## Recommended standards
@@ -413,91 +474,5 @@ Practically, embeddings are used as follows: metadata (or part of the metadata) 
    - For videos and audio files, machine learning models of speech-to-text API solutions can be used to automatically generate transcripts (see for example [Amazon Transcribe](https://aws.amazon.com/transcribe/), [Google Cloud Speech-to-Text](https://cloud.google.com/speech-to-text), [Microsoft Azure Speech to Text](https://azure.microsoft.com/en-us/services/cognitive-services/speech-to-text/), or [rev.ai](https://www.rev.ai/)). The content of the transcripts can then be indexed in search engines, making the content of video and audio files more discoverable. 
    
    - For programs and scripts: a parsing of the commands used in the script may be used to derive information on the methods applied.
-   
-                             
-## Search engine optimization
-
-The standards we present in this Guide have been tailored for each data type. Specialized metadata standards will foster comprehensiveness and discoverability in specialized catalog, and help build optimized data discovery suystems. But it is also critical to ensure the visibility and discoverability of the metadata in generic search engines, which are not built around the same schemas. The web makes use of its own schemas: schema.org. To ensure SEO, the specialized schemas should be mapped to it. 
-
-### The basics of search engine optimization
-
-Data catalogs must be optimized to improve the visibility and ranking of their content in search engines, including specialized search engines like Google's [Dataset Search](https://datasetsearch.research.google.com/). The ranking of web pages by Google and other lead search engines is determined by complex, proprietary, and non-disclosed algorithms. The only option for a web developer to ensure that a web page appears on top of the Google list of results is to pay for it, publishing it as a commercial ad. Otherwise, the ranking of a web page will be determined by a combination of known and unknown criteria. "Google's automated ranking systems are designed to present helpful, reliable information that's primarily created to benefit people, not to gain search engine rankings, in the top Search results." ([Google Search Central](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)) But Google, Bing and other search engines provide web developers with some guidance and recommendations on search engine optimization (SEO). See for example the [Google Search Central](https://developers.google.com/search) website where Google publish "Specific things you can do to improve the SEO of your website". 
-
-Improving the ranking of catalog pages is a shared responsibility of data curators and catalog developers and administrators. **Data curators** must pay particular attention to providing rich, useful content in the catalog web pages (the HTML pages that describe each catalog entry). To identify relevant results, search engines index the content of web pages. Datasets that are well documented, i.e. those published with rich and structured metadata, will thus have a better chance to be discovered. Much attention should be paid to some core elements including the dataset title, producer, description (abstract), keywords, topics, access license, and geographic coverage. In Google Search Central's terms, curators must "create helpful, reliable, people-first content" (not search engine-first content) and "use words that people would use to look for your content, and place those words in prominent locations on the page, such as the title and main heading of a page, and other descriptive locations such as alt text and link text.* 
-
-**Developers and administrators of cataloguing applications** must pay attention to other aspects of a catalog that will make it rank higher in Google and other search engine results: 
-
-- Ensuring that a data catalog delivers a good experience to users (see [Understanding page experience in Google Search results](https://developers.google.com/search/docs/appearance/page-experience)), which among other things involves:
-   - Catalog pages that load fast
-   - Catalog pages that are mobile-friendly. A data catalog should thus be built with a responsive design.
-   - Provide secure connection by serving the catalog over HTTPS (see more information, see for example https://web.dev/enable-https/)
-- Embedding *structured data* in the catalog's HTML pages. The HTML pages in a data catalog are mostly the pages that will make the metadata specific to an entry visible to the user. These pages are automatically generated by the cataloguing application, by extracting and formatting the metadata stored in the catalog's database. Structured data is information that will be included in these HTML pages (but not shown to the user) to help Google understand the content of the page. The use of *structured data* only applies to certain types of content, including datasets. The use of structured data influences not only the ranking of a page, but also the way information on the page will be displayed by Google. The next section is dedicated to this.
-
-Last, Google will "reward" popular websites, i.e. websites that are frequently visited and to which many other influent and popular websites provide links. Google's recommendation is thus to "tell people about your site. Be active in communities where you can tell like-minded people about your services and products that you mention on your site."
-
-A helpful and detailed [self-assessment list](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) of items that data curators, catalog developers, and catalog administrators should pay attention to is provided by Google. Various tools are also available to catalog developers and administrators to assess the technical performance of their websites.
-
-#### Structured data for rich results in Google
-
-*Structured data* is information that is embedded in HTML pages that helps Google classify, understand, and display the content of the page when the page is related to a specific type of content. The information stored in the structured data does not impact how the page itself is displayed in a web browser; it only impacts the display of information on the page when returned by Google search results. The types of content to which structured metadata applies is diverse and includes items like job positings, cooking receipes, books, events, movies, math solvers, and others (see the list provided in [Google's Search Gallery](https://developers.google.com/search/docs/appearance/structured-data/search-gallery)). It also applies to resources of type *dataset* and *image*. In this context, a *dataset* can be any type of structured dataset including microdata, indicators, tables, and geographic datasets.
-
-The *structured data* to be embedded in an HTML page consists of a set of metadata elements compliant with either the [*dataset* schema from schema.org](https://schema.org/Dataset) or W3C's Data Catalog Vocabulary ([DCAT](https://www.w3.org/TR/vocab-dcat/#dcat-scope)) for datasets, and with the *image* schema from schema.org for images. For datasets, the schema.org schema is the most frequently used option.[^1] 
-
-#### schema.org
-
-[**schema.org**](www.schema.org) is a collection of schemas designed to document many types of resources. The most generic type is a "thing" which can be a person, an organization, an event, a creative work, etc. A *creative work* can be a book, a movie, a photograph, a data catalog, a dataset, etc. Among the many types of *creative work* for which schemas are available, we are particularly interested in the ones that correspond to the types of data and resources we recommend in this guide. This includes:
-
-   - [**DataCatalog**](https://schema.org/DataCatalog): A data catalog is a collection of datasets.  
-   - [**Dataset**](https://schema.org/Dataset): A body of structured information describing some topic(s) of interest.  
-   - [**MediaObject**](https://schema.org/MediaObject): A media object, such as an image, video, or audio object embedded in a web page or a downloadable dataset. This includes:
-      - [**ImageObject**](https://schema.org/ImageObject): An image file.   
-      - [**AudioObject**](https://schema.org/AudioObject): An audio file.   
-      - [**VideoObject**](https://schema.org/VideoObject): A video file.   
-   - [**Book**](https://schema.org/Book): A book.  
-   - [**DigitalDocument**](https://schema.org/DigitalDocument): An electronic file or document.  
-
-The schemas proposed by schema.org have been developed primarily "to improve the web by creating a structured data markup schema supported by major search engines. On-page markup helps search engines understand the information on web pages and provide richer search results." (from [schema.org, Q&A](https://schema.org/docs/faq.html#0)) These schemas have not been developed by specialized communities of practice (statisticians, survey specialists, data librarians) to document datasets for preservation of institutional memory, to increase transparency in the data production process, or to provide data users with the "cook book" they may need to safely and responsibly use data. These schemas are not the ones that statistical organizations need to comply with international recommendations like the Generic Standard Business Process Model (GSBPM). But they play a critical role in improving data discoverability, as they provide webmasters and search engines with a means to better capture and index the content of web-based data platforms. Schemas from schema.org should thus be embedded in data catalogs. Data cataloguing applications should automatically map (some of) the elements of the specialized metadata standards and schemas they use to the appropriate fields of schema.org. Recommended mapping between the specialized standards and schemas and schema.org are not yet available. The production of such mappings, and the development of utilities to facilitate the production of content compliant with schema.org, would contribute to the objective of visibility and discoverability of data.  
-
-#### DCAT
-
-[**DCAT**](https://www.w3.org/TR/vocab-dcat-2/) describes datasets and data services using a standard model and vocabulary. It is organized in 13 "classes" (Catalog, Cataloged Resource, Catalog Record, Dataset, Distribution, Data Service, Concept Scheme, Concept, Organization/Person, Relationship, Role, Period of Time, and Location). Within classes, *properties* are used as metadata elements. For example, the class *Cataloged Resource* includes properties like *title*, *description*, *resource creator*; the class *Dataset* includes properties like *spatial resolution*, *temporal coverage*; many of these properties can easily be mapped to equivalent elements of the specialized metadata schemas we recommend in this Guide.
-
-#### Structured metadata on Google
-
-The embedding of structured metadata into HTML pages must be automated in a data cataloguing tool. Data catalogs applications dynamically generate the HTML pages that display the description of each catalog entry. They do so by extracting the necessary metadata from the catalog database, and applying "transformations and styles" to this content to produce a user-friendly output that catalog visitors will view in their web browser. To embed structured data in these pages, the catalog application will (i) extract the relevant subset of metadata elements from the original metadata (e.g., from the DDI-compliant metadata for a micro-dataset), (ii) map these extracted elements to the schema.org or DCAT schema, and (iii) save it in the HTML page as a JSON-LD "hidden" component. Mapping the core elements of specialized metadata standards to the schema.org schema is thus essential to enable this feature. A mapping between the schema presented in this Guide and schema.org is provided in annex 2 of the Guide. 
-
-The screenshots below show an example of an HTML page for a dataset published in a NADA catalog, with the underlying code. The structured metadata is used by Google to display this information as a formatted, "rich result" in Google Dataset Search.
-
-<br>
-**The HTML page as viewed by the catalog user** - The web browser will ignore the embedded structured metadata when the HTML page is displayed. What users will see is entirely controlled by the catalog application. 
-<br>
-
-<br>
-<center>
-![](./images/reDoc_html_view.JPG){width=80%}
-</center>
-<br>
-
-<br>
-**The HTML page code (abstract)** - The automatically-generated structured data can be seen in the HTML page code (or *page source*). This information is visible and processed by Google, Bing, and other search engine's web crawlers. Note that the structured data, although not "visible" to users, can be made accessible to them via API. Other data cataloguing applications may be able to ingest this information; the CKAN cataloguing tool for example makes use of metadata compliant with DCAT or schema.org. Making the structured data accessible is one way to improve the inter-operability of data catalogs.
-<br>
-
-<br>
-<center>
-![](./images/reDoc_html_code.JPG){width=80%}
-</center>
-<br>
-
-<br>
-**The result - Higher visibility/ranking in Google Dataset Search** - The websites catalog.ihsn.org and microdata.worldbank.org are NADA catalogs, which embed schema.org metadata. 
-<br>
-
-<br>
-<center>
-![](./images/reDoc_html_rank.JPG){width=80%}
-</center>
-<br>
-
-
 
 [^1] See Omar Benjelloun, Shiyu Chen, Natasha Noy, 2020, *Google Dataset Search by the Numbers*, https://doi.org/10.48550/arXiv.2006.06894
