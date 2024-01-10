@@ -168,14 +168,19 @@ On this page, the user can:
 
 After inputting variable-level metadata for both files, the user will conclude the dataset documentation by annotating and associating external resources with the survey metadata. External resources encompass all materials intended for user access when the dataset is published in a catalog. This encompasses microdata files, whether for open dissemination or under specific restrictions. In our survey metadata instance, we will append two external resources: the Excel file housing the questionnaire and the dataset (both Stata files compressed into a zip file). To create external resources, the user can navigate to "External Resources" in the navigation tree, "Create a Resource", specify its type ("questionnaire" and "microdata" for our resources), assign a concise title to each, and provide a link to the resource or choose the file for upload in the online catalog.
 
+<br>
 ![Metadata Editor, External Resources]()(./images/ME_external_resources.jpg){width=100%}
+<br>
 
 The dataset documentation is now complete. The metadata can be exported to JSON or XML, or published directly in a NADA catalog. 
 
+<br>
 ![Metadata Editor, Publish in NADA Catalog]()(./images/ME_publish_to_NADA.jpg){width=100%}
+<br>
 
+<br>
 ![Metadata Editor, Survey in NADA]()(./images/ME_survey_in_NADA.jpg){width=100%}
-
+<br>
 
 ### Using R
 
