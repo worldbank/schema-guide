@@ -1,6 +1,6 @@
 --- 
 title: "[DRAFT - WORK IN PROGRESS] Metadata Standards for Improved Data Discoverability and Usability"
-author: "Olivier Dupriez and Mehmood Asghar, World Bank, Office of the Chief Statistician"
+author: "World Bank, Office of the Chief Statistician"
 date: "`r Sys.Date()`"
 knit: bookdown::render_book
 site: bookdown::bookdown_site
