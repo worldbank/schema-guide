@@ -107,11 +107,12 @@ A helpful and detailed [self-assessment list](https://developers.google.com/sear
 
 #### Cost-effectiveness of data dissemination
 
-Reduce the cost of operating a data dissemination service by lowering the burden of responding to users' requests for information.
+Publishing detailed metadata proves to be a cost-effective strategy for organizations involved in data dissemination. By providing comprehensive information about the datasets, including their sources, methodologies, and limitations, organizations empower users to independently navigate and understand the data. This transparency reduces the burden on the organization to respond to frequent and varied user requests for additional information. When users can access detailed metadata, they gain the insights needed to interpret and utilize the data effectively, minimizing the necessity for additional clarifications or support. This, in turn, streamlines the operation of a data dissemination service, saving resources that would otherwise be allocated to addressing individual inquiries. Essentially, the proactive disclosure of comprehensive metadata serves as a preemptive measure, contributing to a more efficient and cost-effective dissemination process by equipping users with the information required for autonomous and accurate data interpretation.
 
 #### Preservation of institutional memory
 
-Support the preservation of **institutional memory**.
+The meticulous production and preservation of detailed metadata by organizations involved in data collection, generation, processing, and analysis, such as national statistics offices, play a pivotal role in supporting the preservation of institutional memory. Detailed metadata serve as a comprehensive record documenting the intricacies of data collection methodologies, processing techniques, and analytical approaches employed over time. This wealth of information helps to safeguard the institutional memory by providing future generations of analysts and data stewards with insights into past practices, standards, and decision-making processes. It acts as a knowledge repository, allowing the organization to learn from historical experiences, maintain consistency in methodologies, and ensure a coherent and informed evolution of data-related practices. Detailed metadata function as a vital component of institutional memory preservation, enabling continuity, learning, and informed decision-making within organizations engaged in the multifaceted aspects of data management.
+
 
 ## Structured metadata
 
