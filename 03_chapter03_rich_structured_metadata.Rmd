@@ -47,11 +47,11 @@ Explanatory materials are the information that should be created and preserved t
 
 #### Finding data
 
-Metadata plays a critical role in facilitating the efficient discovery of data within online catalogs. It serves as the informational backbone that search engines rely upon to index and categorize data, greatly influencing the discoverability of relevant content. The richness of metadata enhances the effectiveness of search engines, as it provides detailed descriptors about the nature, source, and characteristics of the data. The more comprehensive and detailed the metadata, the more effectively search engines can assist users in identifying pertinent data. 
+Metadata facilitate the efficient discovery of data within online catalogs. It serves as the informational backbone that search engines rely upon to index and categorize data, greatly influencing the discoverability of relevant content. The richness of metadata enhances the effectiveness of search engines, as it provides detailed descriptors about the nature, source, and characteristics of the data. The more comprehensive and detailed the metadata, the more effectively search engines can assist users in identifying pertinent data. 
 
 #### Understanding and using data
 
-Metadata holds significant importance in aiding analysts to comprehend and utilize data. Metadata offers insights into the context, structure, and attributes of the data, allowing analysts to interpret and use them accurately. In the absence of a comprehensive description accompanying the data, there is a risk that users may misunderstand or misuse the information, or alternatively opt not to use them at all. Without this contextual information, the user may face challenges in extracting meaningful insights.
+Metadata aid analysts to comprehend and utilize data. Metadata offers insights into the context, structure, and attributes of the data, allowing analysts to interpret and use them accurately. In the absence of a comprehensive description accompanying the data, there is a risk that users may misunderstand or misuse the information, or alternatively opt not to use them at all. Without this contextual information, the user may face challenges in extracting meaningful insights.
 
 #### Assessing data
 
@@ -70,8 +70,7 @@ Metadata holds immense importance in implementing robust quality assurance, qual
 
 #### Harmonization of data collection
 
-
-For organizations engaged in data collection and generation, the establishment of a comprehensive meta-database holds profound importance in ensuring the harmonization of data collection and processing methods and instruments. Metadata plays a pivotal role in identifying differences, inconsistencies, and the absence of standardized practices across diverse datasets. By centralizing metadata, organizations can create a unified framework that facilitates a systematic understanding of the various data sources and their characteristics. This harmonization is particularly crucial for maintaining consistency and accuracy in statistical reporting. A compelling case for the utilization of metadata in this manner can be found in ["The Struggle for Integration and Harmonization of Social Statistics in a Statistical Agency - A Case Study of Statistics Canada"] (https://www.ihsn.org/sites/default/files/resources/IHSN-WP004.pdf) by Gordon Priest (2010), which describes the challenges and benefits of integrating social statistics by fostering a cohesive and standardized approach to data collection and processing within a statistical agency.
+For organizations engaged in data collection and generation, the establishment of a comprehensive meta-database facilitates the harmonization of data collection and processing methods and instruments. Metadata plays a key role in identifying differences, inconsistencies, and the absence of standardized practices across diverse datasets. By centralizing metadata, organizations can create a unified framework that facilitates a systematic understanding of the various data sources and their characteristics. This harmonization is particularly crucial for maintaining consistency and accuracy in statistical reporting. A compelling case for the utilization of metadata in this manner can be found in ["The Struggle for Integration and Harmonization of Social Statistics in a Statistical Agency - A Case Study of Statistics Canada"](https://www.ihsn.org/sites/default/files/resources/IHSN-WP004.pdf) by Gordon Priest (2010), which describes the challenges and benefits of integrating social statistics by fostering a cohesive and standardized approach to data collection and processing within a statistical agency.
 
 #### Visibility
 
