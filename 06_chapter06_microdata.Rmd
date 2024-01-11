@@ -3175,14 +3175,14 @@ The word vectors do not have to be stored in the document metadata to be exploit
 
 The `embeddings` element contains four metadata fields:
   - **`id`** *[Optional ; Not repeatable ; String]* <br>
-  A unique identifier of the word embedding model used to generate the vector.
+  A unique identifier of the word embedding model used to generate the vector.<br>
   - **`description`** *[Optional ; Not repeatable ; String]* <br>
-  A brief description of the model. This may include the identification of the producer, a description of the corpus on which the model was trained, the identification of the software and algorithm used to train the model, the size of the vector, etc.
+  A brief description of the model. This may include the identification of the producer, a description of the corpus on which the model was trained, the identification of the software and algorithm used to train the model, the size of the vector, etc.<br>
   - **`date`** *[Optional ; Not repeatable ; String]* <br>
-  The date the model was trained (or a version date for the model).
-  - **`vector`** *[Required ; Not repeatable ; Object]* @@@@@@@@ do not offer options
+  The date the model was trained (or a version date for the model).<br>
+  - **`vector`** *[Required ; Not repeatable ; Object]* @@@@@@@@ do not offer options<br>
   The numeric vector representing the document, provided as an object (array or string). <br>
-  [1,4,3,5,7,9]
+  [1,4,3,5,7,9]<br>
 
           
 ### Additional 
