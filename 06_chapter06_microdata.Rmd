@@ -41,7 +41,7 @@ As indicated by the [DDI Alliance website](https://ddialliance.org/Specification
                                                                      
 ## Some practical considerations
 
-The DDI is a comprehensive schema that provides metadata elements to document a **study** (e.g., a survey, or an administrative datasets), the related **data files**, and the **variables** they contain. A separate schema is used to document the **related resources** (questionnaires, reports, and others); see Chapter 13. 
+The DDI is a comprehensive schema that provides metadata elements to document a **study** (e.g., a survey, or an administrative datasets), the related **data files**, and the **variables** they contain. A separate schema is used to document the **related resources** (questionnaires, reports, and others); see Chapter 14. 
 
 Some datasets may contain hundreds or even thousands of variables. For each variable, the DDI can include not only the variable name, label and description, but also summary statistics like the count of valid and missing observations, weighted and unweighted frequencies, means, and others. Generating a DDI file manually, in particular the variable-level metadata, can be a tedious and time consuming task. But variable names, summary statistics, and (when avaiulable) variable and value labels can be extracted directly from the data files. User-friendly solutions (specialized metadata editors) are available to automate a large part of this work. DDI can also be generated programmatically using R or Python. Section 5.5 provides examples of the use of specialized DDI metadata editors and programming languages to generate DDI-compliant metadata. 
 
@@ -58,7 +58,7 @@ Documenting microdata is more complex than documenting publications or other typ
 :::
 
                          
-## Schema description: DDI-Codebook 2.5
+## Schema description: DDI-Codebook
 
 The DDI-Codebook is a comprehensive, structured list of elements to be used to document microdata of any source. The standard contains five main sections:
 
