@@ -3187,5 +3187,5 @@ The `embeddings` element contains four metadata fields:
 ### Additional 
 
 **`additional`** *[Optional ; Not repeatable]*<br>
-The `additional` element is provided to allow users of the API to create their own elements and add them to the schema. It is not part of the DDI Codebook standard. All custom elements must be added within the `element` block; embedding them elsewhere in the schema would cause DDI schema validation to fail in NADA.<br>
+The `additional` element is provided to allow users of the API to create their own elements and add them to the schema. It is not part of the DDI Codebook standard. All custom elements must be added within the `element` block; embedding them elsewhere in the schema would cause DDI schema validation to fail in NADA. The name of these elements must all start with "additional.". <br>
 
