@@ -959,7 +959,7 @@ The `embeddings` element contains four metadata fields:
 ### Additional
 
 **`additional`** *[Optional ; Not repeatable]*<br>
-The `additional` element allows data curators to add their own metadata elements to the schema. All custom elements must be added within the `additional` block; embedding them elsewhere in the schema would cause schema validation to fail.
+The `additional` element allows data curators to add their own metadata elements to the schema. All custom elements must be added within the `additional` block; embedding them elsewhere in the schema would cause schema validation to fail. The name of these elements must all start with "additional.". 
 
 ![](./images/ReDoc_ts_series_49.JPG){width=100%}
 
