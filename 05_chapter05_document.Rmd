@@ -1826,8 +1826,7 @@ The `embeddings` element contains four metadata fields:
 ### Additional fields
 
 **`additional`** *[Optional ; Not repeatable]*<br>
-The `additional` element allows data curators to add their own metadata elements to the schema. All custom elements must be added within the `additional` block; embedding them elsewhere in the schema would cause schema validation to fail.
-
+The `additional` element allows data curators to add their own metadata elements to the schema. All custom elements must be added within the `additional` block; embedding them elsewhere in the schema would cause schema validation to fail. The elements must all start with "additional.". For example, a multilateral development bank who uses the standard to document its project documents, may want to add a new element to identify the project(s) to which the document is related. Assuming that all projects can be identified by a unique identifier, which can be used as a link to a project database, the bank may add an optional repeatable element (of type string), and name it name `additional.projectid`, to the standard. 
 
 ## Complete examples
 
