@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 The power of rich and structured metadata | [DRAFT - WORK IN PROGRESS] Metadata Standards for Improved Data Discoverability and Usability</title>
+  <meta name="description" content="Chapter 3 The power of rich and structured metadata | [DRAFT - WORK IN PROGRESS] Metadata Standards for Improved Data Discoverability and Usability" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 The power of rich and structured metadata | [DRAFT - WORK IN PROGRESS] Metadata Standards for Improved Data Discoverability and Usability" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/./images/guide_cover.jpg" />
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 The power of rich and structured metadata | [DRAFT - WORK IN PROGRESS] Metadata Standards for Improved Data Discoverability and Usability" />
+  
+  
+  <meta name="twitter:image" content="/./images/guide_cover.jpg" />
+
+<meta name="author" content="World Bank, Office of the Chief Statistician" />
+
+
+<meta name="date" content="2024-02-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="chapter02.html"/>
+<link rel="next" href="chapter04.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Guide on Metadata Standards</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="part"><span><b>I RATIONALE AND OBJECTIVES</b></span></li>
+<li class="chapter" data-level="1" data-path="chapter01.html"><a href="chapter01.html"><i class="fa fa-check"></i><b>1</b> The challenge of finding, accessing, and using data</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="chapter01.html"><a href="chapter01.html#finding-data"><i class="fa fa-check"></i><b>1.1</b> Finding data</a></li>
+<li class="chapter" data-level="1.2" data-path="chapter01.html"><a href="chapter01.html#accessing-data"><i class="fa fa-check"></i><b>1.2</b> Accessing data</a></li>
+<li class="chapter" data-level="1.3" data-path="chapter01.html"><a href="chapter01.html#using-data"><i class="fa fa-check"></i><b>1.3</b> Using data</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="chapter02.html"><a href="chapter02.html"><i class="fa fa-check"></i><b>2</b> Features of a modern data dissemination platform</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="chapter02.html"><a href="chapter02.html#features-for-data-users"><i class="fa fa-check"></i><b>2.1</b> Features for data users</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="chapter02.html"><a href="chapter02.html#search"><i class="fa fa-check"></i><b>2.1.1</b> Search</a>
+<ul>
+<li class="chapter" data-level="2.1.1.1" data-path="chapter02.html"><a href="chapter02.html#search-box"><i class="fa fa-check"></i><b>2.1.1.1</b> Search box</a></li>
+<li class="chapter" data-level="2.1.1.2" data-path="chapter02.html"><a href="chapter02.html#document-as-a-query"><i class="fa fa-check"></i><b>2.1.1.2</b> Document as a query</a></li>
+<li class="chapter" data-level="2.1.1.3" data-path="chapter02.html"><a href="chapter02.html#image-as-a-query"><i class="fa fa-check"></i><b>2.1.1.3</b> Image as a query</a></li>
+<li class="chapter" data-level="2.1.1.4" data-path="chapter02.html"><a href="chapter02.html#suggested-queries"><i class="fa fa-check"></i><b>2.1.1.4</b> Suggested queries</a></li>
+<li class="chapter" data-level="2.1.1.5" data-path="chapter02.html"><a href="chapter02.html#advanced-search"><i class="fa fa-check"></i><b>2.1.1.5</b> Advanced search</a></li>
+<li class="chapter" data-level="2.1.1.6" data-path="chapter02.html"><a href="chapter02.html#geographic-search"><i class="fa fa-check"></i><b>2.1.1.6</b> Geographic search</a></li>
+<li class="chapter" data-level="2.1.1.7" data-path="chapter02.html"><a href="chapter02.html#results-ranking"><i class="fa fa-check"></i><b>2.1.1.7</b> Results ranking</a></li>
+<li class="chapter" data-level="2.1.1.8" data-path="chapter02.html"><a href="chapter02.html#saving-and-sharing-results"><i class="fa fa-check"></i><b>2.1.1.8</b> Saving and sharing results</a></li>
+</ul></li>
+<li class="chapter" data-level="2.1.2" data-path="chapter02.html"><a href="chapter02.html#filtering"><i class="fa fa-check"></i><b>2.1.2</b> Filtering</a>
+<ul>
+<li class="chapter" data-level="2.1.2.1" data-path="chapter02.html"><a href="chapter02.html#facets"><i class="fa fa-check"></i><b>2.1.2.1</b> Facets</a></li>
+<li class="chapter" data-level="2.1.2.2" data-path="chapter02.html"><a href="chapter02.html#organizing-entries-by-collection"><i class="fa fa-check"></i><b>2.1.2.2</b> Organizing entries by collection</a></li>
+<li class="chapter" data-level="2.1.2.3" data-path="chapter02.html"><a href="chapter02.html#organizing-entries-by-data-type"><i class="fa fa-check"></i><b>2.1.2.3</b> Organizing entries by data type</a></li>
+<li class="chapter" data-level="2.1.2.4" data-path="chapter02.html"><a href="chapter02.html#filtering-by-access-type"><i class="fa fa-check"></i><b>2.1.2.4</b> Filtering by access type</a></li>
+</ul></li>
+<li class="chapter" data-level="2.1.3" data-path="chapter02.html"><a href="chapter02.html#browsing"><i class="fa fa-check"></i><b>2.1.3</b> Browsing</a>
+<ul>
+<li class="chapter" data-level="2.1.3.1" data-path="chapter02.html"><a href="chapter02.html#providing-core-information-in-the-listing-page"><i class="fa fa-check"></i><b>2.1.3.1</b> Providing core information in the listing page</a></li>
+<li class="chapter" data-level="2.1.3.2" data-path="chapter02.html"><a href="chapter02.html#featured-and-most-popular-entries"><i class="fa fa-check"></i><b>2.1.3.2</b> Featured and most popular entries</a></li>
+<li class="chapter" data-level="2.1.3.3" data-path="chapter02.html"><a href="chapter02.html#recent-additions-and-history"><i class="fa fa-check"></i><b>2.1.3.3</b> Recent additions and history</a></li>
+<li class="chapter" data-level="2.1.3.4" data-path="chapter02.html"><a href="chapter02.html#metadata-display-and-formats"><i class="fa fa-check"></i><b>2.1.3.4</b> Metadata display and formats</a></li>
+<li class="chapter" data-level="2.1.3.5" data-path="chapter02.html"><a href="chapter02.html#variable-level-comparison"><i class="fa fa-check"></i><b>2.1.3.5</b> Variable-level comparison</a></li>
+<li class="chapter" data-level="2.1.3.6" data-path="chapter02.html"><a href="chapter02.html#mosaic-view-for-images"><i class="fa fa-check"></i><b>2.1.3.6</b> Mosaic view for images</a></li>
+<li class="chapter" data-level="2.1.3.7" data-path="chapter02.html"><a href="chapter02.html#data-preview"><i class="fa fa-check"></i><b>2.1.3.7</b> Data preview</a></li>
+<li class="chapter" data-level="2.1.3.8" data-path="chapter02.html"><a href="chapter02.html#visualizations"><i class="fa fa-check"></i><b>2.1.3.8</b> Visualizations</a></li>
+<li class="chapter" data-level="2.1.3.9" data-path="chapter02.html"><a href="chapter02.html#links-and-related-resources"><i class="fa fa-check"></i><b>2.1.3.9</b> Links and related resources</a></li>
+</ul></li>
+<li class="chapter" data-level="2.1.4" data-path="chapter02.html"><a href="chapter02.html#sorting"><i class="fa fa-check"></i><b>2.1.4</b> Sorting</a></li>
+<li class="chapter" data-level="2.1.5" data-path="chapter02.html"><a href="chapter02.html#other-features-for-users"><i class="fa fa-check"></i><b>2.1.5</b> Other features for users</a>
+<ul>
+<li class="chapter" data-level="2.1.5.1" data-path="chapter02.html"><a href="chapter02.html#data-and-metadata-api"><i class="fa fa-check"></i><b>2.1.5.1</b> Data and metadata API</a></li>
+<li class="chapter" data-level="2.1.5.2" data-path="chapter02.html"><a href="chapter02.html#bulk-download-option"><i class="fa fa-check"></i><b>2.1.5.2</b> Bulk download option</a></li>
+<li class="chapter" data-level="2.1.5.3" data-path="chapter02.html"><a href="chapter02.html#alerts"><i class="fa fa-check"></i><b>2.1.5.3</b> Alerts</a></li>
+<li class="chapter" data-level="2.1.5.4" data-path="chapter02.html"><a href="chapter02.html#time-series-query-user-interface"><i class="fa fa-check"></i><b>2.1.5.4</b> Time series query user interface</a></li>
+<li class="chapter" data-level="2.1.5.5" data-path="chapter02.html"><a href="chapter02.html#online-data-access-forms"><i class="fa fa-check"></i><b>2.1.5.5</b> Online data access forms</a></li>
+<li class="chapter" data-level="2.1.5.6" data-path="chapter02.html"><a href="chapter02.html#permanent-identifiers-and-dois"><i class="fa fa-check"></i><b>2.1.5.6</b> Permanent identifiers and DOIs</a></li>
+<li class="chapter" data-level="2.1.5.7" data-path="chapter02.html"><a href="chapter02.html#archiving"><i class="fa fa-check"></i><b>2.1.5.7</b> Archiving</a></li>
+<li class="chapter" data-level="2.1.5.8" data-path="chapter02.html"><a href="chapter02.html#catalog-of-citations"><i class="fa fa-check"></i><b>2.1.5.8</b> Catalog of citations</a></li>
+<li class="chapter" data-level="2.1.5.9" data-path="chapter02.html"><a href="chapter02.html#reproducible-and-replicable-scripts"><i class="fa fa-check"></i><b>2.1.5.9</b> Reproducible and replicable scripts</a></li>
+<li class="chapter" data-level="2.1.5.10" data-path="chapter02.html"><a href="chapter02.html#users-feedback"><i class="fa fa-check"></i><b>2.1.5.10</b> Users’ feedback</a></li>
+<li class="chapter" data-level="2.1.5.11" data-path="chapter02.html"><a href="chapter02.html#support"><i class="fa fa-check"></i><b>2.1.5.11</b> Support</a></li>
+<li class="chapter" data-level="2.1.5.12" data-path="chapter02.html"><a href="chapter02.html#conversational-interaction-with-datasets"><i class="fa fa-check"></i><b>2.1.5.12</b> Conversational interaction with datasets</a></li>
+<li class="chapter" data-level="2.1.5.13" data-path="chapter02.html"><a href="chapter02.html#ai-activated-assistance-to-data-analysis"><i class="fa fa-check"></i><b>2.1.5.13</b> AI-activated assistance to data analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="chapter02.html"><a href="chapter02.html#features-for-data-providers"><i class="fa fa-check"></i><b>2.2</b> Features for data providers</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="chapter02.html"><a href="chapter02.html#safety"><i class="fa fa-check"></i><b>2.2.1</b> Safety</a></li>
+<li class="chapter" data-level="2.2.2" data-path="chapter02.html"><a href="chapter02.html#visibility"><i class="fa fa-check"></i><b>2.2.2</b> Visibility</a></li>
+<li class="chapter" data-level="2.2.3" data-path="chapter02.html"><a href="chapter02.html#efficiency"><i class="fa fa-check"></i><b>2.2.3</b> Efficiency</a></li>
+<li class="chapter" data-level="2.2.4" data-path="chapter02.html"><a href="chapter02.html#feedback-from-users"><i class="fa fa-check"></i><b>2.2.4</b> Feedback from users</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="chapter02.html"><a href="chapter02.html#features-for-catalog-administrators"><i class="fa fa-check"></i><b>2.3</b> Features for catalog administrators</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="chapter02.html"><a href="chapter02.html#data-deposit"><i class="fa fa-check"></i><b>2.3.1</b> Data deposit</a></li>
+<li class="chapter" data-level="2.3.2" data-path="chapter02.html"><a href="chapter02.html#privacy-protection"><i class="fa fa-check"></i><b>2.3.2</b> Privacy protection</a></li>
+<li class="chapter" data-level="2.3.3" data-path="chapter02.html"><a href="chapter02.html#free-software"><i class="fa fa-check"></i><b>2.3.3</b> Free software</a></li>
+<li class="chapter" data-level="2.3.4" data-path="chapter02.html"><a href="chapter02.html#security"><i class="fa fa-check"></i><b>2.3.4</b> Security</a></li>
+<li class="chapter" data-level="2.3.5" data-path="chapter02.html"><a href="chapter02.html#it-affordability"><i class="fa fa-check"></i><b>2.3.5</b> IT affordability</a></li>
+<li class="chapter" data-level="2.3.6" data-path="chapter02.html"><a href="chapter02.html#interoperability"><i class="fa fa-check"></i><b>2.3.6</b> Interoperability</a></li>
+<li class="chapter" data-level="2.3.7" data-path="chapter02.html"><a href="chapter02.html#flexibility-on-access-policies"><i class="fa fa-check"></i><b>2.3.7</b> Flexibility on access policies</a></li>
+<li class="chapter" data-level="2.3.8" data-path="chapter02.html"><a href="chapter02.html#api-based-system-for-automation-and-efficiency"><i class="fa fa-check"></i><b>2.3.8</b> API based system for automation and efficiency</a></li>
+<li class="chapter" data-level="2.3.9" data-path="chapter02.html"><a href="chapter02.html#featuring-tools"><i class="fa fa-check"></i><b>2.3.9</b> Featuring tools</a></li>
+<li class="chapter" data-level="2.3.10" data-path="chapter02.html"><a href="chapter02.html#usage-monitoring-and-analytics"><i class="fa fa-check"></i><b>2.3.10</b> Usage monitoring and analytics</a></li>
+<li class="chapter" data-level="2.3.11" data-path="chapter02.html"><a href="chapter02.html#multilingual-capability"><i class="fa fa-check"></i><b>2.3.11</b> Multilingual capability</a></li>
+<li class="chapter" data-level="2.3.12" data-path="chapter02.html"><a href="chapter02.html#search-engine-optimization-seo"><i class="fa fa-check"></i><b>2.3.12</b> Search Engine Optimization (SEO)</a></li>
+<li class="chapter" data-level="2.3.13" data-path="chapter02.html"><a href="chapter02.html#widgets-and-plugins"><i class="fa fa-check"></i><b>2.3.13</b> Widgets and plugins</a></li>
+<li class="chapter" data-level="2.3.14" data-path="chapter02.html"><a href="chapter02.html#interaction-with-developers"><i class="fa fa-check"></i><b>2.3.14</b> Interaction with developers</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="chapter03.html"><a href="chapter03.html"><i class="fa fa-check"></i><b>3</b> The power of rich and structured metadata</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="chapter03.html"><a href="chapter03.html#rich-metadata"><i class="fa fa-check"></i><b>3.1</b> Rich metadata</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="chapter03.html"><a href="chapter03.html#defining-rich-metadata"><i class="fa fa-check"></i><b>3.1.1</b> Defining rich metadata</a>
+<ul>
+<li class="chapter" data-level="3.1.1.1" data-path="chapter03.html"><a href="chapter03.html#cataloguing-material"><i class="fa fa-check"></i><b>3.1.1.1</b> Cataloguing material</a></li>
+<li class="chapter" data-level="3.1.1.2" data-path="chapter03.html"><a href="chapter03.html#contextual-information"><i class="fa fa-check"></i><b>3.1.1.2</b> Contextual information</a></li>
+<li class="chapter" data-level="3.1.1.3" data-path="chapter03.html"><a href="chapter03.html#explanatory-material"><i class="fa fa-check"></i><b>3.1.1.3</b> Explanatory material</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1.2" data-path="chapter03.html"><a href="chapter03.html#benefits-for-data-users"><i class="fa fa-check"></i><b>3.1.2</b> Benefits for data users</a>
+<ul>
+<li class="chapter" data-level="3.1.2.1" data-path="chapter03.html"><a href="chapter03.html#finding-data-1"><i class="fa fa-check"></i><b>3.1.2.1</b> Finding data</a></li>
+<li class="chapter" data-level="3.1.2.2" data-path="chapter03.html"><a href="chapter03.html#understanding-and-using-data"><i class="fa fa-check"></i><b>3.1.2.2</b> Understanding and using data</a></li>
+<li class="chapter" data-level="3.1.2.3" data-path="chapter03.html"><a href="chapter03.html#assessing-data"><i class="fa fa-check"></i><b>3.1.2.3</b> Assessing data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1.3" data-path="chapter03.html"><a href="chapter03.html#benefits-for-data-producers"><i class="fa fa-check"></i><b>3.1.3</b> Benefits for data producers</a>
+<ul>
+<li class="chapter" data-level="3.1.3.1" data-path="chapter03.html"><a href="chapter03.html#credibility"><i class="fa fa-check"></i><b>3.1.3.1</b> Credibility</a></li>
+<li class="chapter" data-level="3.1.3.2" data-path="chapter03.html"><a href="chapter03.html#quality-assurance"><i class="fa fa-check"></i><b>3.1.3.2</b> Quality assurance</a></li>
+<li class="chapter" data-level="3.1.3.3" data-path="chapter03.html"><a href="chapter03.html#harmonization-of-data-collection"><i class="fa fa-check"></i><b>3.1.3.3</b> Harmonization of data collection</a></li>
+<li class="chapter" data-level="3.1.3.4" data-path="chapter03.html"><a href="chapter03.html#visibility-1"><i class="fa fa-check"></i><b>3.1.3.4</b> Visibility</a></li>
+<li class="chapter" data-level="3.1.3.5" data-path="chapter03.html"><a href="chapter03.html#cost-effectiveness-of-data-dissemination"><i class="fa fa-check"></i><b>3.1.3.5</b> Cost-effectiveness of data dissemination</a></li>
+<li class="chapter" data-level="3.1.3.6" data-path="chapter03.html"><a href="chapter03.html#preservation-of-institutional-memory"><i class="fa fa-check"></i><b>3.1.3.6</b> Preservation of institutional memory</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="chapter03.html"><a href="chapter03.html#structured-metadata"><i class="fa fa-check"></i><b>3.2</b> Structured metadata</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="chapter03.html"><a href="chapter03.html#defining-structured-metadata"><i class="fa fa-check"></i><b>3.2.1</b> Defining structured metadata</a></li>
+<li class="chapter" data-level="3.2.2" data-path="chapter03.html"><a href="chapter03.html#formats-for-structured-metadata-json-and-xml"><i class="fa fa-check"></i><b>3.2.2</b> Formats for structured metadata: JSON and XML</a></li>
+<li class="chapter" data-level="3.2.3" data-path="chapter03.html"><a href="chapter03.html#benefits-of-structured-metadata"><i class="fa fa-check"></i><b>3.2.3</b> Benefits of structured metadata</a>
+<ul>
+<li class="chapter" data-level="3.2.3.1" data-path="chapter03.html"><a href="chapter03.html#completeness"><i class="fa fa-check"></i><b>3.2.3.1</b> Completeness</a></li>
+<li class="chapter" data-level="3.2.3.2" data-path="chapter03.html"><a href="chapter03.html#usability"><i class="fa fa-check"></i><b>3.2.3.2</b> Usability</a></li>
+<li class="chapter" data-level="3.2.3.3" data-path="chapter03.html"><a href="chapter03.html#discoverability"><i class="fa fa-check"></i><b>3.2.3.3</b> Discoverability</a></li>
+<li class="chapter" data-level="3.2.3.4" data-path="chapter03.html"><a href="chapter03.html#interoperability-1"><i class="fa fa-check"></i><b>3.2.3.4</b> Interoperability</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="chapter03.html"><a href="chapter03.html#recommended-standards"><i class="fa fa-check"></i><b>3.3</b> Recommended standards</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="chapter03.html"><a href="chapter03.html#documents"><i class="fa fa-check"></i><b>3.3.1</b> Documents</a></li>
+<li class="chapter" data-level="3.3.2" data-path="chapter03.html"><a href="chapter03.html#microdata"><i class="fa fa-check"></i><b>3.3.2</b> Microdata</a></li>
+<li class="chapter" data-level="3.3.3" data-path="chapter03.html"><a href="chapter03.html#geographic-datasets-data-structures-and-data-services"><i class="fa fa-check"></i><b>3.3.3</b> Geographic datasets, data structures, and data services</a></li>
+<li class="chapter" data-level="3.3.4" data-path="chapter03.html"><a href="chapter03.html#time-series-indicators"><i class="fa fa-check"></i><b>3.3.4</b> Time series, indicators</a></li>
+<li class="chapter" data-level="3.3.5" data-path="chapter03.html"><a href="chapter03.html#statistical-tables"><i class="fa fa-check"></i><b>3.3.5</b> Statistical tables</a></li>
+<li class="chapter" data-level="3.3.6" data-path="chapter03.html"><a href="chapter03.html#images"><i class="fa fa-check"></i><b>3.3.6</b> Images</a></li>
+<li class="chapter" data-level="3.3.7" data-path="chapter03.html"><a href="chapter03.html#audio"><i class="fa fa-check"></i><b>3.3.7</b> Audio</a></li>
+<li class="chapter" data-level="3.3.8" data-path="chapter03.html"><a href="chapter03.html#videos"><i class="fa fa-check"></i><b>3.3.8</b> Videos</a></li>
+<li class="chapter" data-level="3.3.9" data-path="chapter03.html"><a href="chapter03.html#programs-and-scripts"><i class="fa fa-check"></i><b>3.3.9</b> Programs and scripts</a></li>
+<li class="chapter" data-level="3.3.10" data-path="chapter03.html"><a href="chapter03.html#external-resources"><i class="fa fa-check"></i><b>3.3.10</b> External resources</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="chapter03.html"><a href="chapter03.html#a-note-on-other-standards"><i class="fa fa-check"></i><b>3.4</b> A note on other standards</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="chapter03.html"><a href="chapter03.html#sdmx"><i class="fa fa-check"></i><b>3.4.1</b> SDMX</a></li>
+<li class="chapter" data-level="3.4.2" data-path="chapter03.html"><a href="chapter03.html#schema.org-and-dcat"><i class="fa fa-check"></i><b>3.4.2</b> schema.org and DCAT</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="chapter03.html"><a href="chapter03.html#use-of-controlled-vocabularies"><i class="fa fa-check"></i><b>3.5</b> Use of controlled vocabularies</a></li>
+<li class="chapter" data-level="3.6" data-path="chapter03.html"><a href="chapter03.html#use-of-tags"><i class="fa fa-check"></i><b>3.6</b> Use of tags</a></li>
+<li class="chapter" data-level="3.7" data-path="chapter03.html"><a href="chapter03.html#metadata-augmentation"><i class="fa fa-check"></i><b>3.7</b> Metadata augmentation</a></li>
+</ul></li>
+<li class="part"><span><b>II PRACTICAL IMPLEMENTATION</b></span></li>
+<li class="chapter" data-level="4" data-path="chapter04.html"><a href="chapter04.html"><i class="fa fa-check"></i><b>4</b> Generating and publishing structured metadata</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="chapter04.html"><a href="chapter04.html#core-properties-and-features-of-metadata-elements"><i class="fa fa-check"></i><b>4.1</b> Core properties and features of metadata elements</a></li>
+<li class="chapter" data-level="4.2" data-path="chapter04.html"><a href="chapter04.html#documentation-of-the-standards-api"><i class="fa fa-check"></i><b>4.2</b> Documentation of the standards’ API</a></li>
+<li class="chapter" data-level="4.3" data-path="chapter04.html"><a href="chapter04.html#generating-and-publishing-structured-metadata"><i class="fa fa-check"></i><b>4.3</b> Generating and publishing structured metadata</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="chapter04.html"><a href="chapter04.html#using-the-metadata-editor"><i class="fa fa-check"></i><b>4.3.1</b> Using the Metadata Editor</a>
+<ul>
+<li class="chapter" data-level="4.3.1.1" data-path="chapter04.html"><a href="chapter04.html#custom-templates"><i class="fa fa-check"></i><b>4.3.1.1</b> Custom templates</a></li>
+<li class="chapter" data-level="4.3.1.2" data-path="chapter04.html"><a href="chapter04.html#producing-and-publishing-the-metadata"><i class="fa fa-check"></i><b>4.3.1.2</b> Producing and publishing the metadata</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3.2" data-path="chapter04.html"><a href="chapter04.html#using-r"><i class="fa fa-check"></i><b>4.3.2</b> Using R</a></li>
+<li class="chapter" data-level="4.3.3" data-path="chapter04.html"><a href="chapter04.html#using-python"><i class="fa fa-check"></i><b>4.3.3</b> Using Python</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III METADATA STANDARDS</b></span></li>
+<li class="chapter" data-level="5" data-path="chapter05.html"><a href="chapter05.html"><i class="fa fa-check"></i><b>5</b> Documents</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="chapter05.html"><a href="chapter05.html#marc-21-dublin-core-and-bibtex"><i class="fa fa-check"></i><b>5.1</b> MARC 21, Dublin Core, and BibTex</a></li>
+<li class="chapter" data-level="5.2" data-path="chapter05.html"><a href="chapter05.html#schema-description"><i class="fa fa-check"></i><b>5.2</b> Schema description</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="chapter05.html"><a href="chapter05.html#metadata-information"><i class="fa fa-check"></i><b>5.2.1</b> Metadata information</a></li>
+<li class="chapter" data-level="5.2.2" data-path="chapter05.html"><a href="chapter05.html#document-description"><i class="fa fa-check"></i><b>5.2.2</b> Document description</a></li>
+<li class="chapter" data-level="5.2.3" data-path="chapter05.html"><a href="chapter05.html#provenance"><i class="fa fa-check"></i><b>5.2.3</b> Provenance</a></li>
+<li class="chapter" data-level="5.2.4" data-path="chapter05.html"><a href="chapter05.html#tags"><i class="fa fa-check"></i><b>5.2.4</b> Tags</a></li>
+<li class="chapter" data-level="5.2.5" data-path="chapter05.html"><a href="chapter05.html#lda-topics"><i class="fa fa-check"></i><b>5.2.5</b> LDA topics</a></li>
+<li class="chapter" data-level="5.2.6" data-path="chapter05.html"><a href="chapter05.html#embeddings"><i class="fa fa-check"></i><b>5.2.6</b> Embeddings</a></li>
+<li class="chapter" data-level="5.2.7" data-path="chapter05.html"><a href="chapter05.html#additional-fields"><i class="fa fa-check"></i><b>5.2.7</b> Additional fields</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="chapter05.html"><a href="chapter05.html#complete-examples"><i class="fa fa-check"></i><b>5.3</b> Complete examples</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="chapter05.html"><a href="chapter05.html#example-1-working-paper"><i class="fa fa-check"></i><b>5.3.1</b> Example 1: Working Paper</a>
+<ul>
+<li class="chapter" data-level="5.3.1.1" data-path="chapter05.html"><a href="chapter05.html#description"><i class="fa fa-check"></i><b>5.3.1.1</b> Description</a></li>
+<li class="chapter" data-level="5.3.1.2" data-path="chapter05.html"><a href="chapter05.html#using-a-metadata-editor"><i class="fa fa-check"></i><b>5.3.1.2</b> Using a metadata editor</a></li>
+<li class="chapter" data-level="5.3.1.3" data-path="chapter05.html"><a href="chapter05.html#using-r-1"><i class="fa fa-check"></i><b>5.3.1.3</b> Using R</a></li>
+<li class="chapter" data-level="5.3.1.4" data-path="chapter05.html"><a href="chapter05.html#using-python-1"><i class="fa fa-check"></i><b>5.3.1.4</b> Using Python</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3.2" data-path="chapter05.html"><a href="chapter05.html#example-2-book"><i class="fa fa-check"></i><b>5.3.2</b> Example 2: Book</a>
+<ul>
+<li class="chapter" data-level="5.3.2.1" data-path="chapter05.html"><a href="chapter05.html#description-1"><i class="fa fa-check"></i><b>5.3.2.1</b> Description</a></li>
+<li class="chapter" data-level="5.3.2.2" data-path="chapter05.html"><a href="chapter05.html#using-r-2"><i class="fa fa-check"></i><b>5.3.2.2</b> Using R</a></li>
+<li class="chapter" data-level="5.3.2.3" data-path="chapter05.html"><a href="chapter05.html#using-python-2"><i class="fa fa-check"></i><b>5.3.2.3</b> Using Python</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3.3" data-path="chapter05.html"><a href="chapter05.html#example-3-importing-from-a-list-of-documents"><i class="fa fa-check"></i><b>5.3.3</b> Example 3: Importing from a list of documents</a>
+<ul>
+<li class="chapter" data-level="5.3.3.1" data-path="chapter05.html"><a href="chapter05.html#using-r-3"><i class="fa fa-check"></i><b>5.3.3.1</b> Using R</a></li>
+<li class="chapter" data-level="5.3.3.2" data-path="chapter05.html"><a href="chapter05.html#using-python-3"><i class="fa fa-check"></i><b>5.3.3.2</b> Using Python</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="chapter06.html"><a href="chapter06.html"><i class="fa fa-check"></i><b>6</b> Microdata</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="chapter06.html"><a href="chapter06.html#definition-of-microdata"><i class="fa fa-check"></i><b>6.1</b> Definition of microdata</a></li>
+<li class="chapter" data-level="6.2" data-path="chapter06.html"><a href="chapter06.html#the-data-documentation-initiative-ddi-metadata-standard"><i class="fa fa-check"></i><b>6.2</b> The Data Documentation Initiative (DDI) metadata standard</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="chapter06.html"><a href="chapter06.html#ddi-codebook"><i class="fa fa-check"></i><b>6.2.1</b> DDI-Codebook</a></li>
+<li class="chapter" data-level="6.2.2" data-path="chapter06.html"><a href="chapter06.html#ddi-lifecycle"><i class="fa fa-check"></i><b>6.2.2</b> DDI-Lifecycle</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="chapter06.html"><a href="chapter06.html#some-practical-considerations"><i class="fa fa-check"></i><b>6.3</b> Some practical considerations</a></li>
+<li class="chapter" data-level="6.4" data-path="chapter06.html"><a href="chapter06.html#schema-description-ddi-codebook"><i class="fa fa-check"></i><b>6.4</b> Schema description: DDI-Codebook</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="chapter06.html"><a href="chapter06.html#document-description-1"><i class="fa fa-check"></i><b>6.4.1</b> Document description</a></li>
+<li class="chapter" data-level="6.4.2" data-path="chapter06.html"><a href="chapter06.html#study-description"><i class="fa fa-check"></i><b>6.4.2</b> Study description</a>
+<ul>
+<li class="chapter" data-level="6.4.2.1" data-path="chapter06.html"><a href="chapter06.html#title-statement"><i class="fa fa-check"></i><b>6.4.2.1</b> Title statement</a></li>
+<li class="chapter" data-level="6.4.2.2" data-path="chapter06.html"><a href="chapter06.html#authoring-entity"><i class="fa fa-check"></i><b>6.4.2.2</b> Authoring entity</a></li>
+<li class="chapter" data-level="6.4.2.3" data-path="chapter06.html"><a href="chapter06.html#other-entity"><i class="fa fa-check"></i><b>6.4.2.3</b> Other entity</a></li>
+<li class="chapter" data-level="6.4.2.4" data-path="chapter06.html"><a href="chapter06.html#production-statement"><i class="fa fa-check"></i><b>6.4.2.4</b> Production statement</a></li>
+<li class="chapter" data-level="6.4.2.5" data-path="chapter06.html"><a href="chapter06.html#distribution-statement"><i class="fa fa-check"></i><b>6.4.2.5</b> Distribution statement</a></li>
+<li class="chapter" data-level="6.4.2.6" data-path="chapter06.html"><a href="chapter06.html#series-statement"><i class="fa fa-check"></i><b>6.4.2.6</b> Series statement</a></li>
+<li class="chapter" data-level="6.4.2.7" data-path="chapter06.html"><a href="chapter06.html#version-statement"><i class="fa fa-check"></i><b>6.4.2.7</b> Version statement</a></li>
+<li class="chapter" data-level="6.4.2.8" data-path="chapter06.html"><a href="chapter06.html#bibliographic-citation"><i class="fa fa-check"></i><b>6.4.2.8</b> Bibliographic citation</a></li>
+<li class="chapter" data-level="6.4.2.9" data-path="chapter06.html"><a href="chapter06.html#bibliographic-citation-format"><i class="fa fa-check"></i><b>6.4.2.9</b> Bibliographic citation format</a></li>
+<li class="chapter" data-level="6.4.2.10" data-path="chapter06.html"><a href="chapter06.html#holdings"><i class="fa fa-check"></i><b>6.4.2.10</b> Holdings</a></li>
+<li class="chapter" data-level="6.4.2.11" data-path="chapter06.html"><a href="chapter06.html#study-notes"><i class="fa fa-check"></i><b>6.4.2.11</b> Study notes</a></li>
+<li class="chapter" data-level="6.4.2.12" data-path="chapter06.html"><a href="chapter06.html#study-autorization"><i class="fa fa-check"></i><b>6.4.2.12</b> Study autorization</a></li>
+<li class="chapter" data-level="6.4.2.13" data-path="chapter06.html"><a href="chapter06.html#study-information"><i class="fa fa-check"></i><b>6.4.2.13</b> Study information</a></li>
+<li class="chapter" data-level="6.4.2.14" data-path="chapter06.html"><a href="chapter06.html#study-development"><i class="fa fa-check"></i><b>6.4.2.14</b> Study development</a></li>
+<li class="chapter" data-level="6.4.2.15" data-path="chapter06.html"><a href="chapter06.html#method"><i class="fa fa-check"></i><b>6.4.2.15</b> Method</a></li>
+<li class="chapter" data-level="6.4.2.16" data-path="chapter06.html"><a href="chapter06.html#data-access"><i class="fa fa-check"></i><b>6.4.2.16</b> Data access</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4.3" data-path="chapter06.html"><a href="chapter06.html#description-of-data-files"><i class="fa fa-check"></i><b>6.4.3</b> Description of data files</a></li>
+<li class="chapter" data-level="6.4.4" data-path="chapter06.html"><a href="chapter06.html#variable-description"><i class="fa fa-check"></i><b>6.4.4</b> Variable description</a></li>
+<li class="chapter" data-level="6.4.5" data-path="chapter06.html"><a href="chapter06.html#variable-groups"><i class="fa fa-check"></i><b>6.4.5</b> Variable groups</a></li>
+<li class="chapter" data-level="6.4.6" data-path="chapter06.html"><a href="chapter06.html#provenance-1"><i class="fa fa-check"></i><b>6.4.6</b> Provenance</a></li>
+<li class="chapter" data-level="6.4.7" data-path="chapter06.html"><a href="chapter06.html#tags-1"><i class="fa fa-check"></i><b>6.4.7</b> Tags</a></li>
+<li class="chapter" data-level="6.4.8" data-path="chapter06.html"><a href="chapter06.html#lda-topics-1"><i class="fa fa-check"></i><b>6.4.8</b> LDA topics</a></li>
+<li class="chapter" data-level="6.4.9" data-path="chapter06.html"><a href="chapter06.html#embeddings-1"><i class="fa fa-check"></i><b>6.4.9</b> Embeddings</a></li>
+<li class="chapter" data-level="6.4.10" data-path="chapter06.html"><a href="chapter06.html#additional"><i class="fa fa-check"></i><b>6.4.10</b> Additional</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="chapter07.html"><a href="chapter07.html"><i class="fa fa-check"></i><b>7</b> Geographic data and services</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="chapter07.html"><a href="chapter07.html#background"><i class="fa fa-check"></i><b>7.1</b> Background</a></li>
+<li class="chapter" data-level="7.2" data-path="chapter07.html"><a href="chapter07.html#geographic-information-metadata-standards"><i class="fa fa-check"></i><b>7.2</b> Geographic information metadata standards</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="chapter07.html"><a href="chapter07.html#documenting-geographic-datasets---the-iso-19115-standard"><i class="fa fa-check"></i><b>7.2.1</b> Documenting geographic datasets - The ISO 19115 standard</a></li>
+<li class="chapter" data-level="7.2.2" data-path="chapter07.html"><a href="chapter07.html#describing-data-structures---the-iso-19115-2-and-iso-19110-standards"><i class="fa fa-check"></i><b>7.2.2</b> Describing data structures - The ISO 19115-2 and ISO 19110 standards</a></li>
+<li class="chapter" data-level="7.2.3" data-path="chapter07.html"><a href="chapter07.html#describing-data-services---the-iso-19119-standard"><i class="fa fa-check"></i><b>7.2.3</b> Describing data services - The ISO 19119 standard</a></li>
+<li class="chapter" data-level="7.2.4" data-path="chapter07.html"><a href="chapter07.html#unified-metadata-specification---the-isots-19139-standard"><i class="fa fa-check"></i><b>7.2.4</b> Unified metadata specification - The ISO/TS 19139 standard</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="chapter07.html"><a href="chapter07.html#schema-description-1"><i class="fa fa-check"></i><b>7.3</b> Schema description</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="chapter07.html"><a href="chapter07.html#introduction-to-iso19139"><i class="fa fa-check"></i><b>7.3.1</b> Introduction to ISO19139</a></li>
+<li class="chapter" data-level="7.3.2" data-path="chapter07.html"><a href="chapter07.html#common-sets-of-elements"><i class="fa fa-check"></i><b>7.3.2</b> Common sets of elements</a>
+<ul>
+<li class="chapter" data-level="7.3.2.1" data-path="chapter07.html"><a href="chapter07.html#contact-responsible-party"><i class="fa fa-check"></i><b>7.3.2.1</b> Contact / Responsible party</a></li>
+<li class="chapter" data-level="7.3.2.2" data-path="chapter07.html"><a href="chapter07.html#online-resource"><i class="fa fa-check"></i><b>7.3.2.2</b> Online resource</a></li>
+<li class="chapter" data-level="7.3.2.3" data-path="chapter07.html"><a href="chapter07.html#offline-resource-medium"><i class="fa fa-check"></i><b>7.3.2.3</b> Offline resource (Medium)</a></li>
+<li class="chapter" data-level="7.3.2.4" data-path="chapter07.html"><a href="chapter07.html#file-format"><i class="fa fa-check"></i><b>7.3.2.4</b> File format</a></li>
+<li class="chapter" data-level="7.3.2.5" data-path="chapter07.html"><a href="chapter07.html#citation"><i class="fa fa-check"></i><b>7.3.2.5</b> Citation</a></li>
+<li class="chapter" data-level="7.3.2.6" data-path="chapter07.html"><a href="chapter07.html#keywords"><i class="fa fa-check"></i><b>7.3.2.6</b> Keywords</a></li>
+<li class="chapter" data-level="7.3.2.7" data-path="chapter07.html"><a href="chapter07.html#constraints-not-clear.-where-is-the-element-uselimitations-what-are-the-elements-used-in-the-schema"><i class="fa fa-check"></i><b>7.3.2.7</b> Constraints @@@@ not clear. where is the element useLimitations? … what are the elements used in the schema?</a></li>
+<li class="chapter" data-level="7.3.2.8" data-path="chapter07.html"><a href="chapter07.html#extent"><i class="fa fa-check"></i><b>7.3.2.8</b> Extent</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3.3" data-path="chapter07.html"><a href="chapter07.html#core-metadata-properties"><i class="fa fa-check"></i><b>7.3.3</b> Core metadata properties</a>
+<ul>
+<li class="chapter" data-level="7.3.3.1" data-path="chapter07.html"><a href="chapter07.html#resource-identifier-idno"><i class="fa fa-check"></i><b>7.3.3.1</b> Resource identifier (<code>idno</code>)</a></li>
+<li class="chapter" data-level="7.3.3.2" data-path="chapter07.html"><a href="chapter07.html#language-language"><i class="fa fa-check"></i><b>7.3.3.2</b> Language (<code>language</code>)</a></li>
+<li class="chapter" data-level="7.3.3.3" data-path="chapter07.html"><a href="chapter07.html#character-set-characterset"><i class="fa fa-check"></i><b>7.3.3.3</b> Character set (<code>characterSet</code>)</a></li>
+<li class="chapter" data-level="7.3.3.4" data-path="chapter07.html"><a href="chapter07.html#parent-identifier-parentidentifier"><i class="fa fa-check"></i><b>7.3.3.4</b> Parent Identifier (<code>parentIdentifier</code>)</a></li>
+<li class="chapter" data-level="7.3.3.5" data-path="chapter07.html"><a href="chapter07.html#hierarchy-levels-hierarchylevel"><i class="fa fa-check"></i><b>7.3.3.5</b> Hierarchy level(s) (<code>hierarchyLevel</code>)</a></li>
+<li class="chapter" data-level="7.3.3.6" data-path="chapter07.html"><a href="chapter07.html#hierarchy-level-names-hierarchylevelname"><i class="fa fa-check"></i><b>7.3.3.6</b> Hierarchy level name(s) (<code>hierarchyLevelname</code>)</a></li>
+<li class="chapter" data-level="7.3.3.7" data-path="chapter07.html"><a href="chapter07.html#contacts-contact"><i class="fa fa-check"></i><b>7.3.3.7</b> Contact(s) (<code>contact</code>)</a></li>
+<li class="chapter" data-level="7.3.3.8" data-path="chapter07.html"><a href="chapter07.html#date-stamp-datestamp"><i class="fa fa-check"></i><b>7.3.3.8</b> Date stamp (<code>dateStamp</code>)</a></li>
+<li class="chapter" data-level="7.3.3.9" data-path="chapter07.html"><a href="chapter07.html#metadata-standard-name-metadatastandardname"><i class="fa fa-check"></i><b>7.3.3.9</b> Metadata standard name (<code>metadataStandardName</code>)</a></li>
+<li class="chapter" data-level="7.3.3.10" data-path="chapter07.html"><a href="chapter07.html#metadata-standard-version-metadatastandardversion"><i class="fa fa-check"></i><b>7.3.3.10</b> Metadata standard version (<code>metadataStandardVersion</code>)</a></li>
+<li class="chapter" data-level="7.3.3.11" data-path="chapter07.html"><a href="chapter07.html#dataset-uri-dataseturi"><i class="fa fa-check"></i><b>7.3.3.11</b> Dataset URI (<code>datasetURI</code>)</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3.4" data-path="chapter07.html"><a href="chapter07.html#main-metadata-sections"><i class="fa fa-check"></i><b>7.3.4</b> Main metadata sections</a>
+<ul>
+<li class="chapter" data-level="7.3.4.1" data-path="chapter07.html"><a href="chapter07.html#spatial-representation-spatialrepresentationinfo"><i class="fa fa-check"></i><b>7.3.4.1</b> Spatial representation (<code>spatialRepresentationInfo</code>)</a></li>
+<li class="chapter" data-level="7.3.4.2" data-path="chapter07.html"><a href="chapter07.html#reference-systems-referencesysteminfo"><i class="fa fa-check"></i><b>7.3.4.2</b> Reference system(s) (<code>referenceSystemInfo</code>)</a></li>
+<li class="chapter" data-level="7.3.4.3" data-path="chapter07.html"><a href="chapter07.html#identification-identificationinfo"><i class="fa fa-check"></i><b>7.3.4.3</b> Identification (<code>identificationInfo</code>)</a>
+<ul>
+<li class="chapter" data-level="7.3.4.3.1" data-path="chapter07.html"><a href="chapter07.html#service-operation"><i class="fa fa-check"></i><b>7.3.4.3.1</b> Service operation</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3.4.4" data-path="chapter07.html"><a href="chapter07.html#content-contentinfo"><i class="fa fa-check"></i><b>7.3.4.4</b> Content (<code>contentInfo</code>)</a></li>
+<li class="chapter" data-level="7.3.4.5" data-path="chapter07.html"><a href="chapter07.html#distribution-distributioninfo"><i class="fa fa-check"></i><b>7.3.4.5</b> Distribution (<code>distributionInfo</code>)</a></li>
+<li class="chapter" data-level="7.3.4.6" data-path="chapter07.html"><a href="chapter07.html#data-quality-dataqualityinfo"><i class="fa fa-check"></i><b>7.3.4.6</b> Data quality (<code>dataQualityInfo</code>)</a>
+<ul>
+<li class="chapter" data-level="7.3.4.6.1" data-path="chapter07.html"><a href="chapter07.html#report-report"><i class="fa fa-check"></i><b>7.3.4.6.1</b> Report (<code>report</code>)</a></li>
+<li class="chapter" data-level="7.3.4.6.2" data-path="chapter07.html"><a href="chapter07.html#lineage-lineage"><i class="fa fa-check"></i><b>7.3.4.6.2</b> Lineage (<code>lineage</code>)</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3.4.7" data-path="chapter07.html"><a href="chapter07.html#metadata-maintenance-metadatamaintenanceinfo"><i class="fa fa-check"></i><b>7.3.4.7</b> Metadata maintenance (<code>metadataMaintenanceInfo</code>)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="chapter07.html"><a href="chapter07.html#iso-19110-feature-catalogue-feature_catalogue"><i class="fa fa-check"></i><b>7.4</b> ISO 19110 Feature Catalogue (<code>feature_catalogue</code>)</a></li>
+<li class="chapter" data-level="7.5" data-path="chapter07.html"><a href="chapter07.html#provenance-2"><i class="fa fa-check"></i><b>7.5</b> Provenance</a></li>
+<li class="chapter" data-level="7.6" data-path="chapter07.html"><a href="chapter07.html#tags-2"><i class="fa fa-check"></i><b>7.6</b> Tags</a></li>
+<li class="chapter" data-level="7.7" data-path="chapter07.html"><a href="chapter07.html#lda-topics-2"><i class="fa fa-check"></i><b>7.7</b> LDA topics</a></li>
+<li class="chapter" data-level="7.8" data-path="chapter07.html"><a href="chapter07.html#embeddings-2"><i class="fa fa-check"></i><b>7.8</b> Embeddings</a></li>
+<li class="chapter" data-level="7.9" data-path="chapter07.html"><a href="chapter07.html#additional-1"><i class="fa fa-check"></i><b>7.9</b> Additional</a></li>
+<li class="chapter" data-level="7.10" data-path="chapter07.html"><a href="chapter07.html#complete-examples-1"><i class="fa fa-check"></i><b>7.10</b> Complete examples</a>
+<ul>
+<li class="chapter" data-level="7.10.1" data-path="chapter07.html"><a href="chapter07.html#example-1-vector---shape-files-bangladesh-outline-of-camps-of-rohingya-refugees-in-coxs-bazar-january-2021"><i class="fa fa-check"></i><b>7.10.1</b> Example 1 (vector - shape files): Bangladesh, Outline of camps of Rohingya refugees in Cox’s Bazar, January 2021</a></li>
+<li class="chapter" data-level="7.10.2" data-path="chapter07.html"><a href="chapter07.html#example-2-vector-csv-data-syria-refugee-sites-ocha"><i class="fa fa-check"></i><b>7.10.2</b> Example 2 (vector, CSV data): Syria Refugee Sites (OCHA)</a></li>
+<li class="chapter" data-level="7.10.3" data-path="chapter07.html"><a href="chapter07.html#example-3-vector-with-feature-catalogue---the-gdis-beta-dataset"><i class="fa fa-check"></i><b>7.10.3</b> Example 3 (vector, with Feature Catalogue) - The GDIS (beta) dataset</a></li>
+<li class="chapter" data-level="7.10.4" data-path="chapter07.html"><a href="chapter07.html#example-4-raster-spatial-distribution-of-the-ethiopian-population-in-2020"><i class="fa fa-check"></i><b>7.10.4</b> Example 4 (raster): Spatial distribution of the Ethiopian population in 2020</a></li>
+<li class="chapter" data-level="7.10.5" data-path="chapter07.html"><a href="chapter07.html#example-5-service-the-united-nations-geospatial-website"><i class="fa fa-check"></i><b>7.10.5</b> Example 5 (service): The United Nations Geospatial website</a></li>
+</ul></li>
+<li class="chapter" data-level="7.11" data-path="chapter07.html"><a href="chapter07.html#useful-tools"><i class="fa fa-check"></i><b>7.11</b> Useful tools</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="chapter08.html"><a href="chapter08.html"><i class="fa fa-check"></i><b>8</b> Databases of indicators</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="chapter08.html"><a href="chapter08.html#database-vs-indicators"><i class="fa fa-check"></i><b>8.1</b> Database vs indicators</a></li>
+<li class="chapter" data-level="8.2" data-path="chapter08.html"><a href="chapter08.html#schema-description-2"><i class="fa fa-check"></i><b>8.2</b> Schema description</a>
+<ul>
+<li class="chapter" data-level="8.2.0.1" data-path="chapter08.html"><a href="chapter08.html#metadata-information-1"><i class="fa fa-check"></i><b>8.2.0.1</b> Metadata information</a></li>
+<li class="chapter" data-level="8.2.0.2" data-path="chapter08.html"><a href="chapter08.html#database-description"><i class="fa fa-check"></i><b>8.2.0.2</b> Database description</a></li>
+<li class="chapter" data-level="8.2.1" data-path="chapter08.html"><a href="chapter08.html#provenance-3"><i class="fa fa-check"></i><b>8.2.1</b> Provenance</a></li>
+<li class="chapter" data-level="8.2.2" data-path="chapter08.html"><a href="chapter08.html#tags-3"><i class="fa fa-check"></i><b>8.2.2</b> Tags</a></li>
+<li class="chapter" data-level="8.2.3" data-path="chapter08.html"><a href="chapter08.html#lda-topics-3"><i class="fa fa-check"></i><b>8.2.3</b> LDA topics</a></li>
+<li class="chapter" data-level="8.2.4" data-path="chapter08.html"><a href="chapter08.html#embeddings-3"><i class="fa fa-check"></i><b>8.2.4</b> Embeddings</a></li>
+<li class="chapter" data-level="8.2.5" data-path="chapter08.html"><a href="chapter08.html#additional-2"><i class="fa fa-check"></i><b>8.2.5</b> Additional</a>
+<ul>
+<li class="chapter" data-level="8.2.5.1" data-path="chapter08.html"><a href="chapter08.html#complete-example"><i class="fa fa-check"></i><b>8.2.5.1</b> Complete example</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="chapter09.html"><a href="chapter09.html"><i class="fa fa-check"></i><b>9</b> Indicators and time series</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="chapter09.html"><a href="chapter09.html#indicators-time-series-database-and-scope-of-the-schema"><i class="fa fa-check"></i><b>9.1</b> Indicators, time series, database, and scope of the schema</a></li>
+<li class="chapter" data-level="9.2" data-path="chapter09.html"><a href="chapter09.html#schema-description-3"><i class="fa fa-check"></i><b>9.2</b> Schema description</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="chapter09.html"><a href="chapter09.html#the-time-series-indicators-schema"><i class="fa fa-check"></i><b>9.2.1</b> The time series (indicators) schema</a>
+<ul>
+<li class="chapter" data-level="9.2.1.1" data-path="chapter09.html"><a href="chapter09.html#cataloguing-parameters"><i class="fa fa-check"></i><b>9.2.1.1</b> Cataloguing parameters</a></li>
+<li class="chapter" data-level="9.2.1.2" data-path="chapter09.html"><a href="chapter09.html#metadata-information-2"><i class="fa fa-check"></i><b>9.2.1.2</b> Metadata information</a></li>
+<li class="chapter" data-level="9.2.1.3" data-path="chapter09.html"><a href="chapter09.html#series-description"><i class="fa fa-check"></i><b>9.2.1.3</b> Series description</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2.2" data-path="chapter09.html"><a href="chapter09.html#provenance-4"><i class="fa fa-check"></i><b>9.2.2</b> Provenance</a></li>
+<li class="chapter" data-level="9.2.3" data-path="chapter09.html"><a href="chapter09.html#tags-4"><i class="fa fa-check"></i><b>9.2.3</b> Tags</a></li>
+<li class="chapter" data-level="9.2.4" data-path="chapter09.html"><a href="chapter09.html#additional-3"><i class="fa fa-check"></i><b>9.2.4</b> Additional</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="chapter09.html"><a href="chapter09.html#generating-and-publishing-compliant-metadata---complete-example"><i class="fa fa-check"></i><b>9.3</b> Generating and publishing compliant metadata - Complete example</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="chapter09.html"><a href="chapter09.html#use-of-ai-for-metadata-augmentation"><i class="fa fa-check"></i><b>9.3.1</b> Use of AI for metadata augmentation</a></li>
+<li class="chapter" data-level="9.3.2" data-path="chapter09.html"><a href="chapter09.html#using-r-4"><i class="fa fa-check"></i><b>9.3.2</b> Using R</a></li>
+<li class="chapter" data-level="9.3.3" data-path="chapter09.html"><a href="chapter09.html#using-python-4"><i class="fa fa-check"></i><b>9.3.3</b> Using Python</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="chapter10.html"><a href="chapter10.html"><i class="fa fa-check"></i><b>10</b> Statistical tables</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="chapter10.html"><a href="chapter10.html#introduction-1"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
+<li class="chapter" data-level="10.2" data-path="chapter10.html"><a href="chapter10.html#anatomy-of-a-table"><i class="fa fa-check"></i><b>10.2</b> Anatomy of a table</a></li>
+<li class="chapter" data-level="10.3" data-path="chapter10.html"><a href="chapter10.html#schema-description-4"><i class="fa fa-check"></i><b>10.3</b> Schema description</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="chapter10.html"><a href="chapter10.html#cataloguing-parameters-1"><i class="fa fa-check"></i><b>10.3.1</b> Cataloguing parameters</a></li>
+<li class="chapter" data-level="10.3.2" data-path="chapter10.html"><a href="chapter10.html#metadata-information-3"><i class="fa fa-check"></i><b>10.3.2</b> Metadata information</a></li>
+<li class="chapter" data-level="10.3.3" data-path="chapter10.html"><a href="chapter10.html#table-description"><i class="fa fa-check"></i><b>10.3.3</b> Table description</a></li>
+<li class="chapter" data-level="10.3.4" data-path="chapter10.html"><a href="chapter10.html#provenance-5"><i class="fa fa-check"></i><b>10.3.4</b> Provenance</a></li>
+<li class="chapter" data-level="10.3.5" data-path="chapter10.html"><a href="chapter10.html#tags-5"><i class="fa fa-check"></i><b>10.3.5</b> Tags</a></li>
+<li class="chapter" data-level="10.3.6" data-path="chapter10.html"><a href="chapter10.html#additional-custom-elements"><i class="fa fa-check"></i><b>10.3.6</b> Additional (custom) elements</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="chapter10.html"><a href="chapter10.html#complete-examples-2"><i class="fa fa-check"></i><b>10.4</b> Complete examples</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="chapter10.html"><a href="chapter10.html#example-1"><i class="fa fa-check"></i><b>10.4.1</b> Example 1</a></li>
+<li class="chapter" data-level="10.4.2" data-path="chapter10.html"><a href="chapter10.html#example-2"><i class="fa fa-check"></i><b>10.4.2</b> Example 2</a></li>
+<li class="chapter" data-level="10.4.3" data-path="chapter10.html"><a href="chapter10.html#example-3"><i class="fa fa-check"></i><b>10.4.3</b> Example 3</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chapter11.html"><a href="chapter11.html"><i class="fa fa-check"></i><b>11</b> Images</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="chapter11.html"><a href="chapter11.html#image-metadata"><i class="fa fa-check"></i><b>11.1</b> Image metadata</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="chapter11.html"><a href="chapter11.html#embedded-metadata-exif"><i class="fa fa-check"></i><b>11.1.1</b> Embedded metadata: EXIF</a></li>
+<li class="chapter" data-level="11.1.2" data-path="chapter11.html"><a href="chapter11.html#iptc-and-dublin-core-standards"><i class="fa fa-check"></i><b>11.1.2</b> IPTC and Dublin Core standards</a></li>
+<li class="chapter" data-level="11.1.3" data-path="chapter11.html"><a href="chapter11.html#augmenting-image-metadata"><i class="fa fa-check"></i><b>11.1.3</b> Augmenting image metadata</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="chapter11.html"><a href="chapter11.html#schema-description-5"><i class="fa fa-check"></i><b>11.2</b> Schema description</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="chapter11.html"><a href="chapter11.html#common-elements"><i class="fa fa-check"></i><b>11.2.1</b> Common elements</a></li>
+<li class="chapter" data-level="11.2.2" data-path="chapter11.html"><a href="chapter11.html#iptc-option"><i class="fa fa-check"></i><b>11.2.2</b> IPTC option</a></li>
+<li class="chapter" data-level="11.2.3" data-path="chapter11.html"><a href="chapter11.html#dublin-core-option"><i class="fa fa-check"></i><b>11.2.3</b> Dublin Core option</a></li>
+<li class="chapter" data-level="11.2.4" data-path="chapter11.html"><a href="chapter11.html#additional-elements-iptc-and-dcmi"><i class="fa fa-check"></i><b>11.2.4</b> Additional elements (IPTC and DCMI)</a></li>
+<li class="chapter" data-level="11.2.5" data-path="chapter11.html"><a href="chapter11.html#lda-topics-4"><i class="fa fa-check"></i><b>11.2.5</b> LDA topics</a></li>
+<li class="chapter" data-level="11.2.6" data-path="chapter11.html"><a href="chapter11.html#embeddings-4"><i class="fa fa-check"></i><b>11.2.6</b> Embeddings</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="chapter11.html"><a href="chapter11.html#examples"><i class="fa fa-check"></i><b>11.3</b> Examples</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="chapter11.html"><a href="chapter11.html#example-1---using-the-iptc-option"><i class="fa fa-check"></i><b>11.3.1</b> Example 1 - Using the IPTC option</a></li>
+<li class="chapter" data-level="11.3.2" data-path="chapter11.html"><a href="chapter11.html#example-2---using-the-dcmi-option"><i class="fa fa-check"></i><b>11.3.2</b> Example 2 - Using the DCMI option</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="chapter12.html"><a href="chapter12.html"><i class="fa fa-check"></i><b>12</b> Videos</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="chapter12.html"><a href="chapter12.html#augmenting-video-metadata"><i class="fa fa-check"></i><b>12.1</b> Augmenting video metadata</a></li>
+<li class="chapter" data-level="12.2" data-path="chapter12.html"><a href="chapter12.html#schema-description-6"><i class="fa fa-check"></i><b>12.2</b> Schema description</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="chapter12.html"><a href="chapter12.html#metadata-information-4"><i class="fa fa-check"></i><b>12.2.1</b> Metadata information</a></li>
+<li class="chapter" data-level="12.2.2" data-path="chapter12.html"><a href="chapter12.html#video-description"><i class="fa fa-check"></i><b>12.2.2</b> Video description</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="chapter12.html"><a href="chapter12.html#complete-example-1"><i class="fa fa-check"></i><b>12.3</b> Complete example</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="chapter12.html"><a href="chapter12.html#in-r"><i class="fa fa-check"></i><b>12.3.1</b> In R</a></li>
+<li class="chapter" data-level="12.3.2" data-path="chapter12.html"><a href="chapter12.html#in-python"><i class="fa fa-check"></i><b>12.3.2</b> In Python</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="chapter13.html"><a href="chapter13.html"><i class="fa fa-check"></i><b>13</b> Research projects and scripts</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="chapter13.html"><a href="chapter13.html#rationale"><i class="fa fa-check"></i><b>13.1</b> Rationale</a></li>
+<li class="chapter" data-level="13.2" data-path="chapter13.html"><a href="chapter13.html#motivation-for-open-analytics"><i class="fa fa-check"></i><b>13.2</b> Motivation for open analytics</a></li>
+<li class="chapter" data-level="13.3" data-path="chapter13.html"><a href="chapter13.html#goal-discoverable-code"><i class="fa fa-check"></i><b>13.3</b> Goal: discoverable code</a></li>
+<li class="chapter" data-level="13.4" data-path="chapter13.html"><a href="chapter13.html#schema-description-7"><i class="fa fa-check"></i><b>13.4</b> Schema description</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="chapter13.html"><a href="chapter13.html#document-description-2"><i class="fa fa-check"></i><b>13.4.1</b> Document description</a></li>
+<li class="chapter" data-level="13.4.2" data-path="chapter13.html"><a href="chapter13.html#project-description"><i class="fa fa-check"></i><b>13.4.2</b> Project description</a></li>
+<li class="chapter" data-level="13.4.3" data-path="chapter13.html"><a href="chapter13.html#provenance-6"><i class="fa fa-check"></i><b>13.4.3</b> Provenance</a></li>
+<li class="chapter" data-level="13.4.4" data-path="chapter13.html"><a href="chapter13.html#tags-6"><i class="fa fa-check"></i><b>13.4.4</b> Tags</a></li>
+<li class="chapter" data-level="13.4.5" data-path="chapter13.html"><a href="chapter13.html#additional-4"><i class="fa fa-check"></i><b>13.4.5</b> Additional</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="chapter13.html"><a href="chapter13.html#generating-compliant-metadata"><i class="fa fa-check"></i><b>13.5</b> Generating compliant metadata</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="chapter13.html"><a href="chapter13.html#full-example-using-a-metadata-editor"><i class="fa fa-check"></i><b>13.5.1</b> Full example, using a metadata editor</a></li>
+<li class="chapter" data-level="13.5.2" data-path="chapter13.html"><a href="chapter13.html#full-example-using-r"><i class="fa fa-check"></i><b>13.5.2</b> Full example, using R</a></li>
+<li class="chapter" data-level="13.5.3" data-path="chapter13.html"><a href="chapter13.html#full-example-using-python"><i class="fa fa-check"></i><b>13.5.3</b> Full example, using Python</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="chapter14.html"><a href="chapter14.html"><i class="fa fa-check"></i><b>14</b> External resources</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="chapter14.html"><a href="chapter14.html#example-of-use-of-external-resources"><i class="fa fa-check"></i><b>14.1</b> Example of use of external resources</a></li>
+</ul></li>
+<li class="appendix"><span><b>ANNEXES</b></span></li>
+<li class="chapter" data-level="" data-path="annex-1-references-and-links.html"><a href="annex-1-references-and-links.html"><i class="fa fa-check"></i>Annex 1: References and links</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">[DRAFT - WORK IN PROGRESS] Metadata Standards for Improved Data Discoverability and Usability</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chapter03" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> The power of rich and structured metadata<a href="chapter03.html#chapter03" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The previous chapter defined the features of an advanced data discoverability and dissemination system. What enables such a system is not only the search algorithms and technology, but also the quality of the metadata available to enable them. Metadata is the “structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use or manage that resource” (Data thesaurus, NIH, <a href="https://nnlm/gov/data/thesaurus" class="uri">https://nnlm/gov/data/thesaurus</a>)</p>
+<p>This chapter describes what metadata is needed, and how it can be organized and improved to enable advanced search and recommender solutions. The core message is that to serve its multiple purposes, metadata must be <strong>rich</strong> and <strong>structured</strong>. In this chapter, we build the case for rich, augmented, structured metadata and for the adoption of metadata standards and schemas.</p>
+<div id="rich-metadata" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Rich metadata<a href="chapter03.html#rich-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="defining-rich-metadata" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Defining rich metadata<a href="chapter03.html#defining-rich-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>Rich</em> metadata means metadata that is <strong>detailed</strong> and <strong>comprehensive</strong>. What makes metadata “detailed and comprehensive” is not always easy to define, and is specific to each data type. Microdata and geospatial datasets for example will require much more – and different– metadata than a document or an image. Metadata standards and schemas provide data curators with detailed lists of <em>elements</em> (or <em>fields</em>), specific to each data type, that must or may be provided to document a dataset. The metadata elements included in a standard or schema will typically cover <em>cataloguing material</em>, <em>contextual information</em>, and <em>explanatory materials</em>.</p>
+<div id="cataloguing-material" class="section level4 hasAnchor" number="3.1.1.1">
+<h4><span class="header-section-number">3.1.1.1</span> Cataloguing material<a href="chapter03.html#cataloguing-material" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Cataloguing material includes elements such as a title, a unique (and preferably permanent) identifier for the dataset, a version number and description, as well as information related to the data curation (including who generated the metadata and when, or where and when metadata may have been harvested from an external catalog). This information allows the dataset to be uniquely identified within a collection or catalog, and serves as a bibliographic record of the dataset, allowing it to be properly acknowledged and cited in publications.</p>
+</div>
+<div id="contextual-information" class="section level4 hasAnchor" number="3.1.1.2">
+<h4><span class="header-section-number">3.1.1.2</span> Contextual information<a href="chapter03.html#contextual-information" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Contextual information describes the context in which the data were collected and how they were put to use. It enables secondary users to understand the background and processes behind the data production. Contextual information should cover topics such as:</p>
+<ul>
+<li>What justified or required the data collection (the objectives of the data production exercise);</li>
+<li>Who or what was being studied (the subject and scope of the data collection);</li>
+<li>The geographic and temporal coverage of the data;</li>
+<li>Changes and developments that occurred over time in the data collection methodology and in the dataset, if relevant. For repeated cross-section, panel, or time series datasets, this may include information describing changes in the question text, variable labeling, sampling procedures, or others;</li>
+<li>What are the key output of the data collection, such as a publication, the design or implementation of a policy or project, etc.</li>
+<li>Problems encountered in the process of data production;</li>
+<li>Other useful information on the life cycle of the dataset.</li>
+</ul>
+</div>
+<div id="explanatory-material" class="section level4 hasAnchor" number="3.1.1.3">
+<h4><span class="header-section-number">3.1.1.3</span> Explanatory material<a href="chapter03.html#explanatory-material" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Explanatory materials are the information that should be created and preserved to ensure the long-term functionality of a dataset and its contents. Explanatory materials include:</p>
+<ul>
+<li>Information about the <strong>data collection methods</strong>: This should describe the instruments used and methods employed, and how they were developed. For sample datasets, details of the sampling design and sampling frames should be included. It is also useful to include information on any monitoring process undertaken during the data collection as well as details of quality controls.</li>
+<li><strong>Technical information</strong>: This information relates to the technical framework and should include the computer system used to generate the data and related files; the software packages with which the files were created.</li>
+<li>Information about the <strong>structure of the dataset</strong>: For quantitative datasets, this includes a detailed data dictionary describing the structure of the dataset, including information about relationships between individual files or records within the study. For example, in the case of microdata, it should include key variables required for unique identification of subjects across data files (needed to properly merge data files), the number of cases and variables in each file, and the number of files in the dataset. For relational databases, the structure and relations between datasets records and elements should be described.</li>
+<li><strong>Variables and values, coding and classification schemes</strong> (for microdata and geospatial data): The documentation should contain an exhaustive list of variables in the dataset, including a complete explanation and full details about the coding and classifications used for the information allocated to those fields. It is especially important to have blank and missing fields explained and accounted for. It is helpful to identify variables to which standard coding classifications apply, and to record the version of the classification scheme used.</li>
+<li>Information about <strong>derived variables</strong> (for microdata and geospatial data, and tabulations): Many data producers derive new variables from original data. This may be as simple as grouping raw age (in years) data according to groups of years appropriate for the survey, or it may be much more complex and require the use of sophisticated algorithms. When grouped or derived variables are created, the logic for the grouping or derivation must be clear. Simple grouping, such as for age, can be included within the data dictionary. More complex derivations require other means of recording the information. Sufficient supporting information should be provided to allow an easy link between the core variables used and the resultant variables. In addition, computer algorithms used to create the derivations should be saved together with information on the software.</li>
+<li>Information on <strong>weighting and grossing</strong> (for sample survey datasets): Weighting and grossing variables must be fully documented, with explanations of the construction of the variables and clear indications of the circumstances in which they should be used. The latter is particularly important when different weights are applied for different purposes.</li>
+<li>Information on <strong>data sources</strong>: Details about the source from which the data is derived should be included. For example, when the data source consists of responses to survey questionnaires, each question should be carefully recorded in the documentation. Ideally, the text will include a reference to the generated variable(s). It is also useful to explain the conditions under which a question would be asked, including, if possible, the cases to which it applies and, ideally, a summary of response statistics.</li>
+<li>Information on <strong>confidentiality and anonymization</strong>: It is important to determine whether the data contains any confidential information on individuals, households, organizations, or institutions. If so, such information should be recorded together with any agreement on how to use the data, such as with survey respondents. Issues of confidentiality may restrict the analyses to be undertaken or results to be published, particularly if the data is to be made available for secondary use. If the data were anonymized to prevent identification, it is wise to record the anonymization procedure (taking care of not providing information that would enable a reverse-engineering of the procedure) and its impact on the data, as such modification may restrict subsequent analysis.</li>
+</ul>
+</div>
+</div>
+<div id="benefits-for-data-users" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Benefits for data users<a href="chapter03.html#benefits-for-data-users" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="finding-data-1" class="section level4 hasAnchor" number="3.1.2.1">
+<h4><span class="header-section-number">3.1.2.1</span> Finding data<a href="chapter03.html#finding-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Metadata facilitate the efficient discovery of data within online catalogs. It serves as the informational backbone that search engines rely upon to index and categorize data, greatly influencing the discoverability of relevant content. The richness of metadata enhances the effectiveness of search engines, as it provides detailed descriptors about the nature, source, and characteristics of the data. The more comprehensive and detailed the metadata, the more effectively search engines can assist users in identifying pertinent data.</p>
+</div>
+<div id="understanding-and-using-data" class="section level4 hasAnchor" number="3.1.2.2">
+<h4><span class="header-section-number">3.1.2.2</span> Understanding and using data<a href="chapter03.html#understanding-and-using-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Metadata aid analysts to comprehend and utilize data. Metadata offers insights into the context, structure, and attributes of the data, allowing analysts to interpret and use them accurately. In the absence of a comprehensive description accompanying the data, there is a risk that users may misunderstand or misuse the information, or alternatively opt not to use them at all. Without this contextual information, the user may face challenges in extracting meaningful insights.</p>
+</div>
+<div id="assessing-data" class="section level4 hasAnchor" number="3.1.2.3">
+<h4><span class="header-section-number">3.1.2.3</span> Assessing data<a href="chapter03.html#assessing-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Good metadata provides analysts with essential information that enables them to assess the reliability, fitness for purpose, and consistency of the data. It offers insights into the source, methodology, and any potential limitations associated with the dataset. For analysts seeking to integrate multiple datasets, robust metadata becomes even more crucial, as it facilitates the evaluation of consistency and compatibility across various sources. The ability to gauge the quality and relevance of the data allows analysts to make informed decisions about its suitability for their specific analytical needs.</p>
+</div>
+</div>
+<div id="benefits-for-data-producers" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Benefits for data producers<a href="chapter03.html#benefits-for-data-producers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="credibility" class="section level4 hasAnchor" number="3.1.3.1">
+<h4><span class="header-section-number">3.1.3.1</span> Credibility<a href="chapter03.html#credibility" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Metadata plays a crucial role in ensuring transparency, auditability, and therefore credibility in the field of statistics and data products. By encompassing both information on the processes involved in generating statistics and data products, as well as details describing the products themselves, metadata serves as an essential tool for users to form well-informed opinions about the quality of the data across various dimensions such as relevance, reliability, and accuracy. Essentially, comprehensive metadata acts as a transparent blueprint, offering insights into the methodology, sources, and any transformations applied during the data generation process. It provides users with the necessary context to assess the robustness of the statistics presented. When organizations make such metadata readily available, it demonstrates a commitment to openness and integrity. Essentially, the philosophy is that if an organization has nothing to hide, the most effective way to communicate that is by publishing thorough and comprehensive metadata alongside the statistics, fostering trust, and reinforcing the credibility of the data products they provide.</p>
+</div>
+<div id="quality-assurance" class="section level4 hasAnchor" number="3.1.3.2">
+<h4><span class="header-section-number">3.1.3.2</span> Quality assurance<a href="chapter03.html#quality-assurance" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Metadata holds immense importance in implementing robust quality assurance, quality control, and quality improvement practices throughout the entire lifecycle of data production and utilization. Evaluating the quality of data extends beyond assessing the dataset alone; it encompasses a thorough examination of the processes that culminated in their availability. Comprehensive metadata detailing both the processes and the resulting products becomes indispensable in this context. By offering a detailed account of the methods, sources, and any transformations applied during data generation, metadata becomes a vital tool for quality assurance, enabling thorough scrutiny of the dataset’s reliability and accuracy. Equally significant is the role metadata plays in quality control, allowing for the identification and rectification of potential issues in the data production process. Moreover, metadata serves as a foundation for continuous quality improvement, providing insights into areas where enhancements can be made to elevate the overall data quality, thereby ensuring the credibility and utility of the data.</p>
+</div>
+<div id="harmonization-of-data-collection" class="section level4 hasAnchor" number="3.1.3.3">
+<h4><span class="header-section-number">3.1.3.3</span> Harmonization of data collection<a href="chapter03.html#harmonization-of-data-collection" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>For organizations engaged in data collection and generation, the establishment of a comprehensive meta-database facilitates the harmonization of data collection and processing methods and instruments. Metadata plays a key role in identifying differences, inconsistencies, and the absence of standardized practices across diverse datasets. By centralizing metadata, organizations can create a unified framework that facilitates a systematic understanding of the various data sources and their characteristics. This harmonization is particularly crucial for maintaining consistency and accuracy in statistical reporting. A compelling case for the utilization of metadata in this manner can be found in <a href="https://www.ihsn.org/sites/default/files/resources/IHSN-WP004.pdf">“The Struggle for Integration and Harmonization of Social Statistics in a Statistical Agency - A Case Study of Statistics Canada”</a> by Gordon Priest (2010), which describes the challenges and benefits of integrating social statistics by fostering a cohesive and standardized approach to data collection and processing within a statistical agency.</p>
+</div>
+<div id="visibility-1" class="section level4 hasAnchor" number="3.1.3.4">
+<h4><span class="header-section-number">3.1.3.4</span> Visibility<a href="chapter03.html#visibility-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Increase the online visibility of the data, and thus the demand for, and use of the data.</p>
+<p>Data cataloguing applications provide search and filtering tools to help users of the catalog identify data of interest. But not all users will start their search for data directly in specialized data catalogs; many will start their search in Google, Google Dataset Search, Bing, Yahoo! or another search engine.</p>
+<p>In some cases, the user may not be brought to the data catalog at all, if the catalog ranked low in the relevance order of the Google query results. <a href="https://www.smartinsights.com/search-engine-marketing/search-engine-statistics/">User behavior data (2020)</a> showed that “only 9% of Google searchers make it to the bottom of the first page of the search results”, and that “only .44% of searchers go to the second page of Google’s search results”. It is thus critical to optimize the visibility of the content of specialized data catalogs in the lead search engines, Google in particular. This optimization process is referred to as <strong>search engine optimization</strong> or SEO. <a href="https://en.wikipedia.org/wiki/Search_engine_optimization">Wikipedia</a> describes SEO as “the process of improving the quality and quantity of website traffic to a website or a web page from search engines. SEO targets unpaid traffic (known as”natural” or “organic” results) rather than direct traffic or paid traffic. (…) As an Internet marketing strategy, SEO considers how search engines work, the computer-programmed algorithms that dictate search engine behavior, what people search for, the actual search terms or keywords typed into search engines, and which search engines are preferred by their targeted audience. SEO is performed because a website will receive more visitors from a search engine when websites rank higher on the search engine results page.”</p>
+<div class="quote">
+<p>Because search engines crawl the web pages that are generated from databases (rather than crawling the databases themselves), your carefully applied metadata inside the database will not even be seen by search engines unless you write scripts to display the metadata tags and their values in HTML meta tags. It is crucial to understand that any metadata offered to search engines must be recognizable as part of a schema and must be machine-readable, which is to say that the search engine must be able to parse the metadata accurately. (For example, if you enter a bibliographic citation into a single metadata field, the search engine probably won’t know how to distinguish the article title from the journal title, or the volume from the issue number. In order for the search engine to read those citations effectively each part of the citation must have its own field. (…) Making sure metadata is machine-readable requires patterns and consistency, which will also prepare it for transformation to other schema. (This is far more important than picking any single metadata schema. (…) <em>From the blog post “Metadata, Schema.org, and Getting Your Digital Collection Noticed” by Patrick Hogan (<a href="https://www.ala.org/tools/article/ala-techsource/metadata-schemaorg-and-getting-your-digital-collection-noticed-3" class="uri">https://www.ala.org/tools/article/ala-techsource/metadata-schemaorg-and-getting-your-digital-collection-noticed-3</a>)</em></p>
+</div>
+<p>The ranking of web pages by Google and other lead search engines is determined by complex, proprietary, and non-disclosed algorithms. The only option for a web developer to ensure that a web page appears on top of the Google list of results is to pay for it, publishing it as a “sponsored” link. Otherwise, the ranking of a web page will be determined by a combination of known and unknown criteria. “Google’s automated ranking systems are designed to present helpful, reliable information that’s primarily created to benefit people, not to gain search engine rankings, in the top Search results.” (<a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content">Google Search Central</a>) But Google, Bing and other search engines provide web developers with some guidance and recommendations on search engine optimization (SEO). See for example the <a href="https://developers.google.com/search">Google Search Central</a> website where Google publish “Specific things you can do to improve the SEO of your website”.</p>
+<ul>
+<li><a href="https://developers.google.com/search/docs/beginner/seo-starter-guide">Google Search Engine Optimization Starter Guide</a></li>
+<li><a href="https://developers.google.com/search/docs/data-types/dataset">Google Dataset Search, Advanced SEO</a></li>
+<li><a href="https://www.bing.com/webmasters/about">Bing webmaster Tools</a></li>
+</ul>
+<p>Improving the ranking of catalog pages is a shared responsibility of data curators and catalog developers and administrators. <strong>Data curators</strong> must pay particular attention to providing rich, useful content in the catalog web pages (the HTML pages that describe each catalog entry). To identify relevant results, search engines index the content of web pages. Datasets that are well documented, i.e. those published with rich and structured metadata, will thus have a better chance to be discovered. Much attention should be paid to some core elements including the dataset title, producer, description (abstract), keywords, topics, access license, and geographic coverage. In Google Search Central’s terms, curators must “create helpful, reliable, people-first content” (not search engine-first content) and “use words that people would use to look for your content, and place those words in prominent locations on the page, such as the title and main heading of a page, and other descriptive locations such as alt text and link text.*</p>
+<p><strong>Developers and administrators of cataloguing applications</strong> must pay attention to other aspects of a catalog that will make it rank higher in Google and other search engine results:</p>
+<ul>
+<li>Ensuring that a data catalog delivers a good experience to users (see <a href="https://developers.google.com/search/docs/appearance/page-experience">Understanding page experience in Google Search results</a>), which among other things involves:
+<ul>
+<li>Catalog pages that load fast</li>
+<li>Catalog pages that are mobile-friendly. A data catalog should thus be built with a responsive design.</li>
+<li>Provide secure connection by serving the catalog over HTTPS (see more information, see for example <a href="https://web.dev/enable-https/" class="uri">https://web.dev/enable-https/</a>)</li>
+</ul></li>
+<li>Embedding <em>structured data</em> in the catalog’s HTML pages. The HTML pages in a data catalog are mostly the pages that will make the metadata specific to an entry visible to the user. These pages are automatically generated by the cataloguing application, by extracting and formatting the metadata stored in the catalog’s database. Structured data is information that will be included in these HTML pages (but not shown to the user) to help Google understand the content of the page. The use of <em>structured data</em> only applies to certain types of content, including datasets. The use of structured data influences not only the ranking of a page, but also the way information on the page will be displayed by Google. The next section is dedicated to this.</li>
+</ul>
+<p>Last, Google will “reward” popular websites, i.e. websites that are frequently visited and to which many other influent and popular websites provide links. Google’s recommendation is thus to “tell people about your site. Be active in communities where you can tell like-minded people about your services and products that you mention on your site.”</p>
+<p>A helpful and detailed <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content">self-assessment list</a> of items that data curators, catalog developers, and catalog administrators should pay attention to is provided by Google. Various tools are also available to catalog developers and administrators to assess the technical performance of their websites.</p>
+</div>
+<div id="cost-effectiveness-of-data-dissemination" class="section level4 hasAnchor" number="3.1.3.5">
+<h4><span class="header-section-number">3.1.3.5</span> Cost-effectiveness of data dissemination<a href="chapter03.html#cost-effectiveness-of-data-dissemination" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Publishing detailed metadata proves to be a cost-effective strategy for organizations involved in data dissemination. By providing comprehensive information about the datasets, including their sources, methodologies, and limitations, organizations empower users to independently navigate and understand the data. This transparency reduces the burden on the organization to respond to frequent and varied user requests for additional information. When users can access detailed metadata, they gain the insights needed to interpret and utilize the data effectively, minimizing the necessity for additional clarifications or support. This, in turn, streamlines the operation of a data dissemination service, saving resources that would otherwise be allocated to addressing individual inquiries. Essentially, the proactive disclosure of comprehensive metadata serves as a preemptive measure, contributing to a more efficient and cost-effective dissemination process by equipping users with the information required for autonomous and accurate data interpretation.</p>
+</div>
+<div id="preservation-of-institutional-memory" class="section level4 hasAnchor" number="3.1.3.6">
+<h4><span class="header-section-number">3.1.3.6</span> Preservation of institutional memory<a href="chapter03.html#preservation-of-institutional-memory" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The meticulous production and preservation of detailed metadata by organizations involved in data collection, generation, processing, and analysis, such as national statistics offices, play a pivotal role in supporting the preservation of institutional memory. Detailed metadata serve as a comprehensive record documenting the intricacies of data collection methodologies, processing techniques, and analytical approaches employed over time. This wealth of information helps to safeguard the institutional memory by providing future generations of analysts and data stewards with insights into past practices, standards, and decision-making processes. It acts as a knowledge repository, allowing the organization to learn from historical experiences, maintain consistency in methodologies, and ensure a coherent and informed evolution of data-related practices. Detailed metadata function as a vital component of institutional memory preservation, enabling continuity, learning, and informed decision-making within organizations engaged in the multifaceted aspects of data management.</p>
+</div>
+</div>
+</div>
+<div id="structured-metadata" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Structured metadata<a href="chapter03.html#structured-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="defining-structured-metadata" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Defining structured metadata<a href="chapter03.html#defining-structured-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Metadata should not only be comprehensive and detailed, they should also be organized in a <strong>structured</strong> manner, preferably using a standardized structure. <strong>Structured metadata</strong> means that the metadata are stored in specific <em>fields</em> (or <em>elements</em>) organized in a <u>metadata schema</u>. <strong>Standardized</strong> means that the list and description of elements are commonly agreed by a community of practice, in which case the metadata schema is referred to as a metadata standard. Some metadata schemas may be standard within an organization, others may be adopted by a larger community of practice, in some cases internationally. International metadata standards have particular value as they facilitate the sharing of international good practice and support cost-effective and efficient data and metadata exchange.</p>
+<p>Some metadata standards have originated from academic data centers, like the <a href="https://ddialliance.org/">Data Documentation Initiative (DDI)</a>, maintained by the <a href="https://www.icpsr.umich.edu/web/pages/">Inter-University Consortium for Political and Social Research</a> (ICPSR) at the University of Michigan. Other found their origins in specialized communities of practice (like the <a href="https://www.iso.org/standard/67253.html?browse=tc">ISO 19139</a> for geospatial resources). The private sector also contributes to the development of standards, like the <a href="https://iptc.org/">International Press Telecommunications Council (IPTC)</a> standard developed by and for news media.</p>
+<p>Metadata compliant with standards will typically be stored as JSON or XML files (described in Chapter 2), which are plain text files. The example below show how a simple free-text content would be structured and stored in JSON and XML formats, using metadata elements from the <a href="https://ddialliance.org/Specification/DDI-Codebook/2.5/">DDI Codebook</a> metadata standard:</p>
+<p><strong>Free text version</strong>:</p>
+<p><em>The Child Mortality Survey (CMS) was conducted by the National Statistics Office of Popstan from July 2010 to June 2011, with financial support from the Child Health Trust Fund (TF123_456).</em></p>
+<p><strong>Structured, machine-readable (JSON) version</strong>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="chapter03.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="chapter03.html#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;title&quot;</span>           <span class="fu">:</span> <span class="st">&quot;Child Mortality Survey 2010-2011&quot;</span><span class="fu">,</span></span>
+<span id="cb1-3"><a href="chapter03.html#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;alternate_title&quot;</span> <span class="fu">:</span> <span class="st">&quot;CMS 2010-2011&quot;</span><span class="fu">,</span> </span>
+<span id="cb1-4"><a href="chapter03.html#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;authoring_entity&quot;</span><span class="fu">:</span> <span class="st">&quot;National Statistics Office (NSO)&quot;</span><span class="fu">,</span> </span>
+<span id="cb1-5"><a href="chapter03.html#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;funding_agencies&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="fu">{</span><span class="dt">&quot;name&quot;</span><span class="fu">:</span><span class="st">&quot;Child Health Trust Fund (CHTF)&quot;</span><span class="fu">,</span> <span class="dt">&quot;grant&quot;</span><span class="fu">:</span><span class="st">&quot;TF123_456&quot;</span><span class="fu">}</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb1-6"><a href="chapter03.html#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;coll_dates&quot;</span>      <span class="fu">:</span> <span class="ot">[</span><span class="fu">{</span><span class="dt">&quot;start&quot;</span><span class="fu">:</span><span class="st">&quot;2010-07&quot;</span><span class="fu">,</span> <span class="dt">&quot;end&quot;</span><span class="fu">:</span><span class="st">&quot;2011-06&quot;</span><span class="fu">}</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb1-7"><a href="chapter03.html#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;nation&quot;</span>          <span class="fu">:</span> <span class="ot">[</span><span class="fu">{</span><span class="dt">&quot;name&quot;</span><span class="fu">:</span><span class="st">&quot;Popstan&quot;</span><span class="fu">,</span> <span class="dt">&quot;abbreviation&quot;</span><span class="fu">:</span><span class="st">&quot;POP&quot;</span><span class="fu">}</span><span class="ot">]</span> </span>
+<span id="cb1-8"><a href="chapter03.html#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span>  </span></code></pre></div>
+<p>In XML format (with DDI tag names):</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="chapter03.html#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">titl</span>&gt;Child Mortality Survey 2010-2011&lt;/<span class="kw">titl</span>&gt;</span>
+<span id="cb2-2"><a href="chapter03.html#cb2-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">altTitl</span>&gt;CMS 2010-2011&lt;/<span class="kw">altTitl</span>&gt;</span>
+<span id="cb2-3"><a href="chapter03.html#cb2-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">rspStmt</span>&gt;&lt;<span class="kw">AuthEnty</span>&gt;National Statistics Office&lt;/<span class="kw">AuthEnty</span>&gt;&lt;/<span class="kw">rspStmt</span>&gt;</span>
+<span id="cb2-4"><a href="chapter03.html#cb2-4" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">fundAg</span><span class="ot"> abbr=</span><span class="er">CHTF&gt;Child</span> <span class="er">Health</span> <span class="er">Trust</span> <span class="er">Fund&lt;/fundAg&gt;</span></span>
+<span id="cb2-5"><a href="chapter03.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="er">&lt;collDate</span> <span class="er">date=</span><span class="st">&quot;2010-07&quot;</span><span class="ot"> event=</span><span class="st">&quot;start&quot;</span>/&gt;</span>
+<span id="cb2-6"><a href="chapter03.html#cb2-6" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">collDate</span><span class="ot"> date=</span><span class="st">&quot;2011-06&quot;</span><span class="ot"> event=</span><span class="st">&quot;end&quot;</span>/&gt;</span>
+<span id="cb2-7"><a href="chapter03.html#cb2-7" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">nation</span><span class="ot"> abbr=</span><span class="st">&quot;POP&quot;</span>&gt;Popstan&lt;/<span class="kw">nation</span>&gt;</span></code></pre></div>
+<p>All three versions contain (almost) the same information. In the structured version, we have added acronyms and the ISO country code. This does not create new information but will help make the existing information more discoverable and inter-operable. The structured version is clearly more suitable for publishing in a meta-database (or catalog). Organizing and storing metadata in such a structured manner will enable all kinds of applications. For example, when metadata for a collection of surveys are stored in a database, it becomes straightforward to apply filters (for example, a filter by country using the nation/name element) and targeted searches to answer questions like “What data are available that cover the month of December 2010?” or “What surveys did the CHTF sponsor?”.</p>
+</div>
+<div id="formats-for-structured-metadata-json-and-xml" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Formats for structured metadata: JSON and XML<a href="chapter03.html#formats-for-structured-metadata-json-and-xml" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Metadata standards and schemas consist of structured lists of metadata fields. They serve multiple purposes. First, they help data curators generate complete and usable documentation of their datasets. Metadata standards that are intuitive and <em>human-readable</em> better serve this purpose. Second, they help generate <em>machine-readable</em> metadata that are the input to software applications like on-line data catalogs. Metadata available in open file formats like JSON (JavaScript Object Notation) and XML (eXtended Markup Language) are most suitable for this purposes.</p>
+<p>Some international metadata standards like the <strong>Data Documentation Initative</strong> (DDI Codebook, for microdata), the ISO 19139 (for geospatial data), or the Dublin Core (a more generic metadata specification) are described and published as XML specifications. Any XML standard or schema can be “translated” into JSON, which is our preferred format (a choice we justify in the next section).</p>
+<p>JSON and XML formats have similarities:</p>
+<ul>
+<li>Both are non-proprietary text files</li>
+<li>Both are hierarchical (they may contain values within values)</li>
+<li>Both can be parsed and used by many programming languages including R and Python</li>
+</ul>
+<p>JSON files are however easier to parse than XML, easier to generate programmatically, and easier to read by humans. This makes them our preferred choice for describing and using metadata standards and schemas.</p>
+<p>Metadata in JSON are stored as <em>key/value</em> pairs, where the keys correspond to the names of the metadata elements in the standard. Values can be string, numeric, boolean, arrays, null, or JSON objects (for a more detailed description of the JSON format, see <a href="https://www.w3schools.com/js/js_json_intro.asp">www.w3schools.com</a>). Metadata in XML are stored within named tags. The example below shows how the JSON and XML formats are used to document the list of authors of a <a href="http://hdl.handle.net/10986/34511">document</a>, using elements from the Dublin Core metadata standard.</p>
+<center>
+<img src="images/document_example_01b_authors_keywords.JPG" style="width:100.0%" />
+</center>
+<p><br></p>
+<p>In the <em>documents</em> schema, authors are documented in the metadata element <code>authors</code> which contains the following sub-elements: <code>first_name</code>, <code>initial</code>, <code>last_name</code>, and <code>affiliation</code>.</p>
+<center>
+<img src="images/JSON_array_list_authors.JPG" style="width:100.0%" />
+</center>
+<p><br></p>
+<p>In JSON, this information will be stored in key/value pairs as follows.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="chapter03.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;authors&quot;</span> <span class="er">:</span> <span class="ot">[</span></span>
+<span id="cb3-2"><a href="chapter03.html#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span><span class="dt">&quot;first_name&quot;</span> <span class="fu">:</span> <span class="st">&quot;Dieter&quot;</span><span class="fu">,</span> </span>
+<span id="cb3-3"><a href="chapter03.html#cb3-3" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&quot;last_name&quot;</span>  <span class="fu">:</span> <span class="st">&quot;Wang&quot;</span><span class="fu">,</span> </span>
+<span id="cb3-4"><a href="chapter03.html#cb3-4" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&quot;affiliation&quot;</span><span class="fu">:</span> <span class="st">&quot;World Bank Group; Fragility, Conflict and Violence&quot;</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-5"><a href="chapter03.html#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span><span class="dt">&quot;first_name&quot;</span> <span class="fu">:</span> <span class="st">&quot;Bo&quot;</span><span class="fu">,</span>     </span>
+<span id="cb3-6"><a href="chapter03.html#cb3-6" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&quot;initial&quot;</span>    <span class="fu">:</span> <span class="st">&quot;P.J.&quot;</span><span class="fu">,</span> </span>
+<span id="cb3-7"><a href="chapter03.html#cb3-7" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&quot;last_name&quot;</span>  <span class="fu">:</span> <span class="st">&quot;Andrée&quot;</span><span class="fu">,</span> </span>
+<span id="cb3-8"><a href="chapter03.html#cb3-8" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&quot;affiliation&quot;</span><span class="fu">:</span> <span class="st">&quot;World Bank Group; Fragility, Conflict and Violence&quot;</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-9"><a href="chapter03.html#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span><span class="dt">&quot;first_name&quot;</span> <span class="fu">:</span> <span class="st">&quot;Andres&quot;</span><span class="fu">,</span> </span>
+<span id="cb3-10"><a href="chapter03.html#cb3-10" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&quot;initial&quot;</span>    <span class="fu">:</span> <span class="st">&quot;F.&quot;</span><span class="fu">,</span> </span>
+<span id="cb3-11"><a href="chapter03.html#cb3-11" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&quot;last_name&quot;</span>  <span class="fu">:</span> <span class="st">&quot;Chamorro&quot;</span><span class="fu">,</span> </span>
+<span id="cb3-12"><a href="chapter03.html#cb3-12" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&quot;affiliation&quot;</span><span class="fu">:</span> <span class="st">&quot;World Bank Group; Development Data Analytics and Tools&quot;</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-13"><a href="chapter03.html#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span><span class="dt">&quot;first_name&quot;</span> <span class="fu">:</span> <span class="st">&quot;Phoebe&quot;</span><span class="fu">,</span> </span>
+<span id="cb3-14"><a href="chapter03.html#cb3-14" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&quot;initial&quot;</span>    <span class="fu">:</span> <span class="st">&quot;G.&quot;</span><span class="fu">,</span> </span>
+<span id="cb3-15"><a href="chapter03.html#cb3-15" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&quot;last_name&quot;</span>  <span class="fu">:</span> <span class="st">&quot;Spencer&quot;</span><span class="fu">,</span>  </span>
+<span id="cb3-16"><a href="chapter03.html#cb3-16" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&quot;affiliation&quot;</span><span class="fu">:</span><span class="st">&quot;World Bank Group; Fragility, Conflict and Violence&quot;</span><span class="fu">}</span></span>
+<span id="cb3-17"><a href="chapter03.html#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div>
+<p>In XML, the same information will be stored within named tags as follows.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb4-1"><a href="chapter03.html#cb4-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">authors</span>&gt;</span>
+<span id="cb4-2"><a href="chapter03.html#cb4-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">author</span>&gt;</span>
+<span id="cb4-3"><a href="chapter03.html#cb4-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">first_name</span>&gt;Dieter&lt;/<span class="kw">first_name</span>&gt; </span>
+<span id="cb4-4"><a href="chapter03.html#cb4-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">last_name</span>&gt;Wang&lt;/<span class="kw">last_name</span>&gt; </span>
+<span id="cb4-5"><a href="chapter03.html#cb4-5" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">affiliation</span>&gt;World Bank Group; Fragility, Conflict and Violence&lt;/<span class="kw">affiliation</span>&gt;</span>
+<span id="cb4-6"><a href="chapter03.html#cb4-6" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">author</span>&gt;</span>
+<span id="cb4-7"><a href="chapter03.html#cb4-7" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">author</span>&gt;</span>
+<span id="cb4-8"><a href="chapter03.html#cb4-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">first_name</span>&gt;Bo&lt;/<span class="kw">first_name</span>&gt; </span>
+<span id="cb4-9"><a href="chapter03.html#cb4-9" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">initial</span>&gt;P.J.&lt;/<span class="kw">initial</span>&gt; </span>
+<span id="cb4-10"><a href="chapter03.html#cb4-10" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">last_name</span>&gt;Andrée&lt;/<span class="kw">last_name</span>&gt; </span>
+<span id="cb4-11"><a href="chapter03.html#cb4-11" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">affiliation</span>&gt;World Bank Group; Fragility, Conflict and Violence&lt;/<span class="kw">affiliation</span>&gt;</span>
+<span id="cb4-12"><a href="chapter03.html#cb4-12" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">author</span>&gt;</span>
+<span id="cb4-13"><a href="chapter03.html#cb4-13" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">author</span>&gt;</span>
+<span id="cb4-14"><a href="chapter03.html#cb4-14" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">first_name</span>&gt;Andres&lt;/<span class="kw">first_name</span>&gt; </span>
+<span id="cb4-15"><a href="chapter03.html#cb4-15" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">initial</span>&gt;E.&lt;/<span class="kw">initial</span>&gt;</span>
+<span id="cb4-16"><a href="chapter03.html#cb4-16" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">last_name</span>&gt;Chamorro&lt;/<span class="kw">last_name</span>&gt; </span>
+<span id="cb4-17"><a href="chapter03.html#cb4-17" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">affiliation</span>&gt;World Bank Group; Development Data Analytics and Tools&lt;/<span class="kw">affiliation</span>&gt;</span>
+<span id="cb4-18"><a href="chapter03.html#cb4-18" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">author</span>&gt;</span>
+<span id="cb4-19"><a href="chapter03.html#cb4-19" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">author</span>&gt;</span>
+<span id="cb4-20"><a href="chapter03.html#cb4-20" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">first_name</span>&gt;Phoebe&lt;/<span class="kw">first_name</span>&gt; </span>
+<span id="cb4-21"><a href="chapter03.html#cb4-21" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">initial</span>&gt;G.&lt;/<span class="kw">initial</span>&gt;</span>
+<span id="cb4-22"><a href="chapter03.html#cb4-22" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">last_name</span>&gt;Spencer&lt;/<span class="kw">last_name</span>&gt; </span>
+<span id="cb4-23"><a href="chapter03.html#cb4-23" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">affiliation</span>&gt;World Bank Group; Fragility, Conflict and Violence&lt;/<span class="kw">affiliation</span>&gt;</span>
+<span id="cb4-24"><a href="chapter03.html#cb4-24" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">author</span>&gt;</span>
+<span id="cb4-25"><a href="chapter03.html#cb4-25" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">authors</span>&gt;</span></code></pre></div>
+</div>
+<div id="benefits-of-structured-metadata" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Benefits of structured metadata<a href="chapter03.html#benefits-of-structured-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Metadata standards and schemas must be comprehensive and intuitive. They aim to provide comprehensive and granular lists of elements. Some standards contain a very long list of elements. Most often, only a subset of the available elements will be used to document a specific dataset. For example, the elements of the DDI metadata standard related to sample design will be used to document sample survey datasets but will be ignored when documenting a population census or an administrative dataset. In all standards and schemas, most elements are <em>optional</em>, not <em>required</em>. Data curators should however try and provide content for all elements for which information is or can be made available.</p>
+<p>Complying with metadata standards and schemas contributes to the completeness, usability, discoverability, and inter-operability of the metadata, and to the visibility of the data and metadata.</p>
+<div id="completeness" class="section level4 hasAnchor" number="3.2.3.1">
+<h4><span class="header-section-number">3.2.3.1</span> Completeness<a href="chapter03.html#completeness" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>When they document datasets, data curators who do not make use of metadata standards and schemas tend to focus on the readily-available documentation and may omit some information that secondary data users –and search engines– may need. Metadata standards and schemas provide checklists of what information could or should be provided. These checklists are developed by experts, and are regularly updated or upgraded based on feedback received from users or to accommodate new technologies.</p>
+<p>Generating complete metadata will often be a collaborative exercise, as the production of data involves multiple stakeholders. The implementation of a survey, for example, may involve sampling specialists, field managers, data processing experts, subject matter specialists, and programmers. Documenting a dataset should not be seen as a last and independent step in the implementation of a data collection or production project. Ideally, metadata will be captured continuously and in quasi-real time during the entire life cycle of the data collection/production, and contributed by those who have most knowledge of each phase of the data production process.</p>
+<p>Generating complete and detailed metadata may be seen as a burden by some organizations or researchers. But it will typically represent only a small fraction of the time and budget invested in the production of the data, and is an investment that will add much value to the data by increasing their usability and discoverability.</p>
+</div>
+<div id="usability" class="section level4 hasAnchor" number="3.2.3.2">
+<h4><span class="header-section-number">3.2.3.2</span> Usability<a href="chapter03.html#usability" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Fully understanding a dataset before conducting analysis should be a pre-requisite for all researchers and data users. But this will only be possible when the documentation is easy to obtain and exploit. Convenience to users is key. When using a geographic dataset for example, the user should be able to immediately find the coordinate reference system that was used. When using survey microdata, which may contain hundreds or thousands of variables, the user need to be able to immediately access information on a variable label, underlying question, universe, categories, etc. Structured metadata enables such “convenience”, as they can easily be transformed into bookmarked PDF documents, searchable websites, machine-readable codebooks, etc. The way metadata are displayed can be tailored to the specific needs of different categories of users.</p>
+</div>
+<div id="discoverability" class="section level4 hasAnchor" number="3.2.3.3">
+<h4><span class="header-section-number">3.2.3.3</span> Discoverability<a href="chapter03.html#discoverability" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="quote">
+<p>Data discoverability is one of the main tasks, next to availability and interoperability, that public policy makers and implementers should take into due consideration in order to foster access, use and re-use of public sector information, particularly in case of open data. Users shall be enabled to easily search and find data they need for the most different purposes. That is clearly highlighted in the introduction statements of the INSPIRE Directive, where we can read that “The loss of time and resources in searching for existing (spatial) data or establishing whether they may be used for a particular purpose is a key obstacle to the full exploitation of the data available”.
+From <a href="https://www.europeandataportal.eu/en/impact-studies/country-insights/italy/italy-discoverability-practice"><em>Metadata and data portals/catalogues are essential assets to enable that data discoverability.</em></a></p>
+</div>
+<p>What matters is not only <u>what</u> metadata are provided as input to the search engines that matters, it is also <u>how</u> the metadata are provided. To understand the value of structured metadata, we need to take into consideration how search engines ingest, index, and exploit the metadata. In brief, the metadata will need to be acquired, augmented, analyzed and transformed, and indexed before they can be made searchable. We provide here an overview of the process, which is described in detail by D. Turnbull and J. Berryman in <a href="https://www.manning.com/books/relevant-search">“Relevant Search: With applications for Solr and Elasticsearch”</a> (2016).</p>
+<ul>
+<li><p><strong>Acquisition</strong>: Search engines like Google and Bing acquire metadata by crawling billions of web pages using <em>web crawlers</em> (or <em>bots</em>), with an objective to cover the entire web. Guidance is available to webmasters on how to optimize websites for visibility (see for example <a href="https://developers.google.com/search/docs/beginner/seo-starter-guide">Google’s Search Engine Optimization (SEO) Starter Guide</a>. The search tools embedded in specialized data catalogs have a much simpler task, as the catalog administrators and curators generate or control, and provide, the well-contained content to be indexed. In a cataloguing application like NADA, this content is provided in the form of <em>structured metadata files</em> saved in JSON or XML format. For textual data (documents), the content of the document (not only the metadata on the) can also be indexed. The process of acquisition/extraction of metadata by the search engine tool must preserve the structure of the metadata, in its original or in a modified form. This will be critical for optimizing the performance of the search tool and the ranking of query results (e.g., a keyword found in a document title may have more weight than the same keyword found in the document abstract), for implementing facets, or for providing advanced search options (e.g., search only in the “authors” metadata field).</p></li>
+<li><p><strong>Augmentation</strong> or <strong>enrichment</strong>: the content of the metadata can be <em>augmented</em> or <em>enriched</em> in multiple ways, often automatically (by extracting information from an external source, or using machine learning algorithms). Part of this augmentation process should happen before the metadata are submitted to the search engine. Other procedures of enrichment of the metadata may be implemented after acquisition of the metadata by the search engine tool. Metadata augmentation can have a significant impact on the discoverability of data. See the section “Augmented (enriched) metadata” below.</p></li>
+<li><p><strong>Analysis</strong> or <strong>transformation</strong>: The metadata generated by the data curator and by the augmentation process will mostly (not exclusively) consist of text. For the purpose of discoverability, some of the text has no value; words like “the”, “a”, it”, “with”, etc., referred to as <em>stop words</em>, will be removed from the metadata (multiple tools are available for this purpose). The remaining words will be converted to lowercase, may be submitted to spell checkers (to exclude or fix errors), and words will be <em>stemmed</em> or <em>lemmatized</em>. The stemming or lemmatization consist of converting words to their <em>stem</em> or <em>root</em>); this will among other transformations change plurals to singular and the conjugated forms of the verbs to their base form. Last, the transformed metadata will be <em>tokenized</em>, i.e. split into a list of terms (<em>tokens</em>). To enable semantic searchability, the metadata can also be converted into numeric vectors using natural language processing <em>embedding</em> models. These vectors will be saved in a database (such as <a href="https://github.com/elastic/elasticsearch">ElasticSearch</a> or <a href="https://milvus.io/">Milvus</a>) that will provide functionalities to measure similarity/distance between vectors. Section 1.8 below provide more information on text embedding and semantic searchability.</p></li>
+<li><p><strong>Indexing</strong>: The last phase of metadata processing is the indexing of the tokens. The index of a search engine is an <em>inverted index</em>, which will contain a list of all terms found in the metadata, with the following information (among other) attached to each term:</p>
+<ul>
+<li>The <em>document frequency</em>, i.e. the number of metadata documents where the word is found (a <em>metadata document</em> is the metadata related to one dataset).</li>
+<li>The identification of the metadata documents in which the term was found.</li>
+<li>The <em>term frequency</em> in each metadata document.</li>
+<li>The <em>term positions</em> in the metadata document, i.e. where the term is found in the document. This is important to identify colocations. When a user submits a query for “demographic transition” for example, documents where the two terms are found next to each other will be more relevant than documents where both terms appear but in different parts of the document.</li>
+</ul></li>
+</ul>
+<p>Once the metadata has been acquired, transformed, and indexed, it is available for use via a user interface (UI). A data catalog UI will typically include a search box and facets (filters). The search engine underlying the search box can be simple (out-of-the-box full text search, looking for exact matches of keywords), or advanced (with semantic search capability and optimized ranking of query results). Basic full-text search do not provide satisfactory user experience, as we illustrated in the introduction to this Guide. Rich, structured metadata, combined with advanced search optimization tools and machine learning solutions, allow catalog administrators to tune the search engine, and implement advanced solutions including semantic searchability.</p>
+<center>
+<img src="images/schema_documentation_indexing.JPG" style="width:100.0%" />
+</center>
+</div>
+<div id="interoperability-1" class="section level4 hasAnchor" number="3.2.3.4">
+<h4><span class="header-section-number">3.2.3.4</span> Interoperability<a href="chapter03.html#interoperability-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Data catalogs that adopt common metadata standards and schemas can exchange information including through automated harvesting and synchronization of catalogs. This allows them to increase their visibility, and to publish their metadata in hubs. Recommendations and guidelines for improved inter-operability of data catalogs are provided by the <a href="https://www.openarchives.org/">Open Archives Initiative</a>.</p>
+<p>Interoperability between data catalogs can be further improved by the adoption of common controlled vocabularies. For example, the adoption of the ISO country codes in country lists will guarantee that all catalogs will be able to filter dataset by country in a consistent manner. This will solve the issue of possible differences in the spelling of country names (e.g., one catalog referring to the <em>Democratic Republic of Congo</em> as <em>Congo, DR</em>, and another one as <em>Congo, Dem. Rep.</em>). It also solves issues of changing country names, e.g. <em>Swaziland</em> renamed as <em>Eswatini</em> in 2018). Controlled vocabularies are often used for “categorical” metadata elements like topics, keywords, data type, etc. Some metadata standards like the ISO 19139 for geospatial data include their own recommended controlled vocabularies. Ideally, controlled vocabularies are developed in accordance with <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> (Findability, Accessibility, Interoperability, and Reuse of digital assets). “The principles emphasise machine-actionability (i.e., the capacity of computational systems to find, access, interoperate, and reuse data with none or minimal human intervention) because humans increasingly rely on computational support to deal with data as a result of the increase in volume, complexity, and creation speed of data.” (<a href="https://www.go-fair.org/fair-principles/" class="uri">https://www.go-fair.org/fair-principles/</a>)</p>
+<p>The adoption of standards and schemas by software developers also contributes to the easy transfer of metadata across applications. For example, data capture tools like <a href="https://mysurvey.solutions/en/">Survey Solutions</a> by the World Bank and <a href="https://www.census.gov/data/software/cspro.html">CsPro</a> by the US Census Bureau offer options to export metadata compliant with the DDI Codebook standard; ESRI’s ArcGIS software export geospatial metadata in the ISO 19139 standard.</p>
+</div>
+</div>
+</div>
+<div id="recommended-standards" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Recommended standards<a href="chapter03.html#recommended-standards" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The standards we recommend and describe in this guide are the following:</p>
+<table>
+<colgroup>
+<col width="35%" />
+<col width="64%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data type</th>
+<th>Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Documents</td>
+<td>Dublin Core Metadata Initiative (DCMI), MARC</td>
+</tr>
+<tr class="even">
+<td>Microdata</td>
+<td>Data Documentation Initiative 2.5 (Codebook)</td>
+</tr>
+<tr class="odd">
+<td>Geographic datasets and services</td>
+<td>ISO 19110, ISO19115, ISO19119, ISO 19139</td>
+</tr>
+<tr class="even">
+<td>Time series, Indicators</td>
+<td>Custom-designed schema</td>
+</tr>
+<tr class="odd">
+<td>Statistical tables</td>
+<td>Custom-designed schema</td>
+</tr>
+<tr class="even">
+<td>Photos / Images</td>
+<td>IPTC (for advanced use) or Dublin Core augmented</td>
+</tr>
+<tr class="odd">
+<td>Audio files</td>
+<td>Dublin Core augmented with AudioObject from schema.org</td>
+</tr>
+<tr class="even">
+<td>Videos</td>
+<td>Dublin Core augmented with VideoObject from schema.org</td>
+</tr>
+<tr class="odd">
+<td>Programs and scripts</td>
+<td>Custom-designed schema</td>
+</tr>
+<tr class="even">
+<td>External resources</td>
+<td>Dublin Core</td>
+</tr>
+<tr class="odd">
+<td>All data types</td>
+<td>schema.org and DCAT (used for search engine optimization purpose, not as the primary schema to document resources)</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<div id="documents" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Documents<a href="chapter03.html#documents" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Documents</strong> are bibliographic resource of any type, such as books, working papers and papers published in scientific journals, reports, manuals, and other resources consisting mainly of text. Document libraries have along tradition of using structured metadata to manage their collections, which dates back from before the days this was computerized. Multiple standards are available. The Dublin Core Metadata Initiative specification (DCMI) provides simple and flexible option. The MARC standard (<strong>MA</strong>chine-<strong>R</strong>eadable <strong>C</strong>ataloging) standard used by the United States Library of Congress is another, more advanced one. The schema we describe in this Guide make is the DCMI complemented by a few elements inspired by the MARC standard.</p>
+</div>
+<div id="microdata" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Microdata<a href="chapter03.html#microdata" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Microdata</strong> are <u>unit-level</u> data on a population of individuals, households, dwellings, facilities, establishments or other. Microdata are typically obtained from surveys, censuses, or administrative recording systems. To document microdata, the Data Documentation Initiative (DDI) Alliance has developed the DDI metadata standard. “The Data Documentation Initiative (DDI) is an international standard for describing the data produced by surveys and other observational methods in the social, behavioral, economic, and health sciences. DDI is a free standard that can document and manage different stages in the research data lifecycle, such as conceptualization, collection, processing, distribution, discovery, and archiving. Documenting data with DDI facilitates understanding, interpretation, and use – by people, software systems, and computer network.” (Source: <a href="https://ddialliance.org/" class="uri">https://ddialliance.org/</a>, accessed on 7 June 2021)</p>
+<p>The DDI standard comes in two versions: DDI Codebook and DDI Lifecycle.</p>
+<ul>
+<li><a href="https://ddialliance.org/Specification/DDI-Codebook/2.5/">DDI-Codebook</a> is a light-weight version of the standard. Its elements include descriptive content for variables, files, source material, and study level information. The standard is designed to support the discovery, preservation, and the informed use of data.</li>
+<li><a href="https://ddialliance.org/Specification/DDI-Lifecycle/3.3/">DDI Lifecycle</a> is designed to document and manage data across the entire life cycle, from conceptualization to data publication, analysis and beyond. It encompasses all of the DDI-Codebook specification and extends it.</li>
+</ul>
+<p>In this Guide, which focuses on the use of matadata standards for documentation, cataloguing and dissemination purposes, we recommend the use of the DDI Codebook which is much easier to implement than the DDI LifeCycle. DDI Codebook provides all necessary elements needed for our purpose of improving data discoverability and usability.</p>
+</div>
+<div id="geographic-datasets-data-structures-and-data-services" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Geographic datasets, data structures, and data services<a href="chapter03.html#geographic-datasets-data-structures-and-data-services" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Geographic data identify and depict geographic locations, boundaries and characteristics of features on the surface of the earth. <strong>Geographic datasets</strong> include raster and vector data files. More or more data is disseminated not in the form of datasets, but in the form of <strong>geographic data services</strong> mainly via web applications. The ISO Technical Committee on Geographic Information/Geomatics (ISO/TC211), created a set of metadata standards to describe geographic datasets (ISO 19115), the geographic data structures of vector data (ISO 19110), and geographic data services (ISO 19119). These ISO standards are also available as an XML specification, the ISO 19139. In this Guide, we describe a JSON and simplified –but ISO-compatible– version of this complex schema.</p>
+</div>
+<div id="time-series-indicators" class="section level3 hasAnchor" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> Time series, indicators<a href="chapter03.html#time-series-indicators" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Indicators</strong> are summary (or “aggregated”) measures related to a key issue or phenomenon and derived from a series of observed facts. For example, the <em>school enrollment rate</em> indicator can be obtained from survey or census microdata, and the <em>GDP per capita</em> indicator is the output of a complex national accounting process that exploits many sources. When an indicator is repeated over time at a regular frequency (annual, quarterly, monthly or other), and when the time dimension is attached to its values, we obtain a <strong>time series</strong>. National statistical agencies and many other organizations publish indicators and time series. Some well-known public databases of time series indicators include the World Bank’s <a href="https://datatopics.worldbank.org/world-development-indicators/">World Development Indicators (WDI)</a>, the Asian Development Bank’s <a href="https://www.adb.org/publications/series/key-indicators-for-asia-and-the-pacific">Key Indicators (KI)</a>, and the United Nations Statistics Division <a href="https://unstats.un.org/sdgs/indicators/database/">Sustainable Development Goals (SDG) database</a>. Some databases provide indicators that are not time series, like the Demographic and Health Survey (DHS) <a href="https://www.statcompiler.com/en/">StatCompiler</a>. Time series and indicators must be published with metadata that provide information on their spatial and temporal coverage, definition, methodology, sources, and more. No international standard is available to document indicators and time series. The JSON metadata schema we describe in this guide was developed by compiling a list of metadata elements found in international indicators databases, complemented with elements from other metadata schemas.</p>
+</div>
+<div id="statistical-tables" class="section level3 hasAnchor" number="3.3.5">
+<h3><span class="header-section-number">3.3.5</span> Statistical tables<a href="chapter03.html#statistical-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Statistical tables</strong> (or <em>cross tabulations</em> or <em>contingency tables</em>) are summary presentations of data, presented as arrays of rows and columns that display numeric aggregates in a clearly labeled fashion. They are typically found in publications such as statistical yearbooks, census and survey reports, research papers, or published on-line. We developed the metadata schema presented in this Guide based on a review of a large collection of tables and of the 2015 <a href="https://www.w3.org/TR/tabular-data-model/#bib-tabular-metadata">W3C Model for Tabular Data and Metadata on the Web</a>. This schema is intended to facilitate the cataloguing and discovery of tabular data, not to provide an electronic solution to automatically reproduce tables.</p>
+</div>
+<div id="images" class="section level3 hasAnchor" number="3.3.6">
+<h3><span class="header-section-number">3.3.6</span> Images<a href="chapter03.html#images" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <strong>images</strong> we are interested in are photos and images available in electronic format. Some images are generated using digital cameras and are “born digital”. Others may have been created by scanning photos, or using other techniques. Note that satellite and remote sensing imagery are not considered in this Guide as images, but as geospatial (raster) data which should be documented using the ISO 19139 schema. To document images, we suggest two options: the <a href="https://dublincore.org/">Dublin Core Metadata Initiative</a> standard augmented by some <a href="https://schema.org/ImageObject">ImageObject (from schema.org)</a> elements as a simple option, and the IPTC standard for more advanced uses and users.</p>
+</div>
+<div id="audio" class="section level3 hasAnchor" number="3.3.7">
+<h3><span class="header-section-number">3.3.7</span> Audio<a href="chapter03.html#audio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To document and catalog audio recordings, we propose a simple metadata schema that combines elements of the <a href="https://dublincore.org/">Dublin Core Metadata Initiative</a> and of the <a href="https://schema.org/AudioObject">AudioObject (from schema.org)</a> schemas.</p>
+</div>
+<div id="videos" class="section level3 hasAnchor" number="3.3.8">
+<h3><span class="header-section-number">3.3.8</span> Videos<a href="chapter03.html#videos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To document and catalog videos, we propose a simple metadata schema that combines elements of the <a href="https://dublincore.org/">Dublin Core Metadata Initiative</a> and of the <a href="https://schema.org/VideoObject">VideoObject (from schema.org)</a> schemas.</p>
+</div>
+<div id="programs-and-scripts" class="section level3 hasAnchor" number="3.3.9">
+<h3><span class="header-section-number">3.3.9</span> Programs and scripts<a href="chapter03.html#programs-and-scripts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We are interested in documenting and disseminating <strong>data processing and analysis programs and scripts</strong>. By “programs and scripts” we mean the code written to conduct data processing and data analysis, that results in the production of research and knowledge products including dublications, derived datasets, visualizations, or other. These scripts are produced using statistical analysis software or programming languages like <a href="https://www.r-project.org/">R</a>, Python, <a href="https://www.sas.com/en_us/software/stat.html">SAS</a>, <a href="https://www.ibm.com/products/spss-statistics">SPSS</a>, <a href="https://www.stata.com/">Stata</a> or equivalent. There are multiple reasons to invest in the documentation and dissemination of reproducible and replicable data processing and analysis (see chapter 12). Increasingly, the dissemination of reproducible scripts is a condition imposed by peer-reviewed journals to authors of papers they publish. Data catalogs should be the go-to place for those who look for reproducible research and examples of good practice in data analysis. As no international metadata schema is available to document and catalog scripts, we developed a schema for this purpose.</p>
+</div>
+<div id="external-resources" class="section level3 hasAnchor" number="3.3.10">
+<h3><span class="header-section-number">3.3.10</span> External resources<a href="chapter03.html#external-resources" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>External resources</strong> are files and links that we may want to attach to a dataset’s published metadata in a data catalog. When we publish metadata in a catalog, what is published is only the textual documentation contained in the JSO or XML metadata file. Other resources attached to a dataset (such as the questionnaire for a survey, technical or training manuals, tabulations, reports, possibly micro-data files, etc.) are not included in these metadata, but also constitute important materials for data users. All these resources are what we consider as <em>external resources</em> (“external” to the schema-compliant metadata), which need to be catalogued and (for most of them) published with the metadata. A simple metadata schema, based on the Dublin Core, is used to provide some essential information on these resources.</p>
+</div>
+</div>
+<div id="a-note-on-other-standards" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> A note on other standards<a href="chapter03.html#a-note-on-other-standards" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sdmx" class="section level3 hasAnchor" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> SDMX<a href="chapter03.html#sdmx" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The metadata standards and schemas described in the Guide do not include the <a href="https://sdmx.org/?sdmx_news=launching-the-new-sdmx-3-0-standard">Statistical Data and Metadata eXchange (SDMX)</a> standard sponsored by a group of international organisations. Although SDMX includes a metadata component, it is intended to support machine-to-machine data exchange, not data documentation and discoverability. SDMX and the metadata standards and schemas we describe in the Guide can –and should– be made inter-operable.</p>
+</div>
+<div id="schema.org-and-dcat" class="section level3 hasAnchor" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> schema.org and DCAT<a href="chapter03.html#schema.org-and-dcat" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>Structured data</em> is information that is embedded in HTML pages that helps Google classify, understand, and display the content of the page when the page is related to a specific type of content. The information stored in the structured data does not impact how the page itself is displayed in a web browser; it only impacts the display of information on the page when returned by Google search results. The types of content to which structured metadata applies is diverse and includes items like job positings, cooking receipes, books, events, movies, math solvers, and others (see the list provided in <a href="https://developers.google.com/search/docs/appearance/structured-data/search-gallery">Google’s Search Gallery</a>). It also applies to resources of type <em>dataset</em> and <em>image</em>. In this context, a <em>dataset</em> can be any type of structured dataset including microdata, indicators, tables, and geographic datasets.</p>
+<p>The <em>structured data</em> to be embedded in an HTML page consists of a set of metadata elements compliant with either the <a href="https://schema.org/Dataset"><em>dataset</em> schema from schema.org</a> or W3C’s Data Catalog Vocabulary (<a href="https://www.w3.org/TR/vocab-dcat/#dcat-scope">DCAT</a>) for datasets, and with the <em>image</em> schema from schema.org for images. For datasets, the schema.org schema is the most frequently used option.[^1]</p>
+<ul>
+<li><strong>schema.org</strong>: <a href="www.schema.org">schema.org</a> is a collection of schemas designed to document many types of resources. The most generic type is a “thing” which can be a person, an organization, an event, a creative work, etc. A <em>creative work</em> can be a book, a movie, a photograph, a data catalog, a dataset, etc. Among the many types of <em>creative work</em> for which schemas are available, we are particularly interested in the ones that correspond to the types of data and resources we recommend in this guide. This includes:
+<ul>
+<li><a href="https://schema.org/DataCatalog"><strong>DataCatalog</strong></a>: A data catalog is a collection of datasets.<br />
+</li>
+<li><a href="https://schema.org/Dataset"><strong>Dataset</strong></a>: A body of structured information describing some topic(s) of interest.<br />
+</li>
+<li><a href="https://schema.org/MediaObject"><strong>MediaObject</strong></a>: A media object, such as an image, video, or audio object embedded in a web page or a downloadable dataset. This includes:
+<ul>
+<li><a href="https://schema.org/ImageObject"><strong>ImageObject</strong></a>: An image file.<br />
+</li>
+<li><a href="https://schema.org/AudioObject"><strong>AudioObject</strong></a>: An audio file.<br />
+</li>
+<li><a href="https://schema.org/VideoObject"><strong>VideoObject</strong></a>: A video file.<br />
+</li>
+</ul></li>
+<li><a href="https://schema.org/Book"><strong>Book</strong></a>: A book.<br />
+</li>
+<li><a href="https://schema.org/DigitalDocument"><strong>DigitalDocument</strong></a>: An electronic file or document. <br></li>
+</ul></li>
+</ul>
+<p>The schemas proposed by schema.org have been developed primarily “to improve the web by creating a structured data markup schema supported by major search engines. On-page markup helps search engines understand the information on web pages and provide richer search results.” (from <a href="https://schema.org/docs/faq.html#0">schema.org, Q&amp;A</a>) These schemas have not been developed by specialized communities of practice (statisticians, survey specialists, data librarians) to document datasets for preservation of institutional memory, to increase transparency in the data production process, or to provide data users with the “cook book” they may need to safely and responsibly use data. These schemas are not the ones that statistical organizations need to comply with international recommendations like the Generic Standard Business Process Model (GSBPM). But they play a critical role in improving data discoverability, as they provide webmasters and search engines with a means to better capture and index the content of web-based data platforms. Schemas from schema.org should thus be embedded in data catalogs. Data cataloguing applications should automatically map (some of) the elements of the specialized metadata standards and schemas they use to the appropriate fields of schema.org. Recommended mapping between the specialized standards and schemas and schema.org are not yet available. The production of such mappings, and the development of utilities to facilitate the production of content compliant with schema.org, would contribute to the objective of visibility and discoverability of data. <br></p>
+<ul>
+<li><strong>DCAT</strong>: <a href="https://www.w3.org/TR/vocab-dcat-2/">DCAT</a> describes datasets and data services using a standard model and vocabulary. It is organized in 13 “classes” (Catalog, Cataloged Resource, Catalog Record, Dataset, Distribution, Data Service, Concept Scheme, Concept, Organization/Person, Relationship, Role, Period of Time, and Location). Within classes, <em>properties</em> are used as metadata elements. For example, the class <em>Cataloged Resource</em> includes properties like <em>title</em>, <em>description</em>, <em>resource creator</em>; the class <em>Dataset</em> includes properties like <em>spatial resolution</em>, <em>temporal coverage</em>; many of these properties can easily be mapped to equivalent elements of the specialized metadata schemas we recommend in this Guide.</li>
+</ul>
+<p>The embedding of structured metadata (schema.org or DCAT) into HTML pages must be automated in a data cataloguing tool. Data catalogs applications dynamically generate the HTML pages that display the description of each catalog entry. They do so by extracting the necessary metadata from the catalog database, and applying “transformations and styles” to this content to produce a user-friendly output that catalog visitors will view in their web browser. To embed structured data in these pages, the catalog application will (i) extract the relevant subset of metadata elements from the original metadata (e.g., from the DDI-compliant metadata for a micro-dataset), (ii) map these extracted elements to the schema.org or DCAT schema, and (iii) save it in the HTML page as a JSON-LD “hidden” component. Mapping the core elements of specialized metadata standards to the schema.org schema is thus essential to enable this feature. The screenshots below show an example of an HTML page for a dataset published in a NADA catalog, with the underlying code. The structured metadata is used by Google to display this information as a formatted, “rich result” in Google Dataset Search.</p>
+<p><br>
+<strong>The HTML page as viewed by the catalog user</strong> - The web browser will ignore the embedded structured metadata when the HTML page is displayed. What users will see is entirely controlled by the catalog application.
+<br></p>
+<br>
+<center>
+<img src="images/reDoc_html_view.JPG" style="width:80.0%" />
+</center>
+<p><br></p>
+<p><br>
+<strong>The HTML page code (abstract)</strong> - The automatically-generated structured data can be seen in the HTML page code (or <em>page source</em>). This information is visible and processed by Google, Bing, and other search engine’s web crawlers. Note that the structured data, although not “visible” to users, can be made accessible to them via API. Other data cataloguing applications may be able to ingest this information; the CKAN cataloguing tool for example makes use of metadata compliant with DCAT or schema.org. Making the structured data accessible is one way to improve the inter-operability of data catalogs.
+<br></p>
+<br>
+<center>
+<img src="images/reDoc_html_code.JPG" style="width:80.0%" />
+</center>
+<p><br></p>
+<p><br>
+<strong>The result - Higher visibility/ranking in Google Dataset Search</strong> - The websites catalog.ihsn.org and microdata.worldbank.org are NADA catalogs, which embed schema.org metadata.
+<br></p>
+<br>
+<center>
+<img src="images/reDoc_html_rank.JPG" style="width:80.0%" />
+</center>
+<p><br></p>
+</div>
+</div>
+<div id="use-of-controlled-vocabularies" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Use of controlled vocabularies<a href="chapter03.html#use-of-controlled-vocabularies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Metadata standards and schemas provide lists of elements with a description of the expected content to be captured in each element. For some elements, it may be appropriate to restrict the valid content to pre-selected options or “controlled vocabularies”. A controlled vocabulary is a pre-defined list of values that can be accepted as valid content for some elements. For example. a metadata element “data type” should not be populated with free text, but should make use of a pre-defined taxonomy of data types. The use of controlled vocabularies (for selected metadata elements) will be particularly useful to implement search and filter features in data catalogs (see section 3.1.1 of this Guide), and to foster inter-operability of data catalogs.</p>
+<div class="quote">
+<p>In library and information science, controlled vocabulary is a carefully selected list of words and phrases, which are used to tag units of information (document or work) so that they may be more easily retrieved by a search.<a href="https://en.wikipedia.org/wiki/Controlled_vocabulary">Wikipedia</a></p>
+</div>
+<p>Controlled vocabularies can be specific to an agency, or be developed by a community of practice. For example, the list of countries and codes provided by the <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes">ISO 3166</a> can be used as a controlled vocabulary for a metadata element <code>country</code> or <code>nation</code>; the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639</a> list of languages can be used as a controlled vocabulary for a metadata element <code>language</code>. Or the <a href="https://vocabularies.cessda.eu/vocabulary/TopicClassification">CESSDA topics classification</a> can be used as a controlled vocabulary for the element <code>topics</code> found in most metadata schemas. When a controlled vocabulary is used in a metadata standard or schema, it is good practice to include an identification of its origin and version.</p>
+<p>Some recommended controlled vocabularies are included in the description of the ISO 19139 standard for geographic data and services (see chapter 6). Most standards and schemas we recommend also include a <code>topics</code> element. Annex 1 provides a description of the CESSDA topics classification.</p>
+<p>Ideally, controlled vocabulary will be developed in compliance with the <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> for scientific data management and stewardship: <strong>F</strong>indability, <strong>A</strong>ccessibility, <strong>I</strong>nteroperability, and <strong>R</strong>euse.</p>
+</div>
+<div id="use-of-tags" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Use of tags<a href="chapter03.html#use-of-tags" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>All metadata standards and schemas described in this guide include a <code>tags</code> element, even when this element is not part of a standard. This element enables the implementation of filters (facets) in data cataloguing applications, in a flexible manner. The <code>tags</code> metadata element is repeatable (meaning that more than one tag can be attached to a dataset) and contains two sub-elements to capture a <code>tag</code> (word or phrase), and the <code>tag_group</code> (if any) it belongs to.</p>
+<center>
+<img src="images/reDoc_tags.JPG" style="width:100.0%" />
+</center>
+<p>To illustrate the use of tags, let’s assume that a catalog contains datasets that are available freely, and others that are available for a fee. The catalog administrator may want to provide a filter (facet) in the user interface that would allow users to filter datasets based on their free or not free status. None of the metadata schemas we describe in the Guide contains an element specifically designed to indicate the “free” or “for a fee” nature of the data. But this information can be captured in a tag “<em>Free</em>” or “<em>For a fee</em>” that would be added to each dataset in the catalog, with a tag group that could be named “free_or_fee”. In R, this would be done as follows (for a “Free” dataset):</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="chapter03.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ... ,</span></span>
+<span id="cb5-2"><a href="chapter03.html#cb5-2" aria-hidden="true" tabindex="-1"></a>tags <span class="ot">=</span> <span class="fu">list</span>(</span>
+<span id="cb5-3"><a href="chapter03.html#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">tag =</span> <span class="st">&quot;Free&quot;</span>, <span class="at">tag_group =</span> <span class="st">&quot;free_or_fee&quot;</span>)</span>
+<span id="cb5-4"><a href="chapter03.html#cb5-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-5"><a href="chapter03.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ... </span></span></code></pre></div>
+<p>In the NADA catalog, a facet titled “Free or for a fee” can then be created based on the information found in the <code>tags</code> element where <code>tag_group</code> = “free_or_fee”.</p>
+<center>
+<img src="images/reDoc_tags_2.JPG" style="width:100.0%" />
+</center>
+</div>
+<div id="metadata-augmentation" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Metadata augmentation<a href="chapter03.html#metadata-augmentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Detailed and complete metadata foster usability and discoverability of data. Augmentation of “enrichment” or “enhancement” of the metadata –which can apply to any metadata standard– will therefore be beneficial. There are multiple ways metadata can be programmatically augmented. Metadata can be extracted from external sources or from the data themselves. This augmentation process often requires the use of machine learning or artificial intelligence tools and methods.</p>
+<p><strong>Extraction from external sources</strong></p>
+<p>Metadata can be augmented by tapping into external sources related to the data being documented. For example, in a catalog of documents published in peer-reviewed journals, the <a href="https://www.scimagojr.com/">Scimago Journal Rank (SJR)</a> indicator could be extracted and added as an additional metadata element for each document. This information can then be used by the catalog’s search engine to rank query results, by “boosting” the rank of documents published in prestigious journals. Information on the popularity of a dataset (for example, measured by the number of downloads), and information on the uses and users of the dataset (for example, by maintaining a catalog of citations of the dataset) can also contribute to enriching the metadata. Some of this information may be stored in the structured metadata, other (like the number of downloads) may be dynamically extracted from a cataloguing application.</p>
+<p><strong>Extraction from the data</strong></p>
+<p>Metadata can be extracted from the data themselves. What metadata can be extracted will be specific to each data type. Examples of metadata augmentation is provided in chapters 5 to 13. We mention a few below.</p>
+<ul>
+<li><p>For microdata: variable-level statistics (range of values, number of valid/missing cases, frequencies for categorical variables, summary statistics like means or standard deviations for continuous variables) can be extracted and stored as metadata. Topics and variable groups can be extracted from the data dictionary using AI-based tools.</p></li>
+<li><p>For documents: information such as the country counts (how many times each country is mentioned) can be extracted automatically to fill out the metadata element related to geographic coverage. Natural language processing (NLP) models can be applied to automatically extract keywords or topics (e.g., using a Latent Dirichlet Allocation - LDA - topic model). Classification models can be applied to categorize documents by type.</p></li>
+</ul>
+<p><strong>Embeddings and semantic discovery</strong></p>
+<p>Previous sections of the chapter showed the value of rich and structured metadata to improve data usability and discoverability. Comprehensive and structured metadata are required to build and develop advanced and optimized <u>lexical</u> search engines (i.e. search engines that return results based on a matching of terms found in a query and in an inverted index). The richness of the metadata guarantees that the search engine will have all necessary “raw material” to identify datasets of interest. The metadata structure allows catalog administrators to tune their search engine (provided they use advanced solutions like Solr or ElasticSearch) to return and rank results in the most relevant manner. But this leaves one issue unsolved: the dependency on keyword matching. A user interested in datasets related to <em>malnutrition</em> for example will not find the indicators on <em>Prevalence of stunting</em> and <em>Prevalence of wasting</em> that the catalog may contain, unless the keyword “malnutrition” was included in these indicators’ metadata. Smarter search engines will be able to “understand” users intent, and identify relevant data based not only on a keyword matching process, but also on the <strong>semantic closeness</strong> between a query submitted by thea user and the metadata available in the database. The combination of rich metadata and natural language processing (NLP) models can solve this issue, by enabling semantic searchability in data catalogs.</p>
+<p>To enable a semantic search engine (or a recommender system), we need a way to “quantify” the semantic content of a query submitted by the user and the semantic content the metadata associated with a dataset, and to measure the closeness between them. This “quantitative” representation of semantic content can be generated in the form of numeric vectors called <strong>embeddings</strong>. “Word embedding is a term used for the representation of words for text analysis, typically in the form of a real-valued vector that encodes the meaning of the word such that the words that are closer in the vector space are expected to be similar in meaning.” (Jurafsky, Daniel; H. James, Martin (2000)). These vectors will typically have a large dimension, with a length of 100 or more. They can be generated for a word, a phrase, or a longer text such as a paragraph or a full document. They are calculated using models like word2vec (Mikolov et al., 2013) or other. Training such models require a large corpus of hundreds of thousands or millions of documents. Pre-trained models and APIs are available that allow data catalog curators to generate embeddings for their metadata and, in real time, for queries submitted by users.</p>
+<p>Practically, embeddings are used as follows: metadata (or part of the metadata) associated with a dataset are converted into a numeric vector using a pre-trained embedding model. These embeddings are stored in a database. When a user submits a search query (which can be a term, a phrase, or even a document), the query is analyzed and enhanced (stop words are removed, spelling errors may be fixed, language detection and automatic translation may be applied, and more), then transformed into a vector using the same pre-trained model that was used to generate the metadata vectors. The metadata vectors that have the shortest distance (typically the cosine distance) with the query vector will be identified. The search engine will then return a sorted list of datasets having the highest semantic similarity with the query, or the distance between vectors will be used in combination with other criteria to rank and return results to the user. The fast identification of the closest vectors requires a specialized and optimized tool like the open source <a href="https://milvus.io/">Milvus</a> application.</p>
+<ul>
+<li><p>For geospatial data: bounding boxes (i.e. the <em>extent</em> of the data) can be derived from the data files.</p></li>
+<li><p>For photos taken by digital cameras: metadata such as the date and time the photo was taken and possibly the geographic location can be extracted from the EXIF metadata generated by digital cameras and stored in the image file. Also, machine learning models allow image labeling, face detection, text detection and recognition to be applied at low cost (using commercial solutions like <a href="https://cloud.google.com/vision">Google Vision</a> or <a href="https://aws.amazon.com/rekognition/">Amazon Rekognition</a> among others).</p></li>
+<li><p>For videos and audio files, machine learning models of speech-to-text API solutions can be used to automatically generate transcripts (see for example <a href="https://aws.amazon.com/transcribe/">Amazon Transcribe</a>, <a href="https://cloud.google.com/speech-to-text">Google Cloud Speech-to-Text</a>, <a href="https://azure.microsoft.com/en-us/services/cognitive-services/speech-to-text/">Microsoft Azure Speech to Text</a>, or <a href="https://www.rev.ai/">rev.ai</a>). The content of the transcripts can then be indexed in search engines, making the content of video and audio files more discoverable.</p></li>
+<li><p>For programs and scripts: a parsing of the commands used in the script may be used to derive information on the methods applied.</p></li>
+</ul>
+<p>[^1] See Omar Benjelloun, Shiyu Chen, Natasha Noy, 2020, <em>Google Dataset Search by the Numbers</em>, <a href="https://doi.org/10.48550/arXiv.2006.06894" class="uri">https://doi.org/10.48550/arXiv.2006.06894</a></p>
+
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chapter02.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chapter04.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["SCHEMA_GUIDE.pdf", "SCHEMA_GUIDE.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

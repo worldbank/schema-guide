@@ -1,0 +1,51 @@
+--- 
+title: "[DRAFT - WORK IN PROGRESS] Metadata Standards for Improved Data Discoverability and Usability"
+author: "World Bank, Office of the Chief Statistician"
+date: "2024-02-06"
+knit: bookdown::render_book
+site: bookdown::bookdown_site
+documentclass: krantz
+monofont: "Source Code Pro"
+monofontoptions: "Scale=0.7"
+biblio-style: apalike
+link-citations: yes
+description: ""
+github-repo: ""
+cover-image: "./images/guide_cover.jpg"
+url: ''
+colorlinks: yes
+graphics: yes
+---
+
+
+# Preface {-}
+
+<p style="text-align: center;"><img src="images/guide_cover.jpg"/></p>
+
+Government agencies, international organizations, the private sector, academia, and other entities engage in the collection, processing, and analysis of data. While these datasets inherently hold value for their creators, they also harbor potential benefits for a wider community of secondary users. By repurposing or reusing these data, this community can significantly enhance the value of existing datasets. Unfortunately, many datasets remain challenging to locate, access, and utilize, resulting in underexploitation. Addressing this issue requires a dedicated and collaborative effort to enhance the discoverability, accessibility, and usability of data. The key to this improvement lies in the quality of the metadata associated with the data.
+
+This guide is designed to promote and facilitate the creation and utilization of comprehensive and structured metadata. The primary audience for this guide are data producers and curators, data librarians, catalog administrators, and developers of data management and dissemination platforms. The guide is particularly applicable to various types of socio-economic data, including indicators, microdata, geographic datasets, publications, and more.
+
+As part of a broader toolset, this guide complements specialized software applications such as a dedicated Metadata Editor, a data cataloging application, and other tools for data management and curation. While the focus of this toolset is on the technical aspects of data documentation and dissemination, it is essential to acknowledge that legal and ethical considerations are equally important. These aspects are addressed in separate guidelines and supported by distinct tools.
+
+Feedback and suggestions on the Guide can be sent to [...*email*...] or submitted in the Guide's [GitHub repository](https://github.com/worldbank/schema-guide). 
+
+The Guide was created using [R Bookdown](https://bookdown.org/) and is licensed under a [Creative Commons Attribution- NonCommercial- NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
+
+<br>
+![](./images/index_ccby_logo.png){width=20%}
+<br>
+<br>
+
+**Acknowledgments**
+
+The Guide was written by Olivier Dupriez (Deputy Chief Statistician, World Bank) and Mehmood Asghar (Senior Data Engineer, World Bank). Kamwoo Lee (Data Scientist, World Bank) produced some of the examples of the use of metadata schemas included in the Guide and contributed to the testing of the schemas. Emmanuel Blondel (consultant) contributed much of chapter 7. Geoffrey Greenwell (consultant) provided input to chapter 10. Bo Andree, Tefera Bekele Degefu, Cathrine Machingauta, and Aivin Solatorio (Data Scientists, World Bank) participated in the testing and improvement of the metadata schemas. David L. Newhouse (Senior Economist, World Bank) provided input to chapter 13. 
+
+The production of the Guide and related tools benefited from financial contributions from:
+
+   - The World Bank-UNHCR Joint Data Center Microdata Library project P174080, Grant No TF0B4772, administered by the World Bank Development Data Group.
+   - The UK Aid-UNHCR-World Bank research program Building the Evidence on Protracted Forced Displacement, funded by the UK government (FCV Data Platform component, project P174529, Grant No TF0B4149). This project supported the development of a data platform which led to the improvement and testing of some of the metadata schemas described in the Guide.
+   - The World Bank administrative budget.
+
+chatGPT was used as a copy editor, but not for substantive content suggestion or creation.  
+

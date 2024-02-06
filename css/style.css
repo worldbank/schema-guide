@@ -1,0 +1,143 @@
+/* -----------code chunk------------- */
+
+
+pre.sourceCode {
+  background-size: 40px !important;
+  background-repeat: no-repeat !important;
+  background-position: 20px 10px !important;
+  padding:60px 20px 15px 20px !important;
+  margin: 0 !important;
+  min-height: 120px;
+  line-height: 1;
+  background-color: #ebeced !important;
+  border: solid 3px #cccecf !important;
+  width: auto;
+}
+
+pre.sourceCode.json {
+  background-image: url("images/filetype-json.svg") !important;
+}
+
+pre.sourceCode.xml {
+  background-image: url("images/filetype-xml.svg") !important;
+}
+
+pre.sourceCode.r {
+  background-image: url("images/R-logo.png") !important;
+}
+
+pre.sourceCode.python {
+  background-image: url("images/Python-logo.webp") !important;
+}
+
+code.sourceCode {
+  font-size: .85em !important;
+  background-color: #ebeced !important;
+  border: solid 0px #cccecf !important;
+  padding: 0px !important;
+}
+
+/* -----------inline code------------- */
+p code, li code {
+  font-size: 1em !important;
+  background-color: #ebeced !important;
+  border: solid 1px #cccecf !important;
+  border-radius: 4px !important;
+  padding: 2px !important;
+}
+
+
+.book .book-body .page-wrapper .page-inner section.normal pre.small-block {
+  width: 75%;
+}
+
+img {
+  border-radius: 4px;
+}
+
+.caption {
+  color: #777;
+  margin-top: 10px;
+}
+
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+
+.flushright {
+  text-align: right;
+}
+blockquote > p:last-child {
+  text-align: right;
+}
+blockquote > p:first-child {
+  text-align: inherit;
+}
+.header-section-number {
+  padding-right: .2em;
+  font-weight: 500;
+}
+.level1 .header-section-number {
+  display: inline-block;
+  border-bottom: 3px solid;
+}
+.level1 h1 {
+  border-bottom: 1px solid;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+h1.title {
+  font-weight: 700;
+}
+.smallcaps {
+  font-variant: small-caps;
+}
+.book .book-body .page-wrapper .page-inner section.normal strong {
+  font-weight: 600;
+}
+
+/* -----------div tips------------- */
+
+div.code {
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 100px;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: 25px 25px;
+  min-height: 120px;
+  background-color: #ebeced;
+  border: dashed 5px #cccecf;
+}
+
+div.code {
+  background-image: url("images/code-square.svg");
+}
+
+div.note, div.idea, div.quote {
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 100px;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: 25px 25px;
+  min-height: 120px;
+  color: #1f5386;
+  background-color: #dfedff;
+  border: solid 3px #bed3ec;
+}
+
+div.note {
+ background-image: url("images/exclamation-square.svg");
+}
+
+div.idea {
+  background-image: url("images/lightbulb.svg");
+}
+
+div.quote {
+  background-image: url("images/chat-right-quote.svg");
+}
+
